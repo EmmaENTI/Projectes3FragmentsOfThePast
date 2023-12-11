@@ -21,6 +21,7 @@ public class BubbleMerge : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        GameObject col = collision.gameObject; // Agafar el nom
         collision.gameObject.GetComponent<BubbleMerge>().isCollisionOff = true;
 
         if (!CompareTag("Bubble") || isCollisionOff)
@@ -43,16 +44,20 @@ public class BubbleMerge : MonoBehaviour
             }
         }
 
+        Debug.Log(transform.name + "  " + collision.transform.name);
+
         if (canMerge1 && canMerge2 && (transform.name != collision.transform.name) && !isCollisionOff)
         {
             // Animació Merge
 
             // Al acabar Animació Merge -> Transició Tinieblas
-            Debug.Log("OCHOA123JHK");
 
             // Destruir les dos bubbles
             Destroy(collision.gameObject);
             Destroy(gameObject);
+
+            bubbleManager.ToggleSelectionPanel();
+            bubbleManager.SetNamesSelectionPanel(new string[] { transform.name, col.transform.name });
         }
 
         collision.gameObject.GetComponent<BubbleMerge>().isCollisionOff = false;
