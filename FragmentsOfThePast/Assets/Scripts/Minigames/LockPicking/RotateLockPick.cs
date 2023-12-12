@@ -33,12 +33,12 @@ public class RotateLockPick : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
         // Precise Lock Pick
         float rotationDelta = currentRotationZ - startRotationZ;
-        transform.Rotate(Vector3.forward, rotationDelta * 0.5f);
+        transform.Rotate(Vector3.forward, rotationDelta);
 
 
         // Funky LockPick
-        Quaternion targetRotation = Quaternion.Euler(0f, 0f, currentRotationZ *0.8f);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+        //Quaternion targetRotation = Quaternion.Euler(0f, 0f, currentRotationZ);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20.0f);
         
         startRotationZ = currentRotationZ;
 
