@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8751100383954613971}
   - component: {fileID: 1415465216692248224}
   - component: {fileID: 2595887768028494337}
+  - component: {fileID: 32006609749763946}
   m_Layer: 5
   m_Name: LockPickBase
   m_TagString: Untagged
@@ -108,7 +109,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 50}
@@ -161,5 +162,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71d1a6b6d1f8891458cc0af3f801ca3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &32006609749763946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158310564482672124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbd92bd3cabd75459a1d4120b60cb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
