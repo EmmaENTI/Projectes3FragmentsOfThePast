@@ -5,18 +5,31 @@ using UnityEngine.Rendering;
 
 public class LockPickTargets : MonoBehaviour
 {
-    [SerializeField] Lock lockScript;
+    [SerializeField] private Lock lockScript;
+
+    [SerializeField] private GameObject skillCheckObject;
+
+    float timer = 0.0f;
+    float timeToSpawnSkillCheck = 2.0f;
 
     private void Start()
     {
         lockScript = GameObject.Find("Lock").GetComponent<Lock>();
     }
 
+    private void Update()
+    {
+        if (timer > timeToSpawnSkillCheck)
+        {
+
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("LockTarget"))
+        if (collision.name == "LayerTarget" + lockScript.GetNextLayerNum())
         {
-            //Debug.Log("ENTERED LOCK TARGET");
+            // Play Sound
         }
     }
 
@@ -24,6 +37,8 @@ public class LockPickTargets : MonoBehaviour
     {
         if (collision.name == "LayerTarget"+lockScript.GetNextLayerNum())
         {
+            StartCoroutine(StartVibrating());
+
             Destroy(collision.transform.parent.GetChild(collision.transform.GetSiblingIndex()-1).gameObject);
             Destroy(collision.gameObject);
             lockScript.SetNextLayerNum();
@@ -32,7 +47,18 @@ public class LockPickTargets : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        
+        if (collision.name == "LayerTarget" + lockScript.GetNextLayerNum())
+        {
+            timer = 0.0f;
+        }
+    }
+
+    IEnumerator StartVibrating()
+    {
+        timer += Time.deltaTime;
+        Vector3 newRotation = new Vector3(0, 0, Mathf.Sin(Time.time * 20f) * 0.2f);
+        transform.Rotate(newRotation);
+        yield return null;
     }
     
 }

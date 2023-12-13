@@ -86,13 +86,7 @@ public class Lock : MonoBehaviour
         }
     }
 
-    public int GetNextLayerNum()
-    {
-        return currentLayer;
-    }
+    public int GetNextLayerNum() => currentLayer;
 
-    public void SetNextLayerNum()
-    {
-        currentLayer--;
-    }
+    public void SetNextLayerNum() => currentLayer--;
 }

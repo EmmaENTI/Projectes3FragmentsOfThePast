@@ -16,7 +16,7 @@ public class BubbleMerge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,7 +61,7 @@ public class BubbleMerge : MonoBehaviour
 
     // !**NO TOCAR**!, MAGIA NEGRA DEL UNITY
     // SI S'ELIMINA EL OnCollisionEnter2D no funciona bé i l'animació s'activaria 2 vegades
-    private void OnCollisionExit2D(Collision2D collision) 
+    private void OnCollisionExit2D(Collision2D collision)
     {
         
     }
