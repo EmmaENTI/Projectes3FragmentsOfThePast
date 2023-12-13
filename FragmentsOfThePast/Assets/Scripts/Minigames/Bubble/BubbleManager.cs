@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private GameObject baseBubble;
     [SerializeField] private Sprite[] bubblesSprites;
     [SerializeField] static public Dictionary<string, Sprite> bubbleDictionary;
+    [SerializeField] private GameObject selectionPanel; 
 
     private List<GameObject> currentBubbles;
 
@@ -128,4 +130,20 @@ public class BubbleManager : MonoBehaviour
             { "Snob", bubblesSprites[26] }
         };
     }
+
+    public void ToggleSelectionPanel()
+    {
+        selectionPanel.SetActive(!selectionPanel.activeSelf);
+    }
+
+    public void SetNamesSelectionPanel(string[] names)
+    {
+        
+        for (int i = 0; i < names.Length; i++)
+        {
+            Debug.Log(names[i]);
+            selectionPanel.transform.GetChild(i).GetChild(0).GetComponent<TMP_Text>().text = names[i];
+        }
+    }
+
 }
