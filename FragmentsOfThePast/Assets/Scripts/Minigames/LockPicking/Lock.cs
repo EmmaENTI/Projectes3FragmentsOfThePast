@@ -17,12 +17,9 @@ public class Lock : MonoBehaviour
     float layerSize = 0.7f;
     DificultyModes[] layerDifficulty;
     DificultyModes[] difficultyTypes = { DificultyModes.EASY, DificultyModes.NORMAL, DificultyModes.HARD};
-
-
+    int currentLayer;
 
     int numOfLockPicks = 1;
-
-    
 
     void Start()
     {
@@ -48,17 +45,18 @@ public class Lock : MonoBehaviour
         for (int i = 0; i < numOfLayers; i++)
         {
             layerDifficulty[i] = difficultyTypes[Random.Range(0,3)];
-            //Debug.Log(layerDifficulty[i].ToString());
         }
     }
     
     private void CreateLayers()
     {
+        currentLayer = numOfLayers-1;
         for (int i = numOfLayers-1; i >= 0; i--)
         {
             
             var layer = Instantiate(layerBase, lockPosition.transform.position, Quaternion.identity, lockPosition.transform);
             layer.transform.localScale = new Vector3(2 + layerSize * i, 2 + layerSize * i, 0.0f);
+            layer.transform.name = "Layer" + i;
 
             if (i == 0) return;
             
@@ -66,6 +64,7 @@ public class Lock : MonoBehaviour
             layerTarget.transform.localScale = new Vector3(2 + layerSize * i, 2 + layerSize * i, 0.0f);
             layerTarget.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0.0f, 360.0f));
             layerTarget.GetComponent<Image>().fillAmount = (float)layerDifficulty[i] / 100.0f;
+            layerTarget.transform.name = "LayerTarget" + i;
 
             Vector2 colliderOffset = layerTarget.GetComponent<RectTransform>().sizeDelta/2;
             
@@ -85,5 +84,15 @@ public class Lock : MonoBehaviour
             var lockPick = Instantiate(lockPickBase, lockPosition.transform.position, Quaternion.identity, lockPosition.transform);
             lockPick.transform.rotation = Quaternion.Euler(0, 0, Random.Range(0.0f, 360.0f));
         }
+    }
+
+    public int GetNextLayerNum()
+    {
+        return currentLayer;
+    }
+
+    public void SetNextLayerNum()
+    {
+        currentLayer--;
     }
 }
