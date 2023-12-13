@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bubble
   - LockTarget
+  - SkillCheckTarget
+  - LockPickingManager
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum DificultyModes: int { EASY = 15, NORMAL = 8, HARD = 3}
+public enum DificultyLayerModes: int { EASY = 15, NORMAL = 8, HARD = 3}
 public class Lock : MonoBehaviour
 {
     [SerializeField] private GameObject lockPosition;
@@ -15,8 +15,8 @@ public class Lock : MonoBehaviour
 
     int numOfLayers = 5;
     float layerSize = 0.7f;
-    DificultyModes[] layerDifficulty;
-    DificultyModes[] difficultyTypes = { DificultyModes.EASY, DificultyModes.NORMAL, DificultyModes.HARD};
+    DificultyLayerModes[] layerDifficulty;
+    DificultyLayerModes[] difficultyTypes = { DificultyLayerModes.EASY, DificultyLayerModes.NORMAL, DificultyLayerModes.HARD};
     int currentLayer;
 
     int numOfLockPicks = 1;
@@ -41,7 +41,7 @@ public class Lock : MonoBehaviour
 
     private void SetDifficultyLayers()
     {
-        layerDifficulty = new DificultyModes[numOfLayers]; 
+        layerDifficulty = new DificultyLayerModes[numOfLayers]; 
         for (int i = 0; i < numOfLayers; i++)
         {
             layerDifficulty[i] = difficultyTypes[Random.Range(0,3)];

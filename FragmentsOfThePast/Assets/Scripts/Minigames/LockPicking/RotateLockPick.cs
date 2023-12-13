@@ -31,14 +31,9 @@ public class RotateLockPick : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         Vector3 pivotToMouse = Input.mousePosition - pivotWorld;
         float currentRotationZ = -Mathf.Atan2(pivotToMouse.x, pivotToMouse.y) * Mathf.Rad2Deg;
 
-        // Precise Lock Pick
-        float rotationDelta = currentRotationZ - startRotationZ;
-        transform.Rotate(Vector3.forward, rotationDelta);
+        PreciseRotation(currentRotationZ);
 
-
-        // Funky LockPick
-        //Quaternion targetRotation = Quaternion.Euler(0f, 0f, currentRotationZ);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20.0f);
+        //FunkyRotation(currentRotationZ);
         
         startRotationZ = currentRotationZ;
 
@@ -48,6 +43,18 @@ public class RotateLockPick : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public void OnEndDrag(PointerEventData eventData)
     {
         rb.isKinematic = false;
+    }
+
+    void PreciseRotation(float currentRotation)
+    {
+        float rotationDelta = currentRotation - startRotationZ;
+        transform.Rotate(Vector3.forward, rotationDelta);
+    }
+
+    void FunkyRotation(float currentRotation)
+    {
+        Quaternion targetRotation = Quaternion.Euler(0f, 0f, currentRotation);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 20.0f);
     }
 
 }

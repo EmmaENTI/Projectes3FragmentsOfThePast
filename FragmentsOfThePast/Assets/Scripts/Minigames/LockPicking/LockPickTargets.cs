@@ -5,23 +5,43 @@ using UnityEngine.Rendering;
 
 public class LockPickTargets : MonoBehaviour
 {
-    [SerializeField] private Lock lockScript;
+    Lock lockScript;
 
-    [SerializeField] private GameObject skillCheckObject;
+    SkillCheck skillCheckScript;
+
+    GameObject lockObject;
+    GameObject skillCheckObject;
+
+    [SerializeField] LockPickingManager lockPickingManager;
 
     float timer = 0.0f;
     float timeToSpawnSkillCheck = 2.0f;
 
     private void Start()
     {
-        lockScript = GameObject.Find("Lock").GetComponent<Lock>();
+        lockPickingManager = GameObject.FindGameObjectWithTag("LockPickingManager").GetComponent<LockPickingManager>();
+        Debug.Log(lockPickingManager.name);
+        
+        lockObject = lockPickingManager.GetLockObject();
+        skillCheckObject = lockPickingManager.GetSkillCheckObject();
+
+
+        lockScript = lockPickingManager.GetLockComponent();
+        skillCheckScript = lockPickingManager.GetSkillCheckComponent();
     }
 
     private void Update()
     {
         if (timer > timeToSpawnSkillCheck)
         {
+            Destroy(lockPickingManager.GetLockObject().transform.GetChild(0).gameObject);
+            Destroy(lockObject.transform.GetChild(1).gameObject);
 
+            skillCheckScript.CreateSkillCheck();
+            lockPickingManager.ToggleView();
+            lockScript.SetNextLayerNum();
+
+            timer = 0.0f;
         }
     }
 
@@ -38,10 +58,6 @@ public class LockPickTargets : MonoBehaviour
         if (collision.name == "LayerTarget"+lockScript.GetNextLayerNum())
         {
             StartCoroutine(StartVibrating());
-
-            Destroy(collision.transform.parent.GetChild(collision.transform.GetSiblingIndex()-1).gameObject);
-            Destroy(collision.gameObject);
-            lockScript.SetNextLayerNum();
         }
     }
 
