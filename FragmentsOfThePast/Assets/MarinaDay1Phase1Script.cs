@@ -166,6 +166,50 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             case 5:
                 DialogueLine5();
                 break;
+
+            case 6:
+                DialogueLine6();
+                break;
+
+            case 7:
+                DialogueLine7();
+                break;
+
+            case 8:
+                DialogueLine8();
+                break;
+
+            case 9:
+                DialogueLine9();
+                break;
+
+            case 10:
+                DialogueLine10();
+                break;
+
+            case 11:
+                DialogueLine11();
+                break;
+
+            case 12:
+                DialogueLine12();
+                break;
+
+            case 13:
+                DialogueLine13();
+                break;
+
+            case 14:
+                DialogueLine14();
+                break;
+
+            case 15:
+                DialogueLine15();
+                break;
+
+            case 16:
+                DialogueLine16();
+                break;
         }
     }
 
@@ -253,7 +297,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             answerButtonsPanel.SetActive(false);
             playerIsAnswering = false;
             canTalk = true;
-            //dialogueLine = 63;
+            dialogueLine = 26;
             playSound1.playEffect();
         }
     }
@@ -266,7 +310,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             answerButtonsPanel.SetActive(false);
             playerIsAnswering = false;
             canTalk = true;
-            //dialogueLine = 65;
+            dialogueLine = 39;
             playSound1.playEffect();
         }
     }
@@ -276,8 +320,156 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         hasEndedTyping = false;
         spiritNameText.text = "Marina";
         texToToWrite = "Yay! I'm thrilled to have a guide like you!";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound1.playEffect();
+    }
+
+    private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "It's like having a personal memory detective.";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
+
+    private void DialogueLine7()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "We'll make a great team, and I promise, I've got the best jokes to keep us entertained along the way.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine8()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Serious) Oh no, please spare me from the dad-jokes, Marina. I'm allergic to puns.";
+        button2AnswerText.text = "(Friendly) You could say I am kind of a detective...";
+        button3AnswerText.text = "(Amused) What kind of jokes?";
+        playerIsAnswering = true;
+    }
+
+
+    public void DialogueLine8Answer1()
+    {
+        if (dialogueLine == 8)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine8Answer2()
+    {
+        if (dialogueLine == 8)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 12;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine8Answer3()
+    {
+        if (dialogueLine == 8)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 15;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine9()
+    {
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "We'll make a great team, and I promise, I've got the best jokes to keep us entertained along the way.";
+        bigSpiritImage.sprite = marinaAngry;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound1.playEffect();
+    }
+
+    private void DialogueLine10()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "But don't worry, I won't pester you with my bad jokes.";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine11()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Or maybe I will...?";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine12()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "You will be the cool mysterious detective...";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine13()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "And I will be the pretty but intelligent girl protagonist!";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine14()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I always wanted to be the protagonist of a \"Novela\"!";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine15()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Oh, you know, the kind that makes you groan and laugh at the same time! Dad jokes, puns...";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine16()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "    Gotta keep the spirits up, no pun intended...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+
+
 }
