@@ -73,11 +73,11 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     public Image bigSpiritImage;
 
     //Luis Emotions
-    public Sprite luisSuprise;
-    public Sprite luisSad;
-    public Sprite luisAngry;
-    public Sprite luisShy;
-    public Sprite luisHappy;
+    public Sprite marinaSurprise;
+    public Sprite marinaSad;
+    public Sprite marinaAngry;
+    public Sprite marinaShy;
+    public Sprite marinaHappy;
 
     //Sound 2
     [SerializeField] PlaySound playSound2;
@@ -154,6 +154,18 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             case 2:
                 DialogueLine2();
                 break;
+
+            case 3:
+                DialogueLine3();
+                break;
+
+            case 4:
+                DialogueLine4();
+                break;
+
+            case 5:
+                DialogueLine5();
+                break;
         }
     }
 
@@ -181,7 +193,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     {
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "omg 1";
+        texToToWrite = "You are Marina, if I recall correctly.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -189,8 +201,82 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "omg 2";
+        playSound2.playEffect();
+        spiritNameText.text = "Marina";
+        texToToWrite = "Oh, you do recall! You've got a good memory, huh?";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine3()
+    {
+        hasEndedTyping = false;
+        spiritNameText.text = "Marina";
+        texToToWrite = "Well, not that I have much to remember lately, but that's what you're here for, right?";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Friendly) Yeah! Here to help!";
+        button2AnswerText.text = "(Flirty) Are you always this bubbly, or is it just for me?";
+        button3AnswerText.text = "(Serious) Let's get down to business, Marina.";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine4Answer1()
+    {
+        if (dialogueLine == 4)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine4Answer2()
+    {
+        if (dialogueLine == 4)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            //dialogueLine = 63;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine4Answer3()
+    {
+        if (dialogueLine == 4)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            //dialogueLine = 65;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine5()
+    {
+        hasEndedTyping = false;
+        spiritNameText.text = "Marina";
+        texToToWrite = "Yay! I'm thrilled to have a guide like you!";
+        bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
