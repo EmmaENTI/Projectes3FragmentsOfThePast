@@ -17,6 +17,7 @@ public class StreetSpiritManager : MonoBehaviour
     [SerializeField] GameObject consultaPanel;
 
     [SerializeField] LuisDay1Phase1Script luisDay1Phase1Script;
+    [SerializeField] MarinaDay1Phase1Script marinaDay1Phase1Script;
 
     [SerializeField] PlaySound playSound;
 
@@ -26,26 +27,30 @@ public class StreetSpiritManager : MonoBehaviour
     //Funcion de Seleccionar Espiritu en la calle
     public void SelectSpirit()
     {
-            //El spiritNumber del game manager = al spirit number del espiritu seleccionado
-            gameManager_Script.spiritNumber = spiritNumber;
+        //El spiritNumber del game manager = al spirit number del espiritu seleccionado
+        gameManager_Script.spiritNumber = spiritNumber;
 
-            //LLamara la funcion SpiritSelectedFunction del game manager
-            gameManager_Script.SpiritSelectedFunction();
+        //LLamara la funcion SpiritSelectedFunction del game manager
+        gameManager_Script.SpiritSelectedFunction();
 
-            //Desactivar el street panel
-            streetPanel.SetActive(false);
+        //Desactivar el street panel
+        streetPanel.SetActive(false);
 
-            //Activar al consulta panel
-            consultaPanel.SetActive(true);
+        //Activar al consulta panel
+        consultaPanel.SetActive(true);
 
-            playSound.playEffect();
+        playSound.playEffect();
 
-            audioSource.enabled = false;
-            audioSource.clip = consultaTheme;
-            audioSource.enabled = true;
- 
-           luisDay1Phase1Script.canStartDialogue = false;
-           luisDay1Phase1Script.canTalk = true;  
+        audioSource.enabled = false;
+        audioSource.clip = consultaTheme;
+        audioSource.enabled = true;
 
+        //Luis Day1Phase1
+        //luisDay1Phase1Script.canStartDialogue = false;
+        //luisDay1Phase1Script.canTalk = true;
+
+        //Marina Day1Phase1
+        marinaDay1Phase1Script.canStartDialogue = false;
+        marinaDay1Phase1Script.canTalk = true;
     }
 }
