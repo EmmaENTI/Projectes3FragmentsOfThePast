@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 31479696}
   - component: {fileID: 31479695}
   m_Layer: 5
-  m_Name: Bruno In Street
+  m_Name: BrunoStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ RectTransform:
   m_GameObject: {fileID: 31479693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1344272222}
@@ -245,7 +245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296.47, y: -0.28931}
+  m_AnchoredPosition: {x: -215, y: -206}
   m_SizeDelta: {x: 592.9431, y: 1062}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31479695
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31479693}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62c1a44e4e632414baceff0a75d2ced5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1080e2b8f63d4045b6c68d30b4f3c14, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -6428,7 +6428,7 @@ GameObject:
   - component: {fileID: 1189887442}
   - component: {fileID: 1189887441}
   m_Layer: 5
-  m_Name: Marina In Street
+  m_Name: MarinaStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6451,7 +6451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 592, y: -81.56701}
+  m_AnchoredPosition: {x: -661, y: -153}
   m_SizeDelta: {x: 538.0699, y: 946.0302}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189887441
@@ -6551,9 +6551,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e2595b37954795489267464809ba222, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8533d2c81b413c644b5173e16233c59f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9203,7 +9203,7 @@ GameObject:
   - component: {fileID: 1558788634}
   - component: {fileID: 1558788633}
   m_Layer: 5
-  m_Name: Carmen In Street
+  m_Name: CarmenStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9218,7 +9218,7 @@ RectTransform:
   m_GameObject: {fileID: 1558788631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1344272222}
@@ -9226,7 +9226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -695.0197, y: -67.33294}
+  m_AnchoredPosition: {x: 149, y: -200}
   m_SizeDelta: {x: 529.96, y: 945.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558788633
@@ -9313,7 +9313,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558788631}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -9326,9 +9326,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6036c914dfe3ec043b663278707007c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 842e04c0b5f8cdb4f964f91a75ec8503, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -10981,7 +10981,7 @@ GameObject:
   - component: {fileID: 1759008382}
   - component: {fileID: 1759008381}
   m_Layer: 5
-  m_Name: Luis In Street
+  m_Name: LuisStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11004,7 +11004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89.653, y: -5.8532}
+  m_AnchoredPosition: {x: 815, y: -92}
   m_SizeDelta: {x: 576.04, y: 1050.8699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759008381
@@ -11104,9 +11104,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 180dcb22d2a328548b3677daa72d13bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f6063342e5d0624499243f9b0e2098d, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -11972,7 +11972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2052982956
 RectTransform:
   m_ObjectHideFlags: 0
