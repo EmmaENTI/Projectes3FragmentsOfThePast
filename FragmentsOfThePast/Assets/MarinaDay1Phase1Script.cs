@@ -210,6 +210,30 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             case 16:
                 DialogueLine16();
                 break;
+
+            case 17:
+                DialogueLine17();
+                break;
+
+            case 18:
+                DialogueLine18();
+                break;
+
+            case 19:
+                DialogueLine19();
+                break;
+
+            case 20:
+                DialogueLine20();
+                break;
+
+            case 21:
+                DialogueLine21();
+                break;
+
+            case 22:
+                DialogueLine22();
+                break;
         }
     }
 
@@ -248,7 +272,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         playSound2.playEffect();
         spiritNameText.text = "Marina";
         texToToWrite = "Oh, you do recall! You've got a good memory, huh?";
-        bigSpiritImage.sprite = marinaSurprise;
+        bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -400,7 +424,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "We'll make a great team, and I promise, I've got the best jokes to keep us entertained along the way.";
+        texToToWrite = "Oh, come on! Dad jokes are a classic!";
         bigSpiritImage.sprite = marinaAngry;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -464,12 +488,102 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     private void DialogueLine16()
     {
         hasEndedTyping = false;
-        texToToWrite = "    Gotta keep the spirits up, no pun intended...";
+        texToToWrite = "Gotta keep the spirits up, no pun intended...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine17()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+        button1AnswerText.text = "(Amused) Give me your best one!";
+        button2AnswerText.text = "(Friendly) Seeing the quality of that one, I prefer not hearing more.";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine17Answer1()
+    {
+        if (dialogueLine == 17)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine17Answer2()
+    {
+        if (dialogueLine == 17)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 23;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine18()
+    {
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Get ready, this one could even be traumatizing.";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound1.playEffect();
+    }
+
+
+    private void DialogueLine19()
+    {
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Why don't oysters donate to charity?";
+        bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
 
+    private void DialogueLine20()
+    {
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "...";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
 
+    private void DialogueLine21()
+    {
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Because they're shellfish!";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound1.playEffect();
+    }
+
+    private void DialogueLine22()
+    {
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "I know, that one was a hard pill to swallow...";
+        bigSpiritImage.sprite = marinaShy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
 
 }

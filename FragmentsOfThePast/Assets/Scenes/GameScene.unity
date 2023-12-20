@@ -2162,6 +2162,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine4Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine8Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine17Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &436944197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,6 +3433,30 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079310}
         m_TargetAssemblyTypeName: LuisDay1Phase1Script, Assembly-CSharp
         m_MethodName: DialogueLine104Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine4Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine8Answer3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8793,6 +8853,42 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079310}
         m_TargetAssemblyTypeName: LuisDay1Phase1Script, Assembly-CSharp
         m_MethodName: DialogueLine104Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine4Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine8Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine17Answer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
