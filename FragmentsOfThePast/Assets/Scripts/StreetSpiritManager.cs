@@ -18,6 +18,7 @@ public class StreetSpiritManager : MonoBehaviour
 
     [SerializeField] LuisDay1Phase1Script luisDay1Phase1Script;
     [SerializeField] MarinaDay1Phase1Script marinaDay1Phase1Script;
+    [SerializeField] BrunoDay1Phase1Script brunoDay1Phase1Script;
 
     [SerializeField] PlaySound playSound;
 
@@ -50,7 +51,11 @@ public class StreetSpiritManager : MonoBehaviour
        // luisDay1Phase1Script.canTalk = true;
 
         //Marina Day1Phase1
-        marinaDay1Phase1Script.canStartDialogue = false;
-        marinaDay1Phase1Script.canTalk = true;
+       // marinaDay1Phase1Script.canStartDialogue = false;
+       // marinaDay1Phase1Script.canTalk = true;
+
+        //Bruno Day1Phase1
+        brunoDay1Phase1Script.canStartDialogue = false;
+        brunoDay1Phase1Script.canTalk = true;
     }
 }
