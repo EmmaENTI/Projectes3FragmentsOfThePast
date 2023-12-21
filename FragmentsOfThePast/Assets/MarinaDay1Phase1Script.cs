@@ -363,6 +363,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     private void DialogueLine0()
     {
         textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));

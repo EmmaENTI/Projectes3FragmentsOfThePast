@@ -152,31 +152,31 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 break;
 
             case 2:
-               // DialogueLine2();
+                DialogueLine2();
                 break;
 
             case 3:
-               // DialogueLine3();
+                DialogueLine3();
                 break;
 
             case 4:
-               // DialogueLine4();
+                DialogueLine4();
                 break;
 
             case 5:
-               // DialogueLine5();
+                DialogueLine5();
                 break;
 
             case 6:
-               // DialogueLine6();
+                DialogueLine6();
                 break;
 
             case 7:
-                // DialogueLine7();
+                 DialogueLine7();
                 break;
 
             case 8:
-                // DialogueLine8();
+                 DialogueLine8();
                 break;
 
             case 9:
@@ -363,6 +363,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
     private void DialogueLine0()
     {
         textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
@@ -372,11 +373,127 @@ public class BrunoDay1Phase1Script : MonoBehaviour
     private void DialogueLine1()
     {
         textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Bruno, am I right?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
+    private void DialogueLine2()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Uh, yeah. That's me.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
 
+    private void DialogueLine3()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Nice to meet you, Bruno.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "You too.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine5()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Friendly) Hey, no need to feel nervous.";
+        button2AnswerText.text = "(Flirty) You're the mysterious and quiet type, Bruno. I like that.";
+        button3AnswerText.text = "(Serious) Let's get down to business, Bruno.";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine5Answer1()
+    {
+        if (dialogueLine == 5)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine5Answer2()
+    {
+        if (dialogueLine == 5)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 31;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine5Answer3()
+    {
+        if (dialogueLine == 5)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 44;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine6()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Nervous? I'm not...";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoSuprise;
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "...";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoSuprise;
+        canTalk = false;
+    }
+
+    private void DialogueLine8()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Yeah, okay, maybe a bit.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
 }
