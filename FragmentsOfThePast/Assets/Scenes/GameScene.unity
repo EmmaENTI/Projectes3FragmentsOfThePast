@@ -2260,6 +2260,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &436944197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3568,6 +3592,30 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079312}
         m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
         m_MethodName: DialogueLine9Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9072,6 +9120,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1517489193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9761,7 +9833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aef34e2db8ff1e429aaa06d774d0dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigImageSprite: {fileID: 21300000, guid: 62c1a44e4e632414baceff0a75d2ced5, type: 3}
+  bigImageSprite: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
   isActive: 1
   spiritName: Bruno
   spiritNumber: 0
