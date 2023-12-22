@@ -425,6 +425,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine3()
@@ -435,6 +436,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         texToToWrite = "Nice to meet you, Bruno.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine4()
@@ -446,6 +448,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine5()
@@ -698,6 +701,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine18()
@@ -763,6 +767,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         texToToWrite = "Hey, Bruno, I am here to help, it is literally my mission.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine24()
@@ -784,6 +789,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoSuprise;
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine26()
@@ -976,7 +982,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
-        texToToWrite = "Specially if the one that notices is someone like you, " + gameManager_Script.playerName + "";
+        texToToWrite = "Specially if the one that notices is someone like you, " + gameManager_Script.playerName + ".";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
         canTalk = false;
@@ -1131,6 +1137,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         texToToWrite = "Hey, don't worry Bruno, I am here to help, not to judge anyone, it is my mission after all...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
 
@@ -1195,6 +1202,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         texToToWrite = "Oh, come on, Bruno! Everyone has some idea of a perfect date, even if it's just in their imagination.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine56()
@@ -1216,6 +1224,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine58()

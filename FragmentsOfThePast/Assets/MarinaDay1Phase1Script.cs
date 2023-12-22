@@ -377,6 +377,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         texToToWrite = "You are Marina, if I recall correctly.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        canTalk = false;
     }
 
     private void DialogueLine2()
@@ -460,7 +461,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine6()
@@ -541,7 +541,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaAngry;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine10()
@@ -628,7 +627,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
         }
     }
 
@@ -641,7 +639,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine = 23;
-            playSound1.playEffect();
         }
     }
 
@@ -653,7 +650,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
 
@@ -676,6 +672,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine21()
@@ -686,7 +683,8 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
+        playSound2.playEffect();
+
     }
 
     private void DialogueLine22()
@@ -707,14 +705,13 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine24()
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "Your vibes are pretty good too, " + gameManager_Script.playerName;
+        texToToWrite = "Your vibes are pretty good too, " + gameManager_Script.playerName + ".";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -737,7 +734,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine27()
@@ -781,7 +777,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
         }
     }
 
@@ -794,7 +789,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine = 33;
-            playSound1.playEffect();
         }
     }
 
@@ -807,7 +801,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine = 36;
-            playSound1.playEffect();
         }
     }
 
@@ -819,14 +812,13 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaShy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine31()
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "You're making me feel all fluttery inside, " + gameManager_Script.playerName;
+        texToToWrite = "You're making me feel all fluttery inside, " + gameManager_Script.playerName + ".";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -849,7 +841,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
 
@@ -857,7 +848,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "Your vibes are pretty good too, " + gameManager_Script.playerName;
+        texToToWrite = "Your vibes are pretty good too, " + gameManager_Script.playerName + ".";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -881,7 +872,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine37()
@@ -898,7 +888,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "Thanks for the cute compliments, " + gameManager_Script.playerName;
+        texToToWrite = "Thanks for the cute compliments, " + gameManager_Script.playerName + ".";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -912,14 +902,13 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSad;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine40()
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "But sure, let's get down to it. What do you want to know? I'm ready for the serious talk, " +gameManager_Script.playerName;
+        texToToWrite = "But sure, let's get down to it. What do you want to know? I'm ready for the serious talk, " +gameManager_Script.playerName + ".";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -985,7 +974,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine43()
@@ -1015,7 +1003,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine46()
@@ -1045,7 +1032,6 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaShy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        playSound1.playEffect();
     }
 
     private void DialogueLine49()
@@ -1062,7 +1048,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     {
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "I am excited to see how you work your magic stuff, " + gameManager_Script.playerName;
+        texToToWrite = "I am excited to see how you work your magic stuff, " + gameManager_Script.playerName + ".";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;

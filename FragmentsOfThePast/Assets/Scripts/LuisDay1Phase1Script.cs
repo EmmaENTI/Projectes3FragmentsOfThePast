@@ -693,13 +693,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine2()
     {
-        playSound2.playEffect();
         hasEndedTyping = false;
         spiritNameText.text = "Luis";
         bigSpiritImage.sprite = luisSuprise;
         texToToWrite = "Well, hello there, living friend! Or should I say, the mysterious spirit guide who's caught my attention...?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine3()
@@ -723,8 +723,8 @@ public class LuisDay1Phase1Script : MonoBehaviour
     {
         dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
-        button1AnswerText.text = "(Flirty)Afterlife is a lot better now that you're here.";
-        button2AnswerText.text = "(Witty)  How's it treating you?";
+        button1AnswerText.text = "(Flirty) Afterlife is a lot better now that you're here.";
+        button2AnswerText.text = "(Witty) How's it treating you?";
         button3AnswerText.text = "(Friendly) As good as possible! And how do you feel?";
         playerIsAnswering = true;
     }
@@ -1322,22 +1322,23 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "Well, let's get to the important part, shall we?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();    
     }
 
     private void DialogueLine52()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisSuprise;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Important part, you say? I'm all ears, " + gameManager_Script.playerName;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine53()
     {
-        spiritNameText.text = gameManager_Script.playerName;
+        spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Lay it on me, and let's see if we can spice up this conversation even more.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1346,12 +1347,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine54()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Let's start by talking about any fragments of memories you might have!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine55()
@@ -1372,13 +1373,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine57()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Concentrate on smells, sounds, and feelings, huh?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine58()
@@ -1451,12 +1452,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine61()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, did you ever find yourself surrounded by messy spaces, having a penchant for laziness...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine62()
@@ -1470,12 +1471,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine63()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Did you have a penchant for knowledge and intellect, Luis?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine64()
@@ -1488,12 +1489,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine65()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, were you the goofball who could turn any situation into a joke, the creative mind who found joy in thinking outside the box...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine66()
@@ -1506,13 +1507,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine67()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisSad;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Messy spaces, laziness, and geeky pursuits? Now that's a combination that doesn't quite fit the bill.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine68()
@@ -1525,13 +1526,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine69()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Knowledge and intellect, huh?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine70()
@@ -1552,13 +1553,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine72()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisSuprise;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = gameManager_Script.playerName+ ", you've hit the nail on the head!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine73()
@@ -1649,7 +1650,6 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine78()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, did you find yourself torn between darker inclinations and a desire to do good?";
@@ -1667,7 +1667,6 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine80()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, when it came to your approach to life, were you a mix of childlike wonder, a touch of snobbery...";
@@ -1686,13 +1685,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine82()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisSad;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Now, that's a combination. I can feel the tug at my emotions.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine83()
@@ -1714,13 +1713,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
         
     private void DialogueLine85()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisSad;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Darker inclinations, a desire for good, and valuing independence?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine86()
@@ -1742,13 +1741,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine88()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Childlike wonder, a touch of snobbery, and a drive for perfection?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine89()
@@ -1777,12 +1776,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine92()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Alright! That is enough; I cannot absorb more essence!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine93()
@@ -1795,13 +1794,13 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine94()
     {
-        playSound2.playEffect();
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Partial memories, huh? Mystery guide, you're like a puzzle solver in this sea of amnesia.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine95()
@@ -1814,12 +1813,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine96()
     {
-        playSound2.playEffect();
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "I really hope I can fix all of this mess before Dia de Muertos...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine97()
@@ -1832,12 +1831,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine98()
     {
-        playSound2.playEffect();
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Before Dia de los Muertos, huh? Well, mystery guide, no pressure, but I'm kind of looking forward to seeing what you come up with.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        playSound2.playEffect();
     }
 
     private void DialogueLine99()
