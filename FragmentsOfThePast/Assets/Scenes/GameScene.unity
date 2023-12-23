@@ -8476,7 +8476,7 @@ RectTransform:
   m_GameObject: {fileID: 1496596828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88565939}
@@ -8484,8 +8484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000004544, y: -370}
-  m_SizeDelta: {x: 1300, y: 275}
+  m_AnchoredPosition: {x: -16, y: -341}
+  m_SizeDelta: {x: 1760, y: 527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496596830
 MonoBehaviour:
@@ -8507,7 +8507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b2730550ea23ff45af69aebbe50af76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10669,18 +10669,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687121063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.041229896, w: 0.9991497}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88565939}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.726}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429.83722, y: -313}
-  m_SizeDelta: {x: 370.8398, y: 135.9981}
+  m_AnchoredPosition: {x: -412, y: -218}
+  m_SizeDelta: {x: 248.2956, y: 53.8613}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687121065
 MonoBehaviour:
@@ -10702,7 +10702,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spirit Name
+  m_text: 'Spirit '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 162d6ffe6148d7c4e85572522d1e836b, type: 2}
   m_sharedMaterial: {fileID: -587633251869696030, guid: 162d6ffe6148d7c4e85572522d1e836b, type: 2}
@@ -10736,8 +10736,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10768,7 +10768,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1687121066
@@ -12681,6 +12681,7 @@ MonoBehaviour:
   button3AnswerText: {fileID: 439539435}
   textPanelImage: {fileID: 1496596830}
   TextPanelNormalSprite: {fileID: 21300000, guid: 5c4e8e4ad16e6404ba6422b861d1842f, type: 3}
+  TextPanelLuisSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   bigSpiritImage: {fileID: 632314263}
   luisSuprise: {fileID: 21300000, guid: a3b0d343272ace54f99c0bd265a8c136, type: 3}
   luisSad: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
@@ -12803,8 +12804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -393.3422}
-  m_SizeDelta: {x: 1200, y: 202.6333}
+  m_AnchoredPosition: {x: -8.546595, y: -393.3422}
+  m_SizeDelta: {x: 1101.2288, y: 202.6333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123327055
 MonoBehaviour:

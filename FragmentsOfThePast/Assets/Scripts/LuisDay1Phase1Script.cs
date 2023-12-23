@@ -70,6 +70,9 @@ public class LuisDay1Phase1Script : MonoBehaviour
     //Sprite de Normal Text Panel
     [SerializeField] Sprite TextPanelNormalSprite;
 
+    //Sprite de Luis Text Panel
+    [SerializeField] Sprite TextPanelLuisSprite;
+
     //Spirit Image
     public Image bigSpiritImage;
 
@@ -684,6 +687,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine1()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
         texToToWrite = "Luis, right? Can you tell me a bit about yourself?";
@@ -693,6 +697,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine2()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         spiritNameText.text = "Luis";
         bigSpiritImage.sprite = luisSuprise;
@@ -788,6 +793,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine8()
     {
+
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Afterlife is pretty damn boring, parties around here are...Pretty dead. Get it?";

@@ -47,12 +47,12 @@ public class StreetSpiritManager : MonoBehaviour
         audioSource.enabled = true;
 
         //Luis Day1Phase1
-        //luisDay1Phase1Script.canStartDialogue = false;
-        //luisDay1Phase1Script.canTalk = true;
+        luisDay1Phase1Script.canStartDialogue = false;
+        luisDay1Phase1Script.canTalk = true;
 
         //Marina Day1Phase1
-        marinaDay1Phase1Script.canStartDialogue = false;
-        marinaDay1Phase1Script.canTalk = true;
+        //marinaDay1Phase1Script.canStartDialogue = false;
+        //marinaDay1Phase1Script.canTalk = true;
 
         //Bruno Day1Phase1
         //brunoDay1Phase1Script.canStartDialogue = false;
