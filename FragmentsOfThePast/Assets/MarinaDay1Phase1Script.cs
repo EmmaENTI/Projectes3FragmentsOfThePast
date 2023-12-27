@@ -69,6 +69,9 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     //Sprite de Normal Text Panel
     [SerializeField] Sprite TextPanelNormalSprite;
 
+    //Sprite de Luis Text Panel
+    [SerializeField] Sprite TextPanelMarinaSprite;
+
     //Spirit Image
     public Image bigSpiritImage;
 
@@ -372,6 +375,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine1()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
         texToToWrite = "You are Marina, if I recall correctly.";
@@ -382,6 +386,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine2()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         playSound2.playEffect();
         spiritNameText.text = "Marina";
@@ -393,6 +398,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine3()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         spiritNameText.text = "Marina";
         texToToWrite = "Well, not that I have much to remember lately, but that's what you're here for, right?";
@@ -455,6 +461,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine5()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         spiritNameText.text = "Marina";
         texToToWrite = "Yay! I'm thrilled to have a guide like you!";
@@ -465,6 +472,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine6()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "It's like having a personal memory detective.";
         bigSpiritImage.sprite = marinaHappy;
@@ -474,6 +482,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine7()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "We'll make a great team, and I promise, I've got the best jokes to keep us entertained along the way.";
         StartCoroutine(TypeText(texToToWrite));
@@ -535,6 +544,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine9()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Oh, come on! Dad jokes are a classic!";
@@ -545,6 +555,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine10()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "But don't worry, I won't pester you with my bad jokes.";
         bigSpiritImage.sprite = marinaHappy;
@@ -554,6 +565,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine11()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "Or maybe I will...?";
         bigSpiritImage.sprite = marinaHappy;
@@ -563,6 +575,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine12()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "You will be the cool mysterious detective...";
         bigSpiritImage.sprite = marinaSurprise;
@@ -572,6 +585,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine13()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "And I will be the pretty but intelligent girl protagonist!";
         bigSpiritImage.sprite = marinaHappy;
@@ -581,6 +595,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine14()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "I always wanted to be the protagonist of a \"Novela\"!";
         bigSpiritImage.sprite = marinaSurprise;
@@ -590,6 +605,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine15()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "Oh, you know, the kind that makes you groan and laugh at the same time! Dad jokes, puns...";
         bigSpiritImage.sprite = marinaHappy;
@@ -599,6 +615,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine16()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         hasEndedTyping = false;
         texToToWrite = "Gotta keep the spirits up, no pun intended...";
         StartCoroutine(TypeText(texToToWrite));
@@ -644,6 +661,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine18()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Get ready, this one could even be traumatizing.";
@@ -655,6 +673,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine19()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Why don't oysters donate to charity?";
@@ -666,6 +685,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine20()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "...";
@@ -677,6 +697,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine21()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Because they're shellfish!";
@@ -689,6 +710,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine22()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "I know, that one was a hard pill to swallow...";
@@ -699,6 +721,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine23()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Aw, thanks!";
@@ -709,6 +732,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine24()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Your vibes are pretty good too, " + gameManager_Script.playerName + ".";
@@ -719,6 +743,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine25()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "I'm just here to spread joy, you know?";
@@ -728,6 +753,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine26()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Well, aren't you a smooth talker!";
@@ -738,6 +764,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine27()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Well, um, maybe a bit of both?";
@@ -748,6 +775,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine28()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "I can be bubbly for everyone, but for you, mystery guide, I can turn it up a notch.";
@@ -806,6 +834,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine30()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Aww, thanks!";
@@ -816,6 +845,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine31()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "You're making me feel all fluttery inside, " + gameManager_Script.playerName + ".";
@@ -825,6 +855,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine32()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "If my jokes don't make you smile, my blushing probably will!";
@@ -835,6 +866,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine33()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Aww, thanks!";
@@ -846,6 +878,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine34()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Your vibes are pretty good too, " + gameManager_Script.playerName + ".";
@@ -856,6 +889,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine35()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "I'm just here to spread joy, you know?";
@@ -866,6 +900,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine36()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Cute? Really?";
@@ -876,6 +911,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine37()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Well, if being a bit shy gets me some attention, I guess it's not so bad.";
@@ -886,6 +922,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine38()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Thanks for the cute compliments, " + gameManager_Script.playerName + ".";
@@ -896,6 +933,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine39()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Serious business? Oh, you're no fun!";
@@ -906,6 +944,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine40()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "But sure, let's get down to it. What do you want to know? I'm ready for the serious talk, " +gameManager_Script.playerName + ".";
@@ -968,6 +1007,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine42()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Oh, about me? Well, let me think...";
@@ -978,6 +1018,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine43()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Let me tell you, I might not remember much, but I know one thing for sure—I love laughing, having a good time, and....";
@@ -988,6 +1029,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine44()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Oh, the sea! There's something magical about the waves, don't you think?";
@@ -997,6 +1039,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine45()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "You're right! Serious can be fun too!";
@@ -1007,6 +1050,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine46()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "It's just... well, serious situations make me a bit tense sometimes.";
@@ -1016,6 +1060,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine47()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Maybe I am just too childish sometimes!";
@@ -1026,6 +1071,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine48()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "Gotcha, didn't I?";
@@ -1036,6 +1082,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine49()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "But, you know, I can be serious when I need to... like, when it involves getting back my memories and stuff!";
@@ -1046,6 +1093,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine50()
     {
+        textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
         texToToWrite = "I am excited to see how you work your magic stuff, " + gameManager_Script.playerName + ".";

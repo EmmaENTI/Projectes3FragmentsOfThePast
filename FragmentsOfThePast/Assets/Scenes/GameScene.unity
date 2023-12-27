@@ -12721,7 +12721,8 @@ MonoBehaviour:
   button2AnswerText: {fileID: 1682963170}
   button3AnswerText: {fileID: 439539435}
   textPanelImage: {fileID: 1496596830}
-  TextPanelNormalSprite: {fileID: 21300000, guid: 5c4e8e4ad16e6404ba6422b861d1842f, type: 3}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: 63624fe11e716354681ca2d3cd49d096, type: 3}
   bigSpiritImage: {fileID: 632314263}
   marinaSurprise: {fileID: 21300000, guid: a2cd9a5aff71a43458a1ca2685fc8fdf, type: 3}
   marinaSad: {fileID: 21300000, guid: c66e684420090a54780380ff3c048709, type: 3}
