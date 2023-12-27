@@ -709,6 +709,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine3()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Luis at your service. If I had known the afterlife came with a charming host, I might have kicked the bucket sooner.";
         StartCoroutine(TypeText(texToToWrite));
@@ -717,6 +718,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine4()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "How's the afterlife treating you, sweetheart?";
@@ -775,6 +777,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine6()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         spiritNameText.text = "Luis";
@@ -785,6 +788,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine7()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "By interesting, I mean actually having some purpose...";
         StartCoroutine(TypeText(texToToWrite));
@@ -793,7 +797,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine8()
     {
-
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Afterlife is pretty damn boring, parties around here are...Pretty dead. Get it?";
@@ -852,6 +856,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine10()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Well, aren't you a breath of fresh air in this afterlife mystery? No time to waste, huh?";
         StartCoroutine(TypeText(texToToWrite));
@@ -860,6 +865,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine11()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I like that. When this whole memory-retrieving gig is wrapped up, I'm all in for making the afterlife parties more interesting...";
         StartCoroutine(TypeText(texToToWrite));
@@ -868,6 +874,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine12()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Especially with someone as intriguing as you. Count on it, mystery guide.";
         StartCoroutine(TypeText(texToToWrite));
@@ -876,6 +883,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine13()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "You'd think, right? But no, it's all so predictable. Same old spirits, same old stories...";
@@ -885,6 +893,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine14()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSad;
         hasEndedTyping = false;
         texToToWrite = "Parties in the afaterlife are like a deck of cards without any aces.";
@@ -894,6 +903,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine15()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "That's until you showed up, mystery guide. Now, maybe, just maybe, we can add a joker to this deck and shake things up a bit.";
@@ -903,6 +913,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine16()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Ah, come on! You've got to admit, even in the afterlife, a good pun can bring some life to the party.";
@@ -912,6 +923,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine17()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Well, metaphorical life, at least. What's the fun in a party without a few groans and eye rolls, right?";
         StartCoroutine(TypeText(texToToWrite));
@@ -920,6 +932,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine18()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Oh, you've got a wit to match mine, I see.";
@@ -929,6 +942,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine19()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Death's treating me like a mystery, but with you around, it's at least a fresh mystery...";
         StartCoroutine(TypeText(texToToWrite));
@@ -938,6 +952,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine20()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "\"Chisme\" is limited in the afterlife, you are a free source of it!";
@@ -996,6 +1011,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine22()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Oh," + gameManager_Script.playerName+ ", don't sell yourself short.";
@@ -1005,6 +1021,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine23()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I've got a feeling there's more to you than meets the eye.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1013,6 +1030,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine24()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "You got something special... Apart from the whole \"I am alive in the dead realm and summoned by God to fix all this mess\"...";
@@ -1022,6 +1040,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine25()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Plenty of 'Chisme,' you say? Now, you've piqued my interest.";
@@ -1031,6 +1050,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine26()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Spill the tea, my friend!";
         StartCoroutine(TypeText(texToToWrite));
@@ -1039,6 +1059,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine27()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "What's the juiciest story you've got?";
@@ -1088,6 +1109,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine29()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Now, that's what I'm talking about!";
@@ -1097,6 +1119,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine30()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "A story with flair and unexpected turns... " + gameManager_Script.playerName+ ", this \"Chisme\" made my day better!";
         StartCoroutine(TypeText(texToToWrite));
@@ -1105,6 +1128,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine31()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Bravo, spirit guide, you've got a talent for storytelling.";
@@ -1114,6 +1138,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine32()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Playing hard to get, huh? I like it.";
@@ -1123,6 +1148,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine33()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "The silent type, the one with the mysterious smile.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1131,6 +1157,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine34()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "You're keeping me on my toes, " + gameManager_Script.playerName+".";
@@ -1140,6 +1167,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine35()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "No \"Chisme\" fan, I see.";
@@ -1149,6 +1177,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine36()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Fair enough, " + gameManager_Script.playerName+".";
         StartCoroutine(TypeText(texToToWrite));
@@ -1157,6 +1186,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine37()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "We'll stick to the essentials, and if you ever change your mind, I'll be here with an open ear.";
@@ -1166,6 +1196,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine38()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSad;
         hasEndedTyping = false;
         texToToWrite = "Feeling? Well, I'm feeling like I've been dealt a hand I didn't sign up for...";
@@ -1175,6 +1206,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine39()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "But hey, that's life... or should I say, death?";
@@ -1184,6 +1216,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine40()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Death's a gamble, after all, might as well enjoy the ride!";
         StartCoroutine(TypeText(texToToWrite));
@@ -1244,6 +1277,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine42()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Make it better, huh? So cute, really.";
@@ -1253,6 +1287,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine43()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I like your style, "+ gameManager_Script.playerName+".";
         StartCoroutine(TypeText(texToToWrite));
@@ -1261,6 +1296,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine44()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Let's turn this hand into a winning one together!";
@@ -1270,6 +1306,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine45()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Worst pun? Ouch! I'll give you that one, " + gameManager_Script.playerName + ".";
@@ -1279,6 +1316,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine46()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "But admit it, you chuckled a bit. Life... or death... can't resist a good pun. But...";
         StartCoroutine(TypeText(texToToWrite));
@@ -1287,6 +1325,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine47()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "I guess I'll have to up my pun game to keep up with you.";
@@ -1296,6 +1335,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine48()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         hasEndedTyping = false;
         texToToWrite = "Apart from lost memories? You've got a knack for getting to the heart of things.";
@@ -1305,15 +1345,17 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine49()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSad;
         hasEndedTyping = false;
         texToToWrite = "Well, there's the whole being dead thing and... Let's just say I've got my reasons, but I'm not one to dwell.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-    }
+    }   
 
     private void DialogueLine50()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Onward to more interesting discussions, perhaps?";
@@ -1323,6 +1365,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine51()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Well, let's get to the important part, shall we?";
@@ -1333,6 +1376,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine52()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1344,6 +1388,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine53()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Lay it on me, and let's see if we can spice up this conversation even more.";
@@ -1353,6 +1398,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine54()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Let's start by talking about any fragments of memories you might have!";
@@ -1363,6 +1409,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine55()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "I will ask you different questions, and while I ask, you should try to really concentrate on smells, sounds, feelings that you may remember...";
         StartCoroutine(TypeText(texToToWrite));
@@ -1371,6 +1418,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine56()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "This will allow me to understand you better, and that way, I will combine fragment orbs to create a memory essence orb.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1379,6 +1427,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine57()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1390,6 +1439,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine58()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "You sound like those ASMR Youtube videos, "+ gameManager_Script.playerName;
         StartCoroutine(TypeText(texToToWrite));
@@ -1398,6 +1448,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine59()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "But I ain't complaining! Hit me with your questions, and let's see if we can stir up some fragments in this old head of mine.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1458,6 +1509,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine61()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, did you ever find yourself surrounded by messy spaces, having a penchant for laziness...";
@@ -1468,6 +1520,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine62()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "And perhaps indulging in geeky interests like gaming or tech gadgets?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1477,6 +1530,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine63()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Did you have a penchant for knowledge and intellect, Luis?";
@@ -1487,6 +1541,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine64()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "Were you the type to bury yourself in books, always seeking to expand your mind and achieve ambitious goals?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1495,6 +1550,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine65()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, were you the goofball who could turn any situation into a joke, the creative mind who found joy in thinking outside the box...";
@@ -1505,6 +1561,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine66()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "And the outgoing soul who never shied away from making new connections?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1513,6 +1570,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine67()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSad;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1524,6 +1582,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine68()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I can't picture myself being a slob or lazy, but the geeky side? I'm not ruling it out entirely, but it feels a bit off. Maybe my memory is playing tricks on me...";
         StartCoroutine(TypeText(texToToWrite));
@@ -1532,6 +1591,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine69()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1543,6 +1603,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine70()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Well, I can't say I remember diving into books, but the idea of ambitious goals? That rings a bell.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1551,6 +1612,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine71()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I must have been up to something big.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1559,6 +1621,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine72()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSuprise;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1570,6 +1633,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine73()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I might not remember the specifics, but being the one who brings laughter, thinks creatively, and never turns down a chance to connect?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1579,6 +1643,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine74()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "That sounds like the Luis I'd want to be.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1639,6 +1704,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine76()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, in matters of the heart and family, were you a passionate romantic, deeply connected to your family...";
@@ -1648,6 +1714,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine77()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "... But also prone to bursts of fiery temper?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1656,6 +1723,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine78()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, did you find yourself torn between darker inclinations and a desire to do good?";
@@ -1665,6 +1733,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine79()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "Were you the kind of person who valued your independence and tended to be a bit of a loner?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1673,6 +1742,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine80()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Luis, when it came to your approach to life, were you a mix of childlike wonder, a touch of snobbery...";
@@ -1682,6 +1752,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine81()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "And a drive for perfection in everything you pursued?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1691,6 +1762,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine82()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSad;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1702,6 +1774,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine83()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Family... That is very locked away, my head hurts when trying to remember them";
         StartCoroutine(TypeText(texToToWrite));
@@ -1710,6 +1783,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine84()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "Passionate and with a fiery temper? The romance... I feel something in me, and I don't know if it is good or bad, but I feel it, spirit guide!";
@@ -1719,6 +1793,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         
     private void DialogueLine85()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisSad;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1730,6 +1805,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine86()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         hasEndedTyping = false;
         texToToWrite = "That's a tough one. I'm not sure," + gameManager_Script.playerName+ " , but the loner aspect hits home. I guess I liked my space!";
@@ -1739,6 +1815,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine87()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite =  "About good and bad... Honestly? I don't remember, but the Luis I am now does not care about good or bad as long as it is fun!";
         StartCoroutine(TypeText(texToToWrite));
@@ -1747,6 +1824,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine88()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1758,6 +1836,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine89()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "That's a mix, alright. It's like trying to blend colors on a canvas. I'm not sure how it all fits together, but it's intriguing.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1766,6 +1845,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine90()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I do feel something about perfectionism... I did like things going my way, I still do...";
         StartCoroutine(TypeText(texToToWrite));
@@ -1774,6 +1854,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine91()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "But I tend to be open for debate if one of my actions is not perfect!";
         StartCoroutine(TypeText(texToToWrite));
@@ -1782,6 +1863,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine92()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Alright! That is enough; I cannot absorb more essence!";
@@ -1792,6 +1874,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine93()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite ="This may not seem like much, but it will help a lot for today! I'll see what fragments I can piece together to get your past memories, at least, partial ones!";
         StartCoroutine(TypeText(texToToWrite));
@@ -1800,6 +1883,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine94()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         bigSpiritImage.sprite = luisHappy;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
@@ -1811,6 +1895,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine95()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "I'm looking forward to what you uncover.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1819,6 +1904,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine96()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "I really hope I can fix all of this mess before Dia de Muertos...";
@@ -1829,6 +1915,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine97()
     {
+        textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         texToToWrite = "Otherwise, it looks bad for me, not going to lie.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1837,6 +1924,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine98()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         spiritNameText.text = "Luis";
         hasEndedTyping = false;
         texToToWrite = "Before Dia de los Muertos, huh? Well, mystery guide, no pressure, but I'm kind of looking forward to seeing what you come up with.";
@@ -1847,6 +1935,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine99()
     {
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Not because I'm desperate for those memories, but, you know, spending time with you has its own kind of appeal.";
         StartCoroutine(TypeText(texToToWrite));
@@ -1855,7 +1944,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine100()
     {
-
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         texToToWrite = "Well, " + gameManager_Script.playerName+ ", I'll be around Calle de las Almas, ready for the grand reveal. Until then, keep the intrigue alive!";
         StartCoroutine(TypeText(texToToWrite));
