@@ -69,6 +69,10 @@ public class BrunoDay1Phase1Script : MonoBehaviour
     //Sprite de Normal Text Panel
     [SerializeField] Sprite TextPanelNormalSprite;
 
+    //Sprite de Bruno Text Panel
+    [SerializeField] Sprite TextPanelBrunoSprite;
+
+
     //Spirit Image
     public Image bigSpiritImage;
 
@@ -382,6 +386,14 @@ public class BrunoDay1Phase1Script : MonoBehaviour
             case 59:
                 DialogueLine59();
                 break;
+
+            case 60:
+                DialogueLine59();
+                break;
+
+            case 61:
+                DialogueLine59();
+                break;
         }
     }
 
@@ -418,7 +430,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine2()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Uh, yeah. That's me.";
@@ -430,7 +442,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine3()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelNormalSprite; 
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Nice to meet you, Bruno.";
@@ -441,7 +453,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine4()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "You too.";
@@ -505,7 +517,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine6()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite; 
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Nervous? I'm not...";
@@ -516,7 +528,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine7()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "...";
@@ -527,7 +539,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine8()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Yeah, okay, maybe a bit.";
@@ -590,7 +602,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine10()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I'm not worried about biting.";
@@ -601,7 +613,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine11()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Just... not used to this.";
@@ -612,7 +624,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine12()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Getting help, I mean.";
@@ -623,7 +635,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine13()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "You sound like a psychologist.";
@@ -634,7 +646,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine14()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "In a good way...";
@@ -694,7 +706,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine17()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Safe and comfortable... Right. I'll try.";
@@ -706,7 +718,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine18()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "It's not about feeling safe. I'm just not used to... this. Opening up, I guess.";
@@ -717,7 +729,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine19()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "But yeah, as I said, I will try, thanks for being so patient.";
@@ -728,7 +740,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine20()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Well, I didn't mean it in a bad way. I just meant you seem... insightful, like one.";
@@ -739,7 +751,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine21()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "You're good at making people open up. It's a compliment.";
@@ -750,7 +762,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine22()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I really suck at this, don't I? I don't want to make it awkward.";
@@ -782,7 +794,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine25()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "...";
@@ -794,7 +806,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine26()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "You sound genuine, so it makes me feel better, thank you again!";
@@ -805,7 +817,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine27()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Mysterious? Not intentional...";
@@ -816,7 +828,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine28()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I just... prefer to keep things to myself.";
@@ -827,7 +839,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine29()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I am obviously not much of a talker, " + gameManager_Script.playerName + ".";
@@ -838,7 +850,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine30()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Uh, well, thanks. I mean, not used to... um, this kind of attention. Not that I don't appreciate it.";
@@ -849,7 +861,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine31()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "It's just, you know, usually I'm more in the background. People don't really notice me much.";
@@ -860,7 +872,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine32()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "It's just, you know, usually I'm more in the background. People don't really notice me much.";
@@ -924,7 +936,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine34()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Yeah, um, I guess I'm not the center of attention usually.";
@@ -936,7 +948,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine35()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "More of a behind-the-scenes guy. But, um, thanks for noticing, I suppose.";
@@ -947,7 +959,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine36()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "The others are definetely the protagonists, I am not a fan of the spotlight.";
@@ -957,7 +969,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
     }
     private void DialogueLine37()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Uh, yeah, I guess that's a new experience for me.";
@@ -968,7 +980,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine38()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Not used to, you know, people... noticing. But, um, thanks. It's, uh, nice to be noticed.";
@@ -979,7 +991,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine39()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Specially if the one that notices is someone like you, " + gameManager_Script.playerName + ".";
@@ -990,7 +1002,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine40()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Yeah, you could say that. I'm not really used to being in the spotlight, so to speak.";
@@ -1001,7 +1013,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine41()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "It's a bit... unexpected. But, um, let's focus on what we're here for. Memories and stuff.";
@@ -1012,7 +1024,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine42()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Otherwise, I fear it will get awkward very fast.";
@@ -1023,7 +1035,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine43()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Business, huh?";
@@ -1034,7 +1046,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine44()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Sure, ask your questions. I'll answer what I can.";
@@ -1097,7 +1109,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine46()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Comfortable sharing? Well, I'll try, I guess.";
@@ -1109,7 +1121,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine47()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Not used to talking about myself... But since you are a Spirit Guide, I guess I will have to try and be more open.";
@@ -1120,7 +1132,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine48()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Sorry if I make this awkward, I tend to do that accidentally.";
@@ -1163,7 +1175,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine52()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Perfect date?";
@@ -1174,7 +1186,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine53()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I, um, haven't really thought about it.";
@@ -1185,7 +1197,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine54()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I'm not... experienced in that area.";
@@ -1217,7 +1229,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine57()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Daydreaming about... dates? Well, not really.";
@@ -1229,7 +1241,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine58()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "I mean, there's so much going on, and I... I don't know.";
@@ -1240,12 +1252,34 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine59()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "It's just not something I think about.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine60()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Works for me... The more I talk, the more I make situations awkward.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine61()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Marina and Luis are the talkers, me and Carmen enjoy silence and privacy.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
         canTalk = false;
     }
 }
