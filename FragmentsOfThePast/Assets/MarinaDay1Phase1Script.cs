@@ -1031,7 +1031,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "But sure, let's get down to it. What do you want to know? I'm ready for the serious talk, " +gameManager_Script.playerName + ".";
+        texToToWrite = "But sure, let's get down to it. What do you want to know? I'm ready for the serious talk, " + gameManager_Script.playerName + ".";
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -1434,5 +1434,329 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         canTalk = false;
         playSound2.playEffect();
     }
+
+    private void DialogueLine71()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Interesting... Can you elaborate? On the family part.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine72()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "I can feel a cozy warmth, hear echoes of laughter, but the details slip through my fingers. It's like they're there, but just out of reach.";
+        bigSpiritImage.sprite = marinaShy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine73()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "I sense something beautiful, but I can't quite put my finger on it. It's both frustrating and comforting, you know?";
+        bigSpiritImage.sprite = marinaSad;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine74()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "I understand... Well, then what about the other traits? Outgoing and clumsy, do you relate to that?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine75()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Outgoing and clumsy? Well, I do love meeting new people and spreading good vibes, but clumsy?";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine76()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = gameManager_Script.playerName + ", outgoing is a nice description but the clumsy part depends on the day!";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine77()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Oh, you betcha! I am sure I was like a whirlwind of energy, always up for an adventure, dancing through life like no one was watching!";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine78()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Well, that lasts even now that you are a spirit.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine79()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "I am indeed super active! I am constantly trying to keep myself busy! Carmen tends to say I am a hurricane.";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine80()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "About the Ambitious part... Well, not in the traditional sense, but I aimed for the stars in my own way.";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+    private void DialogueLine81()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "And about music? Were you perhaps next Mozart?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine82()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "I enjoy a good tune, but you won't find me composing symphonies. I'm more of a casual listener, you know?";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine83()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Oh, you've nailed it! Goofiness is my middle name, and I proudly carry the banner of eternal childlikeness.";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine84()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Life was too short to be serious, right? So, cheerfulness is my go-to vibe, even now that I am dead!";
+        bigSpiritImage.sprite = marinaSurprise;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine85()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "But yes, the most relatable is the childish part...";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine86()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "So you consider yourself childish?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine87()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "You are very aware of your own personality Marina, it is not often that happens.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine88()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "Well, I prefer \"playful\" or \"young at heart.\"";
+        bigSpiritImage.sprite = marinaAngry;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine89()
+    {
+        textPanelImage.sprite = TextPanelMarinaSprite;
+        spiritNameText.text = "Marina";
+        hasEndedTyping = false;
+        texToToWrite = "But thanks for the compliment, if it was one!";
+        bigSpiritImage.sprite = marinaHappy;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine90()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Ask her about Romantic, Family, and Evil traits)";
+        button2AnswerText.text = "(Ask her about Good, Moody and Perfectionist traits)";
+        button3AnswerText.text = "(Ask her about Lazy, Genius and Perfectionist traits)";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine90Answer1()
+    {
+        if (dialogueLine == 90)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+        }
+    }
+    public void DialogueLine90Answer2()
+    {
+        if (dialogueLine == 90)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 93;
+        }
+    }
+
+    public void DialogueLine90Answer3()
+    {
+        if (dialogueLine == 90)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 95;
+        }
+    }
+
+    private void DialogueLine91()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Marina, let's talk about romantic feelings, family, and, well, the possibility of any evil tendencies.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine92()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Tell me about how those words make you feel.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine93()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Marina, now think about this ones, focus your mind on my words.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine94()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Would you say you're generally a good person, not moody, and not too hung up on perfection?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine95()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Are you a bit on the lazy side, maybe a genius, or perhaps a perfectionist?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine96()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Tell me what do you think about those descriptions, do they fit?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
 }
+
 
