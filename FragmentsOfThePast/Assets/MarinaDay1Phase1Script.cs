@@ -439,6 +439,45 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         {
             default:
                 break;
+            case 11:
+                dialogueLine = 51;
+                break;
+
+            case 14:
+                dialogueLine = 51;
+                break;
+
+            case 22:
+                dialogueLine = 51;
+                break;
+
+            case 25:
+                dialogueLine = 51;
+                break;
+
+            case 32:
+                dialogueLine = 51;
+                break;
+
+            case 35:
+                dialogueLine = 51;
+                break;
+
+            case 38:
+                dialogueLine = 51;
+                break;
+
+            case 44:
+                dialogueLine = 51;
+                break;
+
+            case 47:
+                dialogueLine = 51;
+                break;
+
+            case 50:
+                dialogueLine = 51;
+                break;
 
             case 64:
                 dialogueLine = 70;
