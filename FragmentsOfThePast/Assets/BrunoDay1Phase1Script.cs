@@ -176,39 +176,39 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 break;
 
             case 7:
-                 DialogueLine7();
+                DialogueLine7();
                 break;
 
             case 8:
-                 DialogueLine8();
+                DialogueLine8();
                 break;
 
             case 9:
-                 DialogueLine9();
+                DialogueLine9();
                 break;
 
             case 10:
-                 DialogueLine10();
+                DialogueLine10();
                 break;
 
             case 11:
-                  DialogueLine11();
+                DialogueLine11();
                 break;
 
             case 12:
-                  DialogueLine12();
+                DialogueLine12();
                 break;
 
             case 13:
-                 DialogueLine13();
+                DialogueLine13();
                 break;
 
             case 14:
-                 DialogueLine14();
+                DialogueLine14();
                 break;
 
             case 15:
-                 DialogueLine15();
+                DialogueLine15();
                 break;
 
             case 16:
@@ -216,139 +216,139 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 break;
 
             case 17:
-                 DialogueLine17();
+                DialogueLine17();
                 break;
 
             case 18:
-                 DialogueLine18();
+                DialogueLine18();
                 break;
 
             case 19:
-                 DialogueLine19();
+                DialogueLine19();
                 break;
 
             case 20:
-                 DialogueLine20();
+                DialogueLine20();
                 break;
 
             case 21:
-                  DialogueLine21();
+                DialogueLine21();
                 break;
 
             case 22:
-                  DialogueLine22();
+                DialogueLine22();
                 break;
 
             case 23:
-                 DialogueLine23();
+                DialogueLine23();
                 break;
 
             case 24:
-                 DialogueLine24();
+                DialogueLine24();
                 break;
 
             case 25:
-                  DialogueLine25();
+                DialogueLine25();
                 break;
 
             case 26:
-                  DialogueLine26();
+                DialogueLine26();
                 break;
 
             case 27:
-                 DialogueLine27();
+                DialogueLine27();
                 break;
 
             case 28:
-                 DialogueLine28();
+                DialogueLine28();
                 break;
 
             case 29:
-                 DialogueLine29();
+                DialogueLine29();
                 break;
 
             case 30:
-                 DialogueLine30();
+                DialogueLine30();
                 break;
 
             case 31:
-                 DialogueLine31();
+                DialogueLine31();
                 break;
 
             case 32:
-                 DialogueLine32();
+                DialogueLine32();
                 break;
 
             case 33:
-                 DialogueLine33();
+                DialogueLine33();
                 break;
 
             case 34:
-                  DialogueLine34();
+                DialogueLine34();
                 break;
 
             case 35:
-                  DialogueLine35();
+                DialogueLine35();
                 break;
 
             case 36:
-                  DialogueLine36();
+                DialogueLine36();
                 break;
 
             case 37:
-                 DialogueLine37();
+                DialogueLine37();
                 break;
 
             case 38:
-                 DialogueLine38();
+                DialogueLine38();
                 break;
 
             case 39:
-                 DialogueLine39();
+                DialogueLine39();
                 break;
 
             case 40:
-                 DialogueLine40();
+                DialogueLine40();
                 break;
 
             case 41:
-                 DialogueLine41();
+                DialogueLine41();
                 break;
 
             case 42:
-                 DialogueLine42();
+                DialogueLine42();
                 break;
 
             case 43:
-                  DialogueLine43();
+                DialogueLine43();
                 break;
 
             case 44:
-                  DialogueLine44();
+                DialogueLine44();
                 break;
 
             case 45:
-                  DialogueLine45();
+                DialogueLine45();
                 break;
 
             case 46:
-                 DialogueLine46();
+                DialogueLine46();
                 break;
 
             case 47:
-                 DialogueLine47();
+                DialogueLine47();
                 break;
 
             case 48:
-                  DialogueLine48();
+                DialogueLine48();
                 break;
 
             case 49:
-                  DialogueLine49();
+                DialogueLine49();
                 break;
 
             case 50:
-                 DialogueLine50();
+                DialogueLine50();
                 break;
 
             case 51:
@@ -395,7 +395,229 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 DialogueLine61();
                 break;
 
+            case 62:
+                DialogueLine62();
+                break;
 
+            case 63:
+                DialogueLine63();
+                break;
+
+            case 64:
+                DialogueLine64();
+                break;
+
+            case 65:
+                DialogueLine65();
+                break;
+
+            case 66:
+                DialogueLine66();
+                break;
+
+            case 67:
+                DialogueLine67();
+                break;
+
+            case 68:
+                DialogueLine68();
+                break;
+
+            case 69:
+                DialogueLine69();
+                break;
+
+            case 70:
+                DialogueLine70();
+
+                break;
+            case 71:
+                DialogueLine71();
+                break;
+
+            case 72:
+                DialogueLine72();
+                break;
+
+            case 73:
+                DialogueLine73();
+                break;
+
+            case 74:
+                DialogueLine74();
+                break;
+
+            case 75:
+                DialogueLine75();
+                break;
+
+            case 76:
+                DialogueLine76();
+                break;
+
+            case 77:
+                DialogueLine77();
+                break;
+
+            case 78:
+                DialogueLine78();
+                break;
+
+            case 79:
+                DialogueLine79();
+                break;
+
+            case 80:
+                DialogueLine80();
+                break;
+
+            case 81:
+                DialogueLine81();
+                break;
+
+            case 82:
+                DialogueLine82();
+                break;
+
+            case 83:
+                DialogueLine83();
+                break;
+
+            case 84:
+                DialogueLine84();
+                break;
+
+            case 85:
+                DialogueLine85();
+                break;
+
+            case 86:
+                DialogueLine86();
+                break;
+
+            case 87:
+                DialogueLine87();
+                break;
+
+            case 88:
+                DialogueLine88();
+                break;
+
+            case 89:
+                DialogueLine89();
+                break;
+
+            case 90:
+                DialogueLine90();
+                break;
+
+            case 91:
+                DialogueLine91();
+                break;
+
+            case 92:
+                DialogueLine92();
+                break;
+
+            case 93:
+                DialogueLine93();
+                break;
+
+            case 94:
+                DialogueLine94();
+                break;
+
+            case 95:
+                DialogueLine95();
+                break;
+
+            case 96:
+                DialogueLine96();
+                break;
+
+            case 97:
+                DialogueLine97();
+                break;
+
+            case 98:
+                DialogueLine98();
+                break;
+
+            case 99:
+                DialogueLine99();
+                break;
+
+            case 100:
+                DialogueLine100();
+                break;
+
+            case 101:
+                DialogueLine101();
+                break;
+
+            case 102:
+                DialogueLine102();
+                break;
+
+            case 103:
+                DialogueLine103();
+                break;
+
+            case 104:
+                DialogueLine104();
+                break;
+
+            case 105:
+                DialogueLine105();
+                break;
+
+            case 106:
+                DialogueLine106();
+                break;
+
+            case 107:
+                DialogueLine107();
+                break;
+
+            case 108:
+                DialogueLine108();
+                break;
+
+            case 109:
+                DialogueLine109();
+                break;
+
+            case 110:
+                DialogueLine110();
+                break;
+
+            case 111:
+                DialogueLine111();
+                break;
+
+            case 112:
+                DialogueLine112();
+                break;
+
+            case 113:
+                DialogueLine113();
+                break;
+
+            case 114:
+                DialogueLine114();
+                break;
+
+            case 115:
+                DialogueLine115();
+                break;
+
+            case 116:
+                DialogueLine116();
+                break;
+
+            case 117:
+                DialogueLine117();
+                break;
         }
     }
 
@@ -406,6 +628,64 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         {
             default:
                 break;
+
+            case 20:
+                dialogueLine = 62;
+                break;
+
+            case 27:
+                dialogueLine = 62;
+                break;
+
+            case 30:
+                dialogueLine = 62;
+                break;
+
+            case 37:
+                dialogueLine = 62;
+                break;
+
+            case 40:
+                dialogueLine = 62;
+                break;
+
+            case 43:
+                dialogueLine = 62;
+                break;
+
+            case 52:
+                dialogueLine = 62;
+                break;
+
+            case 60:
+                dialogueLine = 62;
+                break;
+
+            case 86:
+                dialogueLine = 98;
+                break;
+
+            case 89:
+                dialogueLine = 98;
+                break;
+
+            case 101:
+                dialogueLine = 105;
+                break;
+
+            case 103:
+                dialogueLine = 105;
+                break;
+
+            case 118:
+                dialogueLine = 135;
+                break;
+
+            case 131:
+                dialogueLine = 135;
+                break;
+
+
 
         }
     }
@@ -444,7 +724,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine3()
     {
-        textPanelImage.sprite = TextPanelNormalSprite; 
+        textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
         texToToWrite = "Nice to meet you, Bruno.";
@@ -519,7 +799,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     private void DialogueLine6()
     {
-        textPanelImage.sprite = TextPanelBrunoSprite; 
+        textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
         texToToWrite = "Nervous? I'm not...";
@@ -597,7 +877,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
             answerButtonsPanel.SetActive(false);
             playerIsAnswering = false;
             canTalk = true;
-            dialogueLine = 30;
+            dialogueLine = 62;
             playSound1.playEffect();
         }
     }
@@ -1573,7 +1853,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = brunoHappy;
         canTalk = false;
         playSound2.playEffect();
-    }   
+    }
 
     private void DialogueLine85()
     {
@@ -1711,7 +1991,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
     }
 
     private void DialogueLine97()
-    {   
+    {
         textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
@@ -2002,10 +2282,310 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
-        texToToWrite = "Then you need to find reliable people, " +gameManager_Script.playerName + ", and cherish them.";
+        texToToWrite = "Then you need to find reliable people, " + gameManager_Script.playerName + ", and cherish them.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoHappy;
         canTalk = false;
         playSound2.playEffect();
+    }
+
+    private void DialogueLine118()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Good and evil, huh? Well, I've always believed that the concepts of good and evil are quite subjective.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine119()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "It's more about intentions and consequences, don't you think? As for me, I've always aimed for the greater good in my pursuits.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+    }
+
+
+    private void DialogueLine120()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "But, you know, sometimes the pursuit of knowledge can lead you down some morally gray paths. I've had my fair share of ethical dilemmas.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine121()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+        button1AnswerText.text = "(Agree)";
+        button2AnswerText.text = "(Disagree)";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine121Answer1()
+    {
+        if (dialogueLine == 121)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+
+    public void DialogueLine121Answer2()
+    {
+        if (dialogueLine == 121)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 125;
+            playSound1.playEffect();    
+        }
+    }
+
+    private void DialogueLine122()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Yeah, intentions matter more than black and white labels.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine123()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "You get it. Life is a spectrum of grays. Intentions shape our actions, and sometimes what seems like a clear-cut choice isn't that simple.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine124()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "It's the shades in between that make things interesting.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine125()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "I believe in clear distinctions between good and evil.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine126()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Really? That's an interesting perspective.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoSad;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine127()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "I'm curious, do you find it easy to navigate a world of absolutes? It must simplify things a lot.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoSad;
+        canTalk = false;
+    }
+
+
+    private void DialogueLine128()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "I believe in clear distinctions between good and evil.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine129()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Knowing where you stand, even if it's on shaky ground, feels better than navigating through uncertainties.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine130()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Interesting, " + gameManager_Script.playerName + ".";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+        
+    private void DialogueLine131()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "...";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+        playSound2.playEffect();
+    }   
+
+    private void DialogueLine132()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "...";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine133()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Romance is... well, it's a complex equation, isn't it? I mean, deep connections are beautiful...";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine134()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "But sometimes the variables involved can throw you off balance.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine135()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Alright! That's sufficient; I can't absorb any more essence!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine136()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "With this, I'll now try to piece together fragments to retrieve your past memories, at least partially!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+   
+
+
+    private void DialogueLine138()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Let's see if magic works, I am used to science.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine139()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "My magic does work, otherwise, I would have not been summoned here by an entity.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine140()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Come around later, Bruno, and you will see my magic does work.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine141()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Alright, " + gameManager_Script.playerName + "!";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+
+    private void DialogueLine142()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "Thanks for your help and patience, I will be around here later.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
     }
 }
