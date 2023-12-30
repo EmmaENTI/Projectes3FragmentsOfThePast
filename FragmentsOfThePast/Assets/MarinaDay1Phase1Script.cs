@@ -439,50 +439,85 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         {
             default:
                 break;
-            case 11:
+            case 12:
                 dialogueLine = 51;
                 break;
 
-            case 14:
+            case 15:
                 dialogueLine = 51;
                 break;
 
-            case 22:
+            case 23:
                 dialogueLine = 51;
                 break;
 
-            case 25:
+            case 26:
                 dialogueLine = 51;
                 break;
 
-            case 32:
+            case 33:
                 dialogueLine = 51;
                 break;
 
-            case 35:
+            case 36:
                 dialogueLine = 51;
                 break;
 
-            case 38:
+            case 39:
                 dialogueLine = 51;
                 break;
 
-            case 44:
+            case 45:
                 dialogueLine = 51;
                 break;
 
-            case 47:
+            case 48:
                 dialogueLine = 51;
                 break;
 
-            case 50:
+            case 51:
                 dialogueLine = 51;
                 break;
 
-            case 64:
+            case 65:
                 dialogueLine = 70;
                 break;
 
+            case 68:
+                dialogueLine = 77;
+                break;
+
+            case 70:
+                dialogueLine = 83;
+                break;
+
+            case 77:
+                dialogueLine = 90;
+                break;
+
+            case 83:
+                dialogueLine = 90;
+                break;
+
+            case 93:
+                dialogueLine = 97;
+                break;
+
+            case 95:
+                dialogueLine = 102;
+                break;
+
+            case 97:
+                dialogueLine = 105;
+                break;
+
+            case 102:
+                dialogueLine = 109;
+                break;
+
+            case 105:
+                dialogueLine = 109;
+                break;
         }
     }
 
@@ -1230,7 +1265,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
-        texToToWrite = "I am excited to see how you work your magic stuff, " + gameManager_Script.playerName + ".";
+        texToToWrite = "Well, let's get to the important part!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
