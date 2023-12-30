@@ -2530,9 +2530,6 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         canTalk = false;
     }
 
-   
-
-
     private void DialogueLine138()
     {
         textPanelImage.sprite = TextPanelBrunoSprite;
