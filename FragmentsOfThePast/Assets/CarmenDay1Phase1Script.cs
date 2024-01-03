@@ -163,7 +163,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
             case 3:
                 DialogueLine3();
                 break;
-/*
+
             case 4:
                 DialogueLine4();
                 break;
@@ -371,7 +371,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
             case 55:
                 DialogueLine55();
                 break;
-
+/*
             case 56:
                 DialogueLine56();
                 break;
@@ -628,6 +628,38 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         switch (dialogueLine)
         {
             default:
+                break;
+
+            case 23:
+                dialogueLine = 55;
+                break;
+
+            case 26:
+                dialogueLine = 55;
+                break;
+
+            case 30:
+                dialogueLine = 55;
+                break;
+
+            case 37:
+                dialogueLine = 55;
+                break;
+
+            case 40:
+                dialogueLine = 55;
+                break;
+                    
+            case 42:
+                dialogueLine = 55;
+                break;
+
+            case 51:
+                dialogueLine = 55;
+                break;
+
+            case 53:
+                dialogueLine = 55;
                 break;
 
         }
@@ -1111,5 +1143,576 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
     }
+
+    private void DialogueLine33()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Flirty) Well, Carmen, a woman like you deserves a little distraction, don't you think?";
+        button2AnswerText.text = "(Flirty) Flattery is just a warm-up, Carmen. The real magic happens when we start working together.";
+        button3AnswerText.text = "(Friendly) I get it, business first.";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine33Answer1()
+    {
+        if (dialogueLine == 33)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine33Answer2()
+    {
+        if (dialogueLine == 33)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 37;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine33Answer3()
+    {
+        if (dialogueLine == 33)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 40;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine34()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Distraction, huh? We'll see if you can keep up with me, darling.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenAngry;
+        canTalk = false;
+    }
+
+    private void DialogueLine35()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Distraction, darling, is a luxury for those who can afford to lose focus. I'm not one of them.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine36()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Distractions don't pay the bills, sweetie. Stick to the task.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine37()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Magic, huh? I've heard a lot of promises...";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenSurprise;
+        canTalk = false;
+    }
+
+    private void DialogueLine38()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "But actions speak louder than words, darling.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine39()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "And you are all talk and no action.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine40()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Well, darling, it's good to know you can stay on track.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine41()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "We're not here to play games; we're here to solve a problem.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine42()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Well, darling, it's about time someone knows how to cut to the chase. Efficiency suits me just fine.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine43 ()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Luis and Marina have an allergy to efficieny and going to the point.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenAngry;
+        canTalk = false;
+    }
+
+    private void DialogueLine44()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Let's see if you can keep up with my level and we will get along just fine.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine45()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Gossip) Oh? You have beef with them?";
+        button2AnswerText.text = "(Friendly) We have to work together to be efficient, Carmen.";
+        button3AnswerText.text = "(Sly) Oh, I am sure I will keep up with the level.";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine45Answer1()
+    {
+        if (dialogueLine == 45)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine45Answer2()
+    {
+        if (dialogueLine == 45)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 51;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine45Answer3()
+    {
+        if (dialogueLine == 45)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 53;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine46()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Oh, another chisme enjoyer I see~";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine47()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "I do enjoy a good cup of tea and a dash of chisme. If there's any drama brewing, you can bet I'll have my cup ready.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenShy;
+        canTalk = false;
+    }
+
+    private void DialogueLine48()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Besides, knowing a bit more about our companions might prove useful.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine49()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Well, part of my job is being interested in other's lifes.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine50()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "So yes, if you have any drama, please do share it with me.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+    private void DialogueLine51()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Efficient, huh? I can respect that.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenSurprise;
+        canTalk = false;
+    }
+
+    private void DialogueLine52()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Just make sure your idea of efficiency aligns with mine, and we won't have a problem.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenAngry;
+        canTalk = false;
+    }
+
+    private void DialogueLine53()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Aren't you a confident person," + gameManager_Script.playerName + "?";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine54()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "I see you have wit, that is something attractive in a person.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+
+    private void DialogueLine55()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Alright, moving on!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine56()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;  
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Let's go to the important part, shall we?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine57()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Finally, getting to the heart of the matter.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine58()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Time is money, darling, let's not waste either.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+    }
+        
+    private void DialogueLine59()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Well, in my case, I am working for free, but yeah, moving on...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine60()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "This are the instructions...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine61()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "I will ask you different questions, and while I ask, you should try to really concentrate on smells, sounds, feelings that you may remember...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine62()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "This will allow me to understand you better, and that way, I will combine fragment orbs to create a memory essence orb.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine63()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Finally, getting to the heart of the matter.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenHappy;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine64()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Ask her about Family)";
+        button2AnswerText.text = "(Ask her about  Materialistic trait)";
+        button3AnswerText.text = "(Ask her about Ambitious trait)";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine64Answer1()
+    {
+        if (dialogueLine == 64)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine64Answer2()
+    {
+        if (dialogueLine == 64)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 67;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine64Answer3()
+    {
+        if (dialogueLine == 64)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine = 69;
+            playSound1.playEffect();
+        }
+    }
+
+    private void DialogueLine65()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Carmen, let's talk about family.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine66()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Were you closely tied to your family, or did you feel a sense of distance?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+        
+    private void DialogueLine67()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Carmen, let's delve into your relationship with material possessions.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine68()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Were you someone who appreciated the finer things in life, finding comfort in luxury and opulence?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine69()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Carmen, let's delve into your ambitions.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine70()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Were you someone with grand aspirations, seeking recognition and applause, or did you have more grounded goals in mind?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine71()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Family, ah... I don't remember... It is very locked away... But I feel... Regret.";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenAngry;
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine72()
+    {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        spiritNameText.text = "Carmen";
+        hasEndedTyping = false;
+        texToToWrite = "Pride and regrets... guess they took the lead. It is what I mostly feel when thinking about the word \"Family\".";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = carmenAngry;
+        canTalk = false;
+    }
+
+    private void DialogueLine73()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+        hasEndedTyping = false;
+        texToToWrite = "Any specific regrets or moments that stand out in your mind?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+
+
 }
+
+
+
 
