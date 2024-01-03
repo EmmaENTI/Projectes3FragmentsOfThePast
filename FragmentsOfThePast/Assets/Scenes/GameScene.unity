@@ -2418,6 +2418,54 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine64Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine88Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine110Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &436944197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,6 +3895,30 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079313}
         m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
         m_MethodName: DialogueLine45Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine64Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine88Answer3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9501,6 +9573,54 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079313}
         m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
         m_MethodName: DialogueLine45Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine64Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine88Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine110Answer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
