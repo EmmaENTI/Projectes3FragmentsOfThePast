@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class KnowledgeScript : MonoBehaviour
 {
-
+    public bool introFinished;
 }

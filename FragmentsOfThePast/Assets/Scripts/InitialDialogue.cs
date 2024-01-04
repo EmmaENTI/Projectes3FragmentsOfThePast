@@ -137,6 +137,7 @@ public class InitialDialogue : MonoBehaviour
 
     public bool canReturnToDialogue;
 
+    [SerializeField] KnowledgeScript knowledgeScript;
     private void Update()
     {
         GoTo68();
@@ -576,6 +577,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "To answer all of those questions running through your little human mind… ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        //knowledgeScript.introFinished = true;
     }
 
 

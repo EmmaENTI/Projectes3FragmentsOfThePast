@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 31479696}
   - component: {fileID: 31479695}
   m_Layer: 5
-  m_Name: Bruno In Street
+  m_Name: BrunoStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ RectTransform:
   m_GameObject: {fileID: 31479693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1344272222}
@@ -245,8 +245,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296.47, y: -0.28931}
-  m_SizeDelta: {x: 592.9431, y: 1062}
+  m_AnchoredPosition: {x: -204, y: -204.98}
+  m_SizeDelta: {x: 592.2804, y: 1050}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31479695
 MonoBehaviour:
@@ -265,6 +265,9 @@ MonoBehaviour:
   streetPanel: {fileID: 2052982955}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 2091079310}
+  marinaDay1Phase1Script: {fileID: 2091079311}
+  brunoDay1Phase1Script: {fileID: 2091079312}
+  carmenDay1Phase1Script: {fileID: 2091079313}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -297,7 +300,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: bcfb2bcf0402b9d4a94ef014b9e5549f, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 3142b4dfa2dae5941a3dd5b9bc6d6758, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -331,7 +334,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31479693}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -344,9 +347,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 62c1a44e4e632414baceff0a75d2ced5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1080e2b8f63d4045b6c68d30b4f3c14, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -622,6 +625,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88565938}
   m_CullTransparentMesh: 1
+--- !u!1 &93727716
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93727717}
+  - component: {fileID: 93727718}
+  m_Layer: 5
+  m_Name: Background_Video
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &93727717
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93727716}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1551305719}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!328 &93727718
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93727716}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: d1274a19ba4b25848bea6f1ab0127a57, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: da75a8292ddc7eb459a85181371e889c, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
+  m_Url: 
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &98904722
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +847,9 @@ MonoBehaviour:
   streetPanel: {fileID: 1651488449}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 0}
+  marinaDay1Phase1Script: {fileID: 0}
+  brunoDay1Phase1Script: {fileID: 0}
+  carmenDay1Phase1Script: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -2089,6 +2166,306 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine4Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine8Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine17Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine29Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine41Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine5Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine9Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine15Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine90Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine74Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine62Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine108Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine121Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine7Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine11Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine14Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine64Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine88Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine110Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &436944197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2619,6 +2996,9 @@ MonoBehaviour:
   streetPanel: {fileID: 1651488449}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 0}
+  marinaDay1Phase1Script: {fileID: 0}
+  brunoDay1Phase1Script: {fileID: 0}
+  carmenDay1Phase1Script: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -3323,6 +3703,222 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079310}
         m_TargetAssemblyTypeName: LuisDay1Phase1Script, Assembly-CSharp
         m_MethodName: DialogueLine104Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine4Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine8Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine29Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine41Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine5Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine9Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine90Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine74Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine62Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine7Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine11Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine64Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine88Answer3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5318,6 +5914,9 @@ MonoBehaviour:
   streetPanel: {fileID: 1651488449}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 0}
+  marinaDay1Phase1Script: {fileID: 0}
+  brunoDay1Phase1Script: {fileID: 0}
+  carmenDay1Phase1Script: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -5554,6 +6153,9 @@ MonoBehaviour:
   streetPanel: {fileID: 1651488449}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 0}
+  marinaDay1Phase1Script: {fileID: 0}
+  brunoDay1Phase1Script: {fileID: 0}
+  carmenDay1Phase1Script: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6244,7 +6846,7 @@ GameObject:
   - component: {fileID: 1189887442}
   - component: {fileID: 1189887441}
   m_Layer: 5
-  m_Name: Marina In Street
+  m_Name: MarinaStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6267,8 +6869,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 592, y: -81.56701}
-  m_SizeDelta: {x: 538.0699, y: 946.0302}
+  m_AnchoredPosition: {x: -703.2594, y: -163.58939}
+  m_SizeDelta: {x: 513.4799, y: 817.1457}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189887441
 MonoBehaviour:
@@ -6287,6 +6889,9 @@ MonoBehaviour:
   streetPanel: {fileID: 2052982955}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 2091079310}
+  marinaDay1Phase1Script: {fileID: 2091079311}
+  brunoDay1Phase1Script: {fileID: 2091079312}
+  carmenDay1Phase1Script: {fileID: 2091079313}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -6319,7 +6924,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 788b88624ebaef340b1b89a36951d259, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: b458104562a43a548806a17a708a850d, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -6353,7 +6958,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189887439}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6366,9 +6971,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2e2595b37954795489267464809ba222, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8533d2c81b413c644b5173e16233c59f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -8177,7 +8782,7 @@ RectTransform:
   m_GameObject: {fileID: 1496596828}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88565939}
@@ -8185,8 +8790,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000004544, y: -370}
-  m_SizeDelta: {x: 1300, y: 275}
+  m_AnchoredPosition: {x: -16, y: -341}
+  m_SizeDelta: {x: 1760, y: 527}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496596830
 MonoBehaviour:
@@ -8208,7 +8813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4b2730550ea23ff45af69aebbe50af76, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8725,6 +9330,306 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine4Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine8Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine17Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine29Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine41Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine5Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine9Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine15Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine90Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine74Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079311}
+        m_TargetAssemblyTypeName: MarinaDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine62Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine108Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079312}
+        m_TargetAssemblyTypeName: BrunoDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine121Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine7Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine11Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine14Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine33Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine45Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine64Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine88Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine98Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079313}
+        m_TargetAssemblyTypeName: CarmenDay1Phase1Script, Assembly-CSharp
+        m_MethodName: DialogueLine110Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1517489193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8870,6 +9775,80 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1551305718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1551305719}
+  - component: {fileID: 1551305721}
+  - component: {fileID: 1551305720}
+  m_Layer: 5
+  m_Name: LobbyContender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1551305719
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551305718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 93727717}
+  m_Father: {fileID: 2052982956}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1551305720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551305718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 8400000, guid: da75a8292ddc7eb459a85181371e889c, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &1551305721
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551305718}
+  m_CullTransparentMesh: 1
 --- !u!1 &1558788631
 GameObject:
   m_ObjectHideFlags: 0
@@ -8884,7 +9863,7 @@ GameObject:
   - component: {fileID: 1558788634}
   - component: {fileID: 1558788633}
   m_Layer: 5
-  m_Name: Carmen In Street
+  m_Name: CarmenStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8899,7 +9878,7 @@ RectTransform:
   m_GameObject: {fileID: 1558788631}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1344272222}
@@ -8907,8 +9886,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -695.0197, y: -67.33294}
-  m_SizeDelta: {x: 529.96, y: 945.33}
+  m_AnchoredPosition: {x: 163, y: -191}
+  m_SizeDelta: {x: 544.7114, y: 983.6837}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558788633
 MonoBehaviour:
@@ -8927,6 +9906,9 @@ MonoBehaviour:
   streetPanel: {fileID: 2052982955}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 2091079310}
+  marinaDay1Phase1Script: {fileID: 2091079311}
+  brunoDay1Phase1Script: {fileID: 2091079312}
+  carmenDay1Phase1Script: {fileID: 2091079313}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -8959,7 +9941,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: fa685e3c750f7eb428697e99150cfb1e, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: 5a9ee746b9d28a7439017efc3e7c3b70, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -8993,7 +9975,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558788631}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -9006,9 +9988,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6036c914dfe3ec043b663278707007c2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 842e04c0b5f8cdb4f964f91a75ec8503, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -9338,7 +10320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aef34e2db8ff1e429aaa06d774d0dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigImageSprite: {fileID: 21300000, guid: 62c1a44e4e632414baceff0a75d2ced5, type: 3}
+  bigImageSprite: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
   isActive: 1
   spiritName: Bruno
   spiritNumber: 0
@@ -9580,7 +10562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1651488450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10174,18 +11156,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687121063}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.041229896, w: 0.9991497}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 88565939}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -4.726}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429.83722, y: -313}
-  m_SizeDelta: {x: 370.8398, y: 135.9981}
+  m_AnchoredPosition: {x: -412, y: -218}
+  m_SizeDelta: {x: 248.2956, y: 53.8613}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1687121065
 MonoBehaviour:
@@ -10207,7 +11189,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Spirit Name
+  m_text: 'Spirit '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 162d6ffe6148d7c4e85572522d1e836b, type: 2}
   m_sharedMaterial: {fileID: -587633251869696030, guid: 162d6ffe6148d7c4e85572522d1e836b, type: 2}
@@ -10241,8 +11223,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -10273,7 +11255,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1687121066
@@ -10661,7 +11643,7 @@ GameObject:
   - component: {fileID: 1759008382}
   - component: {fileID: 1759008381}
   m_Layer: 5
-  m_Name: Luis In Street
+  m_Name: LuisStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10684,8 +11666,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89.653, y: -5.8532}
-  m_SizeDelta: {x: 576.04, y: 1050.8699}
+  m_AnchoredPosition: {x: 762, y: -55.33777}
+  m_SizeDelta: {x: 641.5627, y: 1212.6575}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1759008381
 MonoBehaviour:
@@ -10704,6 +11686,9 @@ MonoBehaviour:
   streetPanel: {fileID: 2052982955}
   consultaPanel: {fileID: 2073008151}
   luisDay1Phase1Script: {fileID: 2091079310}
+  marinaDay1Phase1Script: {fileID: 2091079311}
+  brunoDay1Phase1Script: {fileID: 2091079312}
+  carmenDay1Phase1Script: {fileID: 2091079313}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -10736,7 +11721,7 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: c886bd45931006649ab171efef6654fa, type: 3}
+    m_HighlightedSprite: {fileID: 21300000, guid: b34253cfe22418f4e9b735469742a731, type: 3}
     m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -10783,9 +11768,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 180dcb22d2a328548b3677daa72d13bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f6063342e5d0624499243f9b0e2098d, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -11646,12 +12631,12 @@ GameObject:
   - component: {fileID: 2052982958}
   - component: {fileID: 2052982957}
   m_Layer: 5
-  m_Name: 'Street_Panel '
+  m_Name: 'Lobby_Panel '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2052982956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11664,6 +12649,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1551305719}
   - {fileID: 1344272222}
   m_Father: {fileID: 1533730304}
   m_RootOrder: -1
@@ -11693,7 +12679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fe69496af743d2642913635150ee16a6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12018,6 +13004,9 @@ GameObject:
   - component: {fileID: 2091079306}
   - component: {fileID: 2091079309}
   - component: {fileID: 2091079310}
+  - component: {fileID: 2091079311}
+  - component: {fileID: 2091079312}
+  - component: {fileID: 2091079313}
   m_Layer: 0
   m_Name: ---GAME MANAGER---
   m_TagString: Untagged
@@ -12087,6 +13076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f5e17021e5f1944bb2078f9c83a988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introFinished: 0
 --- !u!114 &2091079309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12148,6 +13138,7 @@ MonoBehaviour:
   streetPanelIntroGameObject: {fileID: 1651488449}
   streetPanelGameObject: {fileID: 2052982955}
   canReturnToDialogue: 0
+  knowledgeScript: {fileID: 2091079306}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12180,22 +13171,138 @@ MonoBehaviour:
   button2AnswerText: {fileID: 1682963170}
   button3AnswerText: {fileID: 439539435}
   textPanelImage: {fileID: 1496596830}
-  TextPanelNormalSprite: {fileID: 21300000, guid: 5c4e8e4ad16e6404ba6422b861d1842f, type: 3}
-  canReturnToDialogue: 0
-  traitRomantic: 0
-  traitAmbitious: 0
-  traitLoner: 0
-  traitPerfeccionist: 0
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelLuisSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   bigSpiritImage: {fileID: 632314263}
   luisSuprise: {fileID: 21300000, guid: a3b0d343272ace54f99c0bd265a8c136, type: 3}
   luisSad: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
   luisAngry: {fileID: 21300000, guid: 626989e81d0a6d040883dc42311e8a88, type: 3}
   luisShy: {fileID: 21300000, guid: c9fb9418d8a9cf14cbd652ae69b2b730, type: 3}
   luisHappy: {fileID: 21300000, guid: 9a4f038743f65c24db4b51c834a5d330, type: 3}
-  specialButtonSprite: {fileID: 21300000, guid: 8300260b090b7024e9b6fcceaa0ef50b, type: 3}
-  specialButtonImage: {fileID: 529168114}
   playSound2: {fileID: 5374810}
-  alchemyButton: {fileID: 1316839560}
+--- !u!114 &2091079311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec2ded7935911234983bdc03cefd27e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1517489187}
+  leftButtonPanel: {fileID: 436944191}
+  rightButtonPanel: {fileID: 529168108}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: 63624fe11e716354681ca2d3cd49d096, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  marinaSurprise: {fileID: 21300000, guid: a2cd9a5aff71a43458a1ca2685fc8fdf, type: 3}
+  marinaSad: {fileID: 21300000, guid: c66e684420090a54780380ff3c048709, type: 3}
+  marinaAngry: {fileID: 21300000, guid: 96b7958889c77024892fc407b4eb7b00, type: 3}
+  marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
+  marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8a516bb64092884cbf0bbf6571afddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelBrunoSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  brunoSuprise: {fileID: 21300000, guid: f3e30c3579978e44c97f4bb663e80b83, type: 3}
+  brunoSad: {fileID: 21300000, guid: 74e01673d6455c645a2563f19dc68cda, type: 3}
+  brunoAngry: {fileID: 21300000, guid: 8d6ad71c39ab52341b7dd9c0b0f8c54e, type: 3}
+  brunoShy: {fileID: 21300000, guid: 3ecc405e82a59714ca1b3020fba23764, type: 3}
+  brunoHappy: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa1446eacc5fe347898374cb769c772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelCarmenSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  carmenSurprise: {fileID: 21300000, guid: 936f82999dda91743bba25346e117321, type: 3}
+  carmenSad: {fileID: 21300000, guid: 788a95142edc85d4887eec414af6163f, type: 3}
+  carmenAngry: {fileID: 21300000, guid: 3d2ee2c04459f924cb2903258078947f, type: 3}
+  carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
+  carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
+  playSound2: {fileID: 5374810}
 --- !u!1 &2123327053
 GameObject:
   m_ObjectHideFlags: 0
@@ -12231,8 +13338,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -393.3422}
-  m_SizeDelta: {x: 1200, y: 202.6333}
+  m_AnchoredPosition: {x: -8.546595, y: -393.3422}
+  m_SizeDelta: {x: 1101.2288, y: 202.6333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123327055
 MonoBehaviour:
@@ -12288,8 +13395,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0
