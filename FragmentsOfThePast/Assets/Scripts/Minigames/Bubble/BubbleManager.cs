@@ -15,7 +15,7 @@ public class BubbleManager : MonoBehaviour
 
     private List<GameObject> currentBubbles;
 
-    private string[] currentMergeableTypes;
+    public string[] currentMergeableTypes;
 
     // Num of Bubbles 27 (Not counting Orange Bubble)
 
@@ -26,6 +26,11 @@ public class BubbleManager : MonoBehaviour
         LoadDictionary();
 
         currentBubbles = new List<GameObject>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            CreateBubble("BaseBubble");
+        }
 
         for (int i = 0; i < 5; i++)
         {
@@ -42,7 +47,7 @@ public class BubbleManager : MonoBehaviour
             CreateBubble("Genius");
         }
 
-        SetMergeableBubbleTypes(new string[] { "Snob", "Evil" });
+        SetMergeableBubbleTypes(new string[] { "Snob", "Evil", "BaseBubble" });
     }
 
     // Update is called once per frame
@@ -100,34 +105,34 @@ public class BubbleManager : MonoBehaviour
     void LoadDictionary()
     {
         bubbleDictionary = new Dictionary<string, Sprite>
-        {
-            { "Active", bubblesSprites[0] },
-            { "Ambitious", bubblesSprites[1] },
-            { "ArtLover", bubblesSprites[2] },
-            { "Bookworm", bubblesSprites[3] },
-            { "Cheerful", bubblesSprites[4] },
-            { "Childish", bubblesSprites[5] },
-            { "Clumsy", bubblesSprites[6] },
-            { "Creative", bubblesSprites[7] },
-            { "Evil", bubblesSprites[8] },
-            { "Family", bubblesSprites[9] },
-            { "Foodie", bubblesSprites[10] },
-            { "Geek", bubblesSprites[11] },
-            { "Genius", bubblesSprites[12] },
-            { "Goof", bubblesSprites[13] },
-            { "HotHeaded", bubblesSprites[14] },
-            { "Insane", bubblesSprites[15] },
-            { "Lazy", bubblesSprites[16] },
-            { "Loner", bubblesSprites[17] },
-            { "Materialist", bubblesSprites[18] },
-            { "Mean", bubblesSprites[19] },
-            { "Moody", bubblesSprites[20] },
-            { "MusicLover", bubblesSprites[21] },
-            { "Outgoing", bubblesSprites[22] },
-            { "Perfectionist", bubblesSprites[23] },
-            { "Romantic", bubblesSprites[24] },
-            { "Slob", bubblesSprites[25] },
-            { "Snob", bubblesSprites[26] }
+        {   { "BaseBubble", bubblesSprites[0] },
+            { "Active", bubblesSprites[1] },
+            { "Ambitious", bubblesSprites[2] },
+            { "ArtLover", bubblesSprites[3] },
+            { "Bookworm", bubblesSprites[4] },
+            { "Cheerful", bubblesSprites[5] },
+            { "Childish", bubblesSprites[6] },
+            { "Clumsy", bubblesSprites[7] },
+            { "Creative", bubblesSprites[8] },
+            { "Evil", bubblesSprites[9] },
+            { "Family", bubblesSprites[10] },
+            { "Foodie", bubblesSprites[11] },
+            { "Geek", bubblesSprites[12] },
+            { "Genius", bubblesSprites[13] },
+            { "Goof", bubblesSprites[14] },
+            { "HotHeaded", bubblesSprites[15] },
+            { "Insane", bubblesSprites[16] },
+            { "Lazy", bubblesSprites[17] },
+            { "Loner", bubblesSprites[18] },
+            { "Materialist", bubblesSprites[19] },
+            { "Mean", bubblesSprites[20] },
+            { "Moody", bubblesSprites[21] },
+            { "MusicLover", bubblesSprites[22] },
+            { "Outgoing", bubblesSprites[23] },
+            { "Perfectionist", bubblesSprites[24] },
+            { "Romantic", bubblesSprites[25] },
+            { "Slob", bubblesSprites[26] },
+            { "Snob", bubblesSprites[27] }
         };
     }
 
@@ -145,5 +150,4 @@ public class BubbleManager : MonoBehaviour
             selectionPanel.transform.GetChild(i).GetChild(0).GetComponent<TMP_Text>().text = names[i];
         }
     }
-
 }

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1755804155616953530}
   - component: {fileID: -8074220294538059643}
   - component: {fileID: 327145834503547208}
+  - component: {fileID: 7491255825312316886}
+  - component: {fileID: 2153024627152569931}
   m_Layer: 5
   m_Name: BubbleBase
   m_TagString: Bubble
@@ -70,7 +72,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e2ce50237a64f3f43968cb140fca8e23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c6fdc3762d904049b2b87035f1c031e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -166,3 +168,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ffce14c6c7474b4f809e674f442918c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCollisionOff: 0
+--- !u!114 &7491255825312316886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937617239870345766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c87c52b747d514d9838c7763a78025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2153024627152569931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3937617239870345766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7491255825312316886}
+          m_TargetAssemblyTypeName: HoverBubble, Assembly-CSharp
+          m_MethodName: HoverOnBubble
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7491255825312316886}
+          m_TargetAssemblyTypeName: HoverBubble, Assembly-CSharp
+          m_MethodName: LeaveBubble
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
