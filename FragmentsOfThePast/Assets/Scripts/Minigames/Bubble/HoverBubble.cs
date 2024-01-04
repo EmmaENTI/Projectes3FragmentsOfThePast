@@ -16,9 +16,11 @@ public class HoverBubble : MonoBehaviour
     {
         // OPTIMITZAR
 
-        for (int i = 0; i < bubbleManager.currentMergeableTypes.Length; i++)
+        // List<Tuple<string, List<string>>>()
+
+        for (int i = 0; i < bubbleManager.GetMergeableBubbleTypes().Count; i++)
         {
-            if (bubbleManager.currentMergeableTypes[i] == transform.name)
+            if (bubbleManager.GetMergeableBubbleTypes()[i].Item1 == transform.name)
             {
                 transform.GetComponent<Image>().color = new Color(1, 0, 0, 1);
             }

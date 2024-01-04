@@ -1,66 +1,68 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using TMPro;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BubbleManager : MonoBehaviour
 {
+    public enum CharacterType { LUIS, CARMEN, BRUNO, MARINA }
+
     [SerializeField] private GameObject alchemyPanel;
     [SerializeField] private GameObject baseBubble;
     [SerializeField] private Sprite[] bubblesSprites;
-    [SerializeField] static public Dictionary<string, Sprite> bubbleDictionary;
+    [SerializeField] public Dictionary<string, Sprite> bubbleDictionary;
+    [SerializeField] public string[] bubbleStrings;
+    const int numOfBubbles = 33;
     [SerializeField] private GameObject selectionPanel; 
 
     private List<GameObject> currentBubbles;
 
     public string[] currentMergeableTypes;
-
-    // Num of Bubbles 27 (Not counting Orange Bubble)
-
+    public List<Tuple<string, List<string>>> currentMergeableTypes2;
+    
     float minDistance = 120.0f;
+
+    public KnowledgeScript knowledgeScript;
+
+    public CharacterType currentCharacter;
 
     void Start()
     {
-        LoadDictionary();
+        LoadData();
 
         currentBubbles = new List<GameObject>();
 
-        for (int i = 0; i < 5; i++)
-        {
-            CreateBubble("BaseBubble");
-        }
+        //CreateBubble("BaseBubble");
+        //CreateBubble("Ambitious");
 
-        for (int i = 0; i < 5; i++)
-        {
-            CreateBubble("Snob");
-        }
+        //SetMergeableBubbleTypes(new string[] { "Snob", "Evil", "BaseBubble" });
 
-        for (int i = 0; i < 5; i++)
-        {
-            CreateBubble("Evil");
-        }
 
-        for (int i = 0; i < 5; i++)
-        {
-            CreateBubble("Genius");
-        }
-
-        SetMergeableBubbleTypes(new string[] { "Snob", "Evil", "BaseBubble" });
+        // Temporal
+        knowledgeScript = new KnowledgeScript();
+        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()   
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            CreateRandomBubbles(5, knowledgeScript.listToCreate);
+            AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist" });
+            AddMergeableTypes("Ambitious", new List<string>() { "BaseBubble", "Perfectionist" });
+        }
     }
-        
+
     public void CreateBubble(string name)
     {
         baseBubble.GetComponent<Image>().sprite = bubbleDictionary[name];
         GameObject gameObj = Instantiate(baseBubble, alchemyPanel.transform);
         gameObj.name = name;
+
         currentBubbles.Add(gameObj);
 
         gameObj.transform.localPosition = RandomPositionWithinBounds();
@@ -68,14 +70,74 @@ public class BubbleManager : MonoBehaviour
         IsValidPosition(gameObj);
     }
 
+    public void CreateRandomBubbles(int numBubbles, List<Tuple<string, int>> savedBubbles)
+    {
+        // Borrar Totes les Bubbles
+        WipeRandomBubbles();
+
+        for (int i = 0; i < savedBubbles.Count; i++)
+        {
+            for (int j = 0; j < savedBubbles[i].Item2; j++)
+            {
+                CreateBubble(savedBubbles[i].Item1);
+            }
+        }
+
+        int initialBubblesOwned = currentBubbles.Count;
+
+        for (int i = 0; i < numBubbles; i++)
+        {
+            bool notOwnedType = true;
+            string randomBubble = bubbleStrings[UnityEngine.Random.Range(0, numOfBubbles)];
+
+            for (int j = 0; j < initialBubblesOwned; j++)
+            {
+                // Si coincideixen Tornar a iterar fins que surti una correcte
+                if (currentBubbles[j].name == randomBubble) 
+                {
+                    notOwnedType = false;
+                    break;
+                }
+
+                // Iterar per comprobar si la bubble creada random no es del tipus del personatge actual
+                for (int k = 0; k < GetCharacterBallTypes().Length; k++) 
+                {
+                    if (GetCharacterBallTypes()[k] == randomBubble)
+                    {
+                        notOwnedType = false;
+                        break;
+                    }
+                }
+            }
+
+            if (notOwnedType)
+            {
+                CreateBubble(randomBubble);
+            }
+            else
+            {
+                i--;
+            }
+        }
+    }
+
+    private void WipeRandomBubbles()
+    { 
+        for (int i = 0; i < currentBubbles.Count; i++)
+        {
+            Destroy(currentBubbles[i]);
+        }
+        currentBubbles.Clear();
+    }
+
     public void SetMergeableBubbleTypes(string[] types) // Bubbles que es poden mergear
     {
         currentMergeableTypes = types;
     }
 
-    public string[] GetMergeableBubbleTypes()
+    public List<Tuple<string, List<string>>> GetMergeableBubbleTypes()
     {
-        return currentMergeableTypes;
+        return currentMergeableTypes2;
     }
 
     private Vector3 RandomPositionWithinBounds()
@@ -102,38 +164,66 @@ public class BubbleManager : MonoBehaviour
         }
     }
 
-    void LoadDictionary()
+    void LoadData()
     {
-        bubbleDictionary = new Dictionary<string, Sprite>
-        {   { "BaseBubble", bubblesSprites[0] },
-            { "Active", bubblesSprites[1] },
-            { "Ambitious", bubblesSprites[2] },
-            { "ArtLover", bubblesSprites[3] },
-            { "Bookworm", bubblesSprites[4] },
-            { "Cheerful", bubblesSprites[5] },
-            { "Childish", bubblesSprites[6] },
-            { "Clumsy", bubblesSprites[7] },
-            { "Creative", bubblesSprites[8] },
-            { "Evil", bubblesSprites[9] },
-            { "Family", bubblesSprites[10] },
-            { "Foodie", bubblesSprites[11] },
-            { "Geek", bubblesSprites[12] },
-            { "Genius", bubblesSprites[13] },
-            { "Goof", bubblesSprites[14] },
-            { "HotHeaded", bubblesSprites[15] },
-            { "Insane", bubblesSprites[16] },
-            { "Lazy", bubblesSprites[17] },
-            { "Loner", bubblesSprites[18] },
-            { "Materialist", bubblesSprites[19] },
-            { "Mean", bubblesSprites[20] },
-            { "Moody", bubblesSprites[21] },
-            { "MusicLover", bubblesSprites[22] },
-            { "Outgoing", bubblesSprites[23] },
-            { "Perfectionist", bubblesSprites[24] },
-            { "Romantic", bubblesSprites[25] },
-            { "Slob", bubblesSprites[26] },
-            { "Snob", bubblesSprites[27] }
+        bubbleStrings = new string[numOfBubbles] { 
+            "BaseBubble", 
+            "Active", 
+            "Ambitious", 
+            "ArtLover",
+            "Assertive", // NOU, sprite no correcte - Music Lover
+            "Bookworm", 
+            "Cheerful", 
+            "Childish", 
+            "Clumsy", 
+            "Creative", 
+            "Evil", 
+            "Family", 
+            "Foodie", 
+            "Geek", 
+            "Genius",
+            "Good", // NOU, sprite no correcte - Lazy
+            "Goof", 
+            "HotHeaded",
+            "Independent", // NOU, sprite no correcte - Cheerful
+            "Insane", 
+            "Lazy", 
+            "Loner",
+            "Loyal", // NOU, sprite no correcte - Foodie
+            "Lure", // NOU, sprite no correcte - GoofBall
+            "Materialistic",
+            "Mean", 
+            "Moody", 
+            "MusicLover", 
+            "Outgoing", 
+            "Perfectionist", 
+            "Romantic", 
+            "Slob", 
+            "Snob" 
         };
+
+        bubbleDictionary = new Dictionary<string, Sprite>();
+        for (int i = 0; i < numOfBubbles; i++)
+        {
+            bubbleDictionary.Add(bubbleStrings[i], bubblesSprites[i]);
+        }
+
+        currentMergeableTypes2 = new List<Tuple<string, List<string>>>();
+    }
+
+    public void SetCurrentCharacter(CharacterType type)
+    {
+        currentCharacter = type;
+    }
+
+    public string[] GetCharacterBallTypes()
+    {
+        return knowledgeScript.characterBubbles[currentCharacter.GetHashCode()];
+    }
+
+    void AddMergeableTypes(string mainBall, List<string> otherBalls)
+    {
+        currentMergeableTypes2.Add(new Tuple<string, List<string>>(mainBall, otherBalls));
     }
 
     public void ToggleSelectionPanel()
@@ -146,7 +236,7 @@ public class BubbleManager : MonoBehaviour
         
         for (int i = 0; i < names.Length; i++)
         {
-            Debug.Log(names[i]);
+            //Debug.Log(names[i]);
             selectionPanel.transform.GetChild(i).GetChild(0).GetComponent<TMP_Text>().text = names[i];
         }
     }

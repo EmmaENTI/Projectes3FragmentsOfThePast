@@ -86,6 +86,19 @@ public class LuisDay1Phase1Script : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] GameObject consultaPanel;
+    [SerializeField] GameObject alchemyPanel;
+    bool lockInAlchemyPanel = false;
+
+    KnowledgeScript knowledgeScript;
+
+    private void Start()
+    {
+        knowledgeScript = new KnowledgeScript();
+    }
+
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -139,6 +152,12 @@ public class LuisDay1Phase1Script : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
             }
         }
+    }
+
+    void SwitchPanels(GameObject a, GameObject b)
+    {
+        a.SetActive(!a.activeSelf);
+        b.SetActive(!b.activeSelf);
     }
 
     private void DialogueTalk()
@@ -550,6 +569,9 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
             case 100:
                 DialogueLine100();
+                break;
+            case 101:
+                DialogueLine101();
                 break;
         }
     }
@@ -1950,6 +1972,25 @@ public class LuisDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playerIsAnswering = false;
+    }
+
+    void DialogueLine101()
+    {
+        if (!lockInAlchemyPanel)
+        {
+            SwitchPanels(consultaPanel, alchemyPanel);
+
+            bubbleManager.knowledgeScript = knowledgeScript;
+
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.LUIS);
+
+
+            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+
+            bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
+            lockInAlchemyPanel = true;
+        }
+        
     }
 }
 

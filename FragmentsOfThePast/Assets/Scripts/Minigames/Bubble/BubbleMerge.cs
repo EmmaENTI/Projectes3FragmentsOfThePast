@@ -32,21 +32,51 @@ public class BubbleMerge : MonoBehaviour
         bool canMerge1 = false;
         bool canMerge2 = false;
 
-        for (int i = 0; i < bubbleManager.GetMergeableBubbleTypes().Length; i++)
+        bool canMergeCharacter1 = false;
+        bool canMergeCharacter2 = false;
+
+
+        // List<Tuple<string, List<string>>>()
+
+        // Iterar la llista de tuples per comprobar quines poden fusionarse entre elles
+        for (int i = 0; i < bubbleManager.GetMergeableBubbleTypes().Count; i++) 
         {
-            if (bubbleManager.GetMergeableBubbleTypes()[i] == transform.name)
+            
+            // Comprobo si pot fer merge
+            if (bubbleManager.GetMergeableBubbleTypes()[i].Item1 == transform.name)
             {
                 canMerge1 = true;
+
+                for (int j = 0; j < bubbleManager.GetMergeableBubbleTypes()[i].Item2.Count; j++)
+                {
+                    if (bubbleManager.GetMergeableBubbleTypes()[i].Item2[j] == collision.transform.name)
+                    {
+                        canMerge2 = true;
+                    }
+                }
             }
-            if (bubbleManager.GetMergeableBubbleTypes()[i] == collision.transform.name)
+            // Iterar Amb quines bubbles pot fer merge
+            
+            
+            // Comprobar si les bubbles son les del personatge actual
+            for (int j = 0; j < bubbleManager.GetCharacterBallTypes().Length; j++)
             {
-                canMerge2 = true;
+                if (bubbleManager.GetCharacterBallTypes()[j] == transform.name)
+                {
+                    canMergeCharacter1 = true;
+                }
+
+                if (bubbleManager.GetCharacterBallTypes()[j] == collision.transform.name)
+                {
+                    canMergeCharacter2 = true;
+                }
             }
+            
         }
 
-        Debug.Log(transform.name + "  " + collision.transform.name);
+        //Debug.Log(transform.name + "  " + collision.transform.name);
 
-        if (canMerge1 && canMerge2 && (transform.name != collision.transform.name) && !isCollisionOff)
+        if (canMergeCharacter1 && canMergeCharacter2 && canMerge1 && canMerge2 && (transform.name != collision.transform.name) && !isCollisionOff)
         {
             // Animació Merge
 
