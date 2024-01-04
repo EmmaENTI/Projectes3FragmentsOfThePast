@@ -48,8 +48,8 @@ public class StreetSpiritManager : MonoBehaviour
         audioSource.enabled = true;
 
         //Luis Day1Phase1
-        //luisDay1Phase1Script.canStartDialogue = false;
-        //luisDay1Phase1Script.canTalk = true;
+        luisDay1Phase1Script.canStartDialogue = false;
+        luisDay1Phase1Script.canTalk = true;
 
         //Marina Day1Phase1
         //marinaDay1Phase1Script.canStartDialogue = false;
@@ -61,7 +61,7 @@ public class StreetSpiritManager : MonoBehaviour
 
 
         //Carmen Day1Phase1
-        carmenDay1Phase1Script.canStartDialogue = false;
-        carmenDay1Phase1Script.canTalk = true;
+        //carmenDay1Phase1Script.canStartDialogue = false;
+        //carmenDay1Phase1Script.canTalk = true;
     }
 }
