@@ -137,7 +137,7 @@ public class InitialDialogue : MonoBehaviour
 
     public bool canReturnToDialogue;
 
-    [SerializeField] KnowledgeScript knowledgeScript;
+    [SerializeField] LoadManager loadManager;
     private void Update()
     {
         GoTo68();
@@ -190,6 +190,12 @@ public class InitialDialogue : MonoBehaviour
         if (Input.GetKeyDown("a"))
         {
             DialogueLine67();
+        }
+
+        if (loadManager.introFinished == true)
+        {
+            dialogueLine = 13;
+            loadManager.introFinished = false;
         }
     }
 
@@ -577,7 +583,6 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "To answer all of those questions running through your little human mind… ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        //knowledgeScript.introFinished = true;
     }
 
 
@@ -654,6 +659,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Good luck " + gameManager_Script.playerName + ", we will see each other once more, in the future. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        //loadManager.introFinished = true;
     }
 
     private void DialogueLine14()

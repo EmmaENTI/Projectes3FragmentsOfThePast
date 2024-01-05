@@ -10899,7 +10899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1651488450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13315,7 +13315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2052982956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13680,7 +13680,7 @@ GameObject:
   - component: {fileID: 2091079304}
   - component: {fileID: 2091079303}
   - component: {fileID: 2091079302}
-  - component: {fileID: 2091079306}
+  - component: {fileID: 2091079314}
   - component: {fileID: 2091079309}
   - component: {fileID: 2091079310}
   - component: {fileID: 2091079311}
@@ -13743,18 +13743,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2091079306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091079301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92f5e17021e5f1944bb2078f9c83a988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2091079309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13816,6 +13804,7 @@ MonoBehaviour:
   streetPanelIntroGameObject: {fileID: 1651488449}
   streetPanelGameObject: {fileID: 2052982955}
   canReturnToDialogue: 0
+  loadManager: {fileID: 0}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13983,6 +13972,19 @@ MonoBehaviour:
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
   playSound2: {fileID: 5374810}
+--- !u!114 &2091079314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0fed587a06fc345b3ceb90f63c79e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introFinished: 0
 --- !u!1 &2123327053
 GameObject:
   m_ObjectHideFlags: 0

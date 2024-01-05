@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class KnowledgeScript
 {
-    public bool introFinished;
 
     public bool isLuis = false;
     public List<string[]> characterBubbles = new List<string[]>()
