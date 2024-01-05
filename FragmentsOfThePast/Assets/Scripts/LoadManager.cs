@@ -24,4 +24,13 @@ public class LoadManager : MonoBehaviour
 
         Debug.Log("SAVED");
     }
+
+    public void Load()
+    {
+        QuickSaveReader.Create("SavePoints")
+                       .Read<bool>("SavePoint1", (r) => { introFinished = r; })
+                       .Read<bool>("SavePoint2", (r) => { prologueFinished = r; });
+
+        Debug.Log("LOADED");
+    }
 }
