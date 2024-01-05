@@ -14,6 +14,8 @@ public class StartGame_Script_MainMenu : MonoBehaviour
     [SerializeField] Animator messageAnimator;
     [SerializeField] bool firstMessage =true;
 
+    [SerializeField] LoadManager loadManager;
+
     public void StartButton()
     { 
         playerNamePanel.SetActive(true);

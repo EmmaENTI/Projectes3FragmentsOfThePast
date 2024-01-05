@@ -10,6 +10,8 @@ public class LoadManager : MonoBehaviour
     public bool introFinished;
     public bool prologueFinished;
 
+    public bool loadGame;
+
 
     //public InputField Content;
 

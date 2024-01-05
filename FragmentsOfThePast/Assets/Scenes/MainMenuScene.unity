@@ -754,6 +754,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 977458060}
+        m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &187277108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3078,6 +3090,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977458050}
   - component: {fileID: 977458049}
+  - component: {fileID: 977458060}
   - component: {fileID: 977458051}
   - component: {fileID: 977458052}
   - component: {fileID: 977458053}
@@ -3112,6 +3125,7 @@ MonoBehaviour:
   soundManagerAudioSource: {fileID: 1253400676}
   messageAnimator: {fileID: 983397931}
   firstMessage: 1
+  loadManager: {fileID: 977458060}
 --- !u!4 &977458050
 Transform:
   m_ObjectHideFlags: 0
@@ -3265,6 +3279,21 @@ MonoBehaviour:
   - {fileID: 268229683}
   - {fileID: 743840590}
   - {fileID: 1864996278}
+--- !u!114 &977458060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977458048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0fed587a06fc345b3ceb90f63c79e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introFinished: 0
+  prologueFinished: 0
+  loadGame: 0
 --- !u!1 &982469978
 GameObject:
   m_ObjectHideFlags: 0
