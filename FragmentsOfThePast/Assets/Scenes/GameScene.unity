@@ -13804,7 +13804,7 @@ MonoBehaviour:
   streetPanelIntroGameObject: {fileID: 1651488449}
   streetPanelGameObject: {fileID: 2052982955}
   canReturnToDialogue: 0
-  loadManager: {fileID: 0}
+  loadManager: {fileID: 2091079314}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13985,6 +13985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introFinished: 0
+  prologueFinished: 0
 --- !u!1 &2123327053
 GameObject:
   m_ObjectHideFlags: 0

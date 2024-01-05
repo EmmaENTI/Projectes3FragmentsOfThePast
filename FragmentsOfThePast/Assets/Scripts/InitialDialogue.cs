@@ -149,7 +149,7 @@ public class InitialDialogue : MonoBehaviour
 
         if (loadManager.prologueFinished == true)
         {
-            dialogueLine = 66;
+            dialogueLine = 67;
             //loadManager.prologueFinished = false;
         }
     }
@@ -685,6 +685,7 @@ public class InitialDialogue : MonoBehaviour
         }
 
         loadManager.introFinished = true;
+        loadManager.Save();
 
         playerIsAnswering = true;
         startHoodedManButtonGameObject.SetActive(true);
@@ -1491,6 +1492,10 @@ public class InitialDialogue : MonoBehaviour
         streetPanelGameObject.SetActive(true);
         cinematicAnim.SetBool("canPlayAnim", true);
         streetPanelIntroGameObject.SetActive(false);
+
+        loadManager.introFinished= false;
+        loadManager.prologueFinished= true;
+        loadManager.Save();
     }
 
     private void GoTo68()
