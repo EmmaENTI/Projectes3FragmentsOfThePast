@@ -138,6 +138,21 @@ public class InitialDialogue : MonoBehaviour
     public bool canReturnToDialogue;
 
     [SerializeField] LoadManager loadManager;
+
+    private void Start()
+    {
+        if (loadManager.introFinished == true)
+        {
+            dialogueLine = 14;
+            //loadManager.introFinished = false;
+        }
+
+        if (loadManager.prologueFinished == true)
+        {
+            dialogueLine = 66;
+            //loadManager.prologueFinished = false;
+        }
+    }
     private void Update()
     {
         GoTo68();
@@ -192,11 +207,7 @@ public class InitialDialogue : MonoBehaviour
             DialogueLine67();
         }
 
-        if (loadManager.introFinished == true)
-        {
-            dialogueLine = 13;
-            loadManager.introFinished = false;
-        }
+       
     }
 
     //Logica del TypeText (passar el text amb el que vols escriure al string textContent de la funcio)
@@ -659,7 +670,6 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Good luck " + gameManager_Script.playerName + ", we will see each other once more, in the future. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        //loadManager.introFinished = true;
     }
 
     private void DialogueLine14()
@@ -673,6 +683,8 @@ public class InitialDialogue : MonoBehaviour
             audioSource.clip = hoodedManMusic;
             audioSource.enabled = true;
         }
+
+        loadManager.introFinished = true;
 
         playerIsAnswering = true;
         startHoodedManButtonGameObject.SetActive(true);

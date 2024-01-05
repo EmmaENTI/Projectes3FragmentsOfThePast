@@ -5,4 +5,5 @@ using UnityEngine;
 public class LoadManager : MonoBehaviour
 {
     public bool introFinished;
+    public bool prologueFinished;
 }
