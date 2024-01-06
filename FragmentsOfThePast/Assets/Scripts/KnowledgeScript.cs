@@ -22,7 +22,7 @@ public class KnowledgeScript
         
         new Tuple<string, int>("BaseBubble", 1), 
         new Tuple<string, int>("Active", 0),
-        new Tuple<string, int>("Ambitious", 2),
+        new Tuple<string, int>("Ambitious", 0),
         new Tuple<string, int>("ArtLover", 0),
         new Tuple<string, int>("Assertive", 0),
         new Tuple<string, int>("Bookworm", 0),
@@ -40,7 +40,7 @@ public class KnowledgeScript
         new Tuple<string, int>("Independent", 0),
         new Tuple<string, int>("Insane", 0),
         new Tuple<string, int>("Lazy", 0),
-        new Tuple<string, int>("Loner", 0),
+        new Tuple<string, int>("Loner", 2),
         new Tuple<string, int>("Loyal", 0),
         new Tuple<string, int>("Lure", 0),
         new Tuple<string, int>("Materialistic", 0),

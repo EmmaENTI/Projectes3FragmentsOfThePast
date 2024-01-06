@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 31479696}
   - component: {fileID: 31479695}
   m_Layer: 5
-  m_Name: BrunoStatic
+  m_Name: 3 BrunoStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,6 +269,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 2091079312}
   carmenDay1Phase1Script: {fileID: 2091079313}
   luisAmbitiousDialogue: {fileID: 2091079316}
+  luisPerfectionistDialogue: {fileID: 2091079317}
+  luisLureDialogue: {fileID: 2091079318}
+  luisLonerDialogue: {fileID: 2091079319}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -853,6 +856,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 0}
   carmenDay1Phase1Script: {fileID: 0}
   luisAmbitiousDialogue: {fileID: 0}
+  luisPerfectionistDialogue: {fileID: 0}
+  luisLureDialogue: {fileID: 0}
+  luisLonerDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -3004,6 +3010,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 0}
   carmenDay1Phase1Script: {fileID: 0}
   luisAmbitiousDialogue: {fileID: 0}
+  luisPerfectionistDialogue: {fileID: 0}
+  luisLureDialogue: {fileID: 0}
+  luisLonerDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6216,6 +6225,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 0}
   carmenDay1Phase1Script: {fileID: 0}
   luisAmbitiousDialogue: {fileID: 0}
+  luisPerfectionistDialogue: {fileID: 0}
+  luisLureDialogue: {fileID: 0}
+  luisLonerDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6457,6 +6469,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 0}
   carmenDay1Phase1Script: {fileID: 0}
   luisAmbitiousDialogue: {fileID: 0}
+  luisPerfectionistDialogue: {fileID: 0}
+  luisLureDialogue: {fileID: 0}
+  luisLonerDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -7300,7 +7315,7 @@ GameObject:
   - component: {fileID: 1189887442}
   - component: {fileID: 1189887441}
   m_Layer: 5
-  m_Name: MarinaStatic
+  m_Name: 1 MarinaStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7347,6 +7362,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 2091079312}
   carmenDay1Phase1Script: {fileID: 2091079313}
   luisAmbitiousDialogue: {fileID: 2091079316}
+  luisPerfectionistDialogue: {fileID: 2091079317}
+  luisLureDialogue: {fileID: 2091079318}
+  luisLonerDialogue: {fileID: 2091079319}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -10320,7 +10338,7 @@ GameObject:
   - component: {fileID: 1558788634}
   - component: {fileID: 1558788633}
   m_Layer: 5
-  m_Name: CarmenStatic
+  m_Name: 4 CarmenStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10367,6 +10385,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 2091079312}
   carmenDay1Phase1Script: {fileID: 2091079313}
   luisAmbitiousDialogue: {fileID: 2091079316}
+  luisPerfectionistDialogue: {fileID: 2091079317}
+  luisLureDialogue: {fileID: 2091079318}
+  luisLonerDialogue: {fileID: 2091079319}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -12207,7 +12228,7 @@ GameObject:
   - component: {fileID: 1759008382}
   - component: {fileID: 1759008381}
   m_Layer: 5
-  m_Name: LuisStatic
+  m_Name: 2 LuisStatic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12254,6 +12275,9 @@ MonoBehaviour:
   brunoDay1Phase1Script: {fileID: 2091079312}
   carmenDay1Phase1Script: {fileID: 2091079313}
   luisAmbitiousDialogue: {fileID: 2091079316}
+  luisPerfectionistDialogue: {fileID: 2091079317}
+  luisLureDialogue: {fileID: 2091079318}
+  luisLonerDialogue: {fileID: 2091079319}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -13862,6 +13886,9 @@ GameObject:
   - component: {fileID: 2091079312}
   - component: {fileID: 2091079313}
   - component: {fileID: 2091079316}
+  - component: {fileID: 2091079317}
+  - component: {fileID: 2091079318}
+  - component: {fileID: 2091079319}
   m_Layer: 0
   m_Name: ---GAME MANAGER---
   m_TagString: Untagged
@@ -14177,6 +14204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canStartLuisAmbitiousDialogue: 0
+  canStartLuisPerfectionistDialogue: 0
+  canStartLuisLureDialogue: 0
+  canStartLuisLonerDialogue: 0
 --- !u!114 &2091079316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14216,6 +14246,138 @@ MonoBehaviour:
   luisSad: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
   luisAngry: {fileID: 21300000, guid: 626989e81d0a6d040883dc42311e8a88, type: 3}
   luisShy: {fileID: 21300000, guid: c9fb9418d8a9cf14cbd652ae69b2b730, type: 3}
+  luisHappy: {fileID: 21300000, guid: 9a4f038743f65c24db4b51c834a5d330, type: 3}
+  playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
+--- !u!114 &2091079317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5da42d4795e5e449db9fabdfc9a784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelLuisSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  luisSuprise: {fileID: 21300000, guid: a3b0d343272ace54f99c0bd265a8c136, type: 3}
+  luisSad: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
+  luisAngry: {fileID: 21300000, guid: 626989e81d0a6d040883dc42311e8a88, type: 3}
+  luisShy: {fileID: 21300000, guid: c9fb9418d8a9cf14cbd652ae69b2b730, type: 3}
+  luisHappy: {fileID: 21300000, guid: 9a4f038743f65c24db4b51c834a5d330, type: 3}
+  playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
+--- !u!114 &2091079318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf554d54fb3dcb645a280f490e833691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelLuisSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  luisSuprise: {fileID: 21300000, guid: a3b0d343272ace54f99c0bd265a8c136, type: 3}
+  luisSad: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
+  luisAngry: {fileID: 21300000, guid: 626989e81d0a6d040883dc42311e8a88, type: 3}
+  luisShy: {fileID: 21300000, guid: c9fb9418d8a9cf14cbd652ae69b2b730, type: 3}
+  luisHappy: {fileID: 21300000, guid: 9a4f038743f65c24db4b51c834a5d330, type: 3}
+  playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
+--- !u!114 &2091079319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b319effe89bc8448b065ac4614fc5a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelLuisSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  luisSuprise: {fileID: 21300000, guid: a3b0d343272ace54f99c0bd265a8c136, type: 3}
+  luisSad: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
+  luisAngry: {fileID: 21300000, guid: c9fb9418d8a9cf14cbd652ae69b2b730, type: 3}
+  luisShy: {fileID: 21300000, guid: 626989e81d0a6d040883dc42311e8a88, type: 3}
   luisHappy: {fileID: 21300000, guid: 9a4f038743f65c24db4b51c834a5d330, type: 3}
   playSound2: {fileID: 5374810}
   bubbleManager: {fileID: 1690408353}

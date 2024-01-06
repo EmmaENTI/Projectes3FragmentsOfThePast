@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class StreetSpiritManager : MonoBehaviour
@@ -22,6 +23,9 @@ public class StreetSpiritManager : MonoBehaviour
     [SerializeField] CarmenDay1Phase1Script carmenDay1Phase1Script;
    
     [SerializeField] LuisAmbitiousDialogue luisAmbitiousDialogue;
+    [SerializeField] LuisPerfectionistDialogue luisPerfectionistDialogue;
+    [SerializeField] LuisLureDialogue luisLureDialogue;
+    [SerializeField] LuisLonerDialogue luisLonerDialogue;
 
     [SerializeField] PlaySound playSound;
 
@@ -59,10 +63,15 @@ public class StreetSpiritManager : MonoBehaviour
         {
             marinaDay1Phase1Script.canStartDialogue = false;
             marinaDay1Phase1Script.canTalk = true;
+            
         }
 
         //Luis Day1Phase1
-        if (spiritNumber == 2)
+        if (spiritNumber == 2 &&
+            dialoguesInfoManager.canStartLuisAmbitiousDialogue == false &&
+            dialoguesInfoManager.canStartLuisPerfectionistDialogue == false&&
+            dialoguesInfoManager.canStartLuisLureDialogue == false &&
+            dialoguesInfoManager.canStartLuisLonerDialogue == false)
         {
             luisDay1Phase1Script.canStartDialogue = false;
             luisDay1Phase1Script.canTalk = true;
@@ -76,6 +85,36 @@ public class StreetSpiritManager : MonoBehaviour
 
             dialoguesInfoManager.canStartLuisAmbitiousDialogue = false;
         }
+
+        //Luis Perfectonist Dialogue
+        else if (spiritNumber == 2 && dialoguesInfoManager.canStartLuisPerfectionistDialogue)
+        {
+            luisPerfectionistDialogue.canStartDialogue = false;
+            luisPerfectionistDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartLuisPerfectionistDialogue = false;
+        }
+
+        //Luis Lure Dialogue
+        else if (spiritNumber == 2 && dialoguesInfoManager.canStartLuisLureDialogue)
+        {
+            luisLureDialogue.canStartDialogue = false;
+            luisLureDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartLuisLureDialogue = false;
+        }
+
+
+        //Luis Loner Dialogue
+        else if (spiritNumber == 2 && dialoguesInfoManager.canStartLuisLonerDialogue)
+        {
+            luisLonerDialogue.canStartDialogue = false;
+            luisLonerDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartLuisLonerDialogue = false;
+        }
+
+
 
         //Bruno Day1Phase1
         if (spiritNumber == 3)

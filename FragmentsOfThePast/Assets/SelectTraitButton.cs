@@ -18,10 +18,26 @@ public class SelectTraitButton : MonoBehaviour
         RestorePanels();
         if (buttonContentText.text == "Ambitious")
         {
-            Debug.Log("Debug");
             dialoguesInfoManager.canStartLuisAmbitiousDialogue = true;
         }
+
+        if (buttonContentText.text == "Perfectionist")
+        {
+            dialoguesInfoManager.canStartLuisPerfectionistDialogue = true;
+        }
+
+        if (buttonContentText.text == "Lure")
+        {
+            dialoguesInfoManager.canStartLuisLureDialogue = true;
+        }
+
+        if (buttonContentText.text == "Loner")
+        {
+            dialoguesInfoManager.canStartLuisLonerDialogue = true;
+        }
+
     }
+
 
     private void RestorePanels()
     {

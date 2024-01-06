@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LuisAmbitiousDialogue : MonoBehaviour
+public class LuisLureDialogue : MonoBehaviour
 {
     //Game Manager
     [SerializeField] GameManager_Script gameManager_Script;
@@ -600,7 +600,7 @@ public class LuisAmbitiousDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Ambitious Dialogue Debug";
+        texToToWrite = "Lure Dialogue Debug";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -611,7 +611,7 @@ public class LuisAmbitiousDialogue : MonoBehaviour
         hasEndedTyping = false;
         spiritNameText.text = "Luis";
         bigSpiritImage.sprite = luisSuprise;
-        texToToWrite = "Ambitious Dialogue Debug";
+        texToToWrite = "Lure Dialogue Debug";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
