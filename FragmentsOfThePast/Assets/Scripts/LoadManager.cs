@@ -11,6 +11,7 @@ public class LoadManager : MonoBehaviour
     public bool prologueFinished;
 
     public bool loadGame;
+    [SerializeField] Animator animator;
 
 
     //public InputField Content;
@@ -34,5 +35,15 @@ public class LoadManager : MonoBehaviour
                        .Read<bool>("SavePoint2", (r) => { prologueFinished = r; });
 
         Debug.Log("LOADED");
+    }
+
+    public void LoadGameAnimPointerEnter()
+    {
+        animator.SetBool("canPlayAnim", true);
+    }
+
+    public void LoadGameAnimPointerExit()
+    {
+        animator.SetBool("canPlayAnim", false);
     }
 }

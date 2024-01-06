@@ -625,9 +625,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 977458049}
-          m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-          m_MethodName: StartGameAnimPointerEnter
+        - m_Target: {fileID: 977458060}
+          m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+          m_MethodName: LoadGameAnimPointerEnter
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -653,9 +653,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 977458049}
-          m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-          m_MethodName: StartGameAnimPointerExit
+        - m_Target: {fileID: 977458060}
+          m_TargetAssemblyTypeName: LoadManager, Assembly-CSharp
+          m_MethodName: LoadGameAnimPointerExit
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3294,6 +3294,7 @@ MonoBehaviour:
   introFinished: 0
   prologueFinished: 0
   loadGame: 0
+  animator: {fileID: 187277106}
 --- !u!1 &982469978
 GameObject:
   m_ObjectHideFlags: 0
