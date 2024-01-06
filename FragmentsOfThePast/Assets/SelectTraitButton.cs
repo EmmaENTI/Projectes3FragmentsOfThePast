@@ -61,6 +61,20 @@ public class SelectTraitButton : MonoBehaviour
             dialoguesInfoManager.canStartBrunoBookwormDialogue = true;
         }
 
+        if (buttonContentText.text == "Geek")
+        {
+            dialoguesInfoManager.canStartBrunoGeekDialogue = true;
+        }
+
+        if (buttonContentText.text == "Genius")
+        {
+            dialoguesInfoManager.canStartBrunoGeniusDialogue = true;
+        }
+
+        if (buttonContentText.text == "Loyal")
+        {
+            dialoguesInfoManager.canStartBrunoLoyalDialogue = true;
+        }
 
     }
 

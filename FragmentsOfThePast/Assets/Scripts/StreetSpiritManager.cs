@@ -33,6 +33,9 @@ public class StreetSpiritManager : MonoBehaviour
     [SerializeField] CarmenEntrepreneurDialogue carmenEntrepreneurDialogue;
 
     [SerializeField] BrunoBookwormDialogue brunoBookwormDialouge;
+    [SerializeField] BrunoGeniusDialogue brunoGeniusDialogue;
+    [SerializeField] BrunoGeekDialogue brunoGeekDialouge;
+    [SerializeField] BrunoLoyalDialogue brunoLoyalDialogue;
 
     [SerializeField] PlaySound playSound;
 
@@ -123,7 +126,10 @@ public class StreetSpiritManager : MonoBehaviour
 
 
         //Bruno Day1Phase1
-        if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoBookwormDialogue == false)
+        if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoBookwormDialogue == false &&
+            dialoguesInfoManager.canStartBrunoGeniusDialogue == false &&
+            dialoguesInfoManager.canStartBrunoGeekDialogue == false &&
+            dialoguesInfoManager.canStartBrunoLoyalDialogue == false)
         {
             brunoDay1Phase1Script.canStartDialogue = false;
             brunoDay1Phase1Script.canTalk = true;
@@ -136,6 +142,33 @@ public class StreetSpiritManager : MonoBehaviour
             brunoBookwormDialouge.canTalk = true;
 
             dialoguesInfoManager.canStartBrunoBookwormDialogue = false;
+        }
+
+        //Bruno Genius Dialogue
+        else if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoGeniusDialogue)
+        {
+            brunoGeniusDialogue.canStartDialogue = false;
+            brunoGeniusDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartBrunoGeniusDialogue = false;
+        }
+
+        //Bruno Geek Dialogue
+        else if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoGeekDialogue)
+        {
+            brunoGeekDialouge.canStartDialogue = false;
+            brunoGeekDialouge.canTalk = true;
+
+            dialoguesInfoManager.canStartBrunoGeekDialogue = false;
+        }
+
+        //Bruno Loyal Dialogue
+        else if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoLoyalDialogue)
+        {
+            brunoLoyalDialogue.canStartDialogue = false;
+            brunoLoyalDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartBrunoLoyalDialogue = false;
         }
 
 

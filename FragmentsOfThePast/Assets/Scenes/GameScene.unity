@@ -275,6 +275,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 2091079320}
   carmenMaterialisticDialogue: {fileID: 2091079321}
   carmenIndependentDialogue: {fileID: 2091079322}
+  carmenEntrepreneurDialogue: {fileID: 2091079323}
+  brunoBookwormDialouge: {fileID: 2091079324}
+  brunoGeniusDialogue: {fileID: 2091079327}
+  brunoGeekDialouge: {fileID: 2091079326}
+  brunoLoyalDialogue: {fileID: 2091079325}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -865,6 +870,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 0}
   carmenMaterialisticDialogue: {fileID: 0}
   carmenIndependentDialogue: {fileID: 0}
+  carmenEntrepreneurDialogue: {fileID: 0}
+  brunoBookwormDialouge: {fileID: 0}
+  brunoGeniusDialogue: {fileID: 0}
+  brunoGeekDialouge: {fileID: 0}
+  brunoLoyalDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -3022,6 +3032,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 0}
   carmenMaterialisticDialogue: {fileID: 0}
   carmenIndependentDialogue: {fileID: 0}
+  carmenEntrepreneurDialogue: {fileID: 0}
+  brunoBookwormDialouge: {fileID: 0}
+  brunoGeniusDialogue: {fileID: 0}
+  brunoGeekDialouge: {fileID: 0}
+  brunoLoyalDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6240,6 +6255,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 0}
   carmenMaterialisticDialogue: {fileID: 0}
   carmenIndependentDialogue: {fileID: 0}
+  carmenEntrepreneurDialogue: {fileID: 0}
+  brunoBookwormDialouge: {fileID: 0}
+  brunoGeniusDialogue: {fileID: 0}
+  brunoGeekDialouge: {fileID: 0}
+  brunoLoyalDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6487,6 +6507,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 0}
   carmenMaterialisticDialogue: {fileID: 0}
   carmenIndependentDialogue: {fileID: 0}
+  carmenEntrepreneurDialogue: {fileID: 0}
+  brunoBookwormDialouge: {fileID: 0}
+  brunoGeniusDialogue: {fileID: 0}
+  brunoGeekDialouge: {fileID: 0}
+  brunoLoyalDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -7383,6 +7408,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 2091079320}
   carmenMaterialisticDialogue: {fileID: 2091079321}
   carmenIndependentDialogue: {fileID: 2091079322}
+  carmenEntrepreneurDialogue: {fileID: 2091079323}
+  brunoBookwormDialouge: {fileID: 2091079324}
+  brunoGeniusDialogue: {fileID: 2091079327}
+  brunoGeekDialouge: {fileID: 2091079326}
+  brunoLoyalDialogue: {fileID: 2091079325}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -10409,6 +10439,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 2091079320}
   carmenMaterialisticDialogue: {fileID: 2091079321}
   carmenIndependentDialogue: {fileID: 2091079322}
+  carmenEntrepreneurDialogue: {fileID: 2091079323}
+  brunoBookwormDialouge: {fileID: 2091079324}
+  brunoGeniusDialogue: {fileID: 2091079327}
+  brunoGeekDialouge: {fileID: 2091079326}
+  brunoLoyalDialogue: {fileID: 2091079325}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -12302,6 +12337,11 @@ MonoBehaviour:
   carmenAssertiveDialogue: {fileID: 2091079320}
   carmenMaterialisticDialogue: {fileID: 2091079321}
   carmenIndependentDialogue: {fileID: 2091079322}
+  carmenEntrepreneurDialogue: {fileID: 2091079323}
+  brunoBookwormDialouge: {fileID: 2091079324}
+  brunoGeniusDialogue: {fileID: 2091079327}
+  brunoGeekDialouge: {fileID: 2091079326}
+  brunoLoyalDialogue: {fileID: 2091079325}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -13916,6 +13956,11 @@ GameObject:
   - component: {fileID: 2091079320}
   - component: {fileID: 2091079321}
   - component: {fileID: 2091079322}
+  - component: {fileID: 2091079323}
+  - component: {fileID: 2091079324}
+  - component: {fileID: 2091079327}
+  - component: {fileID: 2091079326}
+  - component: {fileID: 2091079325}
   m_Layer: 0
   m_Name: ---GAME MANAGER---
   m_TagString: Untagged
@@ -14241,6 +14286,10 @@ MonoBehaviour:
   canStartCarmenMaterialisticDialogue: 0
   canStartCarmenIndependentDialogue: 0
   canStartCarmenEntrepreneurDialogue: 0
+  canStartBrunoBookwormDialogue: 0
+  canStartBrunoGeekDialogue: 0
+  canStartBrunoGeniusDialogue: 0
+  canStartBrunoLoyalDialogue: 1
 --- !u!114 &2091079316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14545,6 +14594,211 @@ MonoBehaviour:
   carmenAngry: {fileID: 21300000, guid: 3d2ee2c04459f924cb2903258078947f, type: 3}
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab3210eaa72376946ac0ec6172a1d4b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelCarmenSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  carmenSuprise: {fileID: 21300000, guid: 936f82999dda91743bba25346e117321, type: 3}
+  carmenSad: {fileID: 21300000, guid: 788a95142edc85d4887eec414af6163f, type: 3}
+  carmenAngry: {fileID: 21300000, guid: 3d2ee2c04459f924cb2903258078947f, type: 3}
+  carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
+  carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf490897e72e4a44fbd653040b8892b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelBrunoSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  brunoSurprise: {fileID: 21300000, guid: f3e30c3579978e44c97f4bb663e80b83, type: 3}
+  brunoSad: {fileID: 21300000, guid: 74e01673d6455c645a2563f19dc68cda, type: 3}
+  brunoAngry: {fileID: 21300000, guid: 8d6ad71c39ab52341b7dd9c0b0f8c54e, type: 3}
+  brunoShy: {fileID: 21300000, guid: 3ecc405e82a59714ca1b3020fba23764, type: 3}
+  brunoHappy: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1078da4f05802fd43b7f9854b81cbecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelBrunoSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  brunoSurprise: {fileID: 21300000, guid: f3e30c3579978e44c97f4bb663e80b83, type: 3}
+  brunoSad: {fileID: 21300000, guid: 74e01673d6455c645a2563f19dc68cda, type: 3}
+  brunoAngry: {fileID: 21300000, guid: 8d6ad71c39ab52341b7dd9c0b0f8c54e, type: 3}
+  brunoShy: {fileID: 21300000, guid: 3ecc405e82a59714ca1b3020fba23764, type: 3}
+  brunoHappy: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 223060cd582b34049b0261c51c50046a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelBrunoSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  brunoSurprise: {fileID: 21300000, guid: f3e30c3579978e44c97f4bb663e80b83, type: 3}
+  brunoSad: {fileID: 21300000, guid: 74e01673d6455c645a2563f19dc68cda, type: 3}
+  brunoAngry: {fileID: 21300000, guid: 8d6ad71c39ab52341b7dd9c0b0f8c54e, type: 3}
+  brunoShy: {fileID: 21300000, guid: 3ecc405e82a59714ca1b3020fba23764, type: 3}
+  brunoHappy: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
+  playSound2: {fileID: 5374810}
+--- !u!114 &2091079327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186120d678643b344b193e1ad9e57baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelBrunoSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  brunoSurprise: {fileID: 21300000, guid: f3e30c3579978e44c97f4bb663e80b83, type: 3}
+  brunoSad: {fileID: 21300000, guid: 74e01673d6455c645a2563f19dc68cda, type: 3}
+  brunoAngry: {fileID: 21300000, guid: 8d6ad71c39ab52341b7dd9c0b0f8c54e, type: 3}
+  brunoShy: {fileID: 21300000, guid: 3ecc405e82a59714ca1b3020fba23764, type: 3}
+  brunoHappy: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
   playSound2: {fileID: 5374810}
 --- !u!1 &2111057809
 GameObject:
