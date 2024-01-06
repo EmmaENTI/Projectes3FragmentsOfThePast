@@ -56,6 +56,11 @@ public class StartGame_Script_MainMenu : MonoBehaviour
         }
     }
 
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
     public void StartGameAnimPointerEnter()
     {
         animator.SetBool("canPlayAnim", true);
