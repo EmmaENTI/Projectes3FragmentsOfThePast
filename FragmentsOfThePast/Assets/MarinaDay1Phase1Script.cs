@@ -84,6 +84,8 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     //Sound 2
     [SerializeField] PlaySound playSound2;
+
+    
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

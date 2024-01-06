@@ -30,6 +30,8 @@ public class BubbleManager : MonoBehaviour
 
     public CharacterType currentCharacter;
 
+    [SerializeField] GameObject[] imagesBlockers;
+
     void Start()
     {
         LoadData();
@@ -52,8 +54,6 @@ public class BubbleManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CreateRandomBubbles(5, knowledgeScript.listToCreate);
-            AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist" });
-            AddMergeableTypes("Ambitious", new List<string>() { "BaseBubble", "Perfectionist" });
         }
     }
 
@@ -209,6 +209,12 @@ public class BubbleManager : MonoBehaviour
         }
 
         currentMergeableTypes2 = new List<Tuple<string, List<string>>>();
+
+        AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist", "Lure", "Loner" });
+        AddMergeableTypes("Ambitious", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Perfectionist", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Lure", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Loner", new List<string>() { "BaseBubble" });
     }
 
     public void SetCurrentCharacter(CharacterType type)
@@ -233,11 +239,18 @@ public class BubbleManager : MonoBehaviour
 
     public void SetNamesSelectionPanel(string[] names)
     {
-        
         for (int i = 0; i < names.Length; i++)
         {
-            //Debug.Log(names[i]);
             selectionPanel.transform.GetChild(i).GetChild(0).GetComponent<TMP_Text>().text = names[i];
+            if (names[i] == "BaseBubble")
+            {
+                imagesBlockers[i].SetActive(true);
+            }
+
+            else
+            {
+                imagesBlockers[i].SetActive(false);
+            }
         }
     }
 }

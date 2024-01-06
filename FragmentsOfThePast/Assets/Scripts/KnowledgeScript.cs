@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class KnowledgeScript
 {
-
+    public bool canStartLuisAmbitiousDialogue;
     public bool isLuis = false;
     public List<string[]> characterBubbles = new List<string[]>()
     {
@@ -22,7 +22,7 @@ public class KnowledgeScript
         
         new Tuple<string, int>("BaseBubble", 1), 
         new Tuple<string, int>("Active", 0),
-        new Tuple<string, int>("Ambitious", 1),
+        new Tuple<string, int>("Ambitious", 2),
         new Tuple<string, int>("ArtLover", 0),
         new Tuple<string, int>("Assertive", 0),
         new Tuple<string, int>("Bookworm", 0),
