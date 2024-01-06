@@ -56,6 +56,11 @@ public class SelectTraitButton : MonoBehaviour
             dialoguesInfoManager.canStartCarmenEntrepreneurDialogue = true;
         }
 
+        if (buttonContentText.text == "Bookworm")
+        {
+            dialoguesInfoManager.canStartBrunoBookwormDialogue = true;
+        }
+
 
     }
 

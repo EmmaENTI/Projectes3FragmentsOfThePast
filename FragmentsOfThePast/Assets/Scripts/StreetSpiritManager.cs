@@ -32,6 +32,8 @@ public class StreetSpiritManager : MonoBehaviour
     [SerializeField] CarmenIndependentDialogue carmenIndependentDialogue;
     [SerializeField] CarmenEntrepreneurDialogue carmenEntrepreneurDialogue;
 
+    [SerializeField] BrunoBookwormDialogue brunoBookwormDialouge;
+
     [SerializeField] PlaySound playSound;
 
     [SerializeField] AudioSource audioSource;
@@ -121,11 +123,21 @@ public class StreetSpiritManager : MonoBehaviour
 
 
         //Bruno Day1Phase1
-        if (spiritNumber == 3)
+        if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoBookwormDialogue == false)
         {
             brunoDay1Phase1Script.canStartDialogue = false;
             brunoDay1Phase1Script.canTalk = true;
         }
+
+        //Bruno Bookworm Dialogue
+        else if (spiritNumber == 3 && dialoguesInfoManager.canStartBrunoBookwormDialogue)
+        {
+            brunoBookwormDialouge.canStartDialogue = false;
+            brunoBookwormDialouge.canTalk = true;
+
+            dialoguesInfoManager.canStartBrunoBookwormDialogue = false;
+        }
+
 
 
         //Carmen Day1Phase1
