@@ -86,6 +86,18 @@ public class CarmenDay1Phase1Script : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] GameObject consultaPanel;
+    [SerializeField] GameObject alchemyPanel;
+    bool lockInAlchemyPanel = false;
+
+    KnowledgeScript knowledgeScript;
+
+    private void Start()
+    {
+        knowledgeScript = new KnowledgeScript();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -140,6 +152,13 @@ public class CarmenDay1Phase1Script : MonoBehaviour
             }
         }
     }
+
+    void SwitchPanels(GameObject a, GameObject b)
+    {
+        a.SetActive(!a.activeSelf);
+        b.SetActive(!b.activeSelf);
+    }
+
 
     private void DialogueTalk()
     {
@@ -662,6 +681,10 @@ public class CarmenDay1Phase1Script : MonoBehaviour
 
             case 128:
                 DialogueLine128();
+                break;
+
+            case 129:
+                DialogueLine129();
                 break;
         }
     }
@@ -2499,6 +2522,25 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
+    }
+
+    private void DialogueLine129()
+    {
+        if (!lockInAlchemyPanel)
+        {
+            SwitchPanels(consultaPanel, alchemyPanel);
+
+            bubbleManager.knowledgeScript = knowledgeScript;
+
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.LUIS);
+
+
+            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+
+            bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
+            lockInAlchemyPanel = true;
+        }
+
     }
 
 

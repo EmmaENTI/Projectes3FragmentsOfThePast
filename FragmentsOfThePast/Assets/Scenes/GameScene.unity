@@ -272,6 +272,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 2091079317}
   luisLureDialogue: {fileID: 2091079318}
   luisLonerDialogue: {fileID: 2091079319}
+  carmenAssertiveDialogue: {fileID: 2091079320}
+  carmenMaterialisticDialogue: {fileID: 2091079321}
+  carmenIndependentDialogue: {fileID: 2091079322}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -859,6 +862,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 0}
   luisLureDialogue: {fileID: 0}
   luisLonerDialogue: {fileID: 0}
+  carmenAssertiveDialogue: {fileID: 0}
+  carmenMaterialisticDialogue: {fileID: 0}
+  carmenIndependentDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -3013,6 +3019,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 0}
   luisLureDialogue: {fileID: 0}
   luisLonerDialogue: {fileID: 0}
+  carmenAssertiveDialogue: {fileID: 0}
+  carmenMaterialisticDialogue: {fileID: 0}
+  carmenIndependentDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6228,6 +6237,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 0}
   luisLureDialogue: {fileID: 0}
   luisLonerDialogue: {fileID: 0}
+  carmenAssertiveDialogue: {fileID: 0}
+  carmenMaterialisticDialogue: {fileID: 0}
+  carmenIndependentDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -6472,6 +6484,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 0}
   luisLureDialogue: {fileID: 0}
   luisLonerDialogue: {fileID: 0}
+  carmenAssertiveDialogue: {fileID: 0}
+  carmenMaterialisticDialogue: {fileID: 0}
+  carmenIndependentDialogue: {fileID: 0}
   playSound: {fileID: 0}
   audioSource: {fileID: 0}
   consultaTheme: {fileID: 0}
@@ -7365,6 +7380,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 2091079317}
   luisLureDialogue: {fileID: 2091079318}
   luisLonerDialogue: {fileID: 2091079319}
+  carmenAssertiveDialogue: {fileID: 2091079320}
+  carmenMaterialisticDialogue: {fileID: 2091079321}
+  carmenIndependentDialogue: {fileID: 2091079322}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -10388,6 +10406,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 2091079317}
   luisLureDialogue: {fileID: 2091079318}
   luisLonerDialogue: {fileID: 2091079319}
+  carmenAssertiveDialogue: {fileID: 2091079320}
+  carmenMaterialisticDialogue: {fileID: 2091079321}
+  carmenIndependentDialogue: {fileID: 2091079322}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -12278,6 +12299,9 @@ MonoBehaviour:
   luisPerfectionistDialogue: {fileID: 2091079317}
   luisLureDialogue: {fileID: 2091079318}
   luisLonerDialogue: {fileID: 2091079319}
+  carmenAssertiveDialogue: {fileID: 2091079320}
+  carmenMaterialisticDialogue: {fileID: 2091079321}
+  carmenIndependentDialogue: {fileID: 2091079322}
   playSound: {fileID: 59950588}
   audioSource: {fileID: 852453419}
   consultaTheme: {fileID: 8300000, guid: 89b54fc451f45514c9e3df8c17fda16a, type: 3}
@@ -13889,6 +13913,9 @@ GameObject:
   - component: {fileID: 2091079317}
   - component: {fileID: 2091079318}
   - component: {fileID: 2091079319}
+  - component: {fileID: 2091079320}
+  - component: {fileID: 2091079321}
+  - component: {fileID: 2091079322}
   m_Layer: 0
   m_Name: ---GAME MANAGER---
   m_TagString: Untagged
@@ -14175,6 +14202,9 @@ MonoBehaviour:
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
   playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
 --- !u!114 &2091079314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14207,6 +14237,10 @@ MonoBehaviour:
   canStartLuisPerfectionistDialogue: 0
   canStartLuisLureDialogue: 0
   canStartLuisLonerDialogue: 0
+  canStartCarmenAssertiveDialogue: 0
+  canStartCarmenMaterialisticDialogue: 0
+  canStartCarmenIndependentDialogue: 0
+  canStartCarmenEntrepreneurDialogue: 0
 --- !u!114 &2091079316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14383,6 +14417,135 @@ MonoBehaviour:
   bubbleManager: {fileID: 1690408353}
   consultaPanel: {fileID: 2073008151}
   alchemyPanel: {fileID: 897386527}
+--- !u!114 &2091079320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9430e58c1d03dd499157a685c861cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelCarmenSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  carmenSuprise: {fileID: 21300000, guid: 936f82999dda91743bba25346e117321, type: 3}
+  carmenSad: {fileID: 21300000, guid: 788a95142edc85d4887eec414af6163f, type: 3}
+  carmenAngry: {fileID: 21300000, guid: 3d2ee2c04459f924cb2903258078947f, type: 3}
+  carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
+  carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
+  playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
+--- !u!114 &2091079321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418de64ace648ec4da60a94fe1043171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelCarmenSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  carmenSuprise: {fileID: 21300000, guid: 936f82999dda91743bba25346e117321, type: 3}
+  carmenSad: {fileID: 21300000, guid: 788a95142edc85d4887eec414af6163f, type: 3}
+  carmenAngry: {fileID: 21300000, guid: 3d2ee2c04459f924cb2903258078947f, type: 3}
+  carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
+  carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
+  playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
+--- !u!114 &2091079322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20fa448ef2eb15346bdfae103fcf9844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  dialogueTextPanel: {fileID: 88565938}
+  dialogueText: {fileID: 2123327055}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  spiritNameText: {fileID: 1687121065}
+  answerButtonsPanel: {fileID: 25709668}
+  middleButtonPanel: {fileID: 1682963168}
+  leftButtonPanel: {fileID: 1459231770}
+  rightButtonPanel: {fileID: 439539433}
+  button1AnswerText: {fileID: 1459231772}
+  button2AnswerText: {fileID: 1682963170}
+  button3AnswerText: {fileID: 439539435}
+  textPanelImage: {fileID: 1496596830}
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelCarmenSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  bigSpiritImage: {fileID: 632314263}
+  carmenSuprise: {fileID: 21300000, guid: 936f82999dda91743bba25346e117321, type: 3}
+  carmenSad: {fileID: 21300000, guid: 788a95142edc85d4887eec414af6163f, type: 3}
+  carmenAngry: {fileID: 21300000, guid: 3d2ee2c04459f924cb2903258078947f, type: 3}
+  carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
+  carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
+  playSound2: {fileID: 5374810}
 --- !u!1 &2111057809
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,11 @@ public class StreetSpiritManager : MonoBehaviour
     [SerializeField] LuisLureDialogue luisLureDialogue;
     [SerializeField] LuisLonerDialogue luisLonerDialogue;
 
+    [SerializeField] CarmenAssertiveDialogue carmenAssertiveDialogue;
+    [SerializeField] CarmenMaterialisticDialogue carmenMaterialisticDialogue;
+    [SerializeField] CarmenIndependentDialogue carmenIndependentDialogue;
+    [SerializeField] CarmenEntrepreneurDialogue carmenEntrepreneurDialogue;
+
     [SerializeField] PlaySound playSound;
 
     [SerializeField] AudioSource audioSource;
@@ -115,7 +120,6 @@ public class StreetSpiritManager : MonoBehaviour
         }
 
 
-
         //Bruno Day1Phase1
         if (spiritNumber == 3)
         {
@@ -123,18 +127,44 @@ public class StreetSpiritManager : MonoBehaviour
             brunoDay1Phase1Script.canTalk = true;
         }
 
+
         //Carmen Day1Phase1
-        if (spiritNumber == 4)
+        if (spiritNumber == 4 &&
+            dialoguesInfoManager.canStartCarmenAssertiveDialogue == false &&
+            dialoguesInfoManager.canStartCarmenMaterialisticDialogue == false &&
+            dialoguesInfoManager.canStartCarmenIndependentDialogue == false)
         {
             carmenDay1Phase1Script.canStartDialogue = false;
             carmenDay1Phase1Script.canTalk = true;
         }
 
+        //Carmen Assertive
+        else if (spiritNumber == 4 && dialoguesInfoManager.canStartCarmenAssertiveDialogue)
+        {
+            carmenAssertiveDialogue.canStartDialogue = false;
+            carmenAssertiveDialogue.canTalk = true;
+        }
+
+        //Carmen Materialistic
+        else if (spiritNumber == 4 && dialoguesInfoManager.canStartCarmenMaterialisticDialogue)
+        {
+            carmenMaterialisticDialogue.canStartDialogue = false;
+            carmenMaterialisticDialogue.canTalk = true;
+        }
+
+        //Carmen Independent
+        else if (spiritNumber == 4 && dialoguesInfoManager.canStartCarmenIndependentDialogue)
+        {
+            carmenIndependentDialogue.canStartDialogue = false;
+            carmenIndependentDialogue.canTalk = true;
+        }
 
 
-
-
-
-
+        //Carmen Entrepreneur
+        else if (spiritNumber == 4 && dialoguesInfoManager.canStartCarmenEntrepreneurDialogue)
+        {
+            carmenEntrepreneurDialogue.canStartDialogue = false;
+            carmenEntrepreneurDialogue.canTalk = true;
+        }
     }
 }

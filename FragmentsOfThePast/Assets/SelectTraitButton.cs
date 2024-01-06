@@ -36,6 +36,27 @@ public class SelectTraitButton : MonoBehaviour
             dialoguesInfoManager.canStartLuisLonerDialogue = true;
         }
 
+        if (buttonContentText.text == "Assertive")
+        {
+            dialoguesInfoManager.canStartCarmenAssertiveDialogue = true;
+        }
+
+        if (buttonContentText.text == "Materialistic")
+        {
+            dialoguesInfoManager.canStartCarmenMaterialisticDialogue = true;
+        }
+
+        if (buttonContentText.text == "Independent")
+        {
+            dialoguesInfoManager.canStartCarmenMaterialisticDialogue = true;
+        }
+
+        if (buttonContentText.text == "Entrepreneur")
+        {
+            dialoguesInfoManager.canStartCarmenEntrepreneurDialogue = true;
+        }
+
+
     }
 
 

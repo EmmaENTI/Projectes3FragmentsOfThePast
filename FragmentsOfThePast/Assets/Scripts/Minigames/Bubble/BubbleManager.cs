@@ -210,11 +210,15 @@ public class BubbleManager : MonoBehaviour
 
         currentMergeableTypes2 = new List<Tuple<string, List<string>>>();
 
-        AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist", "Lure", "Loner" });
+        AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist", "Lure", "Loner", "Entrepreneur", "Assertive", "Materialistic", "Independent" });
         AddMergeableTypes("Ambitious", new List<string>() { "BaseBubble" });
         AddMergeableTypes("Perfectionist", new List<string>() { "BaseBubble" });
         AddMergeableTypes("Lure", new List<string>() { "BaseBubble" });
         AddMergeableTypes("Loner", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Entrepreneur", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Assertive", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Materialistic", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Independent", new List<string>() { "BaseBubble" });
     }
 
     public void SetCurrentCharacter(CharacterType type)

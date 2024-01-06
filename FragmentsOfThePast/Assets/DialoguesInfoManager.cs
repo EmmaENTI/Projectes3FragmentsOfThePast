@@ -8,4 +8,9 @@ public class DialoguesInfoManager : MonoBehaviour
     public bool canStartLuisPerfectionistDialogue;
     public bool canStartLuisLureDialogue;
     public bool canStartLuisLonerDialogue;
+   
+    public bool canStartCarmenAssertiveDialogue;
+    public bool canStartCarmenMaterialisticDialogue;
+    public bool canStartCarmenIndependentDialogue;
+    public bool canStartCarmenEntrepreneurDialogue;
 }
