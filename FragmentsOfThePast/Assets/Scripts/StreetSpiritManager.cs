@@ -132,7 +132,8 @@ public class StreetSpiritManager : MonoBehaviour
         if (spiritNumber == 4 &&
             dialoguesInfoManager.canStartCarmenAssertiveDialogue == false &&
             dialoguesInfoManager.canStartCarmenMaterialisticDialogue == false &&
-            dialoguesInfoManager.canStartCarmenIndependentDialogue == false)
+            dialoguesInfoManager.canStartCarmenIndependentDialogue == false &&
+            dialoguesInfoManager.canStartCarmenEntrepreneurDialogue == false)
         {
             carmenDay1Phase1Script.canStartDialogue = false;
             carmenDay1Phase1Script.canTalk = true;

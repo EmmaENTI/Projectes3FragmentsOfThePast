@@ -13,4 +13,6 @@ public class DialoguesInfoManager : MonoBehaviour
     public bool canStartCarmenMaterialisticDialogue;
     public bool canStartCarmenIndependentDialogue;
     public bool canStartCarmenEntrepreneurDialogue;
+
+    public bool canStartBrunoBookwormDialogue;
 }
