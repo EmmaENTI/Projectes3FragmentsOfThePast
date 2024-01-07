@@ -2532,7 +2532,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
 
             bubbleManager.knowledgeScript = knowledgeScript;
 
-            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.LUIS);
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.CARMEN);
 
 
             // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);

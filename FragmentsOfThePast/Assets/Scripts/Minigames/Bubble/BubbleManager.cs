@@ -16,7 +16,7 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private Sprite[] bubblesSprites;
     [SerializeField] public Dictionary<string, Sprite> bubbleDictionary;
     [SerializeField] public string[] bubbleStrings;
-    const int numOfBubbles = 33;
+    const int numOfBubbles = 34;
     [SerializeField] private GameObject selectionPanel; 
 
     private List<GameObject> currentBubbles;
@@ -177,6 +177,7 @@ public class BubbleManager : MonoBehaviour
             "Childish", 
             "Clumsy", 
             "Creative", 
+            "Entrepreneur", // NOU, sprite no correcte - Grey Ball
             "Evil", 
             "Family", 
             "Foodie", 
