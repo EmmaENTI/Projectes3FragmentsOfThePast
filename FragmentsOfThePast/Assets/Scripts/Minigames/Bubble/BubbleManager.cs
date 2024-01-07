@@ -62,6 +62,7 @@ public class BubbleManager : MonoBehaviour
         baseBubble.GetComponent<Image>().sprite = bubbleDictionary[name];
         GameObject gameObj = Instantiate(baseBubble, alchemyPanel.transform);
         gameObj.name = name;
+        SetInfoPanelName(gameObj);
 
         currentBubbles.Add(gameObj);
 
@@ -80,6 +81,7 @@ public class BubbleManager : MonoBehaviour
             for (int j = 0; j < savedBubbles[i].Item2; j++)
             {
                 CreateBubble(savedBubbles[i].Item1);
+
             }
         }
 
@@ -262,5 +264,10 @@ public class BubbleManager : MonoBehaviour
                 imagesBlockers[i].SetActive(false);
             }
         }
+    }
+
+    public void SetInfoPanelName(GameObject bubble)
+    {
+        bubble.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = bubble.transform.name;
     }
 }

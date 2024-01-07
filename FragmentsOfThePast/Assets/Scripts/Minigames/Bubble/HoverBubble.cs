@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HoverBubble : MonoBehaviour
 {
     BubbleManager bubbleManager;
+
+    GameObject infoPanel;
 
     private void Start()
     {
@@ -28,10 +31,18 @@ public class HoverBubble : MonoBehaviour
                 }
             }
         }
+        ToggleInfoPanel(true);
     }
 
     public void LeaveBubble()
     {
         transform.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+
+        ToggleInfoPanel(false);
+    }
+
+    void ToggleInfoPanel(bool isActive)
+    {
+        transform.GetChild(0).gameObject.SetActive(isActive);
     }
 }
