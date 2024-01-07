@@ -20,9 +20,12 @@ public class HoverBubble : MonoBehaviour
 
         for (int i = 0; i < bubbleManager.GetMergeableBubbleTypes().Count; i++)
         {
-            if (bubbleManager.GetMergeableBubbleTypes()[i].Item1 == transform.name)
+            for (int j = 0; j < bubbleManager.GetCharacterBallTypes().Length; j++)
             {
-                transform.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+                if (bubbleManager.GetCharacterBallTypes()[j] == transform.name && bubbleManager.GetMergeableBubbleTypes()[i].Item1 == transform.name)
+                {
+                    transform.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+                }
             }
         }
     }
