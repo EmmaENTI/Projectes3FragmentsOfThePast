@@ -25,7 +25,13 @@ public class StartGame_Script_MainMenu : MonoBehaviour
     {
         savePlayerNameScript.StorePlayerName();
 
-        if(savePlayerNameScript.playerNameToStorage.Length <10)
+        loadManager.loadGame = false;
+
+        PlayerPrefs.SetInt("loadManager.loadGame", loadManager.loadGame ? 1 : 0);
+
+        loadManager.loadGame = PlayerPrefs.GetInt("loadManager.loadGame") == 0 ? true : false;
+
+        if (savePlayerNameScript.playerNameToStorage.Length <10)
         {
             soundManagerAudioSource.enabled = false;
             SceneManager.LoadScene("GameScene");
@@ -58,7 +64,10 @@ public class StartGame_Script_MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
+        soundManagerAudioSource.enabled = false;
         SceneManager.LoadScene("GameScene");
+        loadManager.loadGame = true;
+        PlayerPrefs.SetInt("loadManager.loadGame", loadManager.loadGame ? 1 : 0);
     }
 
     public void StartGameAnimPointerEnter()

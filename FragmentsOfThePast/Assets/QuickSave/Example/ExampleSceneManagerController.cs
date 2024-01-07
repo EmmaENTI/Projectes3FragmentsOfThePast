@@ -12,6 +12,7 @@ public class ExampleSceneManagerController : MonoBehaviour
     public InputField Input6;
     public InputField Input7;
     public InputField Input8;
+    public bool Input9;
     public InputField Content;
 
     public void Save()
@@ -21,6 +22,7 @@ public class ExampleSceneManagerController : MonoBehaviour
                        .Write("Input2", Input2.text)
                        .Write("Input3", Input3.text)
                        .Write("Input4", Input4.text)
+                       .Write<bool>("Input9", Input9)
                        .Commit();
 
         Content.text = QuickSaveRaw.LoadString("Inputs.json");
@@ -32,9 +34,10 @@ public class ExampleSceneManagerController : MonoBehaviour
                        .Read<string>("Input1", (r) => { Input5.text = r; })
                        .Read<string>("Input2", (r) => { Input6.text = r; })
                        .Read<string>("Input3", (r) => { Input7.text = r; })
-                       .Read<string>("Input4", (r) => { Input8.text = r; });
+                       .Read<string>("Input4", (r) => { Input8.text = r; })
+                       .Read<bool>("Input9", (r) => { Input9 = r; });
     }
-
+    /*
     public void QuickSaveRawExample()
     {
         // Use QuickSaveRaw to directly save / load text or binary data to / from files
@@ -101,4 +104,6 @@ public class ExampleSceneManagerController : MonoBehaviour
         writer.Write("Key4", four);
         writer.Commit();
     }
+    
+    */
 }

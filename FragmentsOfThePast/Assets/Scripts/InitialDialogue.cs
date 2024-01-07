@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InitialDialogue : MonoBehaviour
 {
@@ -141,6 +142,13 @@ public class InitialDialogue : MonoBehaviour
 
     private void Start()
     {
+        loadManager.loadGame = PlayerPrefs.GetInt("loadManager.loadGame") == 1 ? true : false;
+
+        if (loadManager.loadGame)
+        {
+            loadManager.Load();
+        }
+
         if (loadManager.introFinished == true)
         {
             dialogueLine = 14;
@@ -152,6 +160,7 @@ public class InitialDialogue : MonoBehaviour
             dialogueLine = 67;
             //loadManager.prologueFinished = false;
         }
+        
     }
     private void Update()
     {
