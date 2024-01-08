@@ -7365,6 +7365,7 @@ MonoBehaviour:
   luisCharacterSprite: {fileID: 1759008379}
   brunoCharacterSprite: {fileID: 31479693}
   carmenCharacterSprite: {fileID: 1558788631}
+  loadManager: {fileID: 2091079314}
 --- !u!1 &1189887439
 GameObject:
   m_ObjectHideFlags: 0
@@ -13131,6 +13132,7 @@ MonoBehaviour:
   luisCharacterSprite: {fileID: 1759008379}
   brunoCharacterSprite: {fileID: 31479693}
   carmenCharacterSprite: {fileID: 1558788631}
+  loadManager: {fileID: 2091079314}
 --- !u!1 &1956413971
 GameObject:
   m_ObjectHideFlags: 0
@@ -15048,6 +15050,7 @@ MonoBehaviour:
   luisCharacterSprite: {fileID: 1759008379}
   brunoCharacterSprite: {fileID: 31479693}
   carmenCharacterSprite: {fileID: 1558788631}
+  loadManager: {fileID: 0}
 --- !u!1 &2111057809
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,6 +19,8 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] private GameObject brunoCharacterSprite;
     [SerializeField] private GameObject carmenCharacterSprite;
 
+    [SerializeField] LoadManager loadManager;
+
     public void OptionSelected()
     {
         RestorePanels();
@@ -29,6 +31,9 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
+                loadManager.luisDay1 = true;
+                loadManager.Save();
+
             }
         }
 
@@ -39,6 +44,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
+                loadManager.luisDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -49,6 +56,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
+                loadManager.luisDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -59,6 +68,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
+                loadManager.luisDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -69,6 +80,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
+                loadManager.carmenDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -79,6 +92,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
+                loadManager.carmenDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -89,6 +104,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
+                loadManager.carmenDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -99,6 +116,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
+                loadManager.carmenDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -109,6 +128,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
+                loadManager.brunoDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -119,6 +140,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
+                loadManager.brunoDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -129,6 +152,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
+                loadManager.brunoDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -139,6 +164,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
+                loadManager.brunoDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -149,6 +176,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
+                loadManager.marinaDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -159,6 +188,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
+                loadManager.marinaDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -169,6 +200,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
+                loadManager.marinaDay1 = true;
+                loadManager.Save();
             }
         }
 
@@ -179,6 +212,8 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
+                loadManager.marinaDay1 = true;
+                loadManager.Save();
             }
         }
     }
