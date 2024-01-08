@@ -85,7 +85,18 @@ public class MarinaDay1Phase1Script : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
-    
+    [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] GameObject consultaPanel;
+    [SerializeField] GameObject alchemyPanel;
+    bool lockInAlchemyPanel = false;
+
+    KnowledgeScript knowledgeScript;
+
+    private void Start()
+    {
+        knowledgeScript = new KnowledgeScript();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -139,6 +150,12 @@ public class MarinaDay1Phase1Script : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
             }
         }
+    }
+
+    void SwitchPanels(GameObject a, GameObject b)
+    {
+        a.SetActive(!a.activeSelf);
+        b.SetActive(!b.activeSelf);
     }
 
     private void DialogueTalk()
@@ -430,6 +447,198 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
             case 70:
                 DialogueLine70();
+                break;
+
+            case 71:
+                DialogueLine71();
+                break;
+
+            case 72:
+                DialogueLine72();
+                break;
+
+            case 73:
+                DialogueLine73();
+                break;
+
+            case 74:
+                DialogueLine74();
+                break;
+
+            case 75:
+                DialogueLine75();
+                break;
+
+            case 76:
+                DialogueLine76();
+                break;
+
+            case 77:
+                DialogueLine77();
+                break;
+
+            case 78:
+                DialogueLine78();
+                break;
+
+            case 79:
+                DialogueLine79();
+                break;
+
+            case 80:
+                DialogueLine80();
+                break;
+
+            case 81:
+                DialogueLine81();
+                break;
+
+            case 82:
+                DialogueLine82();
+                break;
+
+            case 83:
+                DialogueLine83();
+                break;
+
+            case 84:
+                DialogueLine84();
+                break;
+
+            case 85:
+                DialogueLine85();
+                break;
+
+            case 86:
+                DialogueLine86();
+                break;
+
+            case 87:
+                DialogueLine87();
+                break;
+
+            case 88:
+                DialogueLine88();
+                break;
+
+            case 89:
+                DialogueLine89();
+                break;
+
+            case 90:
+                DialogueLine90();
+                break;
+
+            case 91:
+                DialogueLine91();
+                break;
+
+            case 92:
+                DialogueLine92();
+                break;
+
+            case 93:
+                DialogueLine93();
+                break;
+
+            case 94:
+                DialogueLine94();
+                break;
+
+            case 95:
+                DialogueLine95();
+                break;
+
+            case 96:
+                DialogueLine96();
+                break;
+
+            case 97:
+                DialogueLine97();
+                break;
+
+            case 98:
+                DialogueLine98();
+                break;
+
+            case 99:
+                DialogueLine99();
+                break;
+
+            case 100:
+                DialogueLine100();
+                break;
+
+            case 101:
+                DialogueLine101();
+                break;
+
+            case 102:
+                DialogueLine102();
+                break;
+
+            case 103:
+                DialogueLine103();
+                break;
+
+            case 104:
+                DialogueLine104();
+                break;
+
+            case 105:
+                DialogueLine105();
+                break;
+
+            case 106:
+                DialogueLine106();
+                break;
+
+            case 107:
+                DialogueLine107();
+                break;
+
+            case 108:
+                DialogueLine108();
+                break;
+
+            case 109:
+                DialogueLine109();
+                break;
+
+            case 110:
+                DialogueLine110();
+                break;
+
+            case 111:
+                DialogueLine111();
+                break;
+
+            case 112:
+                DialogueLine112();
+                break;
+
+            case 113:
+                DialogueLine113();
+                break;
+
+            case 114:
+                DialogueLine114();
+                break;
+
+            case 115:
+                DialogueLine115();
+                break;
+
+            case 116:
+                DialogueLine116();
+                break;
+
+            case 117:
+                DialogueLine117();
+                break;
+
+            case 118:
+                DialogueLine118();
                 break;
         }
     }
@@ -2066,6 +2275,24 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         texToToWrite = "Bye Bye!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+    }
+
+    private void DialogueLine118()
+    {
+        if (!lockInAlchemyPanel)
+        {
+            SwitchPanels(consultaPanel, alchemyPanel);
+
+            bubbleManager.knowledgeScript = knowledgeScript;
+
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.MARINA);
+
+
+            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+
+            bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
+            lockInAlchemyPanel = true;
+        }
     }
 }
 

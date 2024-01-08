@@ -91,7 +91,6 @@ public class StreetSpiritManager : MonoBehaviour
             marinaRomanticDialogue.canTalk = true;
 
             dialoguesInfoManager.canStartMarinaRomanticDialogue = false;
-            UnityEngine.Debug.Log("AQUI NO");
         }
 
         //Marina Good Dialogue
@@ -101,7 +100,6 @@ public class StreetSpiritManager : MonoBehaviour
             marinaGoodDialogue.canTalk = true;
 
             dialoguesInfoManager.canStartMarinaGoodDialogue = false;
-            UnityEngine.Debug.Log("AQUI SI");
         }
 
         //Marina Active Dialogue
@@ -120,6 +118,7 @@ public class StreetSpiritManager : MonoBehaviour
             marinaChildishDialogue.canTalk = true;
 
             dialoguesInfoManager.canStartMarinaChildishDialogue = false;
+            UnityEngine.Debug.Log("ARA SI");
         }
 
         //Luis Day1Phase1
