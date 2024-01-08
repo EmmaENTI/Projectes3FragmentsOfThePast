@@ -28,6 +28,10 @@ public class LoadManager : MonoBehaviour
         QuickSaveWriter.Create("SavePoints")
                        .Write<bool>("SavePoint1", introFinished)
                        .Write<bool>("SavePoint2", prologueFinished)
+                       .Write<bool>("SavePoint3", luisDay1)
+                       .Write<bool>("SavePoint4", marinaDay1)
+                       .Write<bool>("SavePoint5", brunoDay1)
+                       .Write<bool>("SavePoint6", carmenDay1)
                        .Commit();
      
         //Content.text = QuickSaveRaw.LoadString("Inputs.json");
@@ -39,7 +43,11 @@ public class LoadManager : MonoBehaviour
     {
         QuickSaveReader.Create("SavePoints")
                        .Read<bool>("SavePoint1", (r) => { introFinished = r; })
-                       .Read<bool>("SavePoint2", (r) => { prologueFinished = r; });
+                       .Read<bool>("SavePoint2", (r) => { prologueFinished = r; })
+                       .Read<bool>("SavePoint3", (r) => { luisDay1 = r; })
+                       .Read<bool>("SavePoint4", (r) => { marinaDay1 = r; })
+                       .Read<bool>("SavePoint5", (r) => { brunoDay1 = r; })
+                       .Read<bool>("SavePoint6", (r) => { carmenDay1 = r; });
 
         Debug.Log("LOADED");
     }
