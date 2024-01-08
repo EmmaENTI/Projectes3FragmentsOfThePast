@@ -25,7 +25,7 @@ public class KnowledgeScript
         new Tuple<string, int>("Ambitious", 0),
         new Tuple<string, int>("ArtLover", 0),
         new Tuple<string, int>("Assertive", 0),
-        new Tuple<string, int>("Bookworm", 0),
+        new Tuple<string, int>("Bookworm", 1),
         new Tuple<string, int>("Cheerful", 0),
         new Tuple<string, int>("Childish", 0),
         new Tuple<string, int>("Clumsy", 0),

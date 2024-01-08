@@ -14242,6 +14242,9 @@ MonoBehaviour:
   brunoShy: {fileID: 21300000, guid: 3ecc405e82a59714ca1b3020fba23764, type: 3}
   brunoHappy: {fileID: 21300000, guid: 0606b65d2e5df0f4d876eaed25e6bad5, type: 3}
   playSound2: {fileID: 5374810}
+  bubbleManager: {fileID: 1690408353}
+  consultaPanel: {fileID: 2073008151}
+  alchemyPanel: {fileID: 897386527}
 --- !u!114 &2091079313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14329,7 +14332,7 @@ MonoBehaviour:
   canStartMarinaRomanticDialogue: 0
   canStartMarinaGoodDialogue: 0
   canStartMarinaActiveDialogue: 0
-  canStartMarinaChildishDialogue: 1
+  canStartMarinaChildishDialogue: 0
 --- !u!114 &2091079316
 MonoBehaviour:
   m_ObjectHideFlags: 0

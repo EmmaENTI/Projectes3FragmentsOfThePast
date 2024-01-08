@@ -85,6 +85,19 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
     //Sound 2
     [SerializeField] PlaySound playSound2;
+
+    [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] GameObject consultaPanel;
+    [SerializeField] GameObject alchemyPanel;
+    bool lockInAlchemyPanel = false;
+
+    KnowledgeScript knowledgeScript;
+
+    private void Start()
+    {
+        knowledgeScript = new KnowledgeScript();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -139,6 +152,13 @@ public class BrunoDay1Phase1Script : MonoBehaviour
             }
         }
     }
+
+    void SwitchPanels(GameObject a, GameObject b)
+    {
+        a.SetActive(!a.activeSelf);
+        b.SetActive(!b.activeSelf);
+    }
+
 
     private void DialogueTalk()
     {
@@ -617,6 +637,110 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
             case 117:
                 DialogueLine117();
+                break;
+
+            case 118:
+                DialogueLine118();
+                break;
+
+            case 119:
+                DialogueLine119();
+                break;
+
+            case 120:
+                DialogueLine120();
+                break;
+
+            case 121:
+                DialogueLine121();
+                break;
+
+            case 122:
+                DialogueLine122();
+                break;
+
+            case 123:
+                DialogueLine123();
+                break;
+
+            case 124:
+                DialogueLine124();
+                break;
+
+            case 125:
+                DialogueLine125();
+                break;
+
+            case 126:
+                DialogueLine126();
+                break;
+
+            case 127:
+                DialogueLine127();
+                break;
+
+            case 128:
+                DialogueLine128();
+                break;
+
+            case 129:
+                DialogueLine129();
+                break;
+
+            case 130:
+                DialogueLine130();
+                break;
+
+            case 131:
+                DialogueLine131();
+                break;
+
+            case 132:
+                DialogueLine132();
+                break;
+
+            case 133:
+                DialogueLine133();
+                break;
+
+            case 134:
+                DialogueLine134();
+                break;
+
+            case 135:
+                DialogueLine135();
+                break;
+
+            case 136:
+                DialogueLine136();
+                break;
+
+            case 137:
+                DialogueLine137();
+                break;
+
+            case 138:
+                DialogueLine138();
+                break;
+
+            case 139:
+                DialogueLine139();
+                break;
+
+            case 140:
+                DialogueLine140();
+                break;
+
+            case 141:
+                DialogueLine141();
+                break;
+
+            case 142:
+                DialogueLine142();
+                break;
+
+            case 143:
+                DialogueLine143();
                 break;
         }
     }
@@ -2530,6 +2654,17 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         canTalk = false;
     }
 
+    private void DialogueLine137()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        spiritNameText.text = "Bruno";
+        hasEndedTyping = false;
+        texToToWrite = "I will wait patiently, " + gameManager_Script.playerName + ".";
+        StartCoroutine(TypeText(texToToWrite));
+        bigSpiritImage.sprite = brunoHappy;
+        canTalk = false;
+    }
+
     private void DialogueLine138()
     {
         textPanelImage.sprite = TextPanelBrunoSprite;
@@ -2584,5 +2719,23 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoHappy;
         canTalk = false;
+    }
+
+    private void DialogueLine143()
+    {
+        if (!lockInAlchemyPanel)
+        {
+            SwitchPanels(consultaPanel, alchemyPanel);
+
+            bubbleManager.knowledgeScript = knowledgeScript;
+
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.BRUNO);
+
+
+            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+
+            bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
+            lockInAlchemyPanel = true;
+        }
     }
 }
