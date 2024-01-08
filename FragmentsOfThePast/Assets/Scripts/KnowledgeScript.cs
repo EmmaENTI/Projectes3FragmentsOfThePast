@@ -21,13 +21,13 @@ public class KnowledgeScript
         // Int = Quantitat
         
         new Tuple<string, int>("BaseBubble", 1), 
-        new Tuple<string, int>("Active", 0),
+        new Tuple<string, int>("Active", 1),
         new Tuple<string, int>("Ambitious", 0),
         new Tuple<string, int>("ArtLover", 0),
         new Tuple<string, int>("Assertive", 0),
         new Tuple<string, int>("Bookworm", 0),
         new Tuple<string, int>("Cheerful", 0),
-        new Tuple<string, int>("Childish", 1),
+        new Tuple<string, int>("Childish", 0),
         new Tuple<string, int>("Clumsy", 0),
         new Tuple<string, int>("Creative", 0),
         new Tuple<string, int>("Entrepreneur", 0),

@@ -570,6 +570,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
             case 100:
                 DialogueLine100();
                 break;
+
             case 101:
                 DialogueLine101();
                 break;

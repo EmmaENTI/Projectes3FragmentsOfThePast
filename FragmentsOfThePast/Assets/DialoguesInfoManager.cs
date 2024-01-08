@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DialoguesInfoManager : MonoBehaviour
 {
+    public bool luisDay1Phase1Finished;
+    public bool marinaDay1Phase1Finished;
+    public bool brunoDay1Phase1Finished;
+    public bool carmenDay1Phase1Finished;
+
     public bool canStartLuisAmbitiousDialogue;
     public bool canStartLuisPerfectionistDialogue;
     public bool canStartLuisLureDialogue;
