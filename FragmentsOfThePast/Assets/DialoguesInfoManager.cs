@@ -18,4 +18,9 @@ public class DialoguesInfoManager : MonoBehaviour
     public bool canStartBrunoGeekDialogue;
     public bool canStartBrunoGeniusDialogue;
     public bool canStartBrunoLoyalDialogue;
+
+    public bool canStartMarinaRomanticDialogue;
+    public bool canStartMarinaGoodDialogue;
+    public bool canStartMarinaActiveDialogue;
+    public bool canStartMarinaChildishDialogue;
 }

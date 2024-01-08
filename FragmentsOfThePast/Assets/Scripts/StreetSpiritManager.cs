@@ -37,6 +37,12 @@ public class StreetSpiritManager : MonoBehaviour
     [SerializeField] BrunoGeekDialogue brunoGeekDialouge;
     [SerializeField] BrunoLoyalDialogue brunoLoyalDialogue;
 
+
+    [SerializeField] MarinaRomanticDialogue marinaRomanticDialogue;
+    [SerializeField] MarinaGoodDialogue marinaGoodDialogue;
+    [SerializeField] MarinaActiveDialogue marinaActiveDialogue;
+    [SerializeField] MarinaChildishDialogue marinaChildishDialogue;
+
     [SerializeField] PlaySound playSound;
 
     [SerializeField] AudioSource audioSource;
@@ -69,11 +75,51 @@ public class StreetSpiritManager : MonoBehaviour
 
 
         //Marina Day1Phase1
-        if (spiritNumber == 1)
+        if (spiritNumber == 1 && dialoguesInfoManager.canStartMarinaActiveDialogue == false &&
+            dialoguesInfoManager.canStartMarinaChildishDialogue == false &&
+            dialoguesInfoManager.canStartMarinaGoodDialogue == false &&
+            dialoguesInfoManager.canStartMarinaRomanticDialogue == false)
         {
             marinaDay1Phase1Script.canStartDialogue = false;
             marinaDay1Phase1Script.canTalk = true;
-            
+        }
+
+        //Marina Romantic Dialogue
+        else if (spiritNumber == 1 && dialoguesInfoManager.canStartMarinaRomanticDialogue)
+        {
+            marinaRomanticDialogue.canStartDialogue = false;
+            marinaRomanticDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartMarinaRomanticDialogue = false;
+            UnityEngine.Debug.Log("AQUI NO");
+        }
+
+        //Marina Good Dialogue
+        else if (spiritNumber == 1 && dialoguesInfoManager.canStartMarinaGoodDialogue)
+        {
+            marinaGoodDialogue.canStartDialogue = false;
+            marinaGoodDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartMarinaGoodDialogue = false;
+            UnityEngine.Debug.Log("AQUI SI");
+        }
+
+        //Marina Active Dialogue
+        else if (spiritNumber == 1 && dialoguesInfoManager.canStartMarinaActiveDialogue)
+        {
+            marinaActiveDialogue.canStartDialogue = false;
+            marinaActiveDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartMarinaActiveDialogue = false;
+        }
+
+        //Marina Childish Dialogue
+        else if (spiritNumber == 1 && dialoguesInfoManager.canStartMarinaChildishDialogue)
+        {
+            marinaChildishDialogue.canStartDialogue = false;
+            marinaChildishDialogue.canTalk = true;
+
+            dialoguesInfoManager.canStartMarinaChildishDialogue = false;
         }
 
         //Luis Day1Phase1
