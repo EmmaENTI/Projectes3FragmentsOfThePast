@@ -13986,6 +13986,7 @@ GameObject:
   - component: {fileID: 2091079302}
   - component: {fileID: 2091079314}
   - component: {fileID: 2091079332}
+  - component: {fileID: 2091079333}
   - component: {fileID: 2091079315}
   - component: {fileID: 2091079309}
   - component: {fileID: 2091079310}
@@ -15051,6 +15052,24 @@ MonoBehaviour:
   brunoCharacterSprite: {fileID: 31479693}
   carmenCharacterSprite: {fileID: 1558788631}
   loadManager: {fileID: 0}
+--- !u!114 &2091079333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b47ebdf8490eea4dbc7020a4372c925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marinaCharacterSprite: {fileID: 1189887439}
+  luisCharacterSprite: {fileID: 1759008379}
+  brunoCharacterSprite: {fileID: 31479693}
+  carmenCharacterSprite: {fileID: 1558788631}
+  loadManager: {fileID: 2091079314}
+  dialoguesInfoManager: {fileID: 2091079315}
 --- !u!1 &2111057809
 GameObject:
   m_ObjectHideFlags: 0
