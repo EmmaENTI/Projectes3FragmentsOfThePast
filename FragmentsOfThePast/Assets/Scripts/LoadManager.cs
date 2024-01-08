@@ -7,8 +7,15 @@ using UnityEngine.UI;
 
 public class LoadManager : MonoBehaviour
 {
+    // Prologue
     public bool introFinished;
     public bool prologueFinished;
+
+    //Day 1
+    public bool luisDay1;
+    public bool marinaDay1;
+    public bool brunoDay1;
+    public bool carmenDay1;
 
     public bool loadGame;
     [SerializeField] Animator animator;

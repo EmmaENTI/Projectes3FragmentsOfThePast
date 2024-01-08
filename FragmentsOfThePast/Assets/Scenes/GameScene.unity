@@ -7361,6 +7361,10 @@ MonoBehaviour:
   selectionPanel: {fileID: 796905657}
   alchemyPanel: {fileID: 897386527}
   lobbyPanel: {fileID: 2052982955}
+  marinaCharacterSprite: {fileID: 1189887439}
+  luisCharacterSprite: {fileID: 1759008379}
+  brunoCharacterSprite: {fileID: 31479693}
+  carmenCharacterSprite: {fileID: 1558788631}
 --- !u!1 &1189887439
 GameObject:
   m_ObjectHideFlags: 0
@@ -13123,6 +13127,10 @@ MonoBehaviour:
   selectionPanel: {fileID: 796905657}
   alchemyPanel: {fileID: 897386527}
   lobbyPanel: {fileID: 2052982955}
+  marinaCharacterSprite: {fileID: 1189887439}
+  luisCharacterSprite: {fileID: 1759008379}
+  brunoCharacterSprite: {fileID: 31479693}
+  carmenCharacterSprite: {fileID: 1558788631}
 --- !u!1 &1956413971
 GameObject:
   m_ObjectHideFlags: 0
@@ -13975,6 +13983,7 @@ GameObject:
   - component: {fileID: 2091079303}
   - component: {fileID: 2091079302}
   - component: {fileID: 2091079314}
+  - component: {fileID: 2091079332}
   - component: {fileID: 2091079315}
   - component: {fileID: 2091079309}
   - component: {fileID: 2091079310}
@@ -14306,6 +14315,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introFinished: 0
   prologueFinished: 0
+  luisDay1: 0
+  marinaDay1: 0
+  brunoDay1: 0
+  carmenDay1: 0
   loadGame: 0
   animator: {fileID: 0}
 --- !u!114 &2091079315
@@ -14320,6 +14333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd8bab7fe08874e458aab26093ef0629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  luisDay1Phase1Finished: 0
+  marinaDay1Phase1Finished: 0
+  brunoDay1Phase1Finished: 0
+  carmenDay1Phase1Finished: 0
   canStartLuisAmbitiousDialogue: 0
   canStartLuisPerfectionistDialogue: 0
   canStartLuisLureDialogue: 0
@@ -15010,6 +15027,27 @@ MonoBehaviour:
   marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
   playSound2: {fileID: 5374810}
+--- !u!114 &2091079332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c16b6afd179fd449b52203ceaa3f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguesInfoManager: {fileID: 2091079315}
+  buttonContentText: {fileID: 0}
+  selectionPanel: {fileID: 0}
+  alchemyPanel: {fileID: 897386527}
+  lobbyPanel: {fileID: 2052982955}
+  marinaCharacterSprite: {fileID: 1189887439}
+  luisCharacterSprite: {fileID: 1759008379}
+  brunoCharacterSprite: {fileID: 31479693}
+  carmenCharacterSprite: {fileID: 1558788631}
 --- !u!1 &2111057809
 GameObject:
   m_ObjectHideFlags: 0
