@@ -179,7 +179,6 @@ public class LuisAmbitiousDialogue : MonoBehaviour
                 DialogueLine2();
                 break;
 
-                /*
             case 3:
                 DialogueLine3();
                 break;
@@ -243,6 +242,7 @@ public class LuisAmbitiousDialogue : MonoBehaviour
             case 18:
                 DialogueLine18();
                 break;
+                /*
 
             case 19:
                 DialogueLine19();
@@ -595,12 +595,14 @@ public class LuisAmbitiousDialogue : MonoBehaviour
         canTalk = false;
     }
 
+
     private void DialogueLine1()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Ambitious Dialogue Debug";
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "So, mystery guide, you're telling me you can see fragments of my past in that little crystal ball of yours?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -610,12 +612,214 @@ public class LuisAmbitiousDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         spiritNameText.text = "Luis";
-        bigSpiritImage.sprite = luisSuprise;
-        texToToWrite = "Ambitious Dialogue Debug";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "That's quite the performance you've got going on. I mean, I've seen my fair share of card readers and fortune tellers, but managing to conjure up a fragment crystal ball is a new one.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine3()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "Color me impressed, but I'm still waiting for the grand reveal. I haven't seen any mind-blowing results yet.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine4()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "So you still think I am all all smoke and mirrors...? Luis, come on, I am here, summoned by a superior entity...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
     }
+
+    private void DialogueLine5()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "But yeah, I do have some grand reveal, I saw a fragment of your past.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine6()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "I felt what you felt, the feeling of chasing recognition, of being ambitious... Recieving praise!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+    private void DialogueLine7()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "The ambience was a casino, you were surrounded by people, you just did an incredible play, and you felt so good hearing the cheers and applauses...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine8()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "A core memory!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine9()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisSuprise;
+        texToToWrite = "W-What...? Wait... Yes, it is true... I can feel that memory in the back of my brain... It even itches...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine10()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisSuprise;
+        texToToWrite = "Yes! True! I was totally like that! And I do remember that casino scenario! I earned almost 100k pesos that day!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine11()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisShy;
+        texToToWrite = gameManager_Script.playerName + "... This feels, private, I do not know if I want you snooping around my memories... This power is frightening even!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine12()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisAngry;
+        texToToWrite = "If you wanted, you could see even my most secret memories?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine13()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "Well... Yes? I technically do have that power.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine14()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "But do remember, I am your ally, I am not here to judge.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine15()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisShy;
+        texToToWrite = "I guess I am not used to being so vulnerable " + gameManager_Script.playerName+ ", but it is true...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine16()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "I need to regain my memories, and you are the only one able to give them back...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine17()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisShy;
+        texToToWrite = "And what is wrong with liking some cheers and applauses anyways? Tsk.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine18()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+        button1AnswerText.text = "(Tease) Well, it says a lot about you.";
+        button2AnswerText.text = "(Ambition) It is totally valid, Luis.";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine18Answer1()
+    {
+        if (dialogueLine == 18)
+        {
+            //dialogueTextPanel.SetActive(true);
+            //answerButtonsPanel.SetActive(false);
+            //playerIsAnswering = false;
+            //canTalk = true;
+            //dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine18Answer2()
+    {
+        if (dialogueLine == 18)
+        {
+            //dialogueTextPanel.SetActive(true);
+            //answerButtonsPanel.SetActive(false);
+            //playerIsAnswering = false;
+            //canTalk = true;
+            //dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
 
 }
 
