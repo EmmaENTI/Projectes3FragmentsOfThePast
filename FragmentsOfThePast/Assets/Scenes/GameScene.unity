@@ -7790,6 +7790,7 @@ MonoBehaviour:
   carmenCharacterSprite: {fileID: 1558788631}
   loadManager: {fileID: 2091079314}
   marinaActiveCinematic: {fileID: 2091079334}
+  CinematicPanel: {fileID: 1385383212}
 --- !u!1 &1189887439
 GameObject:
   m_ObjectHideFlags: 0
@@ -13715,6 +13716,7 @@ MonoBehaviour:
   carmenCharacterSprite: {fileID: 1558788631}
   loadManager: {fileID: 2091079314}
   marinaActiveCinematic: {fileID: 2091079334}
+  CinematicPanel: {fileID: 1385383212}
 --- !u!1 &1956413971
 GameObject:
   m_ObjectHideFlags: 0
@@ -14900,12 +14902,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introFinished: 0
-  prologueFinished: 0
+  prologueFinished: 1
   luisDay1: 0
   marinaDay1: 0
-  brunoDay1: 0
-  carmenDay1: 0
-  loadGame: 0
+  brunoDay1: 1
+  carmenDay1: 1
+  loadGame: 1
   animator: {fileID: 0}
 --- !u!114 &2091079315
 MonoBehaviour:
@@ -15636,6 +15638,7 @@ MonoBehaviour:
   carmenCharacterSprite: {fileID: 1558788631}
   loadManager: {fileID: 0}
   marinaActiveCinematic: {fileID: 0}
+  CinematicPanel: {fileID: 0}
 --- !u!114 &2091079333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15694,7 +15697,9 @@ MonoBehaviour:
   marinaAngry: {fileID: 21300000, guid: 96b7958889c77024892fc407b4eb7b00, type: 3}
   marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
+  CinematicPanel: {fileID: 1385383212}
   playSound2: {fileID: 5374810}
+  loadManager: {fileID: 0}
 --- !u!1 &2111057809
 GameObject:
   m_ObjectHideFlags: 0
