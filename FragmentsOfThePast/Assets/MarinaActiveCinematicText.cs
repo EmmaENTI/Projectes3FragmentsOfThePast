@@ -158,9 +158,25 @@ public class MarinaActiveCinematicText : MonoBehaviour
                 DialogueLine2();
                 break;
 
-               
+
             case 3:
                 DialogueLine3();
+                break;
+
+            case 4:
+                DialogueLine4();
+                break;
+
+            case 5:
+                DialogueLine5();
+                break;
+
+            case 6:
+                DialogueLine5();
+                break;
+
+            case 7:
+                DialogueLine5();
                 break;
         }
     }
@@ -185,7 +201,7 @@ public class MarinaActiveCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug";
+        texToToWrite = "Marina's energy is like a constant sea breeze—refreshing, invigorating, and always in motion.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -193,7 +209,7 @@ public class MarinaActiveCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 2";
+        texToToWrite = "She's an active soul, ever in need of the thrill that comes from engaging in sports and activities.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -202,7 +218,39 @@ public class MarinaActiveCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 3";
+        texToToWrite = "Whether it's the joy of riding the waves or the satisfaction of conquering a challenging hike.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Marina found fulfillment in the movement and vitality that life has to offer.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine5()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "This feeling is... invigorating! Such a rush of energy!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "It is now clear Marina is a person who needs constant activity to stay entertained.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -211,10 +259,5 @@ public class MarinaActiveCinematicText : MonoBehaviour
         loadManager.marinaDay1 = true;
         loadManager.Save();
     }
+
 }
-
-
-
-
-
-

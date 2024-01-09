@@ -162,6 +162,18 @@ public class MarinaGoodCinematicText : MonoBehaviour
             case 3:
                 DialogueLine3();
                 break;
+
+            case 4:
+                DialogueLine4();
+                break;
+
+            case 5:
+                DialogueLine5();
+                break;
+
+            case 6:
+                DialogueLine6();
+                break;
         }
     }
 
@@ -185,7 +197,7 @@ public class MarinaGoodCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug";
+        texToToWrite = "Marina was a kind person who loved helping others.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -193,7 +205,7 @@ public class MarinaGoodCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 2";
+        texToToWrite = "She enjoyed listening to people and making them feel better.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -202,7 +214,31 @@ public class MarinaGoodCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 3";
+        texToToWrite = "Pleasing others made her happy!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "What a simple but nice feeling...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine5()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "The emotion you feel when doing something as simple as opening the door for someone, and getting a smile and a thank you!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+    }
+    private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 

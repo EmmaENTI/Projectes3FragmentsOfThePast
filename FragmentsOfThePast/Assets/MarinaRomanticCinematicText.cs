@@ -162,6 +162,18 @@ public class MarinaRomanticCinematicText : MonoBehaviour
             case 3:
                 DialogueLine3();
                 break;
+
+            case 4:
+                DialogueLine4();
+                break;
+
+            case 5:
+                DialogueLine4();
+                break;
+
+            case 6:
+                DialogueLine4();
+                break;
         }
     }
 
@@ -185,7 +197,7 @@ public class MarinaRomanticCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug";
+        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -193,7 +205,7 @@ public class MarinaRomanticCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 2";
+        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -202,7 +214,31 @@ public class MarinaRomanticCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 3";
+        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine5()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Marina was a hopeless romantic, then!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 

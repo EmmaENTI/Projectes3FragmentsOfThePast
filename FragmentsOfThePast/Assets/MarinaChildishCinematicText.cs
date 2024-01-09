@@ -162,6 +162,18 @@ public class MarinaChildishCinematicText : MonoBehaviour
             case 3:
                 DialogueLine3();
                 break;
+
+            case 4:
+                DialogueLine4();
+                break;
+
+            case 5:
+                DialogueLine5();
+                break;
+
+            case 6:
+                DialogueLine6();
+                break;
         }
     }
 
@@ -185,7 +197,7 @@ public class MarinaChildishCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug";
+        texToToWrite = "Marina, in her essence, remains a child at heart. Emotionally, she views the world through the lens of innocence and wonder.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -193,7 +205,7 @@ public class MarinaChildishCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 2";
+        texToToWrite = "Despite the complexities of the afterlife, Marina brings a childlike curiosity to every experience.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -202,7 +214,31 @@ public class MarinaChildishCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Active Cinematic Text Debug 3";
+        texToToWrite = "Life, to her, was an ongoing adventure, and she approached it with the untarnished enthusiasm of a child discovering something new each day.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "This feeling is familiar, we all feel like a kid sometimes, our inner child never quite dissappears...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine5()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "So Marina chooses to embrace her inner child!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
