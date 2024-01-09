@@ -21,7 +21,7 @@ public class KnowledgeScript
         // Int = Quantitat
         
         new Tuple<string, int>("BaseBubble", 1), 
-        new Tuple<string, int>("Active", 1),
+        new Tuple<string, int>("Active", 0),
         new Tuple<string, int>("Ambitious", 0),
         new Tuple<string, int>("ArtLover", 0),
         new Tuple<string, int>("Assertive", 0),
@@ -58,4 +58,9 @@ public class KnowledgeScript
     
     //public int emptyBallAmount = 1;
     //public int ambitiousBallAmount = 1;
+
+    public void ModifyNumberBubbles(int index, int num)
+    {
+        listToCreate[index] = new Tuple<string, int>(listToCreate[index].Item1, num);
+    }
 }

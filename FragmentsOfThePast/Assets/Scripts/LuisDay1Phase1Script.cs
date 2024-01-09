@@ -737,6 +737,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "Luis at your service. If I had known the afterlife came with a charming host, I might have kicked the bucket sooner.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        //gameManager_Script.ambitiousBallsAmount = 5;
     }
 
     private void DialogueLine4()
@@ -1985,8 +1986,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
             bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.LUIS);
 
-
-            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+            knowledgeScript.ModifyNumberBubbles(2, gameManager_Script.ambitiousBallsAmount);
 
             bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
             lockInAlchemyPanel = true;

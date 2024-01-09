@@ -14926,7 +14926,7 @@ MonoBehaviour:
   brunoDay1Phase1Finished: 0
   carmenDay1Phase1Finished: 0
   canStartLuisAmbitiousDialogue: 0
-  canStartLuisPerfectionistDialogue: 1
+  canStartLuisPerfectionistDialogue: 0
   canStartLuisLureDialogue: 0
   canStartLuisLonerDialogue: 0
   canStartCarmenAssertiveDialogue: 0

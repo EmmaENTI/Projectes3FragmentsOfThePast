@@ -35,6 +35,9 @@ public class GameManager_Script : MonoBehaviour
 
     //Player's Name
     public string playerName;
+    
+
+    public int ambitiousBallsAmount;
 
     private void Start()
     {
