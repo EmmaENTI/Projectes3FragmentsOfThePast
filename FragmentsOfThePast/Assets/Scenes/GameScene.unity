@@ -14636,6 +14636,22 @@ MonoBehaviour:
   consultaPanel: {fileID: 2073008151}
   firstInteraction: 0
   playerName: Arnau
+  ambitiousBallsAmount: 0
+  perfectionistBallsAmount: 0
+  lureBallsAmount: 0
+  lonerBallsAmount: 0
+  assertiveBallsAmount: 0
+  entrepreneurBallsAmount: 0
+  materialisticBallsAmount: 0
+  independentBallsAmount: 0
+  bookwormBallsAmount: 0
+  geniusBallsAmount: 0
+  geekBallsAmount: 0
+  loyalBallsAmount: 0
+  romanticBallsAmount: 0
+  goodBallsAmount: 0
+  activeBallsAmount: 0
+  childishBallsAmount: 0
 --- !u!4 &2091079304
 Transform:
   m_ObjectHideFlags: 0
@@ -14905,9 +14921,9 @@ MonoBehaviour:
   prologueFinished: 1
   luisDay1: 0
   marinaDay1: 0
-  brunoDay1: 1
-  carmenDay1: 1
-  loadGame: 1
+  brunoDay1: 0
+  carmenDay1: 0
+  loadGame: 0
   animator: {fileID: 0}
 --- !u!114 &2091079315
 MonoBehaviour:
@@ -15699,7 +15715,7 @@ MonoBehaviour:
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
   CinematicPanel: {fileID: 1385383212}
   playSound2: {fileID: 5374810}
-  loadManager: {fileID: 0}
+  loadManager: {fileID: 2091079314}
 --- !u!1 &2111057809
 GameObject:
   m_ObjectHideFlags: 0
