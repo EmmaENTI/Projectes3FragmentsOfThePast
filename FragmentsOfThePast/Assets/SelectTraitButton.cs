@@ -20,16 +20,30 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] private GameObject carmenCharacterSprite;
 
     [SerializeField] LoadManager loadManager;
+    //Marina script
     [SerializeField] MarinaActiveCinematicText marinaActiveCinematic;
     [SerializeField] MarinaChildishCinematicText marinaChidlishCinematic;
     [SerializeField] MarinaGoodCinematicText marinaGoodCinematic;
     [SerializeField] MarinaRomanticCinematicText marinaRomanticCinematic;
 
+    //Bruno script
+    [SerializeField] BrunoBookwormCinematicText brunoBookwormCinematic;
+    [SerializeField] BrunoLoyalCinematicText brunoLoyalCinematic;
+    [SerializeField] BrunoGeniusCinematicText brunoGeniusCinematic;
+    [SerializeField] BrunoGeekCinematicText brunoGeekCinematic;
+
     [SerializeField] private GameObject cinematicPanel;
+    //Marina panel
     [SerializeField] private GameObject marinaActivePanel;
     [SerializeField] private GameObject marinaChildishPanel;
     [SerializeField] private GameObject marinaGoodPanel;
     [SerializeField] private GameObject marinaRomanitcPanel;
+
+    //Bruno panel
+    [SerializeField] private GameObject brunoLoyalPanel;
+    [SerializeField] private GameObject brunoGeniusPanel;
+    [SerializeField] private GameObject brunoBookwormPanel;
+    [SerializeField] private GameObject brunoGeekPanel;
 
     public void OptionSelected()
     {
@@ -138,8 +152,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
-                loadManager.brunoDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                brunoBookwormPanel.SetActive(true);
+                brunoBookwormCinematic.canStartDialogue = false;
+                brunoBookwormCinematic.canTalk = true;
             }
         }
 
@@ -150,8 +166,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
-                loadManager.brunoDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                brunoGeekPanel.SetActive(true);
+                brunoGeekCinematic.canStartDialogue = false;
+                brunoGeekCinematic.canTalk = true;
             }
         }
 
@@ -162,8 +180,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
-                loadManager.brunoDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                brunoGeniusPanel.SetActive(true);
+                brunoGeniusCinematic.canStartDialogue = false;
+                brunoGeniusCinematic.canTalk = true;
             }
         }
 
@@ -174,8 +194,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.brunoDay1Phase1Finished = true;
                 brunoCharacterSprite.SetActive(false);
-                loadManager.brunoDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                brunoLoyalPanel.SetActive(true);
+                brunoLoyalCinematic.canStartDialogue = false;
+                brunoLoyalCinematic.canTalk = true;
             }
         }
 

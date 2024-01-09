@@ -168,11 +168,11 @@ public class MarinaRomanticCinematicText : MonoBehaviour
                 break;
 
             case 5:
-                DialogueLine4();
+                DialogueLine5();
                 break;
 
             case 6:
-                DialogueLine4();
+                DialogueLine6();
                 break;
         }
     }
