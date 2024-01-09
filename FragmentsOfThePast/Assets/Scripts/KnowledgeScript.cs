@@ -20,39 +20,39 @@ public class KnowledgeScript
         // String = Tipus de Bola
         // Int = Quantitat
         
-        new Tuple<string, int>("BaseBubble", 1), 
-        new Tuple<string, int>("Active", 0),
-        new Tuple<string, int>("Ambitious", 0),
-        new Tuple<string, int>("ArtLover", 0),
-        new Tuple<string, int>("Assertive", 0),
-        new Tuple<string, int>("Bookworm", 0),
-        new Tuple<string, int>("Cheerful", 0),
-        new Tuple<string, int>("Childish", 0),
-        new Tuple<string, int>("Clumsy", 0),
-        new Tuple<string, int>("Creative", 0),
-        new Tuple<string, int>("Entrepreneur", 0),
-        new Tuple<string, int>("Evil", 0),
-        new Tuple<string, int>("Family", 0),
-        new Tuple<string, int>("Foodie", 0),
-        new Tuple<string, int>("Geek", 0),
-        new Tuple<string, int>("Genius", 0),
-        new Tuple<string, int>("Good", 0),
-        new Tuple<string, int>("Goof", 0),
-        new Tuple<string, int>("Independent", 0),
-        new Tuple<string, int>("Insane", 0),
-        new Tuple<string, int>("Lazy", 0),
-        new Tuple<string, int>("Loner", 0),
-        new Tuple<string, int>("Loyal", 0),
-        new Tuple<string, int>("Lure", 0),
-        new Tuple<string, int>("Materialistic", 0),
-        new Tuple<string, int>("Mean", 0),
-        new Tuple<string, int>("Moody", 0),
-        new Tuple<string, int>("MusicLover", 0),
-        new Tuple<string, int>("Outgoing", 0),
-        new Tuple<string, int>("Perfectionist", 0),
-        new Tuple<string, int>("Romantic", 0),
-        new Tuple<string, int>("Slob", 0),
-        new Tuple<string, int>("Snob", 0),
+        new Tuple<string, int>("BaseBubble", 1), // 0 
+        new Tuple<string, int>("Active", 0), // 1
+        new Tuple<string, int>("Ambitious", 0), // 2
+        new Tuple<string, int>("ArtLover", 0), // 3
+        new Tuple<string, int>("Assertive", 0), // 4
+        new Tuple<string, int>("Bookworm", 0), // 5
+        new Tuple<string, int>("Cheerful", 0), // 6
+        new Tuple<string, int>("Childish", 0), // 7
+        new Tuple<string, int>("Clumsy", 0), // 8
+        new Tuple<string, int>("Creative", 0), // 9
+        new Tuple<string, int>("Entrepreneur", 0), // 10
+        new Tuple<string, int>("Evil", 0), // 11
+        new Tuple<string, int>("Family", 0), // 12
+        new Tuple<string, int>("Foodie", 0), // 13
+        new Tuple<string, int>("Geek", 0), // 14
+        new Tuple<string, int>("Genius", 0), // 15
+        new Tuple<string, int>("Good", 0), // 16
+        new Tuple<string, int>("Goof", 0), // 17
+        new Tuple<string, int>("Independent", 0), // 18
+        new Tuple<string, int>("Insane", 0), // 19
+        new Tuple<string, int>("Lazy", 0), // 20
+        new Tuple<string, int>("Loner", 0), // 21
+        new Tuple<string, int>("Loyal", 0), // 22
+        new Tuple<string, int>("Lure", 0), // 23
+        new Tuple<string, int>("Materialistic", 0), // 24
+        new Tuple<string, int>("Mean", 0), // 25
+        new Tuple<string, int>("Moody", 0), // 26
+        new Tuple<string, int>("MusicLover", 0), // 27
+        new Tuple<string, int>("Outgoing", 0), // 28
+        new Tuple<string, int>("Perfectionist", 0), // 29
+        new Tuple<string, int>("Romantic", 0), // 30
+        new Tuple<string, int>("Slob", 0), // 31
+        new Tuple<string, int>("Snob", 0), // 32
     };
 
     

@@ -801,6 +801,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
         playSound2.playEffect();
+        //gameManager_Script.assertiveBallsAmount = 5;
     }
 
     private void DialogueLine2()
