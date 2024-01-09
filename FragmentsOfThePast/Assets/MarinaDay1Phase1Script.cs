@@ -1821,6 +1821,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.activeBallsAmount++;
     }
 
     private void DialogueLine80()
@@ -1921,6 +1922,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.childishBallsAmount++;
     }
 
     private void DialogueLine89()
@@ -2053,6 +2055,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.romanticBallsAmount++;
     }
 
     private void DialogueLine98()
@@ -2109,6 +2112,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         texToToWrite = "Oh, absolutely! Good vibes all the way, you know? I consider myself the sunshine on a clear day, spreading positivity and warmth.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.goodBallsAmount++;
     }
 
     private void DialogueLine103()
@@ -2288,7 +2292,25 @@ public class MarinaDay1Phase1Script : MonoBehaviour
             bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.MARINA);
 
 
-            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+            knowledgeScript.ModifyNumberBubbles(2, gameManager_Script.ambitiousBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(21, gameManager_Script.lonerBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(23, gameManager_Script.lureBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(29, gameManager_Script.perfectionistBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(4, gameManager_Script.assertiveBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(10, gameManager_Script.entrepreneurBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(18, gameManager_Script.independentBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(24, gameManager_Script.materialisticBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(5, gameManager_Script.bookwormBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(14, gameManager_Script.geekBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(30, gameManager_Script.romanticBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(16, gameManager_Script.goodBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
 
             bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
             lockInAlchemyPanel = true;

@@ -1943,6 +1943,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = brunoHappy;
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.bookwormBallsAmount++;
     }
 
     private void DialogueLine82()
@@ -2000,6 +2001,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = brunoHappy;
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.geniusBallsAmount++;
     }
 
     private void DialogueLine87()
@@ -2034,6 +2036,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = brunoSad;
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.geekBallsAmount++;
     }
 
     private void DialogueLine90()
@@ -2732,7 +2735,25 @@ public class BrunoDay1Phase1Script : MonoBehaviour
             bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.BRUNO);
 
 
-            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+            knowledgeScript.ModifyNumberBubbles(2, gameManager_Script.ambitiousBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(21, gameManager_Script.lonerBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(23, gameManager_Script.lureBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(29, gameManager_Script.perfectionistBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(4, gameManager_Script.assertiveBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(10, gameManager_Script.entrepreneurBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(18, gameManager_Script.independentBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(24, gameManager_Script.materialisticBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(5, gameManager_Script.bookwormBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(14, gameManager_Script.geekBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(30, gameManager_Script.romanticBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(16, gameManager_Script.goodBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
 
             bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
             lockInAlchemyPanel = true;
