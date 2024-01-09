@@ -21,8 +21,15 @@ public class SelectTraitButton : MonoBehaviour
 
     [SerializeField] LoadManager loadManager;
     [SerializeField] MarinaActiveCinematicText marinaActiveCinematic;
+    [SerializeField] MarinaChildishCinematicText marinaChidlishCinematic;
+    [SerializeField] MarinaGoodCinematicText marinaGoodCinematic;
+    [SerializeField] MarinaRomanticCinematicText marinaRomanticCinematic;
 
-    [SerializeField] private GameObject CinematicPanel;
+    [SerializeField] private GameObject cinematicPanel;
+    [SerializeField] private GameObject marinaActivePanel;
+    [SerializeField] private GameObject marinaChildishPanel;
+    [SerializeField] private GameObject marinaGoodPanel;
+    [SerializeField] private GameObject marinaRomanitcPanel;
 
     public void OptionSelected()
     {
@@ -179,8 +186,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
-                loadManager.marinaDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                marinaChildishPanel.SetActive(true);
+                marinaChidlishCinematic.canStartDialogue = false;
+                marinaChidlishCinematic.canTalk = true;
             }
         }
 
@@ -191,12 +200,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
-                CinematicPanel.SetActive(true);
+                cinematicPanel.SetActive(true);
+                marinaActivePanel.SetActive(true);
                 marinaActiveCinematic.canStartDialogue = false;
                 marinaActiveCinematic.canTalk = true;
-                /*
-                loadManager.marinaDay1 = true;
-                loadManager.Save();*/
             }
         }
 
@@ -207,8 +214,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
-                loadManager.marinaDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                marinaRomanitcPanel.SetActive(true);
+                marinaRomanticCinematic.canStartDialogue = false;
+                marinaRomanticCinematic.canTalk = true;
             }
         }
 
@@ -219,8 +228,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
-                loadManager.marinaDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                marinaGoodPanel.SetActive(true);
+                marinaGoodCinematic.canStartDialogue = false;
+                marinaGoodCinematic.canTalk = true;
             }
         }
     }
