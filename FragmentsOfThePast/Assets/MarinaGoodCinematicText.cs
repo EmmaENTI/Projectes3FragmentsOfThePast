@@ -25,6 +25,8 @@ public class MarinaGoodCinematicText : MonoBehaviour
     //Dialogue Line (Contador de lineas de dialogo)
     public int dialogueLine;
 
+    [SerializeField] GameObject textContender;
+
     //Dialogue Text (Contenido del dialogo)
     [SerializeField] TextMeshProUGUI dialogueText;
 
@@ -36,9 +38,6 @@ public class MarinaGoodCinematicText : MonoBehaviour
 
     //Texto para
     [SerializeField] string texToToWrite;
-
-    //Spirit Name Text
-    [SerializeField] TextMeshProUGUI spiritNameText;
 
     //Panel amb els 3 buttons de respostes
     [SerializeField] GameObject answerButtonsPanel;
@@ -91,6 +90,7 @@ public class MarinaGoodCinematicText : MonoBehaviour
         {
             if (canStartDialogue == false && playerIsAnswering == false)
             {
+                textContender.SetActive(true);
                 if (hasEndedTyping)
                 {
                     dialogueLine++;
@@ -185,7 +185,6 @@ public class MarinaGoodCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
         texToToWrite = "Active Cinematic Text Debug";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -194,7 +193,6 @@ public class MarinaGoodCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
         texToToWrite = "Active Cinematic Text Debug 2";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -204,7 +202,6 @@ public class MarinaGoodCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
         texToToWrite = "Active Cinematic Text Debug 3";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
