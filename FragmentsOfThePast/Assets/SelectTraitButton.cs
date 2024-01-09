@@ -20,6 +20,9 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] private GameObject carmenCharacterSprite;
 
     [SerializeField] LoadManager loadManager;
+    [SerializeField] MarinaActiveCinematicText marinaActiveCinematic;
+
+    [SerializeField] private GameObject CinematicPanel;
 
     public void OptionSelected()
     {
@@ -188,8 +191,12 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.marinaDay1Phase1Finished = true;
                 marinaCharacterSprite.SetActive(false);
+                CinematicPanel.SetActive(true);
+                marinaActiveCinematic.canStartDialogue = false;
+                marinaActiveCinematic.canTalk = true;
+                /*
                 loadManager.marinaDay1 = true;
-                loadManager.Save();
+                loadManager.Save();*/
             }
         }
 

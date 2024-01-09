@@ -83,8 +83,12 @@ public class MarinaActiveCinematicText : MonoBehaviour
     public Sprite marinaShy;
     public Sprite marinaHappy;
 
+    [SerializeField] private GameObject CinematicPanel;
+
     //Sound 2
     [SerializeField] PlaySound playSound2;
+
+    [SerializeField] LoadManager loadManager;
 
 
     private void Update()
@@ -606,6 +610,11 @@ public class MarinaActiveCinematicText : MonoBehaviour
         texToToWrite = "Active Cinematic Text Debug 3";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        CinematicPanel.SetActive(false);
+
+        loadManager.marinaDay1 = true;
+        loadManager.Save();
     }
 }
 
