@@ -179,7 +179,7 @@ public class LuisPerfectionistDialogue : MonoBehaviour
                 DialogueLine2();
                 break;
 
-                /*
+
             case 3:
                 DialogueLine3();
                 break;
@@ -235,345 +235,345 @@ public class LuisPerfectionistDialogue : MonoBehaviour
             case 16:
                 DialogueLine16();
                 break;
+                /*
+      case 17:
+          DialogueLine17();
+          break;
+
+      case 18:
+          DialogueLine18();
+          break;
+
+      case 19:
+          DialogueLine19();
+          break;
+
+      case 20:
+          DialogueLine20();
+          break;
+
+      case 21:
+          DialogueLine21();
+          break;
+
+      case 22:
+          DialogueLine22();
+          break;
+
+      case 23:
+          DialogueLine23();
+          break;
+
+      case 24:
+          DialogueLine24();
+          break;
+
+      case 25:
+          DialogueLine25();
+          break;
+
+      case 26:
+          DialogueLine26();
+          break;
+
+      case 27:
+          DialogueLine27();
+          break;
+
+      case 28:
+          DialogueLine28();
+          break;
+
+      case 29:
+          DialogueLine29();
+          break;
+
+      case 30:
+          DialogueLine30();
+          break;
+
+      case 31:
+          DialogueLine31();
+          break;
+
+      case 32:
+          DialogueLine32();
+          break;
+
+      case 33:
+          DialogueLine33();
+          break;
+
+      case 34:
+          DialogueLine34();
+          break;
+
+      case 35:
+          DialogueLine35();
+          break;
+
+      case 36:
+          DialogueLine36();
+          break;
+
+      case 37:
+          DialogueLine37();
+          break;
+
+      case 38:
+          DialogueLine38();
+          break;
+
+      case 39:
+          DialogueLine39();
+          break;
+
+      case 40:
+          DialogueLine40();
+          break;
+
+      case 41:
+          DialogueLine41();
+          break;
+
+      case 42:
+          DialogueLine42();
+          break;
 
-            case 17:
-                DialogueLine17();
-                break;
+      case 43:
+          DialogueLine43();
+          break;
 
-            case 18:
-                DialogueLine18();
-                break;
+      case 44:
+          DialogueLine44();
+          break;
 
-            case 19:
-                DialogueLine19();
-                break;
+      case 45:
+          DialogueLine45();
+          break;
 
-            case 20:
-                DialogueLine20();
-                break;
+      case 46:
+          DialogueLine46();
+          break;
 
-            case 21:
-                DialogueLine21();
-                break;
+      case 47:
+          DialogueLine47();
+          break;
 
-            case 22:
-                DialogueLine22();
-                break;
+      case 48:
+          DialogueLine48();
+          break;
 
-            case 23:
-                DialogueLine23();
-                break;
+      case 49:
+          DialogueLine49();
+          break;
 
-            case 24:
-                DialogueLine24();
-                break;
+      case 50:
+          DialogueLine50();
+          break;
 
-            case 25:
-                DialogueLine25();
-                break;
+      case 51:
+          DialogueLine51();
+          break;
 
-            case 26:
-                DialogueLine26();
-                break;
+      case 52:
+          DialogueLine52();
+          break;
 
-            case 27:
-                DialogueLine27();
-                break;
+      case 53:
+          DialogueLine53();
+          break;
 
-            case 28:
-                DialogueLine28();
-                break;
+      case 54:
+          DialogueLine54();
+          break;
 
-            case 29:
-                DialogueLine29();
-                break;
+      case 55:
+          DialogueLine55();
+          break;
 
-            case 30:
-                DialogueLine30();
-                break;
+      case 56:
+          DialogueLine56();
+          break;
 
-            case 31:
-                DialogueLine31();
-                break;
+      case 57:
+          DialogueLine57();
+          break;
 
-            case 32:
-                DialogueLine32();
-                break;
+      case 58:
+          DialogueLine58();
+          break;
 
-            case 33:
-                DialogueLine33();
-                break;
+      case 59:
+          DialogueLine59();
+          break;
 
-            case 34:
-                DialogueLine34();
-                break;
+      case 60:
+          DialogueLine60();
+          break;
 
-            case 35:
-                DialogueLine35();
-                break;
+      case 61:
+          DialogueLine61();
+          break;
 
-            case 36:
-                DialogueLine36();
-                break;
+      case 62:
+          DialogueLine62();
+          break;
 
-            case 37:
-                DialogueLine37();
-                break;
+      case 63:
+          DialogueLine63();
+          break;
 
-            case 38:
-                DialogueLine38();
-                break;
+      case 64:
+          DialogueLine64();
+          break;
 
-            case 39:
-                DialogueLine39();
-                break;
+      case 65:
+          DialogueLine65();
+          break;
 
-            case 40:
-                DialogueLine40();
-                break;
+      case 66:
+          DialogueLine66();
+          break;
 
-            case 41:
-                DialogueLine41();
-                break;
+      case 67:
+          DialogueLine67();
+          break;
 
-            case 42:
-                DialogueLine42();
-                break;
+      case 68:
+          DialogueLine68();
+          break;
 
-            case 43:
-                DialogueLine43();
-                break;
+      case 69:
+          DialogueLine69();
+          break;
 
-            case 44:
-                DialogueLine44();
-                break;
+      case 70:
+          DialogueLine70();
+          break;
 
-            case 45:
-                DialogueLine45();
-                break;
+      case 71:
+          DialogueLine71();
+          break;
 
-            case 46:
-                DialogueLine46();
-                break;
+      case 72:
+          DialogueLine72();
+          break;
 
-            case 47:
-                DialogueLine47();
-                break;
+      case 73:
+          DialogueLine73();
+          break;
 
-            case 48:
-                DialogueLine48();
-                break;
+      case 74:
+          DialogueLine74();
+          break;
 
-            case 49:
-                DialogueLine49();
-                break;
+      case 75:
+          DialogueLine75();
+          break;
 
-            case 50:
-                DialogueLine50();
-                break;
-
-            case 51:
-                DialogueLine51();
-                break;
-
-            case 52:
-                DialogueLine52();
-                break;
-
-            case 53:
-                DialogueLine53();
-                break;
-
-            case 54:
-                DialogueLine54();
-                break;
-
-            case 55:
-                DialogueLine55();
-                break;
-
-            case 56:
-                DialogueLine56();
-                break;
-
-            case 57:
-                DialogueLine57();
-                break;
-
-            case 58:
-                DialogueLine58();
-                break;
-
-            case 59:
-                DialogueLine59();
-                break;
-
-            case 60:
-                DialogueLine60();
-                break;
-
-            case 61:
-                DialogueLine61();
-                break;
-
-            case 62:
-                DialogueLine62();
-                break;
-
-            case 63:
-                DialogueLine63();
-                break;
-
-            case 64:
-                DialogueLine64();
-                break;
-
-            case 65:
-                DialogueLine65();
-                break;
-
-            case 66:
-                DialogueLine66();
-                break;
-
-            case 67:
-                DialogueLine67();
-                break;
-
-            case 68:
-                DialogueLine68();
-                break;
-
-            case 69:
-                DialogueLine69();
-                break;
-
-            case 70:
-                DialogueLine70();
-                break;
-
-            case 71:
-                DialogueLine71();
-                break;
-
-            case 72:
-                DialogueLine72();
-                break;
-
-            case 73:
-                DialogueLine73();
-                break;
-
-            case 74:
-                DialogueLine74();
-                break;
-
-            case 75:
-                DialogueLine75();
-                break;
-
-            case 76:
-                DialogueLine76();
-                break;
-
-            case 77:
-                DialogueLine77();
-                break;
-
-            case 78:
-                DialogueLine78();
-                break;
-
-            case 79:
-                DialogueLine79();
-                break;
-
-            case 80:
-                DialogueLine80();
-                break;
-
-            case 81:
-                DialogueLine81();
-                break;
-
-            case 82:
-                DialogueLine82();
-                break;
-
-            case 83:
-                DialogueLine83();
-                break;
-
-            case 84:
-                DialogueLine84();
-                break;
-
-            case 85:
-                DialogueLine85();
-                break;
-
-            case 86:
-                DialogueLine86();
-                break;
-
-            case 87:
-                DialogueLine87();
-                break;
-
-            case 88:
-                DialogueLine88();
-                break;
-
-            case 89:
-                DialogueLine89();
-                break;
-
-            case 90:
-                DialogueLine90();
-                break;
-
-            case 91:
-                DialogueLine91();
-                break;
-
-            case 92:
-                DialogueLine92();
-                break;
-
-            case 93:
-                DialogueLine93();
-                break;
-
-            case 94:
-                DialogueLine94();
-                break;
-
-            case 95:
-                DialogueLine95();
-                break;
-
-            case 96:
-                DialogueLine96();
-                break;
-
-            case 97:
-                DialogueLine97();
-                break;
-
-            case 98:
-                DialogueLine98();
-                break;
-
-            case 99:
-                DialogueLine99();
-                break;
-
-            case 100:
-                DialogueLine100();
-                break;
-            case 101:
-                DialogueLine101();
-                break;*/
+      case 76:
+          DialogueLine76();
+          break;
+
+      case 77:
+          DialogueLine77();
+          break;
+
+      case 78:
+          DialogueLine78();
+          break;
+
+      case 79:
+          DialogueLine79();
+          break;
+
+      case 80:
+          DialogueLine80();
+          break;
+
+      case 81:
+          DialogueLine81();
+          break;
+
+      case 82:
+          DialogueLine82();
+          break;
+
+      case 83:
+          DialogueLine83();
+          break;
+
+      case 84:
+          DialogueLine84();
+          break;
+
+      case 85:
+          DialogueLine85();
+          break;
+
+      case 86:
+          DialogueLine86();
+          break;
+
+      case 87:
+          DialogueLine87();
+          break;
+
+      case 88:
+          DialogueLine88();
+          break;
+
+      case 89:
+          DialogueLine89();
+          break;
+
+      case 90:
+          DialogueLine90();
+          break;
+
+      case 91:
+          DialogueLine91();
+          break;
+
+      case 92:
+          DialogueLine92();
+          break;
+
+      case 93:
+          DialogueLine93();
+          break;
+
+      case 94:
+          DialogueLine94();
+          break;
+
+      case 95:
+          DialogueLine95();
+          break;
+
+      case 96:
+          DialogueLine96();
+          break;
+
+      case 97:
+          DialogueLine97();
+          break;
+
+      case 98:
+          DialogueLine98();
+          break;
+
+      case 99:
+          DialogueLine99();
+          break;
+
+      case 100:
+          DialogueLine100();
+          break;
+      case 101:
+          DialogueLine101();
+          break;*/
         }
     }
 
@@ -595,12 +595,14 @@ public class LuisPerfectionistDialogue : MonoBehaviour
         canTalk = false;
     }
 
+
     private void DialogueLine1()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Perfecitonist Dialogue Debug";
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "So, mystery guide, you're telling me you can see fragments of my past in that little crystal ball of yours?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -610,13 +612,194 @@ public class LuisPerfectionistDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelLuisSprite;
         hasEndedTyping = false;
         spiritNameText.text = "Luis";
-        bigSpiritImage.sprite = luisSuprise;
-        texToToWrite = "Perfectionist Dialogue Debug";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "That's quite the performance you've got going on. I mean, I've seen my fair share of card readers and fortune tellers, but managing to conjure up a fragment crystal ball is a new one.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine3()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "Color me impressed, but I'm still waiting for the grand reveal. I haven't seen any mind-blowing results yet.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine4()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "So, you're still convinced I'm just smoke and mirrors, Luis? Seriously, I'm here, summoned by a higher power...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
     }
 
+    private void DialogueLine5()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "I do have a significant revelation though — I glimpsed a fragment of your past.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine6()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "I saw a casino, you had a perfect hand, and was enjoying the looks of the rest of the table.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "You felt like a damn boss. In gambling, achieving perfection offered a temporary sense of control and boosted your self-esteem.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine8()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisSuprise;
+        texToToWrite = "Wait... Yes, that's true... I can feel that memory somewhere in the recesses of my mind... It's like an elusive itch I can't quite scratch.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine9()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "That day is crystal clear in my memory now!  What an amazing play  on my part...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine10()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisShy;
+        texToToWrite = "... This feels personal. I'm not sure I want you delving into my memories. This power is quite intimidating!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine11()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "Intimidating? No, not really. Memories exist, I just manage to be able to read them like books.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine12()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "But in reality, I am here to help, not to pry on the memories of dead spirits.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine13()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "I suppose I'm just not used to being this vulnerable, " + gameManager_Script.playerName + ".";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine14()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisHappy;
+        texToToWrite = "I need to regain my memories, and you are the only one able to give them back... With those weird powers of yours.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine15()
+    {
+        textPanelImage.sprite = TextPanelLuisSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Luis";
+        bigSpiritImage.sprite = luisShy;
+        texToToWrite = "I guess now it is public that I like being a perfect gambler.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine16()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+        button1AnswerText.text = "(Tease) Being a perfectionist";
+        button2AnswerText.text = "(Perfectionism) Hey, I am sure it does not only translate to gambling.";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine16Answer1()
+    {
+        if (dialogueLine == 16)
+        {
+            //dialogueTextPanel.SetActive(true);
+            //answerButtonsPanel.SetActive(false);
+            //playerIsAnswering = false;
+            //canTalk = true;
+            //dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine16Answer2()
+    {
+        if (dialogueLine == 16)
+        {
+            //dialogueTextPanel.SetActive(true);
+            //answerButtonsPanel.SetActive(false);
+            //playerIsAnswering = false;
+            //canTalk = true;
+            //dialogueLine++;
+            playSound1.playEffect();
+
+
+        }
+    }
 }
 
 

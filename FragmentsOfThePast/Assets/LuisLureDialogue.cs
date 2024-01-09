@@ -766,8 +766,8 @@ public class LuisLureDialogue : MonoBehaviour
         leftButtonPanel.SetActive(true);
         middleButtonPanel.SetActive(true);
         rightButtonPanel.SetActive(false);
-        button1AnswerText.text = "(Tease) Well, it says a lot about you.";
-        button2AnswerText.text = "(Ambition) It is totally valid, Luis.";
+        button1AnswerText.text = "(Tease) I do not mind knowing about it.";
+        button2AnswerText.text = "(Alluringness) Well, it was an important part of your life.";
         button3AnswerText.text = "";
         playerIsAnswering = true;
     }
