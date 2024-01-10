@@ -13898,7 +13898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1651488450
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17685,7 +17685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2052982956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19240,6 +19240,7 @@ MonoBehaviour:
   marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 675761408}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079335
@@ -19281,6 +19282,7 @@ MonoBehaviour:
   marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 966669702}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079336
@@ -19322,6 +19324,7 @@ MonoBehaviour:
   marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 1267031783}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079337
@@ -19363,6 +19366,7 @@ MonoBehaviour:
   marinaShy: {fileID: 21300000, guid: 846d0af2dad76a24891c2c60e029587e, type: 3}
   marinaHappy: {fileID: 21300000, guid: 09666045dd000654296afa9f0c6e5c96, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 1962173380}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079338
@@ -19391,6 +19395,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 674608516}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079339
@@ -19419,6 +19424,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 994449009}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079340
@@ -19447,6 +19453,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 1903801653}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079341
@@ -19475,6 +19482,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 1920769899}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079342
@@ -19503,6 +19511,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 1703228363}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079343
@@ -19531,6 +19540,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 619616714}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079344
@@ -19559,6 +19569,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 962032160}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079345
@@ -19587,6 +19598,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 322356410}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079346
@@ -19615,6 +19627,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 2131369174}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079347
@@ -19643,6 +19656,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 487185774}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079348
@@ -19671,6 +19685,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 34054256}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!114 &2091079349
@@ -19699,6 +19714,7 @@ MonoBehaviour:
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   CinematicPanel: {fileID: 1385383212}
+  selfPanel: {fileID: 321920015}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}
 --- !u!1 &2111057809

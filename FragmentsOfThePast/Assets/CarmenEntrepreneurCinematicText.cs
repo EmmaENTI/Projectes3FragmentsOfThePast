@@ -47,6 +47,8 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
 
     [SerializeField] private GameObject CinematicPanel;
 
+    [SerializeField] private GameObject selfPanel;
+
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
@@ -238,6 +240,8 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
         canTalk = false;
 
         CinematicPanel.SetActive(false);
+
+        selfPanel.SetActive(false);
 
         loadManager.carmenDay1 = true;
         loadManager.Save();

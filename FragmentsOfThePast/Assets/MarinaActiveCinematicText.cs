@@ -78,6 +78,8 @@ public class MarinaActiveCinematicText : MonoBehaviour
 
     [SerializeField] private GameObject CinematicPanel;
 
+    [SerializeField] private GameObject selfPanel;
+
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
@@ -255,6 +257,8 @@ public class MarinaActiveCinematicText : MonoBehaviour
         canTalk = false;
 
         CinematicPanel.SetActive(false);
+
+        selfPanel.SetActive(false);
 
         loadManager.marinaDay1 = true;
         loadManager.Save();

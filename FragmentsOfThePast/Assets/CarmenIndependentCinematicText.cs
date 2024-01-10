@@ -47,6 +47,8 @@ public class CarmenIndependentCinematicText : MonoBehaviour
 
     [SerializeField] private GameObject CinematicPanel;
 
+    [SerializeField] private GameObject selfPanel;
+
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
@@ -145,7 +147,7 @@ public class CarmenIndependentCinematicText : MonoBehaviour
                 break;
 
             case 7:
-                DialogueLine6();
+                DialogueLine7();
                 break;
         }
     }
@@ -224,6 +226,8 @@ public class CarmenIndependentCinematicText : MonoBehaviour
         canTalk = false;
 
         CinematicPanel.SetActive(false);
+
+        selfPanel.SetActive(false);
 
         loadManager.carmenDay1 = true;
         loadManager.Save();
