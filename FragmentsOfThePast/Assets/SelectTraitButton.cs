@@ -86,6 +86,7 @@ public class SelectTraitButton : MonoBehaviour
                 luisCharacterSprite.SetActive(true);
                 carmenCharacterSprite.SetActive(true);
                 brunoCharacterSprite.SetActive(true);
+                gameManager_Script.dayCounter = 2;
                 Debug.Log("DEBUG");
             }
         }
