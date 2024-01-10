@@ -48,7 +48,7 @@ public class MainMenuLanguage : MonoBehaviour
     {
         if (EnglishLanguage)
         {
-            texts[0].text = "Start";
+            texts[0].text = "New Game";
             texts[1].text = "Options";
             texts[2].text = "Credits";
             texts[3].text = "Exit";
