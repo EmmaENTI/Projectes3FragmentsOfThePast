@@ -1574,7 +1574,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "Just kidding, " + gameManager_Script.playerName + "Ask away, and let's uncover the \"chisme\" of Marina together.";
+        texToToWrite = "Just kidding, " + gameManager_Script.playerName + " Ask away, and let's uncover the \"chisme\" of Marina together.";
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;

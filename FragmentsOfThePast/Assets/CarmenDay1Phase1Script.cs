@@ -830,7 +830,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = gameManager_Script.playerName + "Well, " +gameManager_Script.playerName + ", I am hard to not remember... But yes, whatever you say darling.";
+        texToToWrite = gameManager_Script.playerName + "Well, " + gameManager_Script.playerName + ", I am hard to not remember... But yes, whatever you say darling.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
