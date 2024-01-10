@@ -9681,6 +9681,7 @@ MonoBehaviour:
   luisLonerPanel: {fileID: 34054256}
   luisRomanticPanel: {fileID: 487185774}
   gameManager_Script: {fileID: 0}
+  dayNumberText: {fileID: 0}
 --- !u!1 &1189887439
 GameObject:
   m_ObjectHideFlags: 0
@@ -16838,6 +16839,7 @@ MonoBehaviour:
   luisLonerPanel: {fileID: 34054256}
   luisRomanticPanel: {fileID: 487185774}
   gameManager_Script: {fileID: 0}
+  dayNumberText: {fileID: 0}
 --- !u!1 &1920769899
 GameObject:
   m_ObjectHideFlags: 0
@@ -17687,7 +17689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2052982956
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19213,6 +19215,7 @@ MonoBehaviour:
   luisLonerPanel: {fileID: 0}
   luisRomanticPanel: {fileID: 0}
   gameManager_Script: {fileID: 2091079303}
+  dayNumberText: {fileID: 1577023662}
 --- !u!114 &2091079333
 MonoBehaviour:
   m_ObjectHideFlags: 0
