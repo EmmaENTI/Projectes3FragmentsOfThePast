@@ -61,6 +61,8 @@ public class GameManager_Script : MonoBehaviour
     public int activeBallsAmount;
     public int childishBallsAmount;
 
+    public bool canStartDay2 = true;
+
     private void Start()
     {
         //Desactivar el panel de texto y la imagen del espiritu

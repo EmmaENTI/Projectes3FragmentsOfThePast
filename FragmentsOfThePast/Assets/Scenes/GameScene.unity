@@ -7017,7 +7017,7 @@ RectTransform:
   - {fileID: 1178328535}
   - {fileID: 708987650}
   - {fileID: 2111057810}
-  m_Father: {fileID: 1533730304}
+  m_Father: {fileID: 897386528}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7511,6 +7511,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 796905660}
   - {fileID: 332543297}
   m_Father: {fileID: 1533730304}
   m_RootOrder: -1
@@ -9679,6 +9680,7 @@ MonoBehaviour:
   luisPerfectionistPanel: {fileID: 321920015}
   luisLonerPanel: {fileID: 34054256}
   luisRomanticPanel: {fileID: 487185774}
+  gameManager_Script: {fileID: 0}
 --- !u!1 &1189887439
 GameObject:
   m_ObjectHideFlags: 0
@@ -13009,7 +13011,6 @@ RectTransform:
   - {fileID: 2073008152}
   - {fileID: 2044202139}
   - {fileID: 897386528}
-  - {fileID: 796905660}
   - {fileID: 1690408352}
   - {fileID: 1385383213}
   m_Father: {fileID: 0}
@@ -16836,6 +16837,7 @@ MonoBehaviour:
   luisPerfectionistPanel: {fileID: 321920015}
   luisLonerPanel: {fileID: 34054256}
   luisRomanticPanel: {fileID: 487185774}
+  gameManager_Script: {fileID: 0}
 --- !u!1 &1920769899
 GameObject:
   m_ObjectHideFlags: 0
@@ -18149,6 +18151,7 @@ MonoBehaviour:
   goodBallsAmount: 0
   activeBallsAmount: 0
   childishBallsAmount: 0
+  canStartDay2: 1
 --- !u!4 &2091079304
 Transform:
   m_ObjectHideFlags: 0
@@ -18415,7 +18418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introFinished: 0
-  prologueFinished: 1
+  prologueFinished: 0
   luisDay1: 0
   marinaDay1: 0
   brunoDay1: 0
@@ -19209,6 +19212,7 @@ MonoBehaviour:
   luisPerfectionistPanel: {fileID: 0}
   luisLonerPanel: {fileID: 0}
   luisRomanticPanel: {fileID: 0}
+  gameManager_Script: {fileID: 2091079303}
 --- !u!114 &2091079333
 MonoBehaviour:
   m_ObjectHideFlags: 0

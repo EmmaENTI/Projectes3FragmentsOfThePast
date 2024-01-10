@@ -69,6 +69,27 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] private GameObject luisLonerPanel;
     [SerializeField] private GameObject luisRomanticPanel;
 
+    [SerializeField] private GameManager_Script gameManager_Script;
+
+
+    private void Update()
+    {
+        if(gameManager_Script.canStartDay2)
+        {
+            if(loadManager.luisDay1 && 
+                loadManager.carmenDay1 &&
+                loadManager.brunoDay1 &&
+                loadManager.marinaDay1)
+            {
+                gameManager_Script.canStartDay2 = false;
+                marinaCharacterSprite.SetActive(true);
+                luisCharacterSprite.SetActive(true);
+                carmenCharacterSprite.SetActive(true);
+                brunoCharacterSprite.SetActive(true);
+            }
+        }
+    }
+
     public void OptionSelected()
     {
         RestorePanels();
