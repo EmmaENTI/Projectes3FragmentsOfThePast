@@ -794,7 +794,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 break;
 
             case 81:
-                dialogueLine = 91;
+                dialogueLine = 89;
                 break;
 
             case 86:
@@ -810,7 +810,11 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 break;
 
             case 103:
-                dialogueLine = 105;
+                dialogueLine = 119;
+                break;
+
+            case 105:
+                dialogueLine = 131;
                 break;
 
             case 112:
