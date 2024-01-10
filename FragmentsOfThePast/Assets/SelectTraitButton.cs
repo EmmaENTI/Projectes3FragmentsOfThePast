@@ -70,7 +70,9 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] private GameObject luisRomanticPanel;
 
     [SerializeField] private GameManager_Script gameManager_Script;
-    [SerializeField] private TextMeshProUGUI dayNumberText;
+    [SerializeField] private GameObject day1Text;
+    [SerializeField] private GameObject day2Text;
+
 
 
     private void Update()
@@ -88,7 +90,8 @@ public class SelectTraitButton : MonoBehaviour
                 carmenCharacterSprite.SetActive(true);
                 brunoCharacterSprite.SetActive(true);
                 gameManager_Script.dayCounter = 2;
-                dayNumberText.text = gameManager_Script.dayCounter.ToString();
+                day1Text.SetActive(false);
+                day2Text.SetActive(true);
                 Debug.Log("DEBUG");
             }
         }
