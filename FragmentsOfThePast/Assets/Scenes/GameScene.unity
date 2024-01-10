@@ -19178,7 +19178,7 @@ MonoBehaviour:
   luisCharacterSprite: {fileID: 1759008379}
   brunoCharacterSprite: {fileID: 31479693}
   carmenCharacterSprite: {fileID: 1558788631}
-  loadManager: {fileID: 0}
+  loadManager: {fileID: 2091079314}
   marinaActiveCinematic: {fileID: 0}
   marinaChidlishCinematic: {fileID: 2091079337}
   marinaGoodCinematic: {fileID: 2091079336}
