@@ -143,6 +143,10 @@ public class LuisPerfectionistCinematicText : MonoBehaviour
             case 6:
                 DialogueLine6();
                 break;
+
+            case 7:
+                DialogueLine7();
+                break;
         }
     }
 
@@ -166,7 +170,7 @@ public class LuisPerfectionistCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Luis enjoyed being a perfectionist, especially when playing poker.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +178,7 @@ public class LuisPerfectionistCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "He made sure to engage only in good deals, even if it meant resorting to cheating...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +187,7 @@ public class LuisPerfectionistCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "Overall, he loved portraying himself as perfect and impressive to others, reveling in the admiration and awe he received.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +195,7 @@ public class LuisPerfectionistCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "This feeling is... Comforting! But also kind of anxiety inducing";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,12 +203,20 @@ public class LuisPerfectionistCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "I feel nice because everyone sees me as perfect... But what if someday I fail...?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Hm, I understand, perfectionism is like that after all... Never perfect enough for oneself.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
     {
         hasEndedTyping = false;
         texToToWrite = "";

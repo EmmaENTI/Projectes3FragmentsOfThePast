@@ -143,6 +143,10 @@ public class LuisAmbitiousCinematicText : MonoBehaviour
             case 6:
                 DialogueLine6();
                 break;
+
+            case 7:
+                DialogueLine7();
+                break;
         }
     }
 
@@ -166,7 +170,7 @@ public class LuisAmbitiousCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Luis was ambitious in a way that went beyond personal success.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +178,7 @@ public class LuisAmbitiousCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "It wasn't just about individual achievements; it was about leaving a mark on the world that people couldn't ignore.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +187,7 @@ public class LuisAmbitiousCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "His ambition stemmed from a deep desire to be recognized, valued, and applauded by others.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +195,7 @@ public class LuisAmbitiousCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "The joy he felt when people praised and loved him was what fueled his relentless pursuit of success.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,12 +203,19 @@ public class LuisAmbitiousCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "This feeling is intense... I feel... Nice. It always feels good to be praised.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I see now... This man was ambitious because of recognition...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+    private void DialogueLine7()
     {
         hasEndedTyping = false;
         texToToWrite = "";

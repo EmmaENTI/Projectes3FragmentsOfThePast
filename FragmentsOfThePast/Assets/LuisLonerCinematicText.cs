@@ -166,7 +166,7 @@ public class LuisLonerCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Despite Luis's extroverted facade, he often perceived people as either potential enemies or useful tools. This perspective left him feeling lonely, even amidst a crowd.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +174,7 @@ public class LuisLonerCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "In his mind, the genuine friends who cared about him were rare gems in a sea of ambiguity, often he thought that in reality, they did not genuinely like him.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +183,7 @@ public class LuisLonerCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "This feeling is... Isolating. I feel powerful, but lonely.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +191,7 @@ public class LuisLonerCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "I feel like everyone can be a tool for me... But woah, it is hard seeing others as persons and not just tools after that initial thought...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,7 +199,7 @@ public class LuisLonerCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "I see now... He may appear extroverted but he is very much introverted.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
