@@ -86,6 +86,8 @@ public class BrunoBookwormDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    public Button middleButton;
+    public Sprite brunoSpecialButtonSprite;
 
     private void Update()
     {
@@ -741,6 +743,11 @@ public class BrunoBookwormDialogue : MonoBehaviour
         button2AnswerText.text = "(Bookwork) I undertand your love for books!";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = brunoSpecialButtonSprite;
+        middleButton.GetComponent<Button>().spriteState = st;
+        middleButton.GetComponent<Image>().sprite = brunoSpecialButtonSprite;
     }
 
     public void DialogueLine15Answer1()

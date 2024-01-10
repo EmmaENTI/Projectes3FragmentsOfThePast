@@ -93,6 +93,9 @@ public class CarmenAssertiveDialogue : MonoBehaviour
 
     KnowledgeScript knowledgeScript;
 
+    public Button middleButton;
+    public Sprite carmenSpecialButtonSprite;
+
     private void Start()
     {
         knowledgeScript = new KnowledgeScript();

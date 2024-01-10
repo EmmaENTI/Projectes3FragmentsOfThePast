@@ -93,6 +93,9 @@ public class LuisLonerDialogue : MonoBehaviour
 
     KnowledgeScript knowledgeScript;
 
+    public Button middleButton;
+    public Sprite luisSpecialButtonSprite;
+
     private void Start()
     {
         knowledgeScript = new KnowledgeScript();
@@ -758,6 +761,11 @@ public class LuisLonerDialogue : MonoBehaviour
         button2AnswerText.text = "(Loner) It is totally understandable!";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = luisSpecialButtonSprite;
+        middleButton.GetComponent<Button>().spriteState = st;
+        middleButton.GetComponent<Image>().sprite = luisSpecialButtonSprite;
     }
 
     public void DialogueLine15Answer1()

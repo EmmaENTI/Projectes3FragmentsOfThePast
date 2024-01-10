@@ -86,6 +86,9 @@ public class BrunoGeniusDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    public Button middleButton;
+    public Sprite brunoSpecialButtonSprite;
+
 
     private void Update()
     {
@@ -741,6 +744,11 @@ case 101:
         button2AnswerText.text = "(Genius) I see you love knowledge.";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = brunoSpecialButtonSprite;
+        middleButton.GetComponent<Button>().spriteState = st;
+        middleButton.GetComponent<Image>().sprite = brunoSpecialButtonSprite;
     }
 
     public void DialogueLine15Answer1()

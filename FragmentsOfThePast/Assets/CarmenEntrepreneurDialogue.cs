@@ -86,6 +86,9 @@ public class CarmenEntrepreneurDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    public Button middleButton;
+    public Sprite carmenSpecialButtonSprite;
+
 
     private void Update()
     {
@@ -567,7 +570,10 @@ public class CarmenEntrepreneurDialogue : MonoBehaviour
                 break;
         }
     }
-
+    //SpriteState st = new SpriteState();
+   // st.highlightedSprite = luisSpecialButtonSprite;
+   //middleButton.GetComponent<Button>().spriteState = st;
+    //middleButton.GetComponent<Image>().sprite = luisSpecialButtonSprite;
     private void DialogueLine0()
     {
         textPanelImage.sprite = TextPanelNormalSprite;
@@ -579,25 +585,28 @@ public class CarmenEntrepreneurDialogue : MonoBehaviour
 
     private void DialogueLine1()
     {
+        textPanelImage.sprite = TextPanelCarmenSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Carmen";
+        bigSpiritImage.sprite = carmenHappy ;
+        texToToWrite = "Well, well, if it isn't my lovely [Player Name]...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+    }
+
+    private void DialogueLine2()
+    {
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
         texToToWrite = "Entrepreneur Dialogue Debug";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-    }
-
-    private void DialogueLine2()
-    {
-        textPanelImage.sprite = TextPanelCarmenSprite;
-        hasEndedTyping = false;
-        spiritNameText.text = "Carmen";
-        bigSpiritImage.sprite = carmenSuprise;
-        texToToWrite = "Entrepreneur Dialogue Debug";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
         playSound2.playEffect();
     }
+
+
 
 }
 

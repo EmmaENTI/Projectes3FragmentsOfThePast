@@ -1,12 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Xml.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class MarinaGoodDialogue : MonoBehaviour
 {
@@ -89,6 +86,8 @@ public class MarinaGoodDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    public Button middleButton;
+    public Sprite marinaSpecialButtonSprite;
 
     private void Update()
     {
@@ -731,6 +730,11 @@ public class MarinaGoodDialogue : MonoBehaviour
         button2AnswerText.text = "(Good Trait) So, you were into doing good deeds?";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = marinaSpecialButtonSprite;
+        middleButton.GetComponent<Button>().spriteState = st;
+        middleButton.GetComponent<Image>().sprite = marinaSpecialButtonSprite;
     }
 
     public void DialogueLine14Answer1()

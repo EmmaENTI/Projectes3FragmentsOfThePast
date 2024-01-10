@@ -93,6 +93,9 @@ public class LuisPerfectionistDialogue : MonoBehaviour
 
     KnowledgeScript knowledgeScript;
 
+    public Button middleButton;
+    public Sprite luisSpecialButtonSprite;
+
     private void Start()
     {
         knowledgeScript = new KnowledgeScript();
@@ -771,6 +774,12 @@ public class LuisPerfectionistDialogue : MonoBehaviour
         button2AnswerText.text = "(Perfectionism) Hey, I am sure it does not only translate to gambling.";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+
+
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = luisSpecialButtonSprite;
+        middleButton.GetComponent<Button>().spriteState = st;
+        middleButton.GetComponent<Image>().sprite = luisSpecialButtonSprite;
     }
 
     public void DialogueLine16Answer1()

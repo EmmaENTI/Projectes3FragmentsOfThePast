@@ -86,6 +86,9 @@ public class CarmenIndependentDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    public Button middleButton;
+    public Sprite carmenSpecialButtonSprite;
+
 
     private void Update()
     {

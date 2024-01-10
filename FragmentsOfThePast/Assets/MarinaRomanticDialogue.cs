@@ -89,6 +89,8 @@ public class MarinaRomanticDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    public Button middleButton;
+    public Sprite marinaSpecialButtonSprite;
 
     private void Update()
     {
@@ -731,6 +733,11 @@ public class MarinaRomanticDialogue : MonoBehaviour
         button2AnswerText.text = "(Romanticism) So, how come you fall in and out of love so fast?";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+
+        SpriteState st = new SpriteState();
+        st.highlightedSprite = marinaSpecialButtonSprite;
+        middleButton.GetComponent<Button>().spriteState = st;
+        middleButton.GetComponent<Image>().sprite = marinaSpecialButtonSprite;
     }
 
     public void DialogueLine14Answer1()
