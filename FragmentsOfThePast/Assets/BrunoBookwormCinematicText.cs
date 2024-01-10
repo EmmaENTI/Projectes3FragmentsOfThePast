@@ -143,6 +143,14 @@ public class BrunoBookwormCinematicText : MonoBehaviour
             case 6:
                 DialogueLine6();
                 break;
+
+            case 7:
+                DialogueLine7();
+                break;
+
+            case 8:
+                DialogueLine8();
+                break;
         }
     }
 
@@ -166,7 +174,7 @@ public class BrunoBookwormCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "For Bruno, books were more than just pages;";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +182,7 @@ public class BrunoBookwormCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "They were lifelines connecting him to stories that whisked him away from the monotony of everyday life.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +191,7 @@ public class BrunoBookwormCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "Lost in the narratives, he found solace, escape, and a world beyond the ordinary, making each book a cherished portal to a new world.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +199,7 @@ public class BrunoBookwormCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "He loved not only thrilling tales but also those math and science books – they were like treasure chests of knowledge that kept him hooked.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,12 +207,28 @@ public class BrunoBookwormCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "I feel comfort! He felt very cozy and nice when reading.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "When you find a book that hooks you, hours slip away unnoticed as you dive into the pages.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Bruno was a bookworm, no matter if it was for fun or study!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine8()
     {
         hasEndedTyping = false;
         texToToWrite = "";
@@ -213,7 +237,7 @@ public class BrunoBookwormCinematicText : MonoBehaviour
 
         CinematicPanel.SetActive(false);
 
-        loadManager.marinaDay1 = true;
+        loadManager.brunoDay1 = true;
         loadManager.Save();
     }
 }

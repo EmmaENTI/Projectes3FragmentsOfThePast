@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.52156866, g: 0.68235296, b: 0, a: 1}
+  m_fontColor: {r: 0.5803922, g: 0.078431375, b: 0.8196079, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2101,7 +2101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae0d3d9eed4a99941817ee1b1e7e95da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c559eb6c244291478df3aeeedbd5d8d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5619,7 +5619,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 633ad05493b256441ab8b2659894802a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6d04fd7da20405469ef4688e4cf6316, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7988,7 +7988,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5104b6a36b8a9444fa5608f48b0258f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3e9e640fec881324194ea344b0417d9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8815,7 +8815,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.5921569, g: 0.8117648, b: 0, a: 1}
+  m_fontColor: {r: 0.57254905, g: 0.078431375, b: 0.8470589, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8950,7 +8950,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.5803922, g: 0.7686275, b: 0, a: 1}
+  m_fontColor: {r: 0.5764706, g: 0.078431375, b: 0.8705883, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9423,7 +9423,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.5921569, g: 0.8117648, b: 0, a: 1}
+  m_fontColor: {r: 0.7254902, g: 0.38431376, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9655,6 +9655,14 @@ MonoBehaviour:
   brunoLoyalCinematic: {fileID: 2091079340}
   brunoGeniusCinematic: {fileID: 2091079339}
   brunoGeekCinematic: {fileID: 2091079338}
+  carmenAssertiveCinematic: {fileID: 2091079345}
+  carmenEntrepreneurCinematic: {fileID: 2091079344}
+  carmenIndependentCinematic: {fileID: 2091079343}
+  carmenMaterialisticCinematic: {fileID: 2091079342}
+  luisAmbitiousCinematic: {fileID: 2091079346}
+  luisPerfectionistCinematic: {fileID: 2091079349}
+  luisLonerCinematic: {fileID: 2091079348}
+  luisRomanticCinematic: {fileID: 2091079347}
   cinematicPanel: {fileID: 1385383212}
   marinaActivePanel: {fileID: 675761408}
   marinaChildishPanel: {fileID: 1962173380}
@@ -9664,6 +9672,14 @@ MonoBehaviour:
   brunoGeniusPanel: {fileID: 994449009}
   brunoBookwormPanel: {fileID: 1920769899}
   brunoGeekPanel: {fileID: 674608516}
+  carmenAssertivePanel: {fileID: 322356410}
+  carmenEntrepreneurPanel: {fileID: 962032160}
+  carmenIndependentPanel: {fileID: 619616714}
+  carmenMaterialisticPanel: {fileID: 1703228363}
+  luisAmbitousPanel: {fileID: 2131369174}
+  luisPerfectionistPanel: {fileID: 321920015}
+  luisLonerPanel: {fileID: 34054256}
+  luisRomanticPanel: {fileID: 487185774}
 --- !u!1 &1189887439
 GameObject:
   m_ObjectHideFlags: 0
@@ -14031,7 +14047,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.5921569, g: 0.8117648, b: 0, a: 1}
+  m_fontColor: {r: 0.5411765, g: 0.09411766, b: 0.8235295, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14885,7 +14901,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87cdac33e78480b4d8fe3fa53deb0c94, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 15d3739cc47047f4dbcbe594c89e52b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15393,7 +15409,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.5803922, g: 0.7686275, b: 0, a: 1}
+  m_fontColor: {r: 0.7686275, g: 0.40784317, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15854,7 +15870,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.52156866, g: 0.68235296, b: 0, a: 1}
+  m_fontColor: {r: 0.77647066, g: 0.49411768, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16795,6 +16811,14 @@ MonoBehaviour:
   brunoLoyalCinematic: {fileID: 2091079340}
   brunoGeniusCinematic: {fileID: 2091079339}
   brunoGeekCinematic: {fileID: 2091079338}
+  carmenAssertiveCinematic: {fileID: 2091079345}
+  carmenEntrepreneurCinematic: {fileID: 2091079344}
+  carmenIndependentCinematic: {fileID: 2091079343}
+  carmenMaterialisticCinematic: {fileID: 2091079342}
+  luisAmbitiousCinematic: {fileID: 2091079346}
+  luisPerfectionistCinematic: {fileID: 2091079349}
+  luisLonerCinematic: {fileID: 2091079348}
+  luisRomanticCinematic: {fileID: 2091079347}
   cinematicPanel: {fileID: 1385383212}
   marinaActivePanel: {fileID: 675761408}
   marinaChildishPanel: {fileID: 1962173380}
@@ -16804,6 +16828,14 @@ MonoBehaviour:
   brunoGeniusPanel: {fileID: 994449009}
   brunoBookwormPanel: {fileID: 1920769899}
   brunoGeekPanel: {fileID: 674608516}
+  carmenAssertivePanel: {fileID: 322356410}
+  carmenEntrepreneurPanel: {fileID: 962032160}
+  carmenIndependentPanel: {fileID: 619616714}
+  carmenMaterialisticPanel: {fileID: 1703228363}
+  luisAmbitousPanel: {fileID: 2131369174}
+  luisPerfectionistPanel: {fileID: 321920015}
+  luisLonerPanel: {fileID: 34054256}
+  luisRomanticPanel: {fileID: 487185774}
 --- !u!1 &1920769899
 GameObject:
   m_ObjectHideFlags: 0
@@ -16986,7 +17018,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0.5921569, g: 0.8117648, b: 0, a: 1}
+  m_fontColor: {r: 0.7490196, g: 0.34901962, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -18051,6 +18083,14 @@ GameObject:
   - component: {fileID: 2091079338}
   - component: {fileID: 2091079340}
   - component: {fileID: 2091079339}
+  - component: {fileID: 2091079345}
+  - component: {fileID: 2091079344}
+  - component: {fileID: 2091079343}
+  - component: {fileID: 2091079342}
+  - component: {fileID: 2091079349}
+  - component: {fileID: 2091079348}
+  - component: {fileID: 2091079347}
+  - component: {fileID: 2091079346}
   m_Layer: 0
   m_Name: ---GAME MANAGER---
   m_TagString: Untagged
@@ -19118,6 +19158,14 @@ MonoBehaviour:
   brunoLoyalCinematic: {fileID: 0}
   brunoGeniusCinematic: {fileID: 0}
   brunoGeekCinematic: {fileID: 0}
+  carmenAssertiveCinematic: {fileID: 0}
+  carmenEntrepreneurCinematic: {fileID: 0}
+  carmenIndependentCinematic: {fileID: 0}
+  carmenMaterialisticCinematic: {fileID: 0}
+  luisAmbitiousCinematic: {fileID: 0}
+  luisPerfectionistCinematic: {fileID: 0}
+  luisLonerCinematic: {fileID: 0}
+  luisRomanticCinematic: {fileID: 0}
   cinematicPanel: {fileID: 1385383212}
   marinaActivePanel: {fileID: 675761408}
   marinaChildishPanel: {fileID: 1962173380}
@@ -19127,6 +19175,14 @@ MonoBehaviour:
   brunoGeniusPanel: {fileID: 0}
   brunoBookwormPanel: {fileID: 0}
   brunoGeekPanel: {fileID: 0}
+  carmenAssertivePanel: {fileID: 0}
+  carmenEntrepreneurPanel: {fileID: 0}
+  carmenIndependentPanel: {fileID: 0}
+  carmenMaterialisticPanel: {fileID: 0}
+  luisAmbitousPanel: {fileID: 0}
+  luisPerfectionistPanel: {fileID: 0}
+  luisLonerPanel: {fileID: 0}
+  luisRomanticPanel: {fileID: 0}
 --- !u!114 &2091079333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19418,6 +19474,230 @@ MonoBehaviour:
   texToToWrite: 
   TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
   TextPanelMarinaSprite: {fileID: 21300000, guid: 4791bfe8d5ac55d43bed7f10405a13cc, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 628838cf2a3f8ad45a1a455047a775e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 1607098299}
+  dialogueText: {fileID: 1177772539}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3519d2b1c8c9f3a46bec9be08e82564d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 693382364}
+  dialogueText: {fileID: 1949677324}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512bcf6434a21f1449c93169a9bfdfb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 837650957}
+  dialogueText: {fileID: 1757019641}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 398504087d1c99e40919b83485d75bb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 1322685071}
+  dialogueText: {fileID: 1772588043}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: c45e2153266a05e42a18e41f20c4091d, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4190e57601868a74ab4e5e1c3042f3d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 1526860760}
+  dialogueText: {fileID: 289670237}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bbf2d650b89e442a9f72b1ff68c3a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 915006579}
+  dialogueText: {fileID: 1038530295}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 566766d710eb1d94aaf585ed2b85db97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 1990869214}
+  dialogueText: {fileID: 1082216876}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
+  CinematicPanel: {fileID: 1385383212}
+  playSound2: {fileID: 5374810}
+  loadManager: {fileID: 2091079314}
+--- !u!114 &2091079349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091079301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54920eccd338bdf49a35d812a72a7c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager_Script: {fileID: 2091079303}
+  canStartDialogue: 1
+  canTalk: 0
+  playerIsAnswering: 0
+  hasEndedTyping: 0
+  dialogueLine: 0
+  textContender: {fileID: 1793312604}
+  dialogueText: {fileID: 1656390882}
+  playSound: {fileID: 198965799}
+  playSound1: {fileID: 302166972}
+  texToToWrite: 
+  TextPanelNormalSprite: {fileID: 21300000, guid: e3af9f5065c8aa94984dd0b79a70bf50, type: 3}
+  TextPanelMarinaSprite: {fileID: 21300000, guid: fa08558ba884fab4294a4ed906cae642, type: 3}
   CinematicPanel: {fileID: 1385383212}
   playSound2: {fileID: 5374810}
   loadManager: {fileID: 2091079314}

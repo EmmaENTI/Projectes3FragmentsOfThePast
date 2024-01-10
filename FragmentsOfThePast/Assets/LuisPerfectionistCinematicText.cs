@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BrunoLoyalCinematicText : MonoBehaviour
+public class LuisPerfectionistCinematicText : MonoBehaviour
 {
     //Game Manager
     [SerializeField] GameManager_Script gameManager_Script;
@@ -213,7 +213,7 @@ public class BrunoLoyalCinematicText : MonoBehaviour
 
         CinematicPanel.SetActive(false);
 
-        loadManager.brunoDay1 = true;
+        loadManager.luisDay1 = true;
         loadManager.Save();
     }
 }

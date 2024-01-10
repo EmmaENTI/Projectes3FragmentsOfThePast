@@ -213,7 +213,7 @@ public class BrunoGeekCinematicText : MonoBehaviour
 
         CinematicPanel.SetActive(false);
 
-        loadManager.marinaDay1 = true;
+        loadManager.brunoDay1 = true;
         loadManager.Save();
     }
 }

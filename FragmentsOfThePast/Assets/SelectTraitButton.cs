@@ -32,6 +32,18 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] BrunoGeniusCinematicText brunoGeniusCinematic;
     [SerializeField] BrunoGeekCinematicText brunoGeekCinematic;
 
+    //Carmen script
+    [SerializeField] CarmenAssertiveCinematicText carmenAssertiveCinematic;
+    [SerializeField] CarmenEntrepreneurCinematicText carmenEntrepreneurCinematic;
+    [SerializeField] CarmenIndependentCinematicText carmenIndependentCinematic;
+    [SerializeField] CarmenMaterialisticCinematicText carmenMaterialisticCinematic;
+
+    //Luis script
+    [SerializeField] LuisAmbitiousCinematicText luisAmbitiousCinematic;
+    [SerializeField] LuisPerfectionistCinematicText luisPerfectionistCinematic;
+    [SerializeField] LuisLonerCinematicText luisLonerCinematic;
+    [SerializeField] LuisRomanticCinematicText luisRomanticCinematic;
+
     [SerializeField] private GameObject cinematicPanel;
     //Marina panel
     [SerializeField] private GameObject marinaActivePanel;
@@ -45,6 +57,18 @@ public class SelectTraitButton : MonoBehaviour
     [SerializeField] private GameObject brunoBookwormPanel;
     [SerializeField] private GameObject brunoGeekPanel;
 
+    //Carmen panel
+    [SerializeField] private GameObject carmenAssertivePanel;
+    [SerializeField] private GameObject carmenEntrepreneurPanel;
+    [SerializeField] private GameObject carmenIndependentPanel;
+    [SerializeField] private GameObject carmenMaterialisticPanel;
+
+    //Luis panel
+    [SerializeField] private GameObject luisAmbitousPanel;
+    [SerializeField] private GameObject luisPerfectionistPanel;
+    [SerializeField] private GameObject luisLonerPanel;
+    [SerializeField] private GameObject luisRomanticPanel;
+
     public void OptionSelected()
     {
         RestorePanels();
@@ -55,8 +79,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
-                loadManager.luisDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                luisAmbitousPanel.SetActive(true);
+                luisAmbitiousCinematic.canStartDialogue = false;
+                luisAmbitiousCinematic.canTalk = true;
 
             }
         }
@@ -68,8 +94,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
-                loadManager.luisDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                luisPerfectionistPanel.SetActive(true);
+                luisPerfectionistCinematic.canStartDialogue = false;
+                luisPerfectionistCinematic.canTalk = true;
             }
         }
 
@@ -80,8 +108,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
-                loadManager.luisDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                luisRomanticPanel.SetActive(true);
+                luisRomanticCinematic.canStartDialogue = false;
+                luisRomanticCinematic.canTalk = true;
             }
         }
 
@@ -92,8 +122,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.luisDay1Phase1Finished = true;
                 luisCharacterSprite.SetActive(false);
-                loadManager.luisDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                luisLonerPanel.SetActive(true);
+                luisLonerCinematic.canStartDialogue = false;
+                luisLonerCinematic.canTalk = true;
             }
         }
 
@@ -104,8 +136,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
-                loadManager.carmenDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                carmenAssertivePanel.SetActive(true);
+                carmenAssertiveCinematic.canStartDialogue = false;
+                carmenAssertiveCinematic.canTalk = true;
             }
         }
 
@@ -116,8 +150,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
-                loadManager.carmenDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                carmenMaterialisticPanel.SetActive(true);
+                carmenMaterialisticCinematic.canStartDialogue = false;
+                carmenMaterialisticCinematic.canTalk = true;
             }
         }
 
@@ -128,8 +164,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
-                loadManager.carmenDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                carmenIndependentPanel.SetActive(true);
+                carmenIndependentCinematic.canStartDialogue = false;
+                carmenIndependentCinematic.canTalk = true;
             }
         }
 
@@ -140,8 +178,10 @@ public class SelectTraitButton : MonoBehaviour
             {
                 dialoguesInfoManager.carmenDay1Phase1Finished = true;
                 carmenCharacterSprite.SetActive(false);
-                loadManager.carmenDay1 = true;
-                loadManager.Save();
+                cinematicPanel.SetActive(true);
+                carmenEntrepreneurPanel.SetActive(true);
+                carmenEntrepreneurCinematic.canStartDialogue = false;
+                carmenEntrepreneurCinematic.canTalk = true;
             }
         }
 
