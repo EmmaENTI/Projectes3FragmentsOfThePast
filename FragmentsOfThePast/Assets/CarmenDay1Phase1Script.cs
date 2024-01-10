@@ -830,7 +830,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = gameManager_Script.playerName + "Well, " + gameManager_Script.playerName + ", I am hard to not remember... But yes, whatever you say darling.";
+        texToToWrite = "Well, " + gameManager_Script.playerName + ", I am hard to not remember... But yes, whatever you say darling.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -1672,7 +1672,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "Finally, getting to the heart of the matter.";
+        texToToWrite = "Very well, let's proceed.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -2195,7 +2195,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "Finer things are wasted on those who don't appreciate them.";
+        texToToWrite = "I, on the other hand, have an exquisite taste that matches my standards.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -2206,7 +2206,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
-        texToToWrite = "Selective, huh? I bet you've got a taste for the finer things in life.";
+        texToToWrite = "Oh, I see. So, your standards are as high as the skyscrapers, I assume?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
@@ -2217,7 +2217,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "Finer things are wasted on those who don't appreciate them.";
+        texToToWrite = "Higher, darling. You're just scratching the surface of my world.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;

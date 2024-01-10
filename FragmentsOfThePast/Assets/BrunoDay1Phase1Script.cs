@@ -1297,7 +1297,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
-        texToToWrite = "It's just, you know, usually I'm more in the background. People don't really notice me much.";
+        texToToWrite = "So, yeah, this is... different.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoShy;
         canTalk = false;
