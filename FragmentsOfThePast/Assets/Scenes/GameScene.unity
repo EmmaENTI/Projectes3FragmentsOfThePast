@@ -18339,9 +18339,9 @@ MonoBehaviour:
   texToToWrite: 
   spiritNameText: {fileID: 1687121065}
   answerButtonsPanel: {fileID: 25709668}
-  middleButtonPanel: {fileID: 1682963168}
-  leftButtonPanel: {fileID: 1459231770}
-  rightButtonPanel: {fileID: 439539433}
+  middleButtonPanel: {fileID: 1517489187}
+  leftButtonPanel: {fileID: 436944191}
+  rightButtonPanel: {fileID: 529168108}
   button1AnswerText: {fileID: 1459231772}
   button2AnswerText: {fileID: 1682963170}
   button3AnswerText: {fileID: 439539435}

@@ -785,6 +785,18 @@ public class BrunoDay1Phase1Script : MonoBehaviour
                 dialogueLine = 62;
                 break;
 
+            case 77:
+                dialogueLine = 81;
+                break;
+
+            case 79:
+                dialogueLine = 86;
+                break;
+
+            case 81:
+                dialogueLine = 91;
+                break;
+
             case 86:
                 dialogueLine = 98;
                 break;
@@ -799,6 +811,10 @@ public class BrunoDay1Phase1Script : MonoBehaviour
 
             case 103:
                 dialogueLine = 105;
+                break;
+
+            case 112:
+                dialogueLine = 135;
                 break;
 
             case 118:
@@ -1815,7 +1831,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelBrunoSprite;
         spiritNameText.text = "Bruno";
         hasEndedTyping = false;
-        texToToWrite = "But you are the boss, [Player Name], I trust your judgement, ask your questions!";
+        texToToWrite = "But you are the boss, " + gameManager_Script.playerName + ", I trust your judgement, ask your questions!";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = brunoSad;
         canTalk = false;
@@ -2283,6 +2299,7 @@ public class BrunoDay1Phase1Script : MonoBehaviour
         leftButtonPanel.SetActive(true);
         middleButtonPanel.SetActive(true);
         rightButtonPanel.SetActive(false);
+        
         button1AnswerText.text = "(Agree)";
         button2AnswerText.text = "(Disagree)";
         button3AnswerText.text = "";
