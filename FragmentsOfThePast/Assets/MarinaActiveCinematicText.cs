@@ -174,11 +174,11 @@ public class MarinaActiveCinematicText : MonoBehaviour
                 break;
 
             case 6:
-                DialogueLine5();
+                DialogueLine6();
                 break;
 
             case 7:
-                DialogueLine5();
+                DialogueLine7();
                 break;
         }
     }
