@@ -139,10 +139,6 @@ public class BrunoLoyalCinematicText : MonoBehaviour
             case 5:
                 DialogueLine5();
                 break;
-
-            case 6:
-                DialogueLine6();
-                break;
         }
     }
 
@@ -166,7 +162,7 @@ public class BrunoLoyalCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Bruno, loyal and introverted, cherished the few family and friends he had.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +170,7 @@ public class BrunoLoyalCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "He was picky about who he let into his inner circle, valuing quality over quantity in his relationships.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +179,7 @@ public class BrunoLoyalCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "This feeling is... Warm. Feeling surrounded by family and friends feels so good...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,20 +187,12 @@ public class BrunoLoyalCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "It is clear Bruno loved his family and friends and they loved him back.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine5()
-    {
-        hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
-    }
-
-    private void DialogueLine6()
     {
         hasEndedTyping = false;
         texToToWrite = "";

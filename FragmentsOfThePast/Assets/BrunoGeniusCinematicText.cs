@@ -166,7 +166,7 @@ public class BrunoGeniusCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Bruno possessed an insatiable curiosity that fueled his mind's relentless exploration.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +174,7 @@ public class BrunoGeniusCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "Bruno was a super-smart guy. Always asking questions about everything, stuff most people didn't even think about.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +183,7 @@ public class BrunoGeniusCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "He wanted to know everything there was to know about the world.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +191,7 @@ public class BrunoGeniusCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "I feel like a sponge for knowledge, soaking up every bit of information around me, always hungry for more!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,7 +199,7 @@ public class BrunoGeniusCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "Such a curious feeling! It must get overwhelming to be thinking hard all the time.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
