@@ -2558,8 +2558,8 @@ public class CarmenDay1Phase1Script : MonoBehaviour
 
             knowledgeScript.ModifyNumberBubbles(30, gameManager_Script.romanticBallsAmount);
             knowledgeScript.ModifyNumberBubbles(16, gameManager_Script.goodBallsAmount);
-            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
-            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(1, gameManager_Script.activeBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(7, gameManager_Script.childishBallsAmount);
 
 
             bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
