@@ -143,6 +143,14 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
             case 6:
                 DialogueLine6();
                 break;
+
+            case 7:
+                DialogueLine7();
+                break;
+
+            case 8:
+                DialogueLine8();
+                break;
         }
     }
 
@@ -166,7 +174,7 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Carmen displayed clear and natural leadership in all her endeavors, from negotiating deals to making strategic decisions...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +182,7 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "Her leadership was marked by clarity of vision, evident in her strategic decision-making and adept negotiation skills.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +191,7 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "Carmen's pursuit of success was not just about financial gains but a quest for mastery in the art of business.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +199,7 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "She reveled in the challenges, seeking growth not only for her enterprises but for herself as a leader.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,12 +207,30 @@ public class CarmenEntrepreneurCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "This feeling... I feel focused, and very confident!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I see now, this is how Carmen felt back then, powerful, confident, even if kind of stressed sometimes...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine7()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Carmen was a business woman!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine8()
     {
         hasEndedTyping = false;
         texToToWrite = "";

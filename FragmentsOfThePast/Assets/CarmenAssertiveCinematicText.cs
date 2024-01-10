@@ -166,7 +166,7 @@ public class CarmenAssertiveCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Carmen was an assertive businesswoman, unafraid to speak her mind.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +174,7 @@ public class CarmenAssertiveCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "In the male-dominated business world, her confidence and outspoken nature often unsettled others, especially men.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +183,7 @@ public class CarmenAssertiveCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "Yet, she navigated this space with unwavering assertiveness.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +191,7 @@ public class CarmenAssertiveCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "This makes me feel both strength and a source of tension...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,7 +199,7 @@ public class CarmenAssertiveCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "Well, Carmen is definetely smart enough to balance between staying true to herself and confronting the resistance her assertiveness inevitably stirred...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }

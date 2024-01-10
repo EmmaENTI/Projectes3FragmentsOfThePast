@@ -143,6 +143,10 @@ public class CarmenIndependentCinematicText : MonoBehaviour
             case 6:
                 DialogueLine6();
                 break;
+
+            case 7:
+                DialogueLine6();
+                break;
         }
     }
 
@@ -166,7 +170,7 @@ public class CarmenIndependentCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Carmen was fiercely independent, viewing romance and dating as time investments only if they benefited her business.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +178,7 @@ public class CarmenIndependentCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "For Carmen, social events were strategic opportunities rather than personal indulgences.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +187,7 @@ public class CarmenIndependentCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "Reflecting her pragmatic approach to relationships and the prioritization of her business pursuits.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +195,7 @@ public class CarmenIndependentCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "This feeling is... Neutral? Isolating?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,12 +203,20 @@ public class CarmenIndependentCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "I feel like everyone is just a tool, it feels... Lonely, but not in a super bad way... It feels numb and neutral.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Carmen thinks socializing is a calculated move, reserved for gains.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
     {
         hasEndedTyping = false;
         texToToWrite = "";

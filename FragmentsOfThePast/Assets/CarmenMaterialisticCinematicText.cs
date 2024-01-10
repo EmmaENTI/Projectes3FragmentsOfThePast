@@ -143,6 +143,10 @@ public class CarmenMaterialisticCinematicText : MonoBehaviour
             case 6:
                 DialogueLine6();
                 break;
+
+            case 7:
+                DialogueLine7();
+                break;
         }
     }
 
@@ -166,7 +170,7 @@ public class CarmenMaterialisticCinematicText : MonoBehaviour
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina loved love. She'd fall for someone fast, but sometimes, she'd fall out of love just as quickly.";
+        texToToWrite = "Carmen, a self-assured and focused businesswoman, was also decidedly materialistic.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -174,7 +178,7 @@ public class CarmenMaterialisticCinematicText : MonoBehaviour
     private void DialogueLine2()
     {
         hasEndedTyping = false;
-        texToToWrite = "She was searching for that fairy tale romance, where everything is perfect and magical.";
+        texToToWrite = "Valuing wealth, luxury, and all things refined, she believed in deserving nothing less than the best life had to offer.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -183,7 +187,7 @@ public class CarmenMaterialisticCinematicText : MonoBehaviour
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "Well, that feeling is... Exciting! And also kind of dangerous.";
+        texToToWrite = "The acquisition of new possessions wasn't merely a transaction; it was a surge of personal power.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -191,7 +195,7 @@ public class CarmenMaterialisticCinematicText : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Falling in love and then falling out of love so quickly sounds draining.";
+        texToToWrite = "Each luxurious item became a tangible symbol of her success...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -199,12 +203,20 @@ public class CarmenMaterialisticCinematicText : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "Marina was a hopeless romantic, then!";
+        texToToWrite = "This feeling makes me feel empowered!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine6()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Carmen definetely knew what she wanted in life. She was no fool.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
     {
         hasEndedTyping = false;
         texToToWrite = "";
