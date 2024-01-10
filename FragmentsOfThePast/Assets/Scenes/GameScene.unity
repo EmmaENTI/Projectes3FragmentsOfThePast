@@ -18438,12 +18438,12 @@ MonoBehaviour:
   marinaDay1Phase1Finished: 0
   brunoDay1Phase1Finished: 0
   carmenDay1Phase1Finished: 0
-  canStartLuisAmbitiousDialogue: 1
+  canStartLuisAmbitiousDialogue: 0
   canStartLuisPerfectionistDialogue: 0
   canStartLuisLureDialogue: 0
   canStartLuisLonerDialogue: 0
   canStartCarmenAssertiveDialogue: 0
-  canStartCarmenMaterialisticDialogue: 0
+  canStartCarmenMaterialisticDialogue: 1
   canStartCarmenIndependentDialogue: 0
   canStartCarmenEntrepreneurDialogue: 0
   canStartBrunoBookwormDialogue: 0
@@ -18679,11 +18679,8 @@ MonoBehaviour:
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
   playSound2: {fileID: 5374810}
-  bubbleManager: {fileID: 1690408353}
-  consultaPanel: {fileID: 2073008151}
-  alchemyPanel: {fileID: 897386527}
-  middleButton: {fileID: 0}
-  carmenSpecialButtonSprite: {fileID: 0}
+  middleButton: {fileID: 1517489192}
+  carmenSpecialButtonSprite: {fileID: 21300000, guid: 5c3144a0dee6a4c4885a206ea30fcf6f, type: 3}
 --- !u!114 &2091079321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18725,11 +18722,8 @@ MonoBehaviour:
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
   playSound2: {fileID: 5374810}
-  bubbleManager: {fileID: 1690408353}
-  consultaPanel: {fileID: 2073008151}
-  alchemyPanel: {fileID: 897386527}
-  middleButton: {fileID: 0}
-  carmenSpecialButtonSprite: {fileID: 0}
+  middleButton: {fileID: 1517489192}
+  carmenSpecialButtonSprite: {fileID: 21300000, guid: 5c3144a0dee6a4c4885a206ea30fcf6f, type: 3}
 --- !u!114 &2091079322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18771,8 +18765,8 @@ MonoBehaviour:
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
   playSound2: {fileID: 5374810}
-  middleButton: {fileID: 0}
-  carmenSpecialButtonSprite: {fileID: 0}
+  middleButton: {fileID: 1517489192}
+  carmenSpecialButtonSprite: {fileID: 21300000, guid: 5c3144a0dee6a4c4885a206ea30fcf6f, type: 3}
 --- !u!114 &2091079323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18814,8 +18808,8 @@ MonoBehaviour:
   carmenShy: {fileID: 21300000, guid: 62d1a8e74aa7449458a1e662784de35c, type: 3}
   carmenHappy: {fileID: 21300000, guid: 8f2ad57b53d87114b80ac13ae15efb45, type: 3}
   playSound2: {fileID: 5374810}
-  middleButton: {fileID: 0}
-  carmenSpecialButtonSprite: {fileID: 0}
+  middleButton: {fileID: 1517489192}
+  carmenSpecialButtonSprite: {fileID: 21300000, guid: 5c3144a0dee6a4c4885a206ea30fcf6f, type: 3}
 --- !u!114 &2091079324
 MonoBehaviour:
   m_ObjectHideFlags: 0
