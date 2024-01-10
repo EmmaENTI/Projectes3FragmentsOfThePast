@@ -18441,7 +18441,7 @@ MonoBehaviour:
   canStartLuisAmbitiousDialogue: 0
   canStartLuisPerfectionistDialogue: 0
   canStartLuisLureDialogue: 0
-  canStartLuisLonerDialogue: 0
+  canStartLuisLonerDialogue: 1
   canStartCarmenAssertiveDialogue: 0
   canStartCarmenMaterialisticDialogue: 0
   canStartCarmenIndependentDialogue: 0

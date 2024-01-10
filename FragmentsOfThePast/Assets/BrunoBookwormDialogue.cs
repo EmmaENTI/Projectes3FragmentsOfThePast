@@ -161,7 +161,7 @@ public class BrunoBookwormDialogue : MonoBehaviour
                 DialogueLine2();
                 break;
 
-                /*
+   
             case 3:
                 DialogueLine3();
                 break;
@@ -213,7 +213,7 @@ public class BrunoBookwormDialogue : MonoBehaviour
             case 15:
                 DialogueLine15();
                 break;
-
+                             /*
             case 16:
                 DialogueLine16();
                 break;
@@ -579,10 +579,11 @@ public class BrunoBookwormDialogue : MonoBehaviour
 
     private void DialogueLine1()
     {
-        textPanelImage.sprite = TextPanelNormalSprite;
+        textPanelImage.sprite = TextPanelBrunoSprite;
         hasEndedTyping = false;
-        spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Bookworm Dialogue Debug";
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoHappy;
+        texToToWrite = "Hello " + gameManager_Script.playerName +"! I am really excited to see your magic!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -592,11 +593,182 @@ public class BrunoBookwormDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelBrunoSprite;
         hasEndedTyping = false;
         spiritNameText.text = "Bruno";
-        bigSpiritImage.sprite = brunoSurprise;
-        texToToWrite = "Bookworm Dialogue Debug";
+        bigSpiritImage.sprite = brunoHappy;
+        texToToWrite = "I have to admit, I am a science kind of guy myself, but I won't doubt you, you seem like you know what you do!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine3()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoHappy;
+        texToToWrite = "So, ready when you are!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine4()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "Well, Bruno, today, you will start believing into non-science methods.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
+    }
+
+    private void DialogueLine5()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "Because indeed, I saw a fragment of your past.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine6()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "You were in a house, it was sunny and very cozy. You were very invested in a book.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine7()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "You loved reading, and had a big collection of books, no matter if science or for fun.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine8()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoSurprise;
+        texToToWrite = "W-What...? Wait... Yes, it is true... I can feel that memory in the back of my brain... It even itches...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine9()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoSurprise;
+        texToToWrite = "Yes! True! I was totally like that! And I do remember that scenario!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine10()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoHappy;
+        texToToWrite = gameManager_Script.playerName + "... This feels, amazing! I wonder if your powers have a scientific explanation?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+    private void DialogueLine11()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "Well, no one bothered to study it before, you are free to do it, I am kind of curious too.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine12()
+    {
+        textPanelImage.sprite = TextPanelNormalSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = gameManager_Script.playerName;
+        texToToWrite = "I see you do not mind me snooping around your memories too much?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine13()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoSurprise;
+        texToToWrite = "Not at all, I do not think I have much to hide.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine14()
+    {
+        textPanelImage.sprite = TextPanelBrunoSprite;
+        hasEndedTyping = false;
+        spiritNameText.text = "Bruno";
+        bigSpiritImage.sprite = brunoHappy;
+        texToToWrite = "I want my memories back, I lost countless knowledge when losing them, and you are here to help.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        playSound2.playEffect();
+    }
+
+    private void DialogueLine15()
+    {
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+        button1AnswerText.text = "(Tease) Well, let's hope you did not do anything sus.";
+        button2AnswerText.text = "(Bookwork) I undertand your love for books!";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine15Answer1()
+    {
+        if (dialogueLine == 15)
+        {
+            //dialogueTextPanel.SetActive(true);
+            //answerButtonsPanel.SetActive(false);
+            //playerIsAnswering = false;
+            //canTalk = true;
+            //dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine15Answer2()
+    {
+        if (dialogueLine == 15)
+        {
+            //dialogueTextPanel.SetActive(true);
+            //answerButtonsPanel.SetActive(false);
+            //playerIsAnswering = false;
+            //canTalk = true;
+            //dialogueLine++;
+            playSound1.playEffect();
+
+
+        }
     }
 }
 
