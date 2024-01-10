@@ -757,6 +757,9 @@ public class LuisDay1Phase1Script : MonoBehaviour
         button1AnswerText.text = "(Flirty) Afterlife is a lot better now that you're here.";
         button2AnswerText.text = "(Witty) How's it treating you?";
         button3AnswerText.text = "(Friendly) As good as possible! And how do you feel?";
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
         playerIsAnswering = true;
     }
 
