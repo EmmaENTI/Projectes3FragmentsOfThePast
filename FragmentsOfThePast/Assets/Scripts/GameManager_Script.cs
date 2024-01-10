@@ -35,6 +35,33 @@ public class GameManager_Script : MonoBehaviour
 
     //Player's Name
     public string playerName;
+    
+
+    //Luis Balls
+    public int ambitiousBallsAmount;
+    public int perfectionistBallsAmount;
+    public int lureBallsAmount;
+    public int lonerBallsAmount;
+
+    //Carmen Balls
+    public int assertiveBallsAmount;
+    public int entrepreneurBallsAmount;
+    public int materialisticBallsAmount;
+    public int independentBallsAmount;
+
+    //Bruno Balls
+    public int bookwormBallsAmount;
+    public int geniusBallsAmount;
+    public int geekBallsAmount;
+    public int loyalBallsAmount;
+
+    //Marina Balls
+    public int romanticBallsAmount;
+    public int goodBallsAmount;
+    public int activeBallsAmount;
+    public int childishBallsAmount;
+
+    public bool canStartDay2 = true;
 
     private void Start()
     {

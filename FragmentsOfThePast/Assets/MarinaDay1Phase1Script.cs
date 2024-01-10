@@ -84,6 +84,19 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
     //Sound 2
     [SerializeField] PlaySound playSound2;
+
+    [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] GameObject consultaPanel;
+    [SerializeField] GameObject alchemyPanel;
+    bool lockInAlchemyPanel = false;
+
+    KnowledgeScript knowledgeScript;
+
+    private void Start()
+    {
+        knowledgeScript = new KnowledgeScript();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -137,6 +150,12 @@ public class MarinaDay1Phase1Script : MonoBehaviour
                 yield return new WaitForSeconds(0.04f);
             }
         }
+    }
+
+    void SwitchPanels(GameObject a, GameObject b)
+    {
+        a.SetActive(!a.activeSelf);
+        b.SetActive(!b.activeSelf);
     }
 
     private void DialogueTalk()
@@ -428,6 +447,198 @@ public class MarinaDay1Phase1Script : MonoBehaviour
 
             case 70:
                 DialogueLine70();
+                break;
+
+            case 71:
+                DialogueLine71();
+                break;
+
+            case 72:
+                DialogueLine72();
+                break;
+
+            case 73:
+                DialogueLine73();
+                break;
+
+            case 74:
+                DialogueLine74();
+                break;
+
+            case 75:
+                DialogueLine75();
+                break;
+
+            case 76:
+                DialogueLine76();
+                break;
+
+            case 77:
+                DialogueLine77();
+                break;
+
+            case 78:
+                DialogueLine78();
+                break;
+
+            case 79:
+                DialogueLine79();
+                break;
+
+            case 80:
+                DialogueLine80();
+                break;
+
+            case 81:
+                DialogueLine81();
+                break;
+
+            case 82:
+                DialogueLine82();
+                break;
+
+            case 83:
+                DialogueLine83();
+                break;
+
+            case 84:
+                DialogueLine84();
+                break;
+
+            case 85:
+                DialogueLine85();
+                break;
+
+            case 86:
+                DialogueLine86();
+                break;
+
+            case 87:
+                DialogueLine87();
+                break;
+
+            case 88:
+                DialogueLine88();
+                break;
+
+            case 89:
+                DialogueLine89();
+                break;
+
+            case 90:
+                DialogueLine90();
+                break;
+
+            case 91:
+                DialogueLine91();
+                break;
+
+            case 92:
+                DialogueLine92();
+                break;
+
+            case 93:
+                DialogueLine93();
+                break;
+
+            case 94:
+                DialogueLine94();
+                break;
+
+            case 95:
+                DialogueLine95();
+                break;
+
+            case 96:
+                DialogueLine96();
+                break;
+
+            case 97:
+                DialogueLine97();
+                break;
+
+            case 98:
+                DialogueLine98();
+                break;
+
+            case 99:
+                DialogueLine99();
+                break;
+
+            case 100:
+                DialogueLine100();
+                break;
+
+            case 101:
+                DialogueLine101();
+                break;
+
+            case 102:
+                DialogueLine102();
+                break;
+
+            case 103:
+                DialogueLine103();
+                break;
+
+            case 104:
+                DialogueLine104();
+                break;
+
+            case 105:
+                DialogueLine105();
+                break;
+
+            case 106:
+                DialogueLine106();
+                break;
+
+            case 107:
+                DialogueLine107();
+                break;
+
+            case 108:
+                DialogueLine108();
+                break;
+
+            case 109:
+                DialogueLine109();
+                break;
+
+            case 110:
+                DialogueLine110();
+                break;
+
+            case 111:
+                DialogueLine111();
+                break;
+
+            case 112:
+                DialogueLine112();
+                break;
+
+            case 113:
+                DialogueLine113();
+                break;
+
+            case 114:
+                DialogueLine114();
+                break;
+
+            case 115:
+                DialogueLine115();
+                break;
+
+            case 116:
+                DialogueLine116();
+                break;
+
+            case 117:
+                DialogueLine117();
+                break;
+
+            case 118:
+                DialogueLine118();
                 break;
         }
     }
@@ -1363,7 +1574,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelMarinaSprite;
         spiritNameText.text = "Marina";
         hasEndedTyping = false;
-        texToToWrite = "Just kidding, " + gameManager_Script.playerName + "Ask away, and let's uncover the \"chisme\" of Marina together.";
+        texToToWrite = "Just kidding, " + gameManager_Script.playerName + " Ask away, and let's uncover the \"chisme\" of Marina together.";
         bigSpiritImage.sprite = marinaSurprise;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -1610,6 +1821,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.activeBallsAmount++;
     }
 
     private void DialogueLine80()
@@ -1710,6 +1922,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.childishBallsAmount++;
     }
 
     private void DialogueLine89()
@@ -1842,6 +2055,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = marinaHappy;
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.romanticBallsAmount++;
     }
 
     private void DialogueLine98()
@@ -1898,6 +2112,7 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         texToToWrite = "Oh, absolutely! Good vibes all the way, you know? I consider myself the sunshine on a clear day, spreading positivity and warmth.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.goodBallsAmount++;
     }
 
     private void DialogueLine103()
@@ -2064,6 +2279,42 @@ public class MarinaDay1Phase1Script : MonoBehaviour
         texToToWrite = "Bye Bye!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+    }
+
+    private void DialogueLine118()
+    {
+        if (!lockInAlchemyPanel)
+        {
+            SwitchPanels(consultaPanel, alchemyPanel);
+
+            bubbleManager.knowledgeScript = knowledgeScript;
+
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.MARINA);
+
+
+            knowledgeScript.ModifyNumberBubbles(2, gameManager_Script.ambitiousBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(21, gameManager_Script.lonerBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(23, gameManager_Script.lureBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(29, gameManager_Script.perfectionistBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(4, gameManager_Script.assertiveBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(10, gameManager_Script.entrepreneurBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(18, gameManager_Script.independentBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(24, gameManager_Script.materialisticBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(5, gameManager_Script.bookwormBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(14, gameManager_Script.geekBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(30, gameManager_Script.romanticBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(16, gameManager_Script.goodBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(1, gameManager_Script.activeBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(7, gameManager_Script.childishBallsAmount);
+
+            bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
+            lockInAlchemyPanel = true;
+        }
     }
 }
 

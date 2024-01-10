@@ -16,7 +16,7 @@ public class BubbleManager : MonoBehaviour
     [SerializeField] private Sprite[] bubblesSprites;
     [SerializeField] public Dictionary<string, Sprite> bubbleDictionary;
     [SerializeField] public string[] bubbleStrings;
-    const int numOfBubbles = 33;
+    const int numOfBubbles = 34;
     [SerializeField] private GameObject selectionPanel; 
 
     private List<GameObject> currentBubbles;
@@ -29,6 +29,8 @@ public class BubbleManager : MonoBehaviour
     public KnowledgeScript knowledgeScript;
 
     public CharacterType currentCharacter;
+
+    [SerializeField] GameObject[] imagesBlockers;
 
     void Start()
     {
@@ -52,8 +54,6 @@ public class BubbleManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CreateRandomBubbles(5, knowledgeScript.listToCreate);
-            AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist" });
-            AddMergeableTypes("Ambitious", new List<string>() { "BaseBubble", "Perfectionist" });
         }
     }
 
@@ -62,6 +62,7 @@ public class BubbleManager : MonoBehaviour
         baseBubble.GetComponent<Image>().sprite = bubbleDictionary[name];
         GameObject gameObj = Instantiate(baseBubble, alchemyPanel.transform);
         gameObj.name = name;
+        SetInfoPanelName(gameObj);
 
         currentBubbles.Add(gameObj);
 
@@ -80,6 +81,7 @@ public class BubbleManager : MonoBehaviour
             for (int j = 0; j < savedBubbles[i].Item2; j++)
             {
                 CreateBubble(savedBubbles[i].Item1);
+
             }
         }
 
@@ -177,6 +179,7 @@ public class BubbleManager : MonoBehaviour
             "Childish", 
             "Clumsy", 
             "Creative", 
+            "Entrepreneur", // NOU, sprite no correcte - Grey Ball
             "Evil", 
             "Family", 
             "Foodie", 
@@ -209,6 +212,25 @@ public class BubbleManager : MonoBehaviour
         }
 
         currentMergeableTypes2 = new List<Tuple<string, List<string>>>();
+
+        AddMergeableTypes("BaseBubble", new List<string>() { "Ambitious", "Perfectionist", "Lure", "Loner", "Entrepreneur", "Assertive", "Materialistic", "Independent", 
+        "Bookworm","Genius","Geek","Loyal","Romantic","Active","Childish","Good"});
+        AddMergeableTypes("Ambitious", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Perfectionist", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Lure", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Loner", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Entrepreneur", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Assertive", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Materialistic", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Independent", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Bookworm", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Genius", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Geek", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Loyal", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Romantic", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Active", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Childish", new List<string>() { "BaseBubble" });
+        AddMergeableTypes("Good", new List<string>() { "BaseBubble" });
     }
 
     public void SetCurrentCharacter(CharacterType type)
@@ -233,11 +255,23 @@ public class BubbleManager : MonoBehaviour
 
     public void SetNamesSelectionPanel(string[] names)
     {
-        
         for (int i = 0; i < names.Length; i++)
         {
-            //Debug.Log(names[i]);
             selectionPanel.transform.GetChild(i).GetChild(0).GetComponent<TMP_Text>().text = names[i];
+            if (names[i] == "BaseBubble")
+            {
+                imagesBlockers[i].SetActive(true);
+            }
+
+            else
+            {
+                imagesBlockers[i].SetActive(false);
+            }
         }
+    }
+
+    public void SetInfoPanelName(GameObject bubble)
+    {
+        bubble.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>().text = bubble.transform.name;
     }
 }

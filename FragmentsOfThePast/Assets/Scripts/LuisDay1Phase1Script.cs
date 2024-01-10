@@ -570,6 +570,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
             case 100:
                 DialogueLine100();
                 break;
+
             case 101:
                 DialogueLine101();
                 break;
@@ -736,6 +737,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "Luis at your service. If I had known the afterlife came with a charming host, I might have kicked the bucket sooner.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
     }
 
     private void DialogueLine4()
@@ -755,6 +757,9 @@ public class LuisDay1Phase1Script : MonoBehaviour
         button1AnswerText.text = "(Flirty) Afterlife is a lot better now that you're here.";
         button2AnswerText.text = "(Witty) How's it treating you?";
         button3AnswerText.text = "(Friendly) As good as possible! And how do you feel?";
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
         playerIsAnswering = true;
     }
 
@@ -1630,6 +1635,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "Well, I can't say I remember diving into books, but the idea of ambitious goals? That rings a bell.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.ambitiousBallsAmount++;
     }
 
     private void DialogueLine71()
@@ -1811,6 +1817,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "Passionate and with a fiery temper? The romance... I feel something in me, and I don't know if it is good or bad, but I feel it, spirit guide!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.romanticBallsAmount++;
     }
         
     private void DialogueLine85()
@@ -1833,6 +1840,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "That's a tough one. I'm not sure," + gameManager_Script.playerName+ " , but the loner aspect hits home. I guess I liked my space!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.lonerBallsAmount++;
     }
 
     private void DialogueLine87()
@@ -1872,6 +1880,7 @@ public class LuisDay1Phase1Script : MonoBehaviour
         texToToWrite = "I do feel something about perfectionism... I did like things going my way, I still do...";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        gameManager_Script.perfectionistBallsAmount++;
     }
 
     private void DialogueLine91()
@@ -1984,8 +1993,25 @@ public class LuisDay1Phase1Script : MonoBehaviour
 
             bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.LUIS);
 
+            knowledgeScript.ModifyNumberBubbles(2, gameManager_Script.ambitiousBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(21, gameManager_Script.lonerBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(23, gameManager_Script.lureBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(29, gameManager_Script.perfectionistBallsAmount);
 
-            // knowledgeScript.listToCreate[0] = new Tuple<string, int>(knowledgeScript.listToCreate[0].Item1, value);
+            knowledgeScript.ModifyNumberBubbles(4, gameManager_Script.assertiveBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(10, gameManager_Script.entrepreneurBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(18, gameManager_Script.independentBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(24, gameManager_Script.materialisticBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(5, gameManager_Script.bookwormBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(14, gameManager_Script.geekBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(30, gameManager_Script.romanticBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(16, gameManager_Script.goodBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(1, gameManager_Script.activeBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(7, gameManager_Script.childishBallsAmount);
 
             bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
             lockInAlchemyPanel = true;

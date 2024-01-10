@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HoverBubble : MonoBehaviour
 {
     BubbleManager bubbleManager;
+
+    GameObject infoPanel;
 
     private void Start()
     {
@@ -20,15 +23,26 @@ public class HoverBubble : MonoBehaviour
 
         for (int i = 0; i < bubbleManager.GetMergeableBubbleTypes().Count; i++)
         {
-            if (bubbleManager.GetMergeableBubbleTypes()[i].Item1 == transform.name)
+            for (int j = 0; j < bubbleManager.GetCharacterBallTypes().Length; j++)
             {
-                transform.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+                if (bubbleManager.GetCharacterBallTypes()[j] == transform.name && bubbleManager.GetMergeableBubbleTypes()[i].Item1 == transform.name)
+                {
+                    transform.GetComponent<Image>().color = new Color(1, 0, 0, 1);
+                }
             }
         }
+        ToggleInfoPanel(true);
     }
 
     public void LeaveBubble()
     {
         transform.GetComponent<Image>().color = new Color(1, 1, 1, 1);
+
+        ToggleInfoPanel(false);
+    }
+
+    void ToggleInfoPanel(bool isActive)
+    {
+        transform.GetChild(0).gameObject.SetActive(isActive);
     }
 }

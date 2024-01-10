@@ -86,6 +86,18 @@ public class CarmenDay1Phase1Script : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    [SerializeField] private BubbleManager bubbleManager;
+    [SerializeField] GameObject consultaPanel;
+    [SerializeField] GameObject alchemyPanel;
+    bool lockInAlchemyPanel = false;
+
+    KnowledgeScript knowledgeScript;
+
+    private void Start()
+    {
+        knowledgeScript = new KnowledgeScript();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -140,6 +152,13 @@ public class CarmenDay1Phase1Script : MonoBehaviour
             }
         }
     }
+
+    void SwitchPanels(GameObject a, GameObject b)
+    {
+        a.SetActive(!a.activeSelf);
+        b.SetActive(!b.activeSelf);
+    }
+
 
     private void DialogueTalk()
     {
@@ -663,6 +682,10 @@ public class CarmenDay1Phase1Script : MonoBehaviour
             case 128:
                 DialogueLine128();
                 break;
+
+            case 129:
+                DialogueLine129();
+                break;
         }
     }
 
@@ -778,6 +801,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
         playSound2.playEffect();
+        //gameManager_Script.assertiveBallsAmount = 5;
     }
 
     private void DialogueLine2()
@@ -806,7 +830,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = gameManager_Script.playerName + "Well, " +gameManager_Script.playerName + ", I am hard to not remember... But yes, whatever you say darling.";
+        texToToWrite = "Well, " + gameManager_Script.playerName + ", I am hard to not remember... But yes, whatever you say darling.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -1648,7 +1672,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "Finally, getting to the heart of the matter.";
+        texToToWrite = "Very well, let's proceed.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -1845,6 +1869,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.materialisticBallsAmount++;
     }
 
     private void DialogueLine78()
@@ -1878,6 +1903,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
+        gameManager_Script.entrepreneurBallsAmount++;
     }
 
     private void DialogueLine81()
@@ -1918,7 +1944,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "It is hard to remember, [Player Name]...";
+        texToToWrite = "It is hard to remember, " +gameManager_Script.playerName + "...";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenAngry;
         canTalk = false;
@@ -2079,6 +2105,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
+        gameManager_Script.assertiveBallsAmount++;
     }
 
     private void DialogueLine96()
@@ -2168,7 +2195,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "Finer things are wasted on those who don't appreciate them.";
+        texToToWrite = "I, on the other hand, have an exquisite taste that matches my standards.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -2179,7 +2206,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
         hasEndedTyping = false;
-        texToToWrite = "Selective, huh? I bet you've got a taste for the finer things in life.";
+        texToToWrite = "Oh, I see. So, your standards are as high as the skyscrapers, I assume?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         playSound2.playEffect();
@@ -2190,7 +2217,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         textPanelImage.sprite = TextPanelCarmenSprite;
         spiritNameText.text = "Carmen";
         hasEndedTyping = false;
-        texToToWrite = "Finer things are wasted on those who don't appreciate them.";
+        texToToWrite = "Higher, darling. You're just scratching the surface of my world.";
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
@@ -2239,6 +2266,7 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
         playSound2.playEffect();
+        gameManager_Script.independentBallsAmount++;
     }
 
     private void DialogueLine108()
@@ -2499,6 +2527,45 @@ public class CarmenDay1Phase1Script : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         bigSpiritImage.sprite = carmenHappy;
         canTalk = false;
+    }
+
+    private void DialogueLine129()
+    {
+        if (!lockInAlchemyPanel)
+        {
+            SwitchPanels(consultaPanel, alchemyPanel);
+
+            bubbleManager.knowledgeScript = knowledgeScript;
+
+            bubbleManager.SetCurrentCharacter(BubbleManager.CharacterType.CARMEN);
+
+
+
+            knowledgeScript.ModifyNumberBubbles(2, gameManager_Script.ambitiousBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(21, gameManager_Script.lonerBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(23, gameManager_Script.lureBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(29, gameManager_Script.perfectionistBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(4, gameManager_Script.assertiveBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(10, gameManager_Script.entrepreneurBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(18, gameManager_Script.independentBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(24, gameManager_Script.materialisticBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(5, gameManager_Script.bookwormBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(14, gameManager_Script.geekBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(15, gameManager_Script.geniusBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(22, gameManager_Script.loyalBallsAmount);
+
+            knowledgeScript.ModifyNumberBubbles(30, gameManager_Script.romanticBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(16, gameManager_Script.goodBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(1, gameManager_Script.activeBallsAmount);
+            knowledgeScript.ModifyNumberBubbles(7, gameManager_Script.childishBallsAmount);
+
+
+            bubbleManager.CreateRandomBubbles(15, knowledgeScript.listToCreate);
+            lockInAlchemyPanel = true;
+        }
+
     }
 
 

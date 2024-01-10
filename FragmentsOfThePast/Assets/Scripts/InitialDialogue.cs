@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class InitialDialogue : MonoBehaviour
 {
@@ -137,7 +138,30 @@ public class InitialDialogue : MonoBehaviour
 
     public bool canReturnToDialogue;
 
-    [SerializeField] KnowledgeScript knowledgeScript;
+    [SerializeField] LoadManager loadManager;
+
+    private void Start()
+    {
+        loadManager.loadGame = PlayerPrefs.GetInt("loadManager.loadGame") == 1 ? true : false;
+
+        if (loadManager.loadGame)
+        {
+            loadManager.Load();
+        }
+
+        if (loadManager.introFinished == true)
+        {
+            dialogueLine = 14;
+            //loadManager.introFinished = false;
+        }
+
+        if (loadManager.prologueFinished == true)
+        {
+            dialogueLine = 67;
+            //loadManager.prologueFinished = false;
+        }
+        
+    }
     private void Update()
     {
         GoTo68();
@@ -191,6 +215,8 @@ public class InitialDialogue : MonoBehaviour
         {
             DialogueLine67();
         }
+
+       
     }
 
     //Logica del TypeText (passar el text amb el que vols escriure al string textContent de la funcio)
@@ -577,7 +603,6 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "To answer all of those questions running through your little human mind… ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        //knowledgeScript.introFinished = true;
     }
 
 
@@ -667,6 +692,9 @@ public class InitialDialogue : MonoBehaviour
             audioSource.clip = hoodedManMusic;
             audioSource.enabled = true;
         }
+
+        loadManager.introFinished = true;
+        loadManager.Save();
 
         playerIsAnswering = true;
         startHoodedManButtonGameObject.SetActive(true);
@@ -1473,6 +1501,10 @@ public class InitialDialogue : MonoBehaviour
         streetPanelGameObject.SetActive(true);
         cinematicAnim.SetBool("canPlayAnim", true);
         streetPanelIntroGameObject.SetActive(false);
+
+        loadManager.introFinished= false;
+        loadManager.prologueFinished= true;
+        loadManager.Save();
     }
 
     private void GoTo68()
