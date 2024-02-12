@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using System;
+using Cinemachine;
 
 public class InitialDialogue : MonoBehaviour
 {
@@ -140,8 +142,12 @@ public class InitialDialogue : MonoBehaviour
 
     [SerializeField] LoadManager loadManager;
 
+    [SerializeField] ScreenShake cameraShake;
+
+
     private void Start()
     {
+
         loadManager.loadGame = PlayerPrefs.GetInt("loadManager.loadGame") == 1 ? true : false;
 
         if (loadManager.loadGame)
@@ -605,7 +611,6 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
     }
 
-
     private void DialogueLine4()
     {
         hasEndedTyping = false;
@@ -620,6 +625,9 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "The Memory Thief steals memories from dead ones, and what is more important to our dead ones than their memories? ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        cameraShake.Shake();
+        
     }
 
     private void DialogueLine6()

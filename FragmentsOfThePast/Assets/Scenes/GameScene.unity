@@ -4106,11 +4106,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4134,7 +4134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13896,6 +13896,7 @@ GameObject:
   - component: {fileID: 1651488450}
   - component: {fileID: 1651488452}
   - component: {fileID: 1651488451}
+  - component: {fileID: 1651488453}
   m_Layer: 5
   m_Name: Intro_Street_Panel
   m_TagString: Untagged
@@ -13983,6 +13984,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651488449}
   m_CullTransparentMesh: 1
+--- !u!114 &1651488453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651488449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e561716c2ae8cf344b5c56588e70548f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.7
+  shakeMagnitude: 3
+  shakeSpeed: 1
 --- !u!1 &1656390880
 GameObject:
   m_ObjectHideFlags: 0
@@ -18369,6 +18385,7 @@ MonoBehaviour:
   streetPanelGameObject: {fileID: 2052982955}
   canReturnToDialogue: 0
   loadManager: {fileID: 2091079314}
+  cameraShake: {fileID: 1651488453}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
