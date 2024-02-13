@@ -637,12 +637,54 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
+
     private void DialogueLine8()
     {
-        hasEndedTyping = false;
-        texToToWrite = "As the sun sets on Dia De Los Muertos, a deadline approaches. ";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        button1AnswerText.text = "(Curiously look around) Calle de las Almas… ";
+        button2AnswerText.text = "(Scream into the air in hopes the mysterious voice comes back).";
+        button3AnswerText.text = "(Panic) What...? (Frantically looking around) This isn't where I was.";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine8Answer1()
+    {
+        if (dialogueLine == 8)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine8Answer2()
+    {
+        if (dialogueLine == 8)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine8Answer3()
+    {
+        if (dialogueLine == 8)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
     }
 
     private void DialogueLine9()
