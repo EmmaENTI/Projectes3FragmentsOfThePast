@@ -249,25 +249,23 @@ public class InitialDialogue : MonoBehaviour
 
             if (hasEndedTyping == false)
             {
-                Debug.Log(textContent.Substring(printIndex, printIndex));
-
-                /*if(textContent.Substring(0, printIndex) == "<")
+                if(textContent.Substring(printIndex, 1) == "<")
                 {
                     if(isFirstColor)
                     {
-                        printIndex += 10;
+                        printIndex += 11;
                         isFirstColor = false;
                         Debug.Log("First Jump");
                     }
 
                     else
                     {
-                        printIndex += 7;
+                        printIndex += 8;
                         isFirstColor = true;
                         Debug.Log("Second Jump");
                     }
                     
-                }*/
+                }
 
                 dialogueText.text = textContent.Substring(0, printIndex);
 
@@ -277,6 +275,7 @@ public class InitialDialogue : MonoBehaviour
                 }
 
                 yield return new WaitForSeconds(0.04f);
+                //yield return new WaitForSeconds(0.5f);
             }
         }
     }
@@ -568,7 +567,7 @@ public class InitialDialogue : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=red> fracture.</color>";
+        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=red>fracture.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
