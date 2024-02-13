@@ -65,6 +65,11 @@ public class InitialDialogue : MonoBehaviour
 
     //Sprite Dark Street Background
     [SerializeField] Sprite streetDarkBackgroundSprite;
+    
+    
+    [SerializeField] Sprite flowerSpaceBackgroundSprite;
+    [SerializeField] Animator animator;
+
 
     //Sound 0
     [SerializeField] PlaySound playSound;
@@ -143,6 +148,8 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] LoadManager loadManager;
 
     [SerializeField] ScreenShake cameraShake;
+
+    bool isFirstColor = true;
 
 
     private void Start()
@@ -242,7 +249,28 @@ public class InitialDialogue : MonoBehaviour
 
             if (hasEndedTyping == false)
             {
+                Debug.Log(textContent.Substring(printIndex, printIndex));
+
+                /*if(textContent.Substring(0, printIndex) == "<")
+                {
+                    if(isFirstColor)
+                    {
+                        printIndex += 10;
+                        isFirstColor = false;
+                        Debug.Log("First Jump");
+                    }
+
+                    else
+                    {
+                        printIndex += 7;
+                        isFirstColor = true;
+                        Debug.Log("Second Jump");
+                    }
+                    
+                }*/
+
                 dialogueText.text = textContent.Substring(0, printIndex);
+
                 if(printIndex%3 == 0 && textContent.Substring(0, printIndex) != "")
                 {
                     playSound.playEffect();
@@ -538,75 +566,40 @@ public class InitialDialogue : MonoBehaviour
     
     private void DialogueLine0()
     {
+        dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "";
+        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=red> fracture.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        animator.SetBool("canPlayFadeIn", true);
+        streetPanelImage.sprite = flowerSpaceBackgroundSprite;
+        spiritNameText.text = " ";
     }
 
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        spiritNameText.text = "???";
-        texToToWrite = "Wake up… " + gameManager_Script.playerName + " wake up…! ";
+        spiritNameText.text = " ";
+        texToToWrite = "Bizarre events have led to the blurring of boundaries, with spirits crossing over into the land of the living and vice versa. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine2()
     {
-
-        dialogueTextPanel.SetActive(false);
-        answerButtonsPanel.SetActive(true);
-        button1AnswerText.text = "(Confused) What? Where? Who are you? ";
-        button2AnswerText.text = "(Amazed) Whoa, what's this? Feels like a dream… ";
-        button3AnswerText.text = "(Panic) Is this sleep paralysis?! ";
-        playerIsAnswering = true;
+        hasEndedTyping = false;
+        spiritNameText.text = " ";
+        texToToWrite = "Ghostly apparitions among the living have created a sense of unease and confusion between both the spirits and living.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
     }
 
-    public void DialogueLine2Answer1()
-    {
-        if (dialogueLine == 2)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
-
-    public void DialogueLine2Answer2()
-    {
-        if (dialogueLine == 2)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
-
-    public void DialogueLine2Answer3()
-    {
-        if (dialogueLine == 2)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
 
     private void DialogueLine3()
     {
         hasEndedTyping = false;
-        texToToWrite = "To answer all of those questions running through your little human mind… ";
+        texToToWrite = "As the convergence of the realms threatens to reshape the fabric of reality, scientists and spiritists are struggling to comprehend the cause of these events.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -614,7 +607,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "A danger has been born of desires untamed, stealing memories and disrupting the delicate balance that binds our worlds, the dead and the living. ";
+        texToToWrite = "Fear and anxiety have gripped the population, and very few who are gifted with paranormal abilities are able to restore the balance between the realms or face the unknown consequences of their convergence.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -622,7 +615,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "The Memory Thief steals memories from dead ones, and what is more important to our dead ones than their memories? ";
+        texToToWrite = "You… You are one of the gifted ones, a spiritist with a natural ease and innate ability to see and interact with the realm of the dead. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -633,7 +626,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine6()
     {
         hasEndedTyping = false;
-        texToToWrite = "Without them, they cannot go back to their families and are bound to be forgotten…";
+        texToToWrite = "In a world where such talents are rare, your unique connection to the spirits sets you apart.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -641,7 +634,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine7()
     {
         hasEndedTyping = false;
-        texToToWrite = "But fear not, you're a bridge between worlds… One of a kind human, able to communicate with spirits. Time is your companion, but also your adversary.";
+        texToToWrite = "But… Who are you?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
