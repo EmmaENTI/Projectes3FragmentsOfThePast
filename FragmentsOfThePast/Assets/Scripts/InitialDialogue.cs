@@ -640,128 +640,207 @@ public class InitialDialogue : MonoBehaviour
 
     private void DialogueLine8()
     {
-        dialogueTextPanel.SetActive(false);
-        answerButtonsPanel.SetActive(true);
-        button1AnswerText.text = "(Curiously look around) Calle de las Almas… ";
-        button2AnswerText.text = "(Scream into the air in hopes the mysterious voice comes back).";
-        button3AnswerText.text = "(Panic) What...? (Frantically looking around) This isn't where I was.";
-        playerIsAnswering = true;
-    }
-
-    public void DialogueLine8Answer1()
-    {
-        if (dialogueLine == 8)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
-
-    public void DialogueLine8Answer2()
-    {
-        if (dialogueLine == 8)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
-
-    public void DialogueLine8Answer3()
-    {
-        if (dialogueLine == 8)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
+        hasEndedTyping = false;
+        texToToWrite = "You find a wallet filled with cash and identification. Do you return it to its owner, knowing they might be in dire need of the money?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
     }
 
     private void DialogueLine9()
     {
-        hasEndedTyping = false;
-        texToToWrite = "You have a week, dear human, a precious span of time to gather the keys before the fabric of the afterlife unravels completely.";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        button1AnswerText.text = "Return the wallet to his owner.";
+        button2AnswerText.text = "Keep the money for yourself but you return the other documents.";
+        button3AnswerText.text = "Take the entire wallet, bad luck.";
+        playerIsAnswering = true;
     }
+
+    public void DialogueLine9Answer1()
+    {
+        if (dialogueLine == 9)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine9Answer2()
+    {
+        if (dialogueLine == 9)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine9Answer3()
+    {
+        if (dialogueLine == 9)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+
     private void DialogueLine10()
     {
         hasEndedTyping = false;
-        texToToWrite = "Take heart, for you are not alone in this endeavor. ";
+        texToToWrite = "You discover that someone you trust has betrayed you, but revealing the truth could harm them and others involved.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
+
     private void DialogueLine11()
     {
-        hasEndedTyping = false;
-        texToToWrite = "Spirits yearn for resolution, their memories waiting to be rediscovered.";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+
+        button1AnswerText.text = "Forgive the betrayal and keep the truth hidden to avoid unnecessary pain and conflict";
+        button2AnswerText.text = "Confront the betrayal and seek closure is for personal healing and integrity";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
     }
+
+    public void DialogueLine11Answer1()
+    {
+        if (dialogueLine == 11)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine11Answer2()
+    {
+        if (dialogueLine == 11)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
     private void DialogueLine12()
     {
         hasEndedTyping = false;
-        texToToWrite = "Reach out, uncover their tales, and restore the stolen fragments.";
+        texToToWrite = "You are on your way to an event that you have been waiting for a long time and you see a neighbor’s dog who has been missing for days and follows you in search of help.\r\n\r\n";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
+
     private void DialogueLine13()
     {
-        hasEndedTyping = false;
-        texToToWrite = "Good luck " + gameManager_Script.playerName + ", we will see each other once more, in the future. ";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+
+        button1AnswerText.text = "Continue on your way ignoring the dog and you arrive at time to the event.";
+        button2AnswerText.text = "Go back and take the dog with it’s owner.";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine13Answer1()
+    {
+        if (dialogueLine == 13)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine13Answer2()
+    {
+        if (dialogueLine == 13)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
     }
 
     private void DialogueLine14()
     {
-        dialogueTextPanel.SetActive(false);
-        streetPanelImage.sprite = streetBackgroundSprite;
-        if(canPlayMusicLine14)
-        {
-            canPlayMusicLine14 = false;
-            audioSource.enabled = false;
-            audioSource.clip = hoodedManMusic;
-            audioSource.enabled = true;
-        }
-
-        loadManager.introFinished = true;
-        loadManager.Save();
-
-        playerIsAnswering = true;
-        startHoodedManButtonGameObject.SetActive(true);
-    }
-
-    public void StartHoodedManButton()
-    {
-        if (dialogueLine == 14)
-        {
-            startHoodedManButtonGameObject.SetActive(false);
-            textPanelImage.sprite = TextPanelNormalSprite;
-            spiritNameText.text = "";
-            dialogueTextPanel.SetActive(true);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-        }
+        hasEndedTyping = false;
+        texToToWrite = "You have insider information that could give you an unfair advantage in a business deal.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
     }
 
     private void DialogueLine15()
     {
-        hasEndedTyping = false;
-        texToToWrite = "You open your eyes to Calle de las Almas, a spectral street adorned with marigolds and papel picado.";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+
+        button1AnswerText.text = "Exploit the information for personal gain, disregarding the potential harm it may cause to others.";
+        button2AnswerText.text = "Refuse to use it, opting for fair and ethical practices";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine15Answer1()
+    {
+        if (dialogueLine == 15)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine15Answer2()
+    {
+        if (dialogueLine == 15)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
     }
 
     private void DialogueLine16()

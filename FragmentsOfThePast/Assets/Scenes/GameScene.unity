@@ -3288,8 +3288,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -70}
-  m_SizeDelta: {x: 500, y: 200}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 1800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440721417
 MonoBehaviour:
@@ -3416,7 +3416,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine2Answer2
+        m_MethodName: DialogueLine9Answer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3428,7 +3428,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine18Answer2
+        m_MethodName: DialogueLine11Answer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3440,7 +3440,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine22Answer2
+        m_MethodName: DialogueLine13Answer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3452,55 +3452,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine27Answer2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine39Answer2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine50Answer2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine57Answer2
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine63Answer2
+        m_MethodName: DialogueLine15Answer2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5196,8 +5148,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -615, y: -70}
-  m_SizeDelta: {x: 500, y: 200}
+  m_AnchoredPosition: {x: 0, y: 60}
+  m_SizeDelta: {x: 1800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &609651182
 MonoBehaviour:
@@ -5324,7 +5276,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine2Answer1
+        m_MethodName: DialogueLine9Answer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5336,7 +5288,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine18Answer1
+        m_MethodName: DialogueLine11Answer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5348,7 +5300,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine22Answer1
+        m_MethodName: DialogueLine13Answer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5360,31 +5312,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine27Answer1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine39Answer1
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine63Answer1
+        m_MethodName: DialogueLine15Answer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9073,7 +9001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1106948752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13308,7 +13236,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.728, y: 0}
-  m_SizeDelta: {x: 472.8428, y: 178.2158}
+  m_SizeDelta: {x: 1600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567993701
 MonoBehaviour:
@@ -13396,7 +13324,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1567993702
@@ -14196,8 +14124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 615, y: -70}
-  m_SizeDelta: {x: 500, y: 200}
+  m_AnchoredPosition: {x: 0, y: -140}
+  m_SizeDelta: {x: 1800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659393591
 MonoBehaviour:
@@ -14324,67 +14252,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine2Answer3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine18Answer3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine22Answer3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine27Answer3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine39Answer3
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2091079309}
-        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
-        m_MethodName: DialogueLine63Answer3
+        m_MethodName: DialogueLine9Answer3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16647,7 +16515,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2.1613, y: 2.7016}
-  m_SizeDelta: {x: 478.3868, y: 181.6288}
+  m_SizeDelta: {x: 1600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884422450
 MonoBehaviour:
@@ -16735,7 +16603,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1884422451
@@ -17749,7 +17617,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1.1961, y: -1.7142}
-  m_SizeDelta: {x: 473.1496, y: 174.4154}
+  m_SizeDelta: {x: 1600, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2047183623
 MonoBehaviour:
@@ -17837,7 +17705,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2047183624
