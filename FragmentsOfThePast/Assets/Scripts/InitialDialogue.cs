@@ -253,7 +253,7 @@ public class InitialDialogue : MonoBehaviour
                 {
                     if(isFirstColor)
                     {
-                        printIndex += 11;
+                        printIndex += 17; 
                         isFirstColor = false;
                         Debug.Log("First Jump");
                     }
@@ -567,7 +567,7 @@ public class InitialDialogue : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=red>fracture.</color>";
+        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=#000000ff>fracture.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
