@@ -591,18 +591,16 @@ public class InitialDialogue : MonoBehaviour
         animator.SetBool("canPlayAnim0", true);
         streetPanelImage.sprite = flowerSpaceBackgroundSprite;
         textPanelImage.sprite = TextPanelNormalSprite;
-        //textPanelImage.sprite = TextPanelDarkSprite;
         spiritNameText.text = " ";
     }
 
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        spiritNameText.text = "Hooded Man";
+        spiritNameText.text = "";
         texToToWrite = "Bizarre events have led to the blurring of boundaries, with spirits crossing over into the land of the living and vice versa. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     private void DialogueLine2()
@@ -934,6 +932,7 @@ public class InitialDialogue : MonoBehaviour
 
         textPanelBackgroundGameObject.SetActive(true);
         dialogueTextGameObject.transform.position = dialogueFrameDownGameObject.transform.position;
+
     }
 
     private void DialogueLine18()
@@ -1033,10 +1032,12 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine25()
     {
         hasEndedTyping = false;
-        spiritNameText.text = "???";
         texToToWrite = "Hey there, friend, you seem a bit out of place. Are you lost…? Need someone to show you how to navigate the breach?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        spiritNameText.text = "Hooded Man";
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     private void DialogueLine26()
@@ -1093,7 +1094,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine27()
     {
         hasEndedTyping = false;
-        spiritNameText.text = "???";
+        spiritNameText.text = "Hooded Man";
         texToToWrite = "You know, I couldn't help but notice... your breathing, rhythmic and alive, you still maintain your humanity…  ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -1178,13 +1179,16 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine32()
     {
         hasEndedTyping = false;
-        texToToWrite = "(In a quick movement, he approaches you and holds your throat strongly, choking you, you can feel his powers draining yours, he is… stealing your powers to add them to his array!)";
+        texToToWrite = "In a quick movement, he approaches you and holds your throat strongly, choking you, you can feel his powers draining yours, he is… stealing your powers to add them to his array!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
         cameraShake.Shake();
         streetPanelImage.sprite = quasimanSpriteBackground;
         hoodedManImage.SetActive(false);
+
+        spiritNameText.text = "";
+        textPanelImage.sprite = TextPanelNormalSprite;
     }
 
     private void DialogueLine33()
@@ -1193,6 +1197,9 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You are very naive if you think you can walk around here like Alice in Wonderland…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        spiritNameText.text = "Hooded Man";
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     private void DialogueLine34()
@@ -1201,6 +1208,9 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "The man sneers, his grip tightening around your throat.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        spiritNameText.text = "";
+        textPanelImage.sprite = TextPanelNormalSprite;
     }
 
     private void DialogueLine35()
@@ -1209,6 +1219,9 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Carefree, like a damn lost child.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        spiritNameText.text = "Hooded Man";
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     private void DialogueLine36()
@@ -1217,6 +1230,11 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "As he tries to drain your powers, a sudden resistance surges within you, causing him to falter.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+
+        spiritNameText.text = "";
+        textPanelImage.sprite = TextPanelNormalSprite;
+        cameraShake.Shake();
     }
 
     private void DialogueLine37()
@@ -1237,6 +1255,9 @@ public class InitialDialogue : MonoBehaviour
         hoodedManImage.SetActive(true);
         streetPanelImage.sprite = intro2Background;
         cameraShake.Shake();
+
+        spiritNameText.text = "Hooded Man";
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     private void DialogueLine39()
@@ -1255,6 +1276,9 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         animator.SetBool("canPlayAnim5", true);
+
+        spiritNameText.text = "";
+        textPanelImage.sprite = TextPanelNormalSprite;
     }
 
     private void DialogueLine41()
