@@ -162,6 +162,12 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] private GameObject conquistadorPanel;
     [SerializeField] private GameObject ordenPanel;
 
+    [SerializeField] private GameObject textPanelBackgroundGameObject;
+    [SerializeField] private GameObject dialogueTextGameObject;
+    [SerializeField] private GameObject dialogueFrameUpGameObject;
+    [SerializeField] private GameObject dialogueFrameDownGameObject;
+   
+    [SerializeField] private GameObject darkerFilterPanel;
 
     private void Start()
     {
@@ -584,16 +590,19 @@ public class InitialDialogue : MonoBehaviour
 
         animator.SetBool("canPlayAnim0", true);
         streetPanelImage.sprite = flowerSpaceBackgroundSprite;
+        textPanelImage.sprite = TextPanelNormalSprite;
+        //textPanelImage.sprite = TextPanelDarkSprite;
         spiritNameText.text = " ";
     }
 
     private void DialogueLine1()
     {
         hasEndedTyping = false;
-        spiritNameText.text = " ";
+        spiritNameText.text = "Hooded Man";
         texToToWrite = "Bizarre events have led to the blurring of boundaries, with spirits crossing over into the land of the living and vice versa. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     private void DialogueLine2()
@@ -671,16 +680,21 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You find a wallet filled with cash and identification. Do you return it to its owner, knowing they might be in dire need of the money?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        textPanelBackgroundGameObject.SetActive(false);
+        dialogueTextGameObject.transform.position = dialogueFrameUpGameObject.transform.position;
+        darkerFilterPanel.SetActive(false);
     }
 
     private void DialogueLine9()
     {
-        dialogueTextPanel.SetActive(false);
+        //dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
         button1AnswerText.text = "Return the wallet to his owner.";
         button2AnswerText.text = "Keep the money for yourself but you return the other documents.";
         button3AnswerText.text = "Take the entire wallet, bad luck.";
         playerIsAnswering = true;
+        darkerFilterPanel.SetActive(true);
     }
 
     public void DialogueLine9Answer1()
@@ -729,11 +743,12 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You discover that someone you trust has betrayed you, but revealing the truth could harm them and others involved.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        darkerFilterPanel.SetActive(false);
     }
 
     private void DialogueLine11()
     {
-        dialogueTextPanel.SetActive(false);
+        //dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
 
         leftButtonPanel.SetActive(true);
@@ -744,6 +759,7 @@ public class InitialDialogue : MonoBehaviour
         button2AnswerText.text = "Confront the betrayal and seek closure is for personal healing and integrity";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+        darkerFilterPanel.SetActive(true);
     }
 
     public void DialogueLine11Answer1()
@@ -778,11 +794,12 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You are on your way to an event that you have been waiting for a long time and you see a neighbor’s dog who has been missing for days and follows you in search of help.\r\n\r\n";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        darkerFilterPanel.SetActive(false);
     }
 
     private void DialogueLine13()
     {
-        dialogueTextPanel.SetActive(false);
+        //dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
 
         leftButtonPanel.SetActive(true);
@@ -793,6 +810,7 @@ public class InitialDialogue : MonoBehaviour
         button2AnswerText.text = "Go back and take the dog with it’s owner.";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+        darkerFilterPanel.SetActive(true);
     }
 
     public void DialogueLine13Answer1()
@@ -827,11 +845,12 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You have insider information that could give you an unfair advantage in a business deal.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        darkerFilterPanel.SetActive(false);
     }
 
     private void DialogueLine15()
     {
-        dialogueTextPanel.SetActive(false);
+        //dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
 
         leftButtonPanel.SetActive(true);
@@ -842,6 +861,7 @@ public class InitialDialogue : MonoBehaviour
         button2AnswerText.text = "Refuse to use it, opting for fair and ethical practices";
         button3AnswerText.text = "";
         playerIsAnswering = true;
+        darkerFilterPanel.SetActive(true);
     }
 
     public void DialogueLine15Answer1()
@@ -894,6 +914,7 @@ public class InitialDialogue : MonoBehaviour
         animator.SetBool("canPlayAnim2", true);
 
         streetPanelImage.sprite = blackGalaxyBackgroundSprite;
+        darkerFilterPanel.SetActive(false);
     }
 
 
@@ -910,6 +931,9 @@ public class InitialDialogue : MonoBehaviour
 
         streetPanelImage.sprite = intro1Background;
         animator.SetBool("canPlayAnim3", true);
+
+        textPanelBackgroundGameObject.SetActive(true);
+        dialogueTextGameObject.transform.position = dialogueFrameDownGameObject.transform.position;
     }
 
     private void DialogueLine18()
