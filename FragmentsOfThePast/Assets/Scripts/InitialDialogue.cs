@@ -71,7 +71,7 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] Sprite blackGalaxyBackgroundSprite;
     [SerializeField] Sprite intro1Background;
     [SerializeField] Sprite intro2Background;
-   // [SerializeField] Sprite intro3Background;
+    [SerializeField] Sprite blackImageBackground;
 
     [SerializeField] Animator animator;
 
@@ -660,6 +660,9 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "But… Who are you?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        //
+        streetPanelImage.sprite = blackImageBackground;
     }
 
     private void DialogueLine8()
@@ -931,6 +934,8 @@ public class InitialDialogue : MonoBehaviour
 
         streetPanelImage.sprite = intro2Background;
         cameraShake.Shake();
+        hoodedManImage.SetActive(true);
+
     }
 
     private void DialogueLine21()
@@ -940,8 +945,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        hoodedManImage.SetActive(true);
-
+        
         FadeInHoodedMain();
     }
 
