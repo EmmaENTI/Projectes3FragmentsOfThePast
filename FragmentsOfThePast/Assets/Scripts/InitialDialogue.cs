@@ -187,7 +187,7 @@ public class InitialDialogue : MonoBehaviour
     }
     private void Update()
     {
-        GoTo68();
+        //GoTo68();
         //If Left CLick
         if (Input.GetMouseButtonDown(0))
         {
@@ -236,7 +236,7 @@ public class InitialDialogue : MonoBehaviour
         //Hacks
         if (Input.GetKeyDown("a"))
         {
-            DialogueLine67();
+            //DialogueLine67();
         }
 
        
@@ -320,169 +320,169 @@ public class InitialDialogue : MonoBehaviour
                 break;
 
             case 5:
-                DialogueLine5();
+                DialogueLine4dot1();
                 break;
 
             case 6:
-                DialogueLine6();
+                DialogueLine4dot2();
                 break;
 
             case 7:
-                DialogueLine7();
+                DialogueLine5();
                 break;
 
             case 8:
-                DialogueLine8();
+                DialogueLine6();
                 break;
 
             case 9:
-                DialogueLine9();
+                DialogueLine7();
                 break;
 
             case 10:
-                DialogueLine10();
+                DialogueLine8();
                 break;
 
             case 11:
-                DialogueLine11();
+                DialogueLine9();
                 break;
 
             case 12:
-                DialogueLine12();
+                DialogueLine10();
                 break;
 
             case 13:
-                DialogueLine13();
+                DialogueLine11();
                 break;
 
             case 14:
-                DialogueLine14();
+                DialogueLine12();
                 break;
 
             case 15:
-                DialogueLine15();
+                DialogueLine13();
                 break;
 
             case 16:
-                DialogueLine16();
+                DialogueLine14();
                 break;
 
             case 17:
-                DialogueLine17();
+                DialogueLine15();
                 break;
 
             case 18:
-                DialogueLine18();
+                DialogueLine16();
                 break;
 
             case 19:
-                DialogueLine19();
+                DialogueLine17();
                 break;
 
             case 20:
-                DialogueLine20();
+                DialogueLine18();
                 break;
 
             case 21:
-                DialogueLine21();
+                DialogueLine19();
                 break;
 
             case 22:
-                DialogueLine22();
+                DialogueLine20();
                 break;
 
             case 23:
-                DialogueLine23();
+                DialogueLine21();
                 break;
 
             case 24:
-                DialogueLine24();
+                DialogueLine22();
                 break;
 
             case 25:
-                DialogueLine25();
+                DialogueLine23();
                 break;
 
             case 26:
-                DialogueLine26();
+                DialogueLine24();
                 break;
 
             case 27:
-                DialogueLine27();
+                DialogueLine25();
                 break;
 
             case 28:
-                DialogueLine28();
+                DialogueLine26();
                 break;
 
             case 29:
-                DialogueLine29();
+                DialogueLine27();
                 break;
 
             case 30:
-                DialogueLine30();
+                DialogueLine28();
                 break;
 
             case 31:
-                DialogueLine31();
+                DialogueLine29();
                 break;
 
             case 32:
-                DialogueLine32();
+                DialogueLine30();
                 break;
 
             case 33:
-                DialogueLine33();
+                DialogueLine31();
                 break;
 
             case 34:
-                DialogueLine34();
+                DialogueLine32();
                 break;
 
             case 35:
-                DialogueLine35();
+                DialogueLine33();
                 break;
 
             case 36:
-                DialogueLine36();
+                DialogueLine34();
                 break;
 
             case 37:
-                DialogueLine37();
+                DialogueLine35();
                 break;
 
             case 38:
-                DialogueLine38();
+                DialogueLine36();
                 break;
 
             case 39:
-                DialogueLine39();
+                DialogueLine37();
                 break;
 
             case 40:
-                DialogueLine40();
+                DialogueLine38();
                 break;
 
             case 41:
-                DialogueLine41();
+                DialogueLine39();
                 break;
 
             case 42:
-                DialogueLine42();
+                DialogueLine40();
                 break;
 
             case 43:
-                DialogueLine43();
+                DialogueLine41();
                 break;
 
-            case 44:
-                DialogueLine44();
+           case 44:
+                DialogueLine42();
                 break;
 
             case 45:
-                DialogueLine45();
+                DialogueLine43();
                 break;
-
+ /*
             case 46:
                 DialogueLine46();
                 break;
@@ -569,7 +569,7 @@ public class InitialDialogue : MonoBehaviour
 
             case 67:
                 DialogueLine67();
-                break;
+                break;*/
         }
     }
     
@@ -616,7 +616,24 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Fear and anxiety have gripped the population, and very few who are gifted with paranormal abilities are able to restore the balance between the realms or face the unknown consequences of their convergence.";
+        texToToWrite = "Fear and anxiety have gripped the population...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+
+    private void DialogueLine4dot1()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "And very few who are gifted with paranormal abilities are able to restore the balance between the realms";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine4dot2()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Or face the unknown consequences of their convergence.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -626,10 +643,7 @@ public class InitialDialogue : MonoBehaviour
         hasEndedTyping = false;
         texToToWrite = "You… You are one of the gifted ones, a spiritist with a natural ease and innate ability to see and interact with the realm of the dead. ";
         StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
-
-        cameraShake.Shake();
-        
+        canTalk = false;  
     }
 
     private void DialogueLine6()
@@ -668,7 +682,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine9Answer1()
     {
-        if (dialogueLine == 9)
+        if (dialogueLine == 11)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -681,7 +695,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine9Answer2()
     {
-        if (dialogueLine == 9)
+        if (dialogueLine == 11)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -694,7 +708,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine9Answer3()
     {
-        if (dialogueLine == 9)
+        if (dialogueLine == 11)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -731,7 +745,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine11Answer1()
     {
-        if (dialogueLine == 11)
+        if (dialogueLine == 13)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -744,7 +758,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine11Answer2()
     {
-        if (dialogueLine == 11)
+        if (dialogueLine == 13)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -780,7 +794,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine13Answer1()
     {
-        if (dialogueLine == 13)
+        if (dialogueLine == 15)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -793,7 +807,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine13Answer2()
     {
-        if (dialogueLine == 13)
+        if (dialogueLine == 15)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -829,7 +843,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine15Answer1()
     {
-        if (dialogueLine == 15)
+        if (dialogueLine == 17)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -842,7 +856,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine15Answer2()
     {
-        if (dialogueLine == 15)
+        if (dialogueLine == 17)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -916,6 +930,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         streetPanelImage.sprite = intro2Background;
+        cameraShake.Shake();
     }
 
     private void DialogueLine21()
@@ -959,7 +974,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine24Answer1()
     {
-        if (dialogueLine == 24)
+        if (dialogueLine == 26)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -972,7 +987,7 @@ public class InitialDialogue : MonoBehaviour
 
     public void DialogueLine24Answer2()
     {
-        if (dialogueLine == 24)
+        if (dialogueLine == 26)
         {
             dialogueTextPanel.SetActive(true);
             answerButtonsPanel.SetActive(false);
@@ -990,24 +1005,78 @@ public class InitialDialogue : MonoBehaviour
 
     private void DialogueLine25()
     {
-
+        hasEndedTyping = false;
+        spiritNameText.text = "???";
+        texToToWrite = "Hey there, friend, you seem a bit out of place. Are you lost…? Need someone to show you how to navigate the breach?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
     }
 
     private void DialogueLine26()
     {
-
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Friendly) Sure, why not?";
+        button2AnswerText.text = "(Cautious) Thanks, but I'll navigate this place solo. No offense.";
+        button3AnswerText.text = "(Rude) No guide needed. Move along, creep.";
+        playerIsAnswering = true;
     }
+
+    public void DialogueLine26Answer1()
+    {
+        if (dialogueLine == 28)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine26Answer2()
+    {
+        if (dialogueLine == 28)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine26Answer3()
+    {
+        if (dialogueLine == 28)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
 
     private void DialogueLine27()
     {
-
+        hasEndedTyping = false;
+        spiritNameText.text = "???";
+        texToToWrite = "You know, I couldn't help but notice... your breathing, rhythmic and alive, you still maintain your humanity…  ";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
     }
 
 
     private void DialogueLine28()
     {
         hasEndedTyping = false;
-        texToToWrite = "Life is a precious gift, isn't it? Your abilities, your memories... they're tempting. Imagine the power, the richness I could savor.";
+        texToToWrite = "You are a spiritist… I can feel your aura, it ripples with power around you.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1015,7 +1084,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine29()
     {
         hasEndedTyping = false;
-        texToToWrite = "But be cautious, dear. Lose grip, and these treasures might find themselves in less forgiving hands.";
+        texToToWrite = "The subtle rise and fall of your chest… It's fascinating, really. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1023,92 +1092,108 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine30()
     {
         hasEndedTyping = false;
-        texToToWrite = "Consider that a friendly warning, I like you, human, a lot.";
+        texToToWrite = "Can you feel your heartbeat, each pulse a reminder of your existence in this... transitional state, here in the breach?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine31()
     {
-        streetPanelImage.sprite = streetBackgroundSprite;
-        textPanelImage.sprite = TextPanelNormalSprite;
-        hoodedManImage.SetActive(false);
-        if (canPlayMusicLine31)
-        {
-            canPlayMusicLine31 = false;
-            audioSource.enabled = false;
-            audioSource.clip = introMusic;
-            audioSource.enabled = true;
-        }
-
-        hasEndedTyping = false;
-        spiritNameText.text = "";
-        texToToWrite = "The hooded figure, with an unsettling grin, melts into the shadows of a dark alleyway. ";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        rightButtonPanel.SetActive(true);
+        button1AnswerText.text = "(Creeped Out) Too much info... Back off with the anatomy analysis.";
+        button2AnswerText.text = "(Denial) Alive, dead, who knows? Just leave me be, okay?";
+        button3AnswerText.text = "(Rude) Maybe a psychologist would care about your deep thoughts. Not me, though.";
+        playerIsAnswering = true;
     }
+
+    public void DialogueLine31Answer1()
+    {
+        if (dialogueLine == 33)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine31Answer2()
+    {
+        if (dialogueLine == 33)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine31Answer3()
+    {
+        if (dialogueLine == 33)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
 
     private void DialogueLine32()
     {
         hasEndedTyping = false;
-        texToToWrite = "As he vanishes, a peculiar gust of wind carries an eerie whisper, leaving you with a sense of unease.";
+        texToToWrite = "(In a quick movement, he approaches you and holds your throat strongly, choking you, you can feel his powers draining yours, he is… stealing your powers to add them to his array!)";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        cameraShake.Shake();
     }
 
     private void DialogueLine33()
     {
-        groupImage.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "Then… You hear a group of people running towards you! Are they… dead?! Oh, true, we are in the dead realm. At this point, nothing is surprising…";
+        texToToWrite = "You are very naive if you think you can walk around here like Alice in Wonderland…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine34()
     {
-        groupImage.SetActive(false);
-        marinaSadImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Marina";
-        playSound2.playEffect();
-        texToToWrite = "Hey there! Sorry to burst in like this, have you seen a hooded guy, with a super creepy vibe? He's, like, holding our memories hostage!";
+        texToToWrite = "The man sneers, his grip tightening around your throat.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine35()
     {
-        marinaSadImage.SetActive(false);
-        brunoSadImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Bruno";
-        playSound2.playEffect();
-        texToToWrite = "I-I think I saw him going into the alley, but I didn't want to... you know, chase after him alone. It's just, um, not my thing.";
+        texToToWrite = "Carefree, like a damn lost child.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine36()
     {
-        brunoSadImage.SetActive(false);
-        carmenAngerImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Carmen";
-        playSound2.playEffect();
-        texToToWrite = "Cut the small talk. Hooded man, stole our memories. Seen him or not?";
+        texToToWrite = "As he tries to drain your powers, a sudden resistance surges within you, causing him to falter.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine37()
     {
-        carmenAngerImage.SetActive(false);
-        luisSurpriseImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Luis";
-        playSound2.playEffect();
-        texToToWrite = "Hey! Any chance you've crossed paths with a dude in a hood? Stole our memories, you know. ";
+        texToToWrite = "Gasping for air, you feel a surge of energy coursing through your veins, your powers too potent for him to overcome.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1116,109 +1201,82 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine38()
     {
         hasEndedTyping = false;
-        texToToWrite = "Classic move. The usual Monday shenanigans. Anyone up for a bet on where our memory thief ran off to?";
+        texToToWrite = " You`re stronger than I anticipated… But I don’t mind making this story a little longer, after all… I do love a good chase. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine39()
     {
-        luisSurpriseImage.SetActive(false);
-        dialogueTextPanel.SetActive(false);
-        answerButtonsPanel.SetActive(true);
-        button1AnswerText.text = "(Friendly) Oh yeah, I saw him…";
-        button2AnswerText.text = "(Nervous) Yes…? ";
-        button3AnswerText.text = "(Annoyed) Yes I saw him! All of this is crazy! ";
-        playerIsAnswering = true;
-    }
-
-
-    public void DialogueLine39Answer1()
-    {
-        if (dialogueLine == 39)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
-
-    public void DialogueLine39Answer2()
-    {
-        if (dialogueLine == 39)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
-    }
-
-    public void DialogueLine39Answer3()
-    {
-        if (dialogueLine == 39)
-        {
-            dialogueTextPanel.SetActive(true);
-            answerButtonsPanel.SetActive(false);
-            playerIsAnswering = false;
-            canTalk = true;
-            dialogueLine++;
-            playSound1.playEffect();
-        }
+        hasEndedTyping = false;
+        texToToWrite = "Don’t think you are special, you are not the only one looking for the source of all this events.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
     }
 
     private void DialogueLine40()
     {
-        carmenAngerImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Carmen";
-        playSound2.playEffect();
-        texToToWrite = "Great, the hooded dude vanished, once again! There is no point in chasing him, he comes and goes whenever he wants…";
+        texToToWrite = "As he disappears into the shadows, you feel very tired, your throat hurts, you cough and search desperately for air, there is not much time to find the exit.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine41()
     {
-        carmenAngerImage.SetActive(false);
-        brunoSurpriseImage.SetActive(true);
-        hasEndedTyping = false;
-        spiritNameText.text = "Bruno";
-        playSound2.playEffect();
-        texToToWrite = "Um, guys, not to interrupt, but look, our new friend here is, well, not exactly one of us. Living, I mean. How do we explain that?";
-        StartCoroutine(TypeText(texToToWrite));
-        canTalk = false;
+        dialogueTextPanel.SetActive(false);
+        answerButtonsPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+        button1AnswerText.text = "Run Forward, there is no point in returning!";
+        button2AnswerText.text = "Run Backwards, to where you came from.";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+    }
+
+    public void DialogueLine41Answer1()
+    {
+        if (dialogueLine == 43)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
+    }
+
+    public void DialogueLine41Answer2()
+    {
+        if (dialogueLine == 43)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound1.playEffect();
+        }
     }
 
     private void DialogueLine42()
     {
-        brunoSurpriseImage.SetActive(false);
-        marinaSurpriseImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Marina";
-        playSound2.playEffect();
-        texToToWrite = "Oh wow! A living person in the afterlife?! That's fascinating! Maybe you're like a bridge between worlds! Can we keep them? Please?~";
+        texToToWrite = "You try to move, but it is useless… As run, you begin to lose consciousness, a scent fills the air—candles and marigolds.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
     private void DialogueLine43()
     {
-        marinaSurpriseImage.SetActive(false);
-        luisHappyImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Luis";
-        playSound2.playEffect();
-        texToToWrite = "Eh, living, dead, who cares? What's your story, living one? You here for a wild afterlife party?";
+        texToToWrite = "It's comforting but darkness envelops you entirely and you feel yourself falling unconscious.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
 
+
+    /*
     private void DialogueLine44()
     {
         luisHappyImage.SetActive(false);
@@ -1571,6 +1629,9 @@ public class InitialDialogue : MonoBehaviour
         {
         }
     }
+
+    */
+
 
     void FadeInAnim()
     {
