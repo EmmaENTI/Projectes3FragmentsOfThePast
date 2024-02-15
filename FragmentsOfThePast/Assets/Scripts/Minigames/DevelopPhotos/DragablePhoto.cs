@@ -18,9 +18,18 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     float timeElapsed = 0;
     float angleOffset = 0;
 
+    [SerializeField] Vector3 redContainerPosition;
+    [SerializeField] Vector3 grayContainerPosition;
+
+    bool hasCompletedRed = false;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        redContainerPosition = GameObject.Find("RedContainer").transform.position;
+        grayContainerPosition = GameObject.Find("GrayContainer").transform.position;
     }
 
     private void Update()
@@ -30,7 +39,6 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             CalculateVelocity();
             FlipPhoto();
 
-            // TODO Lerp Flip Photo
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Mathf.Clamp(rb.velocity.y/5+angleOffset, -250, 70), 0, 0), 0.05f);
 
             CheckVelocity();  
@@ -79,13 +87,13 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     void CheckVelocity()
     {
-        if (Mathf.Abs(rb.velocity.y) > 400)
+        if (Mathf.Abs(rb.velocity.y) > 600)
         {
-            //Debug.Log("TOO FAST: " + rb.velocity.y);
+            Debug.Log("TOO FAST: " + rb.velocity.y);
         }
-        else if (Mathf.Abs(rb.velocity.y) < 150)
+        else if (Mathf.Abs(rb.velocity.y) < 100)
         {
-            //Debug.Log("TOO SLOW: " + rb.velocity.y);
+            Debug.Log("TOO SLOW: " + rb.velocity.y);
         }
         else
         {
@@ -96,7 +104,18 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             // TODO Lerp to Next Stage
 
-            //Destroy(gameObject);
+            if (!hasCompletedRed)
+            {
+                transform.position = grayContainerPosition;
+                hasCompletedRed = true;
+                timeElapsed = 0;
+            }
+            else
+            {
+                Destroy(gameObject);
+                // Tp to DryingRope
+            }
+
         }
     }
 
