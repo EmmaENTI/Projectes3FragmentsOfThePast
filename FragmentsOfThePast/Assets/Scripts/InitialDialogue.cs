@@ -661,8 +661,9 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        //
-        streetPanelImage.sprite = blackImageBackground;
+        
+        animator.SetBool("canPlayFadeOut", true);
+        //streetPanelImage.sprite = blackImageBackground;
     }
 
     private void DialogueLine8()
@@ -907,6 +908,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         streetPanelImage.sprite = intro1Background;
+        FadeInAnim();
     }
 
     private void DialogueLine18()
@@ -1643,12 +1645,15 @@ public class InitialDialogue : MonoBehaviour
         {
             animator.SetBool("canPlayFadeIn", false);
             animator.SetBool("canPlayHoodedManFadeIn", false);
+            animator.SetBool("canPlayFadeOut", false);
+
         }
 
         else if (!animator.GetBool("canPlayFadeIn"))
         {
             animator.SetBool("canPlayFadeIn", true);
             animator.SetBool("canPlayHoodedManFadeIn", false);
+            animator.SetBool("canPlayFadeOut", false);
         }
     }
 
