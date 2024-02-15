@@ -169,6 +169,11 @@ public class InitialDialogue : MonoBehaviour
    
     [SerializeField] private GameObject darkerFilterPanel;
 
+    public AudioClip whoAreYou;
+    public GameObject audioSourceGameObject;
+
+    private bool canChangeSound1 = true;
+
     private void Start()
     {
 
@@ -670,6 +675,20 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         animator.SetBool("canPlayAnim1", true);
+
+
+
+
+       if (canChangeSound1)
+       {
+            audioSourceGameObject.SetActive(false);
+            canChangeSound1 = false;
+       }
+
+        audioSource.clip = whoAreYou;
+
+        audioSourceGameObject.SetActive(true);
+
     }
 
     private void DialogueLine8()

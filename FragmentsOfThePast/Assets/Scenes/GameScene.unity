@@ -19554,6 +19554,8 @@ MonoBehaviour:
   dialogueFrameUpGameObject: {fileID: 1336502227}
   dialogueFrameDownGameObject: {fileID: 2042394825}
   darkerFilterPanel: {fileID: 447596965}
+  whoAreYou: {fileID: 8300000, guid: b9bca2d0e2717b74e8275293a75185e0, type: 3}
+  audioSourceGameObject: {fileID: 852453418}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
