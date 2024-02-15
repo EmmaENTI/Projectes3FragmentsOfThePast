@@ -44,9 +44,6 @@ public class ScreenShake : MonoBehaviour
 
             elapsed += Time.deltaTime * shakeSpeed;
 
-
-            Debug.Log("SHAKING");
-
             yield return null;
         }
 

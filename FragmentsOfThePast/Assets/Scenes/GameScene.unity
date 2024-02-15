@@ -19162,6 +19162,7 @@ MonoBehaviour:
   intro1Background: {fileID: 21300000, guid: 900a052807b623c43894c361cd8a6167, type: 3}
   intro2Background: {fileID: 21300000, guid: ab1a076da412e374abe744aecb3092bf, type: 3}
   blackImageBackground: {fileID: 21300000, guid: dfb53c62966200042ad515b5f2d227c9, type: 3}
+  quasimanSpriteBackground: {fileID: 21300000, guid: c81417c4acf3c6d40810fc6085f43487, type: 3}
   animator: {fileID: 1651488454}
   playSound: {fileID: 198965799}
   playSound1: {fileID: 302166972}

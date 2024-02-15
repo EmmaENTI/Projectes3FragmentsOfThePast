@@ -72,6 +72,7 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] Sprite intro1Background;
     [SerializeField] Sprite intro2Background;
     [SerializeField] Sprite blackImageBackground;
+    [SerializeField] Sprite quasimanSpriteBackground;
 
     [SerializeField] Animator animator;
 
@@ -581,7 +582,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        animator.SetBool("canPlayFadeIn", true);
+        animator.SetBool("canPlayAnim0", true);
         streetPanelImage.sprite = flowerSpaceBackgroundSprite;
         spiritNameText.text = " ";
     }
@@ -661,9 +662,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        
-        animator.SetBool("canPlayFadeOut", true);
-        //streetPanelImage.sprite = blackImageBackground;
+        animator.SetBool("canPlayAnim1", true);
     }
 
     private void DialogueLine8()
@@ -887,14 +886,16 @@ public class InitialDialogue : MonoBehaviour
 
         else if (isOrden)
         {
+
             ordenPanel.SetActive(true);
         }
 
 
-        FadeInAnim();
+        animator.SetBool("canPlayAnim2", true);
 
         streetPanelImage.sprite = blackGalaxyBackgroundSprite;
     }
+
 
     private void DialogueLine17()
     {
@@ -908,7 +909,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         streetPanelImage.sprite = intro1Background;
-        FadeInAnim();
+        animator.SetBool("canPlayAnim3", true);
     }
 
     private void DialogueLine18()
@@ -947,8 +948,8 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        
-        FadeInHoodedMain();
+
+        animator.SetBool("canPlayAnim4", true);
     }
 
     private void DialogueLine22()
@@ -1004,10 +1005,6 @@ public class InitialDialogue : MonoBehaviour
         }
     }
 
-
-    /// <summary>
-    /// ///
-    /// </summary>
 
     private void DialogueLine25()
     {
@@ -1162,6 +1159,8 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         cameraShake.Shake();
+        streetPanelImage.sprite = quasimanSpriteBackground;
+        hoodedManImage.SetActive(false);
     }
 
     private void DialogueLine33()
@@ -1207,9 +1206,13 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine38()
     {
         hasEndedTyping = false;
-        texToToWrite = " You`re stronger than I anticipated… But I don’t mind making this story a little longer, after all… I do love a good chase. ";
+        texToToWrite = "You`re stronger than I anticipated… But I don’t mind making this story a little longer, after all… I do love a good chase. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        hoodedManImage.SetActive(true);
+        streetPanelImage.sprite = intro2Background;
+        cameraShake.Shake();
     }
 
     private void DialogueLine39()
@@ -1226,6 +1229,8 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "As he disappears into the shadows, you feel very tired, your throat hurts, you cough and search desperately for air, there is not much time to find the exit.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        animator.SetBool("canPlayAnim5", true);
     }
 
     private void DialogueLine41()
@@ -1639,7 +1644,7 @@ public class InitialDialogue : MonoBehaviour
     */
 
 
-    void FadeInAnim()
+    /*void FadeInAnim()
     {
         if (animator.GetBool("canPlayFadeIn"))
         {
@@ -1660,7 +1665,7 @@ public class InitialDialogue : MonoBehaviour
     void FadeInHoodedMain()
     {
         animator.SetBool("canPlayHoodedManFadeIn", true); 
-    }
+    }*/
 
 }
 
