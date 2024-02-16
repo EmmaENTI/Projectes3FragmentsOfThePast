@@ -85,6 +85,16 @@ public class InitialDialogue : MonoBehaviour
     //Sound 2
     [SerializeField] PlaySound playSound2;
 
+    //Sound 4
+    [SerializeField] PlaySound playSound4;
+
+    //Sound 5
+    [SerializeField] PlaySound playSound5;
+
+    //Sound 6
+    [SerializeField] PlaySound playSound6;
+
+
     //Audio Source
     [SerializeField] AudioSource audioSource;
 
@@ -173,6 +183,8 @@ public class InitialDialogue : MonoBehaviour
     public GameObject audioSourceGameObject;
 
     private bool canChangeSound1 = true;
+
+    bool isWhoAreYou;
 
     private void Start()
     {
@@ -291,10 +303,18 @@ public class InitialDialogue : MonoBehaviour
 
                 dialogueText.text = textContent.Substring(0, printIndex);
 
-                if(printIndex%3 == 0 && textContent.Substring(0, printIndex) != "")
+                if(printIndex%3 == 0 && textContent.Substring(0, printIndex) != "" && !isWhoAreYou)
                 {
                     playSound.playEffect();
                 }
+
+
+                if (printIndex % 3 == 0 && textContent.Substring(0, printIndex) != "" && isWhoAreYou)
+                {
+                    playSound6.playEffect();
+                }
+
+
 
                 yield return new WaitForSeconds(0.04f);
                 //yield return new WaitForSeconds(0.5f);
@@ -689,6 +709,8 @@ public class InitialDialogue : MonoBehaviour
 
         audioSourceGameObject.SetActive(true);
 
+        isWhoAreYou = true;
+
     }
 
     private void DialogueLine8()
@@ -723,7 +745,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -736,7 +758,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -749,7 +771,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -788,7 +810,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -801,7 +823,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -839,7 +861,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -852,7 +874,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -890,7 +912,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -903,7 +925,7 @@ public class InitialDialogue : MonoBehaviour
             playerIsAnswering = false;
             canTalk = true;
             dialogueLine++;
-            playSound1.playEffect();
+            playSound4.playEffect();
         }
     }
 
@@ -932,6 +954,9 @@ public class InitialDialogue : MonoBehaviour
 
         streetPanelImage.sprite = blackGalaxyBackgroundSprite;
         darkerFilterPanel.SetActive(false);
+
+        playSound5.playEffect();
+        isWhoAreYou = false;
     }
 
 
