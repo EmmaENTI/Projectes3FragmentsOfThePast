@@ -39,7 +39,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             CalculateVelocity();
             FlipPhoto();
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(Mathf.Clamp(rb.velocity.y/5+angleOffset, -250, 70), 0, 0), 0.05f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-Mathf.Clamp(rb.velocity.y/5+angleOffset, -250, 70), 0, 0), 0.05f);
 
             CheckVelocity();  
         }
