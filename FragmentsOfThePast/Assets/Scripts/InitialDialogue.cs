@@ -180,9 +180,14 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] private GameObject darkerFilterPanel;
 
     public AudioClip whoAreYou;
+    public AudioClip breachClip;
     public GameObject audioSourceGameObject;
 
     private bool canChangeSound1 = true;
+    private bool canChangeSound2 = true;
+    private bool canChangeSound3 = true;
+
+    private bool canPlayEffectSound = true;
 
     bool isWhoAreYou;
 
@@ -734,6 +739,13 @@ public class InitialDialogue : MonoBehaviour
         button3AnswerText.text = "Take the entire wallet, bad luck.";
         playerIsAnswering = true;
         darkerFilterPanel.SetActive(true);
+
+        if(canPlayEffectSound)
+        {
+            playSound6.playEffect();
+            canPlayEffectSound = false;
+        }
+ 
     }
 
     public void DialogueLine9Answer1()
@@ -783,6 +795,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         darkerFilterPanel.SetActive(false);
+        canPlayEffectSound = true;
     }
 
     private void DialogueLine11()
@@ -799,6 +812,12 @@ public class InitialDialogue : MonoBehaviour
         button3AnswerText.text = "";
         playerIsAnswering = true;
         darkerFilterPanel.SetActive(true);
+
+        if (canPlayEffectSound)
+        {
+            playSound6.playEffect();
+            canPlayEffectSound = false;
+        }
     }
 
     public void DialogueLine11Answer1()
@@ -834,6 +853,8 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         darkerFilterPanel.SetActive(false);
+
+        canPlayEffectSound = true;
     }
 
     private void DialogueLine13()
@@ -850,6 +871,13 @@ public class InitialDialogue : MonoBehaviour
         button3AnswerText.text = "";
         playerIsAnswering = true;
         darkerFilterPanel.SetActive(true);
+
+        if (canPlayEffectSound)
+        {
+            playSound6.playEffect();
+            canPlayEffectSound = false;
+        }
+
     }
 
     public void DialogueLine13Answer1()
@@ -885,6 +913,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         darkerFilterPanel.SetActive(false);
+        canPlayEffectSound = true;
     }
 
     private void DialogueLine15()
@@ -901,6 +930,12 @@ public class InitialDialogue : MonoBehaviour
         button3AnswerText.text = "";
         playerIsAnswering = true;
         darkerFilterPanel.SetActive(true);
+
+        if (canPlayEffectSound)
+        {
+            playSound6.playEffect();
+            canPlayEffectSound = false;
+        }
     }
 
     public void DialogueLine15Answer1()
@@ -977,6 +1012,16 @@ public class InitialDialogue : MonoBehaviour
         textPanelBackgroundGameObject.SetActive(true);
         dialogueTextGameObject.transform.position = dialogueFrameDownGameObject.transform.position;
 
+        if (canChangeSound2)
+        {
+            audioSourceGameObject.SetActive(false);
+            canChangeSound2 = false;
+        }
+
+        audioSource.clip = breachClip;
+
+        audioSourceGameObject.SetActive(true);
+
     }
 
     private void DialogueLine18()
@@ -1017,6 +1062,16 @@ public class InitialDialogue : MonoBehaviour
 
 
         animator.SetBool("canPlayAnim4", true);
+
+        if (canChangeSound3)
+        {
+            audioSourceGameObject.SetActive(false);
+            canChangeSound3 = false;
+        }
+
+        audioSource.clip = hoodedManMusic;
+
+        audioSourceGameObject.SetActive(true);
     }
 
     private void DialogueLine22()
