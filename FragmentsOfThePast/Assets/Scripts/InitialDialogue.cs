@@ -97,6 +97,9 @@ public class InitialDialogue : MonoBehaviour
     //Sound 7
     [SerializeField] PlaySound playSound7;
 
+    //Sound 8
+    [SerializeField] PlaySound playSound8;
+
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
@@ -1302,6 +1305,7 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         hoodedManText = false;
+        playSound8.playEffect();
     }
 
     private void DialogueLine33()
