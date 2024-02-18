@@ -94,6 +94,9 @@ public class InitialDialogue : MonoBehaviour
     //Sound 6
     [SerializeField] PlaySound playSound6;
 
+    //Sound 7
+    [SerializeField] PlaySound playSound7;
+
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
@@ -190,6 +193,7 @@ public class InitialDialogue : MonoBehaviour
     private bool canPlayEffectSound = true;
 
     bool isWhoAreYou;
+    bool hoodedManText;
 
     private void Start()
     {
@@ -308,19 +312,23 @@ public class InitialDialogue : MonoBehaviour
 
                 dialogueText.text = textContent.Substring(0, printIndex);
 
-                if(printIndex%3 == 0 && textContent.Substring(0, printIndex) != "" && !isWhoAreYou)
+                if(printIndex%3 == 0 && textContent.Substring(0, printIndex) != "")
                 {
-                    playSound.playEffect();
+                    if(!isWhoAreYou && !hoodedManText)
+                    {
+                        playSound.playEffect();
+                    }
+
+                    else if(isWhoAreYou)
+                    {
+                        playSound6.playEffect();
+                    }
+
+                    else if(hoodedManText)
+                    {
+                        playSound7.playEffect();
+                    }
                 }
-
-
-                if (printIndex % 3 == 0 && textContent.Substring(0, printIndex) != "" && isWhoAreYou)
-                {
-                    playSound6.playEffect();
-                }
-
-
-
                 yield return new WaitForSeconds(0.04f);
                 //yield return new WaitForSeconds(0.5f);
             }
@@ -1137,6 +1145,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "Hooded Man";
         textPanelImage.sprite = TextPanelDarkSprite;
+        hoodedManText = true;
     }
 
     private void DialogueLine26()
@@ -1197,6 +1206,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You know, I couldn't help but notice... your breathing, rhythmic and alive, you still maintain your humanity…  ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        hoodedManText = true;
     }
 
 
@@ -1206,6 +1216,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "You are a spiritist… I can feel your aura, it ripples with power around you.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        hoodedManText = true;
     }
 
     private void DialogueLine29()
@@ -1214,6 +1225,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "The subtle rise and fall of your chest… It's fascinating, really. ";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        hoodedManText = true;
     }
 
     private void DialogueLine30()
@@ -1222,6 +1234,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Can you feel your heartbeat, each pulse a reminder of your existence in this... transitional state, here in the breach?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        hoodedManText = true;
     }
 
     private void DialogueLine31()
@@ -1288,6 +1301,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
+        hoodedManText = false;
     }
 
     private void DialogueLine33()
@@ -1299,6 +1313,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "Hooded Man";
         textPanelImage.sprite = TextPanelDarkSprite;
+        hoodedManText = true;
     }
 
     private void DialogueLine34()
@@ -1310,6 +1325,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
+        hoodedManText = false;
     }
 
     private void DialogueLine35()
@@ -1321,6 +1337,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "Hooded Man";
         textPanelImage.sprite = TextPanelDarkSprite;
+        hoodedManText = true;
     }
 
     private void DialogueLine36()
@@ -1334,6 +1351,7 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         cameraShake.Shake();
+        hoodedManText = false;
     }
 
     private void DialogueLine37()
@@ -1357,6 +1375,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "Hooded Man";
         textPanelImage.sprite = TextPanelDarkSprite;
+        hoodedManText = true;
     }
 
     private void DialogueLine39()
@@ -1378,6 +1397,7 @@ public class InitialDialogue : MonoBehaviour
 
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
+        hoodedManText = false;
     }
 
     private void DialogueLine41()
