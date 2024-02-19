@@ -5,17 +5,21 @@ using UnityEngine.EventSystems;
 
 public class CreateChip : MonoBehaviour, IPointerDownHandler
 {
-    // Start is called before the first frame update
+    ChipManager chipManager;
 
-    [SerializeField] GameObject chipPrefab;
+    private void Start()
+    {
+        chipManager = transform.parent.GetComponentInChildren<ChipManager>();
+    }
 
 
     public void OnPointerDown(PointerEventData eventData)
     {
         if (transform.childCount == 0)
         {
-            GameObject obj = Instantiate(chipPrefab, transform.position, Quaternion.identity, transform);
-            obj.name = chipPrefab.name;
+            chipManager.LoseChips();
+            GameObject obj = Instantiate(chipManager.chipPrefab, transform.position, Quaternion.identity, transform);
+            obj.name = chipManager.chipPrefab.name;
         }
     }
 }

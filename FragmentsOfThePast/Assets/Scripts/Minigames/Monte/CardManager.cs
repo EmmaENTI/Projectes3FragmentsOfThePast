@@ -9,41 +9,152 @@ public class CardManager : MonoBehaviour
     List<CardSuit> deck;
     Dictionary<CardSuit, Color> cardColor;
 
-    CardSuit bottomLayoutColor;
-    CardSuit topLayoutColor;
+    CardSuit leftLayoutColor;
+    CardSuit rightLayoutColor;
     CardSuit gateColor;
-
-    bool isChoiceBot = false;
-    bool isChoiceTop = false;
 
     [SerializeField] GameObject botLayout;
     [SerializeField] GameObject topLayout;
     [SerializeField] GameObject gate;
 
+    ChipManager chipManager;
+
+    [SerializeField] int winCount = 0;
+
+
+
     void Start()
     {
         Load();
         SetBotTopLayout();
+        SetGateColor();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SetBotTopLayout();
-            SetGate();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            CheckChoice();
-        }
         if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetRound();
+        }
+        if (Input.GetKeyDown(KeyCode.T))
         {
             ResetGame();
         }
 
         PrintCardStates();
+    }
 
+    public void CheckChipTopBotWithGate()
+    {
+        // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
+        Debug.Log("Button Pushed");
+
+        Debug.Log(chipManager.isLeftChoice + " " + chipManager.isRightChoice);
+
+        if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
+
+        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        {
+            SuccessGame();
+        }
+        else
+        {
+            ResetRound();
+        }
+    }
+
+    void PrintCardStates()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log(leftLayoutColor.ToString() + " " + rightLayoutColor.ToString() + " " + gateColor.ToString());
+        }
+    }
+
+    void ResetRound()
+    {
+        Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
+
+        if (chipManager.GetChips() <= 0)
+        {
+            ResetGame();
+            return;
+        }
+
+        //gate.SetActive(false);
+
+        chipManager.DestroyChip();
+
+        SetBotTopLayout();
+        SetGateColor();
+    }
+
+    void SuccessGame()
+    {
+        Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
+
+        winCount++;
+
+        if (winCount >= 5)
+        {
+            Debug.Log("YOU WON, GG");
+
+            // TEMP_START
+            winCount = 0;
+            chipManager.ResetLives();
+
+            SetBotTopLayout();
+            SetGateColor();
+            chipManager.ResetLives();
+            //TEMP_END
+
+            // Progress with the Story
+            return;
+        }
+
+        //gate.SetActive(true);
+
+        chipManager.GainChips();
+        chipManager.DestroyChip();
+
+        SetBotTopLayout();
+        SetGateColor();
+    }
+
+    void ResetGame()
+    {
+        Debug.Log("YOU LOST ALL LIVES, GIT GUD");
+
+        winCount = 0;
+        chipManager.ResetLives();
+
+        SetBotTopLayout();
+        SetGateColor();
+        //gate.SetActive(false);
+    }
+
+    void SetGateColor()
+    {
+        gateColor = deck[Random.Range(0, 4)];
+        gate.GetComponent<Image>().color = cardColor[gateColor];
+    }
+
+    void SetBotTopLayout()
+    {
+        int randNum = Random.Range(0, 4);
+        int prevRandNum = randNum;
+
+        leftLayoutColor = deck[randNum];
+
+        while (randNum == prevRandNum)
+        {
+            randNum = Random.Range(0, 4);
+        }
+
+        rightLayoutColor = deck[randNum];
+
+        botLayout.GetComponent<Image>().color = cardColor[leftLayoutColor];
+        topLayout.GetComponent<Image>().color = cardColor[rightLayoutColor];
     }
 
     void Load()
@@ -59,110 +170,7 @@ public class CardManager : MonoBehaviour
         cardColor.Add(deck[1], Color.green);
         cardColor.Add(deck[2], Color.blue);
         cardColor.Add(deck[3], Color.yellow);
-    }
 
-    void SetBotTopLayout()
-    {
-        int randNum = Random.Range(0, 4);
-        int prevRandNum = randNum;
-
-        bottomLayoutColor = deck[randNum];
-   
-        while (randNum == prevRandNum)
-        {
-            randNum = Random.Range(0, 4);
-        }
-
-        topLayoutColor = deck[randNum];
-
-        SetTopBotColor();
-    }
-
-    void CheckChoice()
-    {
-        gate.SetActive(true);
-        SetGateColor();
-
-        if (isChoiceTop)
-        {
-            if (gateColor == topLayoutColor)
-            {
-                SuccessGame();
-            }
-            else
-            {
-                ResetGame();
-            }
-        }
-        else if (isChoiceBot)
-        {
-            if (gateColor == bottomLayoutColor)
-            {
-                SuccessGame();
-            }
-            else
-            {
-                ResetGame();
-            }
-        }
-    }
-
-    void SetGate()
-    {
-        gateColor = deck[Random.Range(0, 4)];
-    }
-
-    void PrintCardStates()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Debug.Log(bottomLayoutColor.ToString() + " " + topLayoutColor.ToString() + " " + gateColor.ToString());
-        }
-    }
-
-    void ResetGame()
-    {
-        SetBotTopLayout();
-        SetGate();
-
-        gate.SetActive(false);
-
-        isChoiceBot = false;
-        isChoiceTop = false;
-
-
-        Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
-        // You lost Dialogue, Try Again
-        // Doubt Button to progress Story?
-    }
-
-    void SuccessGame()
-    {
-        Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
-        // You won Dialogue
-        // Progress with the Story
-    }
-
-    public void ChoiceBotLayout()
-    {
-        isChoiceBot = true;
-        CheckChoice();
-    }
-
-    public void ChoiceTopLayout()
-    {
-        isChoiceTop = true;
-        CheckChoice();
-    }
-
-    void SetTopBotColor()
-    {
-        botLayout.GetComponent<Image>().color = cardColor[bottomLayoutColor];
-        topLayout.GetComponent<Image>().color = cardColor[topLayoutColor];
-    }
-
-    void SetGateColor()
-    {
-        gate.GetComponent<Image>().color = cardColor[gateColor];
+        chipManager = transform.parent.GetComponentInChildren<ChipManager>();
     }
 }

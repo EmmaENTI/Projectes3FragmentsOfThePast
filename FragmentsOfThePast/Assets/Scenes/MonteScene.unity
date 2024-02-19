@@ -508,11 +508,11 @@ RectTransform:
   m_Children:
   - {fileID: 577906198}
   - {fileID: 1987287926}
+  - {fileID: 481759095}
+  - {fileID: 1131569839}
   - {fileID: 213546547}
   - {fileID: 1884866490}
   - {fileID: 222739450}
-  - {fileID: 481759095}
-  - {fileID: 1131569839}
   - {fileID: 636338723}
   - {fileID: 461498339}
   m_Father: {fileID: 0}
@@ -741,7 +741,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 150, y: 250}
   m_EdgeRadius: 0
 --- !u!114 &481759098
 MonoBehaviour:
@@ -1076,7 +1076,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 636338725}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1987287927}
+        m_TargetAssemblyTypeName: CardManager, Assembly-CSharp
+        m_MethodName: CheckChipTopBotWithGate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636338725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1355,7 +1367,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 150, y: 250}
   m_EdgeRadius: 0
 --- !u!114 &1131569842
 MonoBehaviour:
@@ -1680,7 +1692,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: DOUBT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1769,8 +1781,8 @@ GameObject:
   - component: {fileID: 1884866493}
   - component: {fileID: 1884866492}
   - component: {fileID: 1884866494}
-  - component: {fileID: 1884866496}
   - component: {fileID: 1884866495}
+  - component: {fileID: 1884866496}
   m_Layer: 5
   m_Name: ChipsDrawer
   m_TagString: Untagged
@@ -1893,7 +1905,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a913a6998d817b64e9d5620152f21015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chipPrefab: {fileID: 3951280989474356977, guid: 8bcf837351187f04fabeb3abcc0928ff, type: 3}
 --- !u!114 &1884866496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,6 +1917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d61b27496c66d14cb3cb996fc0adeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chipPrefab: {fileID: 3951280989474356977, guid: 8bcf837351187f04fabeb3abcc0928ff, type: 3}
   isLeftChoice: 0
   isRightChoice: 0
 --- !u!1 &1933025906
