@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ChipManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool isLeftChoice = false;
+    public bool isRightChoice = false;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

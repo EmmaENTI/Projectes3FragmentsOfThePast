@@ -12,10 +12,10 @@ public class CreateChip : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("EI");
         if (transform.childCount == 0)
         {
-            Instantiate(chipPrefab, transform.position, Quaternion.identity, transform);
+            GameObject obj = Instantiate(chipPrefab, transform.position, Quaternion.identity, transform);
+            obj.name = chipPrefab.name;
         }
     }
 }
