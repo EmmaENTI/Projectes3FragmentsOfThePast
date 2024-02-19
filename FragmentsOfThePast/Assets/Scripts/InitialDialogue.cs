@@ -177,6 +177,7 @@ public class InitialDialogue : MonoBehaviour
 
     public bool isConquistador;
     public bool isOrden;
+    private bool canChooseOrigin = true;
 
     [SerializeField] private GameObject conquistadorPanel;
     [SerializeField] private GameObject ordenPanel;
@@ -201,6 +202,9 @@ public class InitialDialogue : MonoBehaviour
 
     bool isWhoAreYou;
     bool hoodedManText;
+
+
+    private int benignityPoints;
 
     private void Start()
     {
@@ -773,6 +777,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints += 2;
         }
     }
 
@@ -786,6 +792,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints += 1;
         }
     }
 
@@ -799,6 +807,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints -= 2;
         }
     }
 
@@ -845,6 +855,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints += 1;
         }
     }
 
@@ -858,6 +870,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints -= 1;
         }
     }
 
@@ -905,6 +919,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints -= 1;
         }
     }
 
@@ -918,6 +934,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints += 1;
         }
     }
 
@@ -963,6 +981,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints -= 1;
         }
     }
 
@@ -976,6 +996,8 @@ public class InitialDialogue : MonoBehaviour
             canTalk = true;
             dialogueLine++;
             playSound4.playEffect();
+
+            benignityPoints += 1;
         }
     }
 
@@ -987,6 +1009,20 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        if(canChooseOrigin)
+        {
+            if(benignityPoints >= 0)
+            {
+                isOrden = true;
+            }
+            else if(benignityPoints < 0) 
+            {
+                isConquistador = true;
+            }
+
+            canChooseOrigin = false;
+        }
 
         if (isConquistador)
         {

@@ -19827,7 +19827,7 @@ MonoBehaviour:
   canReturnToDialogue: 0
   loadManager: {fileID: 2091079314}
   cameraShake: {fileID: 1651488453}
-  isConquistador: 1
+  isConquistador: 0
   isOrden: 0
   conquistadorPanel: {fileID: 297961122}
   ordenPanel: {fileID: 233046616}
