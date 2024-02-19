@@ -100,6 +100,9 @@ public class InitialDialogue : MonoBehaviour
     //Sound 8
     [SerializeField] PlaySound playSound8;
 
+    //Sound 9
+    [SerializeField] PlaySound playSound9;
+
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
@@ -192,6 +195,7 @@ public class InitialDialogue : MonoBehaviour
     private bool canChangeSound1 = true;
     private bool canChangeSound2 = true;
     private bool canChangeSound3 = true;
+    private bool canChangeSound4 = true;
 
     private bool canPlayEffectSound = true;
 
@@ -530,11 +534,11 @@ public class InitialDialogue : MonoBehaviour
             case 45:
                 DialogueLine43();
                 break;
- /*
-            case 46:
-                DialogueLine46();
-                break;
 
+            case 46:
+                DialogueLine44();
+                break;
+ /*
             case 47:
                 DialogueLine47();
                 break;
@@ -1402,6 +1406,17 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         hoodedManText = false;
+
+        if (canChangeSound4)
+        {
+            audioSourceGameObject.SetActive(false);
+            canChangeSound4 = false;
+        }
+
+        audioSource.clip = breachClip;
+
+        audioSourceGameObject.SetActive(true);
+        playSound9.playEffect();
     }
 
     private void DialogueLine41()
@@ -1458,18 +1473,19 @@ public class InitialDialogue : MonoBehaviour
     }
 
 
-    /*
+    
     private void DialogueLine44()
     {
-        luisHappyImage.SetActive(false);
-        carmenHappyImage.SetActive(true);
         hasEndedTyping = false;
-        spiritNameText.text = "Carmen";
-        playSound2.playEffect();
-        texToToWrite = "We can't just 'keep' a living person, Marina. And Luis, this is serious.";
+        texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+
+        dialogueTextPanel.SetActive(false);
+        animator.SetBool("canPlayAnim6", true);
     }
+    /*
 
     private void DialogueLine45()
     {
