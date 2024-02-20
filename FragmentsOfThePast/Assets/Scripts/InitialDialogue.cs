@@ -1384,7 +1384,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-
+        hoodedManImage.SetActive(false);
         dialogueTextPanel.SetActive(false);
         animator.SetBool("canPlayAnim6", true);
     }
