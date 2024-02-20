@@ -635,7 +635,7 @@ public class InitialDialogue : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=#000000ff>fracture.</color>";
+        texToToWrite = "In a world where the living and the dead had always remained separate, the once-firm boundaries between realms began to <color=#ffa500ff>fracture.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -675,7 +675,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine4()
     {
         hasEndedTyping = false;
-        texToToWrite = "Only a few gifted people like you, who can <color=#000000ff>interact with spirits</color>, can help restore balance between the realms.";
+        texToToWrite = "Only a few gifted people like you, who can <color=#ffa500ff>interact with spirits</color>, can help restore balance between the realms.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -970,7 +970,7 @@ public class InitialDialogue : MonoBehaviour
         dialogueTextPanel.SetActive(true);
 
         hasEndedTyping = false;
-        texToToWrite = "You step into the breach between the realms, your heart pounding with anticipation…";
+        texToToWrite = "You step into the <color=#ffa500ff>breach between the realms,</color> your heart pounding with anticipation…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1021,7 +1021,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine18()
     {
         hasEndedTyping = false;
-        texToToWrite = "From the swirling void, a mysterious figure appears, surrounded by darkness. Their presence feels eerie and threatening.";
+        texToToWrite = "From the swirling void, <color=#ffa500ff>a mysterious figure appears</color> surrounded by darkness. Their presence feels eerie and threatening.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1054,7 +1054,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine20()
     {
         hasEndedTyping = false;
-        texToToWrite = "Their dark hood hides their face, but you can tell they're like you, a spiritist.";
+        texToToWrite = "Their dark hood hides their face, but you can tell they're like you, <color=#ffa500ff>a spiritist.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1120,13 +1120,13 @@ public class InitialDialogue : MonoBehaviour
         if(isConquistador)
         {
             button3AnswerText.text = "(Origin) No guide needed. Move along, creep.";
-            rightButtonPanel.GetComponent<Image>().color = new Color32(57, 86, 255, 210);
+            rightButtonPanel.GetComponent<Image>().color = new Color32(57, 86, 255, 255);
         }
 
         else if(isOrden)
         {
             button3AnswerText.text = "(Origin) Thanks, but I'm not lost. I'm just exploring the breach by myself.";
-            rightButtonPanel.GetComponent<Image>().color = new Color32(64, 175, 255, 210);
+            rightButtonPanel.GetComponent<Image>().color = new Color32(64, 175, 255, 255);
 
         }
 
@@ -1178,7 +1178,7 @@ public class InitialDialogue : MonoBehaviour
     {
         hasEndedTyping = false;
         spiritNameText.text = "Hooded Man";
-        texToToWrite = "I can sense something about you... You're a spiritist, someone who can connect with the spirit world. Your energy feels strong and alive.";
+        texToToWrite = "I can sense something about you... You're a spiritist, someone who can connect with the spirit world. Your energy feels strong and <color=#00ffffff>alive.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         hoodedManText = true;
@@ -1197,7 +1197,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine26()
     {
         hasEndedTyping = false;
-        texToToWrite = "Can you feel your heart beating? It's a reminder that you're in this strange place called the breach, somewhere between life and death.";
+        texToToWrite = "Can you feel your heart beating? It's a reminder that you're in this strange place called <color=#00ffffff>the breach,</color> somewhere between life and death.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         hoodedManText = true;
@@ -1333,7 +1333,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine34()
     {
         hasEndedTyping = false;
-        texToToWrite = "You're tougher than I thought! But I'm not in a hurry. I enjoy a good chase. You're not the only one searching for answers about what's happening.";
+        texToToWrite = "You're tougher than I thought! But I'm not in a hurry. I enjoy a good chase. <color=#00ffffff>You're not the only one</color> searching for answers about what's happening.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1374,7 +1374,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine36()
     {
         hasEndedTyping = false;
-        texToToWrite = "As you run, you start to feel faint.A familiar smell fills the air - candles and marigolds.It's comforting, but then darkness takes over, and you fall unconscious.";
+        texToToWrite = "As you run, you start to feel faint.A familiar smell fills the air - <color=#ffa500ff>candles and marigolds.</color> It's comforting, but then darkness takes over, and you fall unconscious.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
