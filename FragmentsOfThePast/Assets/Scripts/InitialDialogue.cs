@@ -206,6 +206,8 @@ public class InitialDialogue : MonoBehaviour
 
     private int benignityPoints;
 
+    [SerializeField] GameObject saveIcon;
+
     private void Start()
     {
 
@@ -962,6 +964,7 @@ public class InitialDialogue : MonoBehaviour
 
     private void DialogueLine14()
     {
+        StartCoroutine(SaveIconTimer());
         conquistadorPanel.SetActive(false);
         ordenPanel.SetActive(false);
         dialogueTextPanel.SetActive(true);
@@ -1387,6 +1390,13 @@ public class InitialDialogue : MonoBehaviour
         hoodedManImage.SetActive(false);
         dialogueTextPanel.SetActive(false);
         animator.SetBool("canPlayAnim6", true);
+    }
+
+    IEnumerator SaveIconTimer()
+    {
+        saveIcon.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        saveIcon.SetActive(false);
     }
     /*
 

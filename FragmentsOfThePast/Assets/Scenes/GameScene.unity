@@ -12087,7 +12087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1353169054
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19890,6 +19890,7 @@ MonoBehaviour:
   whoAreYou: {fileID: 8300000, guid: b9bca2d0e2717b74e8275293a75185e0, type: 3}
   breachClip: {fileID: 8300000, guid: b82b9afbf4c7fbe48a22ad3d6c8dd3d4, type: 3}
   audioSourceGameObject: {fileID: 852453418}
+  saveIcon: {fileID: 1353169053}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
