@@ -4035,6 +4035,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine21Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine23Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine27Answer2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &440721421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6042,6 +6078,42 @@ MonoBehaviour:
       - m_Target: {fileID: 2091079309}
         m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
         m_MethodName: DialogueLine12Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine21Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine23Answer1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine27Answer1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15329,6 +15401,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine23Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2091079309}
+        m_TargetAssemblyTypeName: InitialDialogue, Assembly-CSharp
+        m_MethodName: DialogueLine27Answer3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1659393595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18666,10 +18762,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You''re someone who deeply values balance and harmony in nature. With
-    a talent for connecting with spirits, you''re dedicated to maintaining peace
-    between the realms. Now, as chaos threatens, you''re on a mission to restore
-    order and stability for both the living and the dead.
+  m_text: 'You learned from ancient spiritists about harmony between life and death.
+    Gifted with the ability to communicate with spirits, you''re committed to restoring
+    order and peace. With a compassionate heart, you strive to bring comfort and
+    stability to everyone during these troubled times.
 
 
     When you take <color=#00ffffff>good</color>
