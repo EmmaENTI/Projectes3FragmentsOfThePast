@@ -47,20 +47,36 @@ public class CardManager : MonoBehaviour
     public void CheckChipTopBotWithGate()
     {
         // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
-        Debug.Log("Button Pushed");
-
-        Debug.Log(chipManager.isLeftChoice + " " + chipManager.isRightChoice);
-
         if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
 
         if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice || chipManager.isRightChoice && (gateColor == rightLayoutColor))
         {
-            SuccessGame();
+            chipManager.GainChips();
+            SuccessRound();
         }
         else
         {
             ResetRound();
         }
+    }
+
+    public void DoubtButton()
+    {
+        chipManager.RecollectChip();
+
+        // Si doubt es correcte (Left i Right son diferents a la carta mostrada, no passa res)
+        if ((gateColor != leftLayoutColor) && (gateColor != rightLayoutColor))
+        {
+            SuccessRound();
+        }
+        // Si alguna de les cartes es igual a la carta mostrada penalització
+        else
+        {
+            chipManager.SetDoubtMultiplier();
+            SetBotTopLayout();
+            SetGateColor();
+        }
+
     }
 
     void PrintCardStates()
@@ -74,6 +90,7 @@ public class CardManager : MonoBehaviour
     void ResetRound()
     {
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
+        // Missatge Doubt era la opcio correcta
 
         if (chipManager.GetChips() <= 0)
         {
@@ -83,15 +100,14 @@ public class CardManager : MonoBehaviour
 
         //gate.SetActive(false);
 
-        chipManager.DestroyChip();
-
         SetBotTopLayout();
         SetGateColor();
     }
 
-    void SuccessGame()
+    void SuccessRound()
     {
         Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
+        // Missatge Doubt era la opcio correcta
 
         winCount++;
 
@@ -113,9 +129,6 @@ public class CardManager : MonoBehaviour
         }
 
         //gate.SetActive(true);
-
-        chipManager.GainChips();
-        chipManager.DestroyChip();
 
         SetBotTopLayout();
         SetGateColor();

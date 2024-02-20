@@ -14,8 +14,6 @@ public class CheckChipChoice : MonoBehaviour
     {
         if (collision.name == "Chip")
         {
-            Debug.Log("Chip Entered");
-
             if (transform.name == "LeftChoice")
             {
                 chipManager.isLeftChoice = true;
@@ -31,7 +29,6 @@ public class CheckChipChoice : MonoBehaviour
     {
         if (collision.name == "Chip")
         {
-            Debug.Log("Chip Exited");
             chipManager.isLeftChoice = false;
             chipManager.isRightChoice = false;
         }

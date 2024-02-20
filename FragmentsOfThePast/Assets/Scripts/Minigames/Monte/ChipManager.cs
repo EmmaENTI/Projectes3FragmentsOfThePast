@@ -26,14 +26,14 @@ public class ChipManager : MonoBehaviour
     {
         chipCount -= 1 + (chipCount/2 * doubtFailedMultiplier);
         doubtFailedMultiplier = 0;
-
+        DestroyChip();
         UpdateUIChipCounter();
     }
 
     public void GainChips()
     {
         chipCount += 2;
-
+        DestroyChip();
         UpdateUIChipCounter();
     }
 
@@ -46,8 +46,6 @@ public class ChipManager : MonoBehaviour
     {
         doubtFailedMultiplier++;
         doubtFailedMultiplier %= 2;
-
-        Debug.Log(doubtFailedMultiplier);
     }
 
     public void ResetLives()
@@ -73,5 +71,15 @@ public class ChipManager : MonoBehaviour
     public void UpdateUIChipCounter()
     {
         chipCounterText.text = chipCount.ToString();
+    }
+
+    public void RecollectChip()
+    {
+        if (transform.childCount != 0)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+            chipCount++;
+            UpdateUIChipCounter();
+        }
     }
 }
