@@ -75,6 +75,7 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] Sprite quasimanSpriteBackground;
 
     [SerializeField] Animator animator;
+    [SerializeField] Animator hoodedManAnimator;
 
     //Sound 0
     [SerializeField] PlaySound playSound;
@@ -639,6 +640,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
+        hoodedManAnimator.SetBool("canPlayHoodedManMovement", true);
         animator.SetBool("canPlayAnim0", true);
         streetPanelImage.sprite = flowerSpaceBackgroundSprite;
         textPanelImage.sprite = TextPanelNormalSprite;
@@ -652,6 +654,7 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Spirits are appearing among the living and viceversa.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        
     }
 
     private void DialogueLine2()

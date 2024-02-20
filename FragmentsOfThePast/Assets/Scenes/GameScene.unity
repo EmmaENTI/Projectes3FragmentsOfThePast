@@ -864,7 +864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 474.60596, y: -199.51294}
+  m_AnchoredPosition: {x: 474.60596, y: -199.5127}
   m_SizeDelta: {x: 723.4362, y: 1275.9006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &98904724
@@ -1663,7 +1663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.560966, y: -361.49286}
+  m_AnchoredPosition: {x: -18.560547, y: -361.49286}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &244083893
@@ -2501,7 +2501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -18.560966, y: -361.49286}
+  m_AnchoredPosition: {x: -18.560547, y: -361.49286}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &302166971
@@ -4144,7 +4144,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15.443298, y: 0}
+  m_AnchoredPosition: {x: 15.443359, y: 0}
   m_SizeDelta: {x: 175.7148, y: 34.096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &447596967
@@ -9924,7 +9924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1106948752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12848,6 +12848,7 @@ GameObject:
   - component: {fileID: 1472916147}
   - component: {fileID: 1472916149}
   - component: {fileID: 1472916148}
+  - component: {fileID: 1472916150}
   m_Layer: 5
   m_Name: Hooded Man Image
   m_TagString: Untagged
@@ -12872,7 +12873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 51}
+  m_AnchoredPosition: {x: 0, y: 40}
   m_SizeDelta: {x: 921.6, y: 1228.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472916148
@@ -12913,6 +12914,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472916146}
   m_CullTransparentMesh: 1
+--- !u!95 &1472916150
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472916146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da4aa60053ea5944db1cd8e1904a826a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1479008354
 GameObject:
   m_ObjectHideFlags: 0
@@ -15043,7 +15065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 474.60596, y: -199.51294}
+  m_AnchoredPosition: {x: 474.60596, y: -199.5127}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1651488449
@@ -18984,7 +19006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13.7, y: -329}
+  m_AnchoredPosition: {x: -13.700195, y: -329}
   m_SizeDelta: {x: 1200, y: 202.6333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2042394827
@@ -19840,6 +19862,7 @@ MonoBehaviour:
   blackImageBackground: {fileID: 21300000, guid: dfb53c62966200042ad515b5f2d227c9, type: 3}
   quasimanSpriteBackground: {fileID: 21300000, guid: c81417c4acf3c6d40810fc6085f43487, type: 3}
   animator: {fileID: 1651488454}
+  hoodedManAnimator: {fileID: 1472916150}
   playSound: {fileID: 198965799}
   playSound1: {fileID: 302166972}
   playSound2: {fileID: 5374810}
