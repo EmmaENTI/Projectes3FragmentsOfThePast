@@ -3280,12 +3280,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introFinished: 0
-  prologueFinished: 1
-  luisDay1: 1
-  marinaDay1: 1
+  prologueFinished: 0
+  luisDay1: 0
+  marinaDay1: 0
   brunoDay1: 0
   carmenDay1: 0
-  loadGame: 1
+  loadGame: 0
   animator: {fileID: 187277106}
 --- !u!1 &982469978
 GameObject:
