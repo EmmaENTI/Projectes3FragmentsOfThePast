@@ -76,6 +76,7 @@ public class InitialDialogue : MonoBehaviour
 
     [SerializeField] Animator animator;
     [SerializeField] Animator hoodedManAnimator;
+    [SerializeField] Animator backgroundAnimator;
 
     //Sound 0
     [SerializeField] PlaySound playSound;
@@ -208,6 +209,7 @@ public class InitialDialogue : MonoBehaviour
     private int benignityPoints;
 
     [SerializeField] GameObject saveIcon;
+    [SerializeField] GameObject tagGameObject;
 
     private void Start()
     {
@@ -654,7 +656,11 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Spirits are appearing among the living and viceversa.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        
+
+        animator.SetBool("canPlayAnim0Part2", true);
+        backgroundAnimator.SetBool("BackgroundMovement0", true);
+        streetPanelImage.sprite = intro1Background;
+        cameraShake.Shake();
     }
 
     private void DialogueLine2()
@@ -806,7 +812,6 @@ public class InitialDialogue : MonoBehaviour
 
     private void DialogueLine10()
     {
-        //dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
 
         leftButtonPanel.SetActive(true);
@@ -869,7 +874,6 @@ public class InitialDialogue : MonoBehaviour
 
     private void DialogueLine12()
     {
-        //dialogueTextPanel.SetActive(false);
         answerButtonsPanel.SetActive(true);
 
         leftButtonPanel.SetActive(true);
@@ -992,6 +996,7 @@ public class InitialDialogue : MonoBehaviour
         audioSource.clip = breachClip;
 
         audioSourceGameObject.SetActive(true);
+        backgroundAnimator.SetBool("BackgroundMovement1", true);
 
     }
 
@@ -1107,7 +1112,8 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        spiritNameText.text = "Hooded Man";
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "???";
         textPanelImage.sprite = TextPanelDarkSprite;
         hoodedManText = true;
     }
@@ -1269,10 +1275,13 @@ public class InitialDialogue : MonoBehaviour
         streetPanelImage.sprite = quasimanSpriteBackground;
         hoodedManImage.SetActive(false);
 
+        tagGameObject.SetActive(false);
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         hoodedManText = false;
         playSound8.playEffect();
+        backgroundAnimator.SetBool("BackgroundMovement2", true);
+
     }
 
     private void DialogueLine29()
@@ -1282,7 +1291,8 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        spiritNameText.text = "Hooded Man";
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "???";
         textPanelImage.sprite = TextPanelDarkSprite;
         hoodedManText = true;
     }
@@ -1294,6 +1304,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
+        tagGameObject.SetActive(false);
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         hoodedManText = false;
@@ -1306,6 +1317,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
+        tagGameObject.SetActive(true);
         spiritNameText.text = "Hooded Man";
         textPanelImage.sprite = TextPanelDarkSprite;
         hoodedManText = true;
@@ -1318,7 +1330,7 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-
+        tagGameObject.SetActive(false);
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         cameraShake.Shake();
@@ -1344,7 +1356,8 @@ public class InitialDialogue : MonoBehaviour
         streetPanelImage.sprite = intro2Background;
         cameraShake.Shake();
 
-        spiritNameText.text = "Hooded Man";
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "???";
         textPanelImage.sprite = TextPanelDarkSprite;
         hoodedManText = true;
     }
@@ -1358,6 +1371,7 @@ public class InitialDialogue : MonoBehaviour
 
         animator.SetBool("canPlayAnim5", true);
 
+        tagGameObject.SetActive(false);
         spiritNameText.text = "";
         textPanelImage.sprite = TextPanelNormalSprite;
         hoodedManText = false;
