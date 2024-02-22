@@ -1391,7 +1391,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine36()
     {
         hasEndedTyping = false;
-        texToToWrite = "As you run, you start to feel faint.A familiar smell fills the air - <color=#ffa500ff>candles and marigolds.</color> It's comforting, but then darkness takes over, and you fall unconscious.";
+        texToToWrite = "As you run, you start to feel faint. A familiar smell fills the air - <color=#ffa500ff>candles and marigolds.</color> It's comforting, but then darkness takes over, and you fall unconscious.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
