@@ -115,6 +115,7 @@ public class InitialDialogue : MonoBehaviour
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
+    [SerializeField] GameObject effectSourceGameObject;
 
     //Clip Hooded Man Theme
     [SerializeField] AudioClip hoodedManMusic;
@@ -1422,6 +1423,9 @@ public class InitialDialogue : MonoBehaviour
         hoodedManImage.SetActive(false);
         dialogueTextPanel.SetActive(false);
         animator.SetBool("canPlayAnim6", true);
+
+        effectSourceGameObject.SetActive(false);
+        effectSourceGameObject.SetActive(true);
     }
 
     IEnumerator SaveIconTimer()
