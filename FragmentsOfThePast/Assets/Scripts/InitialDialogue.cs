@@ -105,6 +105,12 @@ public class InitialDialogue : MonoBehaviour
     //Sound 9
     [SerializeField] PlaySound playSound9;
 
+    //Sound 10
+    [SerializeField] PlaySound playSound10;
+
+    //Sound 11
+    [SerializeField] PlaySound playSound11;
+
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
@@ -661,6 +667,7 @@ public class InitialDialogue : MonoBehaviour
         backgroundAnimator.SetBool("BackgroundMovement0", true);
         streetPanelImage.sprite = intro1Background;
         cameraShake.Shake();
+        playSound10.playEffect();
     }
 
     private void DialogueLine2()
@@ -1386,7 +1393,9 @@ public class InitialDialogue : MonoBehaviour
 
         audioSourceGameObject.SetActive(true);
         playSound9.playEffect();
+        playSound11.playEffect();
     }
+
 
     private void DialogueLine36()
     {
