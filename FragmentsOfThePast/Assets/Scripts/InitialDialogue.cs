@@ -77,6 +77,7 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] Animator hoodedManAnimator;
     [SerializeField] Animator backgroundAnimator;
+    [SerializeField] Animator originAlertMessageAnimator;
 
     //Sound 0
     [SerializeField] PlaySound playSound;
@@ -216,6 +217,7 @@ public class InitialDialogue : MonoBehaviour
 
     [SerializeField] GameObject saveIcon;
     [SerializeField] GameObject tagGameObject;
+    [SerializeField] GameObject originMessageAlertGameObject;
 
     private void Start()
     {
@@ -973,6 +975,7 @@ public class InitialDialogue : MonoBehaviour
 
         playSound5.playEffect();
         isWhoAreYou = false;
+        originAlertMessageAnimator.SetBool("AlertMessageOrigin", true);
     }
 
 
@@ -1004,6 +1007,9 @@ public class InitialDialogue : MonoBehaviour
 
         audioSourceGameObject.SetActive(true);
         backgroundAnimator.SetBool("BackgroundMovement1", true);
+        originMessageAlertGameObject.SetActive(false);
+
+
 
     }
 
