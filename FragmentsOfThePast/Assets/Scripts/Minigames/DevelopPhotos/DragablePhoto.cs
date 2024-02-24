@@ -22,6 +22,10 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] Vector3 grayContainerPosition;
 
     bool hasCompletedRed = false;
+    bool hasCompletedReveal = false;
+    public bool disableDrag = false;
+
+    float timeToDry = 3;
 
 
     void Start()
@@ -37,11 +41,10 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (isCursorDragging)
         {
             CalculateVelocity();
-            FlipPhoto();
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-Mathf.Clamp(rb.velocity.y/5+angleOffset, -250, 70), 0, 0), 0.05f);
+            RevealPhotos();
 
-            CheckVelocity();  
+            DryPhotos();
         }
         else
         {
@@ -50,31 +53,12 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         }
     }
 
-    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
-    {
-        startPoint = eventData.pressPosition;
-        cursorPosition = eventData.pressPosition;
-
-        timeElapsed = 0;
-    }
-
-    
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        isCursorDragging = eventData.dragging;
-        cursorPosition = eventData.position;
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        isCursorDragging = false;
-        timeElapsed = 0;
-    }
 
     void CalculateVelocity()
     {
-        Vector3 vector = new Vector3(0, cursorPosition.y, 0) - new Vector3(0, transform.position.y, 0);
+        if (disableDrag) { return; }
+
+        Vector3 vector = new Vector3(cursorPosition.x, cursorPosition.y, 0) - new Vector3(transform.position.x, transform.position.y, 0);
         float distance = vector.magnitude;
         Vector3 direction = vector.normalized;
         rb.velocity = direction * distance * speed;
@@ -100,6 +84,11 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             timeElapsed += Time.deltaTime;
         }
 
+        CompleteStep();
+    }
+
+    void CompleteStep()
+    {
         if (timeToComplete < timeElapsed)
         {
             // TODO Lerp to Next Stage
@@ -112,12 +101,56 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             }
             else
             {
-                Destroy(gameObject);
-                // Tp to DryingRope
+                transform.SetParent(transform.parent.parent.GetChild(1));
+                transform.localPosition = new(-680, -400, 0);
+                hasCompletedReveal = true;
             }
 
         }
     }
-
     
+    void RevealPhotos()
+    {
+        if (hasCompletedReveal) { return; }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-Mathf.Clamp(rb.velocity.y / 5 + angleOffset, -250, 70), 0, 0), 0.05f);
+        FlipPhoto();
+        CheckVelocity();
+    }
+
+    void DryPhotos()
+    {
+        timeElapsed += Time.deltaTime;
+
+        if (timeElapsed >= timeToDry)
+        {
+            // Reveal Photo
+            // Zoom Photo
+        }
+    }
+
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
+    {
+        startPoint = eventData.pressPosition;
+        cursorPosition = eventData.pressPosition;
+
+        timeElapsed = 0;
+    }
+
+    public void OnDrag(PointerEventData eventData)
+    {
+        isCursorDragging = eventData.dragging;
+        cursorPosition = eventData.position;
+    }
+
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        isCursorDragging = false;
+        timeElapsed = 0;
+
+        if (hasCompletedReveal)
+        {
+            rb.velocity = Vector2.zero;
+        }
+    }
 }

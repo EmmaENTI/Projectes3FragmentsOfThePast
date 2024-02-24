@@ -8,6 +8,7 @@ TagManager:
   - LockTarget
   - SkillCheckTarget
   - LockPickingManager
+  - Photo
   layers:
   - Default
   - TransparentFX

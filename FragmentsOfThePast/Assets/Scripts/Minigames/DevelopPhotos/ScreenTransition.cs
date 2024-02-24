@@ -25,6 +25,11 @@ public class ScreenTransition : MonoBehaviour
 
     void Update()
     {
+        for (int i = 0; i < dryingRopeScreen.transform.childCount; i++)
+        {
+            Debug.Log(dryingRopeScreen.transform.GetChild(i).name);
+        }
+        
         //TransitionToDryingRope();
         //StartCoroutine(TransitionToProcessScreen());
     }
@@ -35,8 +40,8 @@ public class ScreenTransition : MonoBehaviour
 
         while (processPhotoScreen.transform.localPosition != processPhotoOB)
         {
-            processPhotoScreen.transform.localPosition = Vector3.MoveTowards(processPhotoScreen.transform.localPosition, processPhotoOB, 10);
-            dryingRopeScreen.transform.localPosition = Vector3.MoveTowards(dryingRopeScreen.transform.localPosition, Vector3.zero, 10);
+            processPhotoScreen.transform.localPosition = Vector3.MoveTowards(processPhotoScreen.transform.localPosition, processPhotoOB, 15);
+            dryingRopeScreen.transform.localPosition = Vector3.MoveTowards(dryingRopeScreen.transform.localPosition, Vector3.zero, 15);
 
             yield return null;
         }
@@ -50,8 +55,8 @@ public class ScreenTransition : MonoBehaviour
 
         while (dryingRopeScreen.transform.localPosition != dryingRopeOB)
         {
-            dryingRopeScreen.transform.localPosition = Vector3.MoveTowards(dryingRopeScreen.transform.localPosition, dryingRopeOB, 10);
-            processPhotoScreen.transform.localPosition = Vector3.MoveTowards(processPhotoScreen.transform.localPosition, Vector3.zero, 10);
+            dryingRopeScreen.transform.localPosition = Vector3.MoveTowards(dryingRopeScreen.transform.localPosition, dryingRopeOB, 15);
+            processPhotoScreen.transform.localPosition = Vector3.MoveTowards(processPhotoScreen.transform.localPosition, Vector3.zero, 15);
 
             yield return null;
         }

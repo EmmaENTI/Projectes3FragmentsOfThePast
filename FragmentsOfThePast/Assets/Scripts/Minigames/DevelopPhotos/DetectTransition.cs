@@ -21,7 +21,7 @@ public class DetectTransition : MonoBehaviour, IPointerEnterHandler
             Debug.Log("Entered ProcessPhoto");
             transition.LockProcessPhoto();
             StartCoroutine(transition.TransitionToDryingRope());
-        }
+        }   
         else if (transform.parent.name == "DryingRope")
         {
             Debug.Log("Entered DryingRope");
