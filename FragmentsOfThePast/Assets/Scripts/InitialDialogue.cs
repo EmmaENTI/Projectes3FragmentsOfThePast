@@ -545,31 +545,31 @@ public class InitialDialogue : MonoBehaviour
             case 43:
                 DialogueLine43();
                 break;
-/*
+
            case 44:
-                DialogueLine42();
+                DialogueLine44();
                 break;
 
             case 45:
-                DialogueLine43();
+                DialogueLine45();
                 break;
 
             case 46:
-                DialogueLine44();
-                break;*/
+                DialogueLine46();
+                break;
+                
+            case 47:
+                DialogueLine47();
+                break;
+
+            case 48:
+                DialogueLine48();
+                break;
+
+            case 49:
+                DialogueLine49();
+                break;
                 /*
-                           case 47:
-                               DialogueLine47();
-                               break;
-
-                           case 48:
-                               DialogueLine48();
-                               break;
-
-                           case 49:
-                               DialogueLine49();
-                               break;
-
                            case 50:
                                DialogueLine50();
                                break;
@@ -1480,8 +1480,116 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Hey there, buddy. What kind of drugs did you end up taking to wind up like this in an abandoned building?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
+    private void DialogueLine44()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "He extends a hand towards you, offering to help you up.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+    }
+
+
+    private void DialogueLine45()
+    {
+        answerButtonsPanel.SetActive(true);
+        dialogueTextPanel.SetActive(false);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+
+        button1AnswerText.text = "(Stand up by yourself) I did not take any drugs…";
+        button2AnswerText.text = "(Take his hand) Thanks...";
+        button3AnswerText.text = "";
+        playerIsAnswering = true;
+
+        if (canPlayEffectSound)
+        {
+            playSound6.playEffect();
+            canPlayEffectSound = false;
+        }
+    }
+
+    public void DialogueLine45Answer1()
+    {
+        if (dialogueLine == 45)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound4.playEffect();
+        }
+    }
+
+    public void DialogueLine45Answer2()
+    {
+        if (dialogueLine == 45)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine+=3;
+            playSound4.playEffect();
+        }
+    }
+
+    private void DialogueLine46()
+    {
+        hasEndedTyping = false;
+        texToToWrite = " Yeah right, people don't just appear in shady abandoned buildings unconscious out of hobby…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+    }
+
+    private void DialogueLine47()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "If it is a hobby I should look into it though, sounds like fun.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+    }
+
+    private void DialogueLine48()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "No problem! But nothing is free, eh? You will need to repay me someday.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+    }
+
+    private void DialogueLine49()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I came here to find the origin of the breach. Do you know anything about it?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+    }
 
     IEnumerator SaveIconTimer()
     {
