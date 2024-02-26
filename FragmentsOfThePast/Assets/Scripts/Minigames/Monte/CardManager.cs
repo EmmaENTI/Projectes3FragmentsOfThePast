@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,7 @@ public class CardManager : MonoBehaviour
     ChipManager chipManager;
 
     [SerializeField] int winCount = 0;
+    [SerializeField] TextMeshProUGUI winCountText;
 
 
 
@@ -28,6 +30,7 @@ public class CardManager : MonoBehaviour
         Load();
         SetBotTopLayout();
         SetGateColor();
+
     }
 
     void Update()
@@ -42,6 +45,8 @@ public class CardManager : MonoBehaviour
         }
 
         PrintCardStates();
+
+        winCountText.text = winCount.ToString();
     }
 
     public void CheckChipTopBotWithGate()
