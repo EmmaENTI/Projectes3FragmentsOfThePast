@@ -529,23 +529,23 @@ public class InitialDialogue : MonoBehaviour
             case 39:
                 DialogueLine39();
                 break;
-/*
+
             case 40:
-                DialogueLine38();
-                break;
-
-            case 41:
-                DialogueLine39();
-                break;
-
-            case 42:
                 DialogueLine40();
                 break;
 
-            case 43:
+            case 41:
                 DialogueLine41();
                 break;
 
+            case 42:
+                DialogueLine42();
+                break;
+
+            case 43:
+                DialogueLine43();
+                break;
+/*
            case 44:
                 DialogueLine42();
                 break;
@@ -1446,10 +1446,42 @@ public class InitialDialogue : MonoBehaviour
         texToToWrite = "Your head feels heavy, and your surroundings seem unfamiliar.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-
-
-        //animator.SetBool("canPlayAnim7", true);
     }
+
+    private void DialogueLine40()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "When you open your eyes you see… A man.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        animator.SetBool("canPlayAnim7", true);
+    }
+
+    private void DialogueLine41()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "He looks slightly translucent, bones underneath and…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine42()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Wait… He is dead?!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine43()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Hey there, buddy. What kind of drugs did you end up taking to wind up like this in an abandoned building?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
 
     IEnumerator SaveIconTimer()
     {
