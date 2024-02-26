@@ -78,6 +78,7 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] Animator hoodedManAnimator;
     [SerializeField] Animator backgroundAnimator;
     [SerializeField] Animator originAlertMessageAnimator;
+    [SerializeField] Animator textAnimator;
 
     //Sound 0
     [SerializeField] PlaySound playSound;
@@ -294,7 +295,7 @@ public class InitialDialogue : MonoBehaviour
         //Hacks
         if (Input.GetKeyDown("a"))
         {
-            //DialogueLine67();
+            DialogueLine38();
         }
 
        
@@ -520,15 +521,15 @@ public class InitialDialogue : MonoBehaviour
             case 37:
                 DialogueLine37();
                 break;
-/*
+
             case 38:
-                DialogueLine36();
+                DialogueLine38();
                 break;
-
+                
             case 39:
-                DialogueLine37();
+                DialogueLine39();
                 break;
-
+/*
             case 40:
                 DialogueLine38();
                 break;
@@ -996,6 +997,7 @@ public class InitialDialogue : MonoBehaviour
         animator.SetBool("canPlayAnim3", true);
 
         textPanelBackgroundGameObject.SetActive(true);
+        //textPanelBackgroundGameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         dialogueTextGameObject.transform.position = dialogueFrameDownGameObject.transform.position;
 
         if (canChangeSound2)
@@ -1428,12 +1430,35 @@ public class InitialDialogue : MonoBehaviour
         effectSourceGameObject.SetActive(true);
     }
 
+    private void DialogueLine38()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "As you slowly regain consciousness, you find yourself lying on a dusty floor in an empty spiritist consulting room. ";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        textAnimator.SetBool("TextAnim1", true);
+    }
+
+    private void DialogueLine39()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Your head feels heavy, and your surroundings seem unfamiliar.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+
+        //animator.SetBool("canPlayAnim7", true);
+    }
+
     IEnumerator SaveIconTimer()
     {
         saveIcon.SetActive(true);
         yield return new WaitForSeconds(2f);
         saveIcon.SetActive(false);
     }
+
+
     /*
 
     private void DialogueLine45()
