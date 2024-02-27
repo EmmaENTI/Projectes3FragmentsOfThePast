@@ -126,8 +126,15 @@ public class CardManager : MonoBehaviour
 
     void ResetRound()
     {
+        if (immunityActive) // Inmunitat
+        {
+            immunityActive = false;
+            return;
+        }
+
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
         // Missatge Doubt era la opcio correcta
+        doubleScoreActive = false;
 
         if (chipManager.GetChips() <= 0)
         {
@@ -143,10 +150,21 @@ public class CardManager : MonoBehaviour
 
     void SuccessRound()
     {
-        Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
-        // Missatge Doubt era la opcio correcta
 
-        winCount++;
+        if (doubleScoreActive) // Doble puntuación
+        {
+            winCount += 2;
+            Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
+            doubleScoreActive = false;
+            // Missatge Doubt era la opcio correcta
+        }
+        else
+        {
+            winCount++;
+            Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
+            doubleScoreActive = false;
+            // Missatge Doubt era la opcio correcta
+        }
 
         if (winCount >= 5)
         {
@@ -181,6 +199,12 @@ public class CardManager : MonoBehaviour
         SetBotTopLayout();
         SetGateColor();
         //gate.SetActive(false);
+
+        doubleChipActive = false;
+        doubleScoreActive = false;
+        revealActive = false;
+        immunityActive = false;
+        predictoActive = false;
     }
 
     void SetGateColor()
