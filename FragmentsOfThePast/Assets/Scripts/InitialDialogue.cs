@@ -608,7 +608,7 @@ public class InitialDialogue : MonoBehaviour
                            case 58:
                                DialogueLine58();
                                break;
-                 /*
+                 
                            case 59:
                                DialogueLine59();
                                break;
@@ -636,7 +636,7 @@ public class InitialDialogue : MonoBehaviour
                            case 65:
                                DialogueLine65();
                                break;
-
+                /*
                            case 66:
                                DialogueLine66();
                                break;
@@ -1756,8 +1756,9 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        tagGameObject.SetActive(false);
+        tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
     }
 
     private void DialogueLine58()
@@ -1771,6 +1772,95 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "Luis";
         textPanelImage.sprite = TextPanelDarkSprite;
         luisSurpriseImage.SetActive(true);
+    }
+
+    private void DialogueLine59()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "We play a game, any game you choose.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+    }
+
+    private void DialogueLine60()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "It could be a simple card game, a word association game, or even a game of riddles. The key is concentration.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+    }
+
+    private void DialogueLine61()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "As we play, we'll focus our minds, allowing my powers to work their magic.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+    }
+    private void DialogueLine62()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "The deeper we delve into the game, the more I'll uncover about your past.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = TextPanelNormalSprite;
+        spiritNameText.text = gameManager_Script.playerName;
+    }
+
+    private void DialogueLine63()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Alright, let's give it a try.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisSurpriseImage.SetActive(false);
+        luisHappyImage.SetActive(true);
+    }
+
+    private void DialogueLine64()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Who knows, maybe we'll uncover something useful about the breach and my lost memories in the process.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisSurpriseImage.SetActive(true);
+        luisHappyImage.SetActive(false);
+    }
+
+    private void DialogueLine65()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Between this and drinking tequila at the bar, I prefer this.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisSurpriseImage.SetActive(false);
+        luisHappyImage.SetActive(true);
     }
 
     /*
