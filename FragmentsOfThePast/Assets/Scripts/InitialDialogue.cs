@@ -166,6 +166,7 @@ public class InitialDialogue : MonoBehaviour
     //Luis
     [SerializeField] GameObject luisSurpriseImage;
     [SerializeField] GameObject luisHappyImage;
+    [SerializeField] GameObject luisAngryImage;
 
 
     //Group
@@ -271,6 +272,8 @@ public class InitialDialogue : MonoBehaviour
                 {
                     //Passar a la seguent linea de dialeg
                     dialogueLine++;
+
+                    LineJump();
 
                     //canTalk a true per poder cirdar la funcio DialogueTalk();
                     canTalk = true;
@@ -569,7 +572,7 @@ public class InitialDialogue : MonoBehaviour
             case 49:
                 DialogueLine49();
                 break;
-                /*
+              
                            case 50:
                                DialogueLine50();
                                break;
@@ -585,7 +588,7 @@ public class InitialDialogue : MonoBehaviour
                            case 53:
                                DialogueLine53();
                                break;
-
+                 
                            case 54:
                                DialogueLine54();
                                break;
@@ -605,7 +608,7 @@ public class InitialDialogue : MonoBehaviour
                            case 58:
                                DialogueLine58();
                                break;
-
+                 /*
                            case 59:
                                DialogueLine59();
                                break;
@@ -641,6 +644,20 @@ public class InitialDialogue : MonoBehaviour
                            case 67:
                                DialogueLine67();
                                break;*/
+        }
+    }
+
+    void LineJump()
+    {
+        Debug.Log("Jump");
+        switch (dialogueLine)
+        {
+            default:
+                break;
+
+            case 48:
+                dialogueLine = 49;
+                break;
         }
     }
     
@@ -1583,12 +1600,25 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine49()
     {
         hasEndedTyping = false;
-        texToToWrite = "I came here to find the origin of the breach. Do you know anything about it?";
+        texToToWrite = "Name is Luis, by the way…?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        tagGameObject.SetActive(false);
-        textPanelImage.sprite = TextPanelNormalSprite;
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+    }
+
+    private void DialogueLine50()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I thought about presenting myself, to not make this so awkward and stuff…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
     }
 
     IEnumerator SaveIconTimer()
@@ -1598,6 +1628,150 @@ public class InitialDialogue : MonoBehaviour
         saveIcon.SetActive(false);
     }
 
+    private void DialogueLine51()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Luis… Alright. My name is " + gameManager_Script.playerName + ", thanks for saving me and stuff…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+    }
+
+    private void DialogueLine52()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I came here to find the origin of the breach. Do you know anything about it?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+    }
+
+    private void DialogueLine53()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Crossing the breach, huh? That's some serious business you've got yourself into, " + gameManager_Script.playerName + "…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisSurpriseImage.SetActive(true);
+    }
+
+    private void DialogueLine54()
+    {
+        answerButtonsPanel.SetActive(true);
+        dialogueTextPanel.SetActive(false);
+        leftButtonPanel.SetActive(true);
+        middleButtonPanel.SetActive(true);
+        rightButtonPanel.SetActive(false);
+
+        button1AnswerText.text = "(Insist) Do you know anything about it or not?";
+
+        if(isConquistador)
+        {
+            button2AnswerText.text = "(Origin) It is my destiny, to conquer the breach and become stronger.";
+        }
+
+        else if(isOrden)
+        {
+            button2AnswerText.text = "(Origin) It is my destiny, to restore the balance and bring peace.";
+        }
+       
+        button3AnswerText.text = "";
+
+        playerIsAnswering = true;
+
+        if (canPlayEffectSound)
+        {
+            playSound6.playEffect();
+            canPlayEffectSound = false;
+        }
+    }
+
+    public void DialogueLine54Answer1()
+    {
+        if (dialogueLine == 54)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound4.playEffect();
+        }
+    }
+
+    public void DialogueLine54Answer2()
+    {
+        if (dialogueLine == 54)
+        {
+            dialogueTextPanel.SetActive(true);
+            answerButtonsPanel.SetActive(false);
+            playerIsAnswering = false;
+            canTalk = true;
+            dialogueLine++;
+            playSound4.playEffect();
+        }
+    }
+
+    private void DialogueLine55()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I used to know where it was, you know. Had a hunch about its location. But then... something happened. My memories got wiped clean. Total amnesia.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisAngryImage.SetActive(true);
+        luisSurpriseImage.SetActive(false);
+    }
+
+    private void DialogueLine56()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Guess I got too close to the breach, and it decided to mess with my head. Classic breach move, right?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisAngryImage.SetActive(false);
+        luisHappyImage.SetActive(true);
+
+    }
+
+    private void DialogueLine57()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "I am a spiritist, I can recover your memories.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+    }
+
+    private void DialogueLine58()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "Recover them? That is new… And how, exactly?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        spiritNameText.text = "Luis";
+        textPanelImage.sprite = TextPanelDarkSprite;
+        luisSurpriseImage.SetActive(true);
+    }
 
     /*
 
