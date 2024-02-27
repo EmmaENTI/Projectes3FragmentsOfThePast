@@ -1845,8 +1845,8 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
         textPanelImage.sprite = TextPanelDarkSprite;
-        luisSurpriseImage.SetActive(true);
         luisHappyImage.SetActive(false);
+        luisSurpriseImage.SetActive(true);
     }
 
     private void DialogueLine65()

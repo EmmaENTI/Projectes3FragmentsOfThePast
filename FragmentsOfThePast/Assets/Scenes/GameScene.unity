@@ -20515,7 +20515,7 @@ MonoBehaviour:
   carmenSurprisedImage: {fileID: 630411492}
   luisSurpriseImage: {fileID: 1415673112}
   luisHappyImage: {fileID: 1415673112}
-  luisAngryImage: {fileID: 0}
+  luisAngryImage: {fileID: 260194159}
   groupImage: {fileID: 1641661055}
   spiritNameText: {fileID: 1145030510}
   cinematicAnim: {fileID: 1344272223}
