@@ -23,6 +23,12 @@ public class CardManager : MonoBehaviour
     [SerializeField] int winCount = 0;
     [SerializeField] TextMeshProUGUI winCountText;
 
+    bool doubleScoreActive = false;
+    bool revealActive = false;
+    bool predictoActive = false;
+    bool immunityActive = false;
+    bool doubleChipActive = false;
+
 
 
     void Start()
@@ -47,6 +53,32 @@ public class CardManager : MonoBehaviour
         PrintCardStates();
 
         winCountText.text = winCount.ToString();
+    }
+
+    // Funcions para activar habilidades
+    public void ActivateDoubleScore()
+    {
+        doubleScoreActive = true;
+    }
+
+    public void ActivateReveal()
+    {
+        revealActive = true;
+    }
+
+    public void ActivatePredicto()
+    {
+        predictoActive = true;
+    }
+
+    public void ActivateImmunity()
+    {
+        immunityActive = true;
+    }
+
+    public void ActivateDoubleChip()
+    {
+        doubleChipActive = true;
     }
 
     public void CheckChipTopBotWithGate()
