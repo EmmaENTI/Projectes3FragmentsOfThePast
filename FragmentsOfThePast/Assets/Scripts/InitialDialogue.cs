@@ -222,6 +222,9 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] GameObject tagGameObject;
     [SerializeField] GameObject originMessageAlertGameObject;
 
+    [SerializeField] private Sprite ordenBackground;
+    [SerializeField] private Sprite conquerorBackground;
+
     private void Start()
     {
 
@@ -978,18 +981,20 @@ public class InitialDialogue : MonoBehaviour
         if (isConquistador)
         {
             conquistadorPanel.SetActive(true);
+            streetPanelImage.sprite = conquerorBackground;
         }
 
         else if (isOrden)
         {
 
             ordenPanel.SetActive(true);
+            streetPanelImage.sprite = ordenBackground;
         }
 
 
         animator.SetBool("canPlayAnim2", true);
 
-        streetPanelImage.sprite = blackGalaxyBackgroundSprite;
+        //streetPanelImage.sprite = blackGalaxyBackgroundSprite;
         darkerFilterPanel.SetActive(false);
 
         playSound5.playEffect();

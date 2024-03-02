@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4093640703
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -10294,7 +10294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1106948752
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19578,7 +19578,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4093640703
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -20598,6 +20598,8 @@ MonoBehaviour:
   saveIcon: {fileID: 1353169053}
   tagGameObject: {fileID: 953620930}
   originMessageAlertGameObject: {fileID: 1354503313}
+  ordenBackground: {fileID: 21300000, guid: 14ece9fc0692e7341a4776e1028897be, type: 3}
+  conquerorBackground: {fileID: 21300000, guid: dffa074317318484a81320b463bbdb7b, type: 3}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
