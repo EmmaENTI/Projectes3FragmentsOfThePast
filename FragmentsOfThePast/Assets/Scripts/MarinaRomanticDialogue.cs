@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+using System.Xml.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class MarinaGoodDialogue : MonoBehaviour
+public class MarinaRomanticDialogue : MonoBehaviour
 {
     //Game Manager
     [SerializeField] GameManager_Script gameManager_Script;
@@ -163,7 +166,7 @@ public class MarinaGoodDialogue : MonoBehaviour
                 DialogueLine2();
                 break;
 
-
+               
             case 3:
                 DialogueLine3();
                 break;
@@ -638,7 +641,7 @@ public class MarinaGoodDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Picture this... You were in a plaza, and you were getting ready a gift for someone, it was made with love and you were very excited about it.";
+        texToToWrite = "Picture this... You were in a street, on a sunny day, and one boy was gifting you a flower!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -648,7 +651,7 @@ public class MarinaGoodDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "You liked doing good actions, to make others happy was your happiness!";
+        texToToWrite = "You fell in love instantly, but I do assume that it did not last long, the feeling did not feel too strong, just a crush.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -671,7 +674,7 @@ public class MarinaGoodDialogue : MonoBehaviour
         hasEndedTyping = false;
         spiritNameText.text = "Marina";
         bigSpiritImage.sprite = marinaHappy;
-        texToToWrite = gameManager_Script.playerName + " you are amazing! Amazing! I am so glad to have something back!";
+        texToToWrite = gameManager_Script.playerName +" you are amazing! Amazing! I am so glad to have something back!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -727,7 +730,7 @@ public class MarinaGoodDialogue : MonoBehaviour
         middleButtonPanel.SetActive(true);
         rightButtonPanel.SetActive(false);
         button1AnswerText.text = "(Friendly) Making it public is a no.";
-        button2AnswerText.text = "(Good Trait) So, you were into doing good deeds?";
+        button2AnswerText.text = "(Romanticism) So, how come you fall in and out of love so fast?";
         button3AnswerText.text = "";
         playerIsAnswering = true;
 

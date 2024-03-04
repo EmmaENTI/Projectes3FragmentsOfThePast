@@ -1625,12 +1625,15 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
+        //animator.SetBool("canPlayAnim8", true);
+
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
 
         lobbyContenderGameObject.SetActive(true);
         luisHappyImage.SetActive(true);
+
     }
 
     private void DialogueLine50()
@@ -1710,7 +1713,6 @@ public class InitialDialogue : MonoBehaviour
         }
        
         button3AnswerText.text = "";
-
         playerIsAnswering = true;
 
         if (canPlayEffectSound)

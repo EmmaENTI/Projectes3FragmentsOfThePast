@@ -1,14 +1,11 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Xml.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MarinaChildishDialogue : MonoBehaviour
+
+public class MarinaGoodDialogue : MonoBehaviour
 {
     //Game Manager
     [SerializeField] GameManager_Script gameManager_Script;
@@ -641,7 +638,7 @@ public class MarinaChildishDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Picture this... You always saw the opportunity to let your inner child free, even if it meant looking like a kid to others.";
+        texToToWrite = "Picture this... You were in a plaza, and you were getting ready a gift for someone, it was made with love and you were very excited about it.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -651,7 +648,7 @@ public class MarinaChildishDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "You enjoyed chasing butterflies, playing with kids, and overall, enjoyed the little moments where you felt like a kid again!";
+        texToToWrite = "You liked doing good actions, to make others happy was your happiness!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -730,7 +727,7 @@ public class MarinaChildishDialogue : MonoBehaviour
         middleButtonPanel.SetActive(true);
         rightButtonPanel.SetActive(false);
         button1AnswerText.text = "(Friendly) Making it public is a no.";
-        button2AnswerText.text = "(Childish) How do you do it? Be in touch with your inner child?";
+        button2AnswerText.text = "(Good Trait) So, you were into doing good deeds?";
         button3AnswerText.text = "";
         playerIsAnswering = true;
 

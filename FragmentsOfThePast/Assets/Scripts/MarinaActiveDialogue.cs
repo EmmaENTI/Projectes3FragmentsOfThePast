@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MarinaRomanticDialogue : MonoBehaviour
+public class MarinaActiveDialogue : MonoBehaviour
 {
     //Game Manager
     [SerializeField] GameManager_Script gameManager_Script;
@@ -166,7 +166,7 @@ public class MarinaRomanticDialogue : MonoBehaviour
                 DialogueLine2();
                 break;
 
-               
+
             case 3:
                 DialogueLine3();
                 break;
@@ -641,7 +641,7 @@ public class MarinaRomanticDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Picture this... You were in a street, on a sunny day, and one boy was gifting you a flower!";
+        texToToWrite = "Picture this... You were in a beach in this memory, sun, sea, sunscreen and sand coating your skin and hair.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -651,7 +651,7 @@ public class MarinaRomanticDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "You fell in love instantly, but I do assume that it did not last long, the feeling did not feel too strong, just a crush.";
+        texToToWrite = "You were playing a game, having fun and very energetic, as usual, you loved sports and were a very active person.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -674,7 +674,7 @@ public class MarinaRomanticDialogue : MonoBehaviour
         hasEndedTyping = false;
         spiritNameText.text = "Marina";
         bigSpiritImage.sprite = marinaHappy;
-        texToToWrite = gameManager_Script.playerName +" you are amazing! Amazing! I am so glad to have something back!";
+        texToToWrite = gameManager_Script.playerName + " you are amazing! Amazing! I am so glad to have something back!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -730,7 +730,7 @@ public class MarinaRomanticDialogue : MonoBehaviour
         middleButtonPanel.SetActive(true);
         rightButtonPanel.SetActive(false);
         button1AnswerText.text = "(Friendly) Making it public is a no.";
-        button2AnswerText.text = "(Romanticism) So, how come you fall in and out of love so fast?";
+        button2AnswerText.text = "(Active) How do you do it? You are like an endless source of energy!";
         button3AnswerText.text = "";
         playerIsAnswering = true;
 

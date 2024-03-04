@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MarinaActiveDialogue : MonoBehaviour
+public class MarinaChildishDialogue : MonoBehaviour
 {
     //Game Manager
     [SerializeField] GameManager_Script gameManager_Script;
@@ -641,7 +641,7 @@ public class MarinaActiveDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "Picture this... You were in a beach in this memory, sun, sea, sunscreen and sand coating your skin and hair.";
+        texToToWrite = "Picture this... You always saw the opportunity to let your inner child free, even if it meant looking like a kid to others.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -651,7 +651,7 @@ public class MarinaActiveDialogue : MonoBehaviour
         textPanelImage.sprite = TextPanelNormalSprite;
         hasEndedTyping = false;
         spiritNameText.text = gameManager_Script.playerName;
-        texToToWrite = "You were playing a game, having fun and very energetic, as usual, you loved sports and were a very active person.";
+        texToToWrite = "You enjoyed chasing butterflies, playing with kids, and overall, enjoyed the little moments where you felt like a kid again!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -730,7 +730,7 @@ public class MarinaActiveDialogue : MonoBehaviour
         middleButtonPanel.SetActive(true);
         rightButtonPanel.SetActive(false);
         button1AnswerText.text = "(Friendly) Making it public is a no.";
-        button2AnswerText.text = "(Active) How do you do it? You are like an endless source of energy!";
+        button2AnswerText.text = "(Childish) How do you do it? Be in touch with your inner child?";
         button3AnswerText.text = "";
         playerIsAnswering = true;
 
