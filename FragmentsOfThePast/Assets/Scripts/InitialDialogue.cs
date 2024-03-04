@@ -233,6 +233,8 @@ public class InitialDialogue : MonoBehaviour
 
     [SerializeField] private Sprite luisNewIllustrationImage;
 
+    [SerializeField] private GameObject lobbyContenderGameObject;
+
     private void Start()
     {
 
@@ -1185,7 +1187,6 @@ public class InitialDialogue : MonoBehaviour
 
         }
 
-
         playerIsAnswering = true;
     }
 
@@ -1517,7 +1518,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         tagGameObject.SetActive(true);
-        spiritNameText.text = "Luis";
+        spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
         tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
         tagGameObject.SetActive(true);
@@ -1584,12 +1585,12 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine46()
     {
         hasEndedTyping = false;
-        texToToWrite = " Yeah right, people don't just appear in shady abandoned buildings unconscious out of hobby…";
+        texToToWrite = "Yeah right, people don't just appear in shady abandoned buildings unconscious out of hobby…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
         tagGameObject.SetActive(true);
-        spiritNameText.text = "Luis";
+        spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
     }
 
@@ -1601,7 +1602,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         tagGameObject.SetActive(true);
-        spiritNameText.text = "Luis";
+        spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
     }
 
@@ -1613,7 +1614,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         tagGameObject.SetActive(true);
-        spiritNameText.text = "Luis";
+        spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
     }
 
@@ -1627,6 +1628,9 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
+
+        lobbyContenderGameObject.SetActive(true);
+        luisHappyImage.SetActive(true);
     }
 
     private void DialogueLine50()
@@ -1639,6 +1643,7 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
+        luisHappyImage.SetActive(true);
     }
 
     IEnumerator SaveIconTimer()
@@ -1680,6 +1685,7 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
+        luisHappyImage.SetActive(false);
         luisSurpriseImage.SetActive(true);
     }
 
@@ -1864,7 +1870,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite; ;
         luisHappyImage.SetActive(false);
         luisSurpriseImage.SetActive(true);
     }
