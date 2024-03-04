@@ -20600,6 +20600,7 @@ MonoBehaviour:
   originMessageAlertGameObject: {fileID: 1354503313}
   ordenBackground: {fileID: 21300000, guid: 14ece9fc0692e7341a4776e1028897be, type: 3}
   conquerorBackground: {fileID: 21300000, guid: dffa074317318484a81320b463bbdb7b, type: 3}
+  luisNewIllustrationImage: {fileID: 21300000, guid: 4569355f3b57f6d459766f730f39f524, type: 3}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0

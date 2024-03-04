@@ -225,6 +225,8 @@ public class InitialDialogue : MonoBehaviour
     [SerializeField] private Sprite ordenBackground;
     [SerializeField] private Sprite conquerorBackground;
 
+    [SerializeField] private Sprite luisNewIllustrationImage;
+
     private void Start()
     {
 
@@ -1224,7 +1226,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine24()
     {
         hasEndedTyping = false;
-        spiritNameText.text = "Hooded Man";
+        spiritNameText.text = "???";
         texToToWrite = "I can sense something about you... You're a spiritist, someone who can connect with the spirit world. Your energy feels strong and <color=#00ffffff>alive.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
@@ -1356,7 +1358,7 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         tagGameObject.SetActive(true);
-        spiritNameText.text = "Hooded Man";
+        spiritNameText.text = "???";
         textPanelImage.sprite = TextPanelDarkSprite;
         hoodedManText = true;
     }
@@ -1460,6 +1462,9 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         textAnimator.SetBool("TextAnim1", true);
+
+
+
     }
 
     private void DialogueLine39()
@@ -1478,6 +1483,8 @@ public class InitialDialogue : MonoBehaviour
         canTalk = false;
 
         animator.SetBool("canPlayAnim7", true);
+        streetPanelImage.sprite = luisNewIllustrationImage;
+        backgroundAnimator.SetBool("BackgroundMovement3", true);
     }
 
     private void DialogueLine41()
