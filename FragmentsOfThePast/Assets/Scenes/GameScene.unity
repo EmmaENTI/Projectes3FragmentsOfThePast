@@ -20561,6 +20561,8 @@ MonoBehaviour:
   textPanelImage: {fileID: 1758461481}
   TextPanelDarkSprite: {fileID: 21300000, guid: b1bea1e466f215b4b9f421b344da273b, type: 3}
   TextPanelNormalSprite: {fileID: 21300000, guid: f39656e3ad8aa124fb24f7c948d63f19, type: 3}
+  LuisPanelSprite: {fileID: 21300000, guid: db6c347c7cb1ed743b5b8dd91f12ae9c, type: 3}
+  LuisTagSprite: {fileID: 21300000, guid: db6c347c7cb1ed743b5b8dd91f12ae9c, type: 3}
   hoodedManImage: {fileID: 1472916146}
   marinaSadImage: {fileID: 732092754}
   marinaSurpriseImage: {fileID: 2089422434}

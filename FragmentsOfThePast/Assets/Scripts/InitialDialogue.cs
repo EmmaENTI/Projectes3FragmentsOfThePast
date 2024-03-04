@@ -142,7 +142,13 @@ public class InitialDialogue : MonoBehaviour
 
     //Text Panel Normal Sprite
     [SerializeField] Sprite TextPanelNormalSprite;
-   
+
+    //Luis Panel Sprite
+    [SerializeField] Sprite LuisPanelSprite;
+
+    //Luis Tag Sprite
+    [SerializeField] Sprite LuisTagSprite;
+
     //Hooded Man Image
     [SerializeField] GameObject hoodedManImage;
 
@@ -1512,7 +1518,9 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        tagGameObject.SetActive(true);
     }
 
     private void DialogueLine44()
@@ -1582,7 +1590,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
     }
 
     private void DialogueLine47()
@@ -1594,7 +1602,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
     }
 
     private void DialogueLine48()
@@ -1606,7 +1614,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
     }
 
     private void DialogueLine49()
@@ -1618,7 +1626,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
     }
 
     private void DialogueLine50()
@@ -1630,7 +1638,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
     }
 
     IEnumerator SaveIconTimer()
@@ -1671,7 +1679,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(true);
     }
 
@@ -1741,7 +1749,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
         luisAngryImage.SetActive(true);
         luisSurpriseImage.SetActive(false);
     }
@@ -1755,7 +1763,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
         luisAngryImage.SetActive(false);
         luisHappyImage.SetActive(true);
 
@@ -1782,7 +1790,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(true);
     }
 
@@ -1842,7 +1850,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(false);
         luisHappyImage.SetActive(true);
     }
@@ -1870,7 +1878,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(true);
         spiritNameText.text = "Luis";
-        textPanelImage.sprite = TextPanelDarkSprite;
+        textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(false);
         luisHappyImage.SetActive(true);
     }
