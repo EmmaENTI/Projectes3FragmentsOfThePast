@@ -81,6 +81,8 @@ namespace CardHouse
             Dragging.Instance.OnDrag += HandleDragStart;
             Dragging.Instance.OnDrop += HandleDragDrop;
             Dragging.Instance.PostDrop += HandlePostDrop;
+
+            
         }
 
         void OnDestroy()
@@ -105,6 +107,15 @@ namespace CardHouse
         void HandleDragStart(DragDetector draggedCard)
         {
             CollidersEntered = 0;
+        }
+
+        public void SetFaceUp()
+        {
+            for (var i = 0; i < MountedCards.Count; i++)
+            {
+                MountedCards[i].SetFacing(true);
+            }
+
         }
 
         void HandleDragDrop(DragDetector dragDetector)
