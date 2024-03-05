@@ -28,6 +28,8 @@ namespace CardHouse.SampleGames.Tarot
                 }
             }
             AdjustSpread(0);
+
+            DealNextCard();
         }
 
         public void NextSpread()
