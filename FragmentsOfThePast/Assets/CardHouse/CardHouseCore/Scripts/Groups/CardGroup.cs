@@ -120,6 +120,7 @@ namespace CardHouse
             {
                 MountedCards[i].SetFacing(true);
                 StartCoroutine(NextRound());
+                
             }
 
         }

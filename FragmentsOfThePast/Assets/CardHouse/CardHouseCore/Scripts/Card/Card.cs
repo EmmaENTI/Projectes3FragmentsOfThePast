@@ -53,6 +53,7 @@ namespace CardHouse
             Turning = GetComponent<Turning>();
             Scaling = GetComponent<Scaling>();
             OnCardFocused += HandleCardFocused;
+           
         }
 
         void OnDestroy()
@@ -71,6 +72,7 @@ namespace CardHouse
         public void SetFacing(bool isFaceUp)
         {
             SetFacing(isFaceUp ? CardFacing.FaceUp : CardFacing.FaceDown);
+            
         }
 
         public void SetFacing(CardFacing facing, bool immediate = false, float spd = 1f)
