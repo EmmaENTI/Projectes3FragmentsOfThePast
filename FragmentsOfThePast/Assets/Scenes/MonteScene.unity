@@ -200,6 +200,14 @@ PrefabInstance:
       value: DeckPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 8761025072723690575, guid: 979624791065b604c86842ec546f76a9, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1496902905}
+    - target: {fileID: 8761025072723690575, guid: 979624791065b604c86842ec546f76a9, type: 3}
+      propertyPath: spPlayer
+      value: 
+      objectReference: {fileID: 853435130}
+    - target: {fileID: 8761025072723690575, guid: 979624791065b604c86842ec546f76a9, type: 3}
       propertyPath: ShuffleStrategy
       value: 
       objectReference: {fileID: 11400000, guid: 8a92c661e864fd44f833d2e4508e44a3, type: 2}
@@ -676,6 +684,14 @@ PrefabInstance:
       propertyPath: Colors.Array.data[0].Color.r
       value: 0.482
       objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1496902905}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: spPlayer
+      value: 
+      objectReference: {fileID: 853435130}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: DropGates.Gates.Array.size
       value: 0
@@ -1527,6 +1543,14 @@ PrefabInstance:
       value: 0.482
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1496902905}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: spPlayer
+      value: 
+      objectReference: {fileID: 853435130}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: DropGates.Gates.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -1791,6 +1815,14 @@ PrefabInstance:
       value: 0.482
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1496902905}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: spPlayer
+      value: 
+      objectReference: {fileID: 853435130}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: DropGates.Gates.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -1960,6 +1992,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deck
       objectReference: {fileID: 0}
+    - target: {fileID: 8761025072723690575, guid: 979624791065b604c86842ec546f76a9, type: 3}
+      propertyPath: sp
+      value: 
+      objectReference: {fileID: 1496902905}
+    - target: {fileID: 8761025072723690575, guid: 979624791065b604c86842ec546f76a9, type: 3}
+      propertyPath: spPlayer
+      value: 
+      objectReference: {fileID: 853435130}
     - target: {fileID: 8761025072723690575, guid: 979624791065b604c86842ec546f76a9, type: 3}
       propertyPath: ShuffleStrategy
       value: 

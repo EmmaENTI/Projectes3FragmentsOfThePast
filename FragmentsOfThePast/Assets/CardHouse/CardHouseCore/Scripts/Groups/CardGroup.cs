@@ -1,4 +1,6 @@
+using CardHouse.SampleGames.Tarot;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -27,6 +29,9 @@ namespace CardHouse
         static List<CardGroup> GroupsHoveredWithObjects = new List<CardGroup>();
 
         int CollidersEntered = 0;
+
+        [SerializeField] SpreadManager sp;
+        [SerializeField] SpreadManager spPlayer;
 
         public static CardGroup HilightedGroup
         {
@@ -114,8 +119,16 @@ namespace CardHouse
             for (var i = 0; i < MountedCards.Count; i++)
             {
                 MountedCards[i].SetFacing(true);
+                StartCoroutine(NextRound());
             }
 
+        }
+
+        IEnumerator NextRound()
+        {
+            yield return new WaitForSeconds(2);
+            sp.ShuffleCardsBackIn();
+            spPlayer.ShuffleCardsBackIn();
         }
 
         void HandleDragDrop(DragDetector dragDetector)
