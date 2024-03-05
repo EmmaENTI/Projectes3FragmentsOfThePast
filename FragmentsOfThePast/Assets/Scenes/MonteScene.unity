@@ -4826,6 +4826,15 @@ MonoBehaviour:
   gate: {fileID: 213546546}
   winCount: 0
   winCountText: {fileID: 1278353769}
+  Slots:
+  - {fileID: 631786856}
+  - {fileID: 408102949}
+  Sprites:
+  - {fileID: 21300000, guid: e3ebaa5e7ec42114290b2e350cab5045, type: 3}
+  - {fileID: 21300000, guid: 55de9b0668a2f1749a73a6537a056dd3, type: 3}
+  - {fileID: 21300000, guid: 40d577569fd6be547a735a4efa2a44c3, type: 3}
+  - {fileID: 21300000, guid: 7ffa92f2b4d185048b8109251272b7a0, type: 3}
+  GuessSlot: {fileID: 675604366}
 --- !u!1 &2103233721
 GameObject:
   m_ObjectHideFlags: 0

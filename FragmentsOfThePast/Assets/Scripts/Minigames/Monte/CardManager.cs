@@ -1,3 +1,4 @@
+using CardHouse;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -29,7 +30,10 @@ public class CardManager : MonoBehaviour
     bool immunityActive = false;
     bool doubleChipActive = false;
 
+    public List<CardGroup> Slots;
+    public List<Sprite> Sprites;
 
+    public CardGroup GuessSlot;
 
     void Start()
     {
