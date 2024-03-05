@@ -1,21 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     Vector2 startPoint;
     Vector2 cursorPosition;
-
+    
     Rigidbody2D rb;
+    public bool isGoodVelocity = false;
 
-    //[SerializeField] float maxRotation = 70.0f;
-
-    bool isCursorDragging = false;
+    public bool isCursorDragging = false;
     float speed = 2;
-    float timeToComplete = 5;
-    float timeElapsed = 0;
     float angleOffset = 0;
 
     [SerializeField] Vector3 redContainerPosition;
@@ -25,120 +23,188 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     bool hasCompletedReveal = false;
     public bool disableDrag = false;
 
+    public bool startDrying = false;
     float timeToDry = 3;
+    float timeElapsedDry = 0;
 
+    Image outlinePhoto;
+
+    ScreenTransition transition;
+
+    [SerializeField] CheckpointManager[] checkpointManagers;
+    CheckpointManager currentCheckpointManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        redContainerPosition = GameObject.Find("RedContainer").transform.position;
-        grayContainerPosition = GameObject.Find("GrayContainer").transform.position;
+        //redContainerPosition = GameObject.Find("RedContainer").transform.position;
+        grayContainerPosition = GameObject.Find("PurpleContainer").transform.position;
+
+        outlinePhoto = transform.GetChild(0).GetComponent<Image>();
+
+        transition = GetComponentInParent<ScreenTransition>();
+
+        checkpointManagers = transform.parent.GetComponentsInChildren<CheckpointManager>();
+        currentCheckpointManager = checkpointManagers[0];
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            transform.SetParent(transform.parent.parent.GetChild(1));
+            StartCoroutine(LerpTo(new(-680, -400, 0), true));
+            StartCoroutine(transition.TransitionToDryingRope());
+            hasCompletedReveal = true;
+        }
+
         if (isCursorDragging)
         {
             CalculateVelocity();
 
             RevealPhotos();
-
-            DryPhotos();
         }
         else
         {
             angleOffset = 0;
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            if (!hasCompletedReveal)
+            {
+                transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
+            }
+            
+        }
+
+        if (startDrying)
+        {
+            DryPhotos();
         }
     }
 
+    #region Reveal Photos
+    void FlipPhoto()
+    {
+        if (rb.velocity.y < 0) angleOffset = 0; else angleOffset = -180;
+    }
 
     void CalculateVelocity()
     {
         if (disableDrag) { return; }
-
         Vector3 vector = new Vector3(cursorPosition.x, cursorPosition.y, 0) - new Vector3(transform.position.x, transform.position.y, 0);
         float distance = vector.magnitude;
         Vector3 direction = vector.normalized;
         rb.velocity = direction * distance * speed;
     }
 
-    void FlipPhoto()
+    void CalculateOutlineAlpha()
     {
-        if (rb.velocity.y < 0) angleOffset = -180; else angleOffset = 0;
+        outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, currentCheckpointManager.currentLaps / currentCheckpointManager.totalLaps);
     }
 
     void CheckVelocity()
     {
-        if (Mathf.Abs(rb.velocity.y) > 600)
+        if (rb.velocity.magnitude > 600 || rb.velocity.magnitude < 100)
         {
-            Debug.Log("TOO FAST: " + rb.velocity.y);
-        }
-        else if (Mathf.Abs(rb.velocity.y) < 100)
-        {
-            Debug.Log("TOO SLOW: " + rb.velocity.y);
+            isGoodVelocity = false;
+            //Debug.Log("TOO FAST OR TOO SLOW");
         }
         else
         {
-            timeElapsed += Time.deltaTime;
+            isGoodVelocity = true;
+            //Debug.Log("NICE");
         }
-
-        CompleteStep();
     }
 
-    void CompleteStep()
+    public void CompleteStep()
     {
-        if (timeToComplete < timeElapsed)
+        if (!hasCompletedRed)
         {
-            // TODO Lerp to Next Stage
-
-            if (!hasCompletedRed)
-            {
-                transform.position = grayContainerPosition;
-                hasCompletedRed = true;
-                timeElapsed = 0;
-            }
-            else
-            {
-                transform.SetParent(transform.parent.parent.GetChild(1));
-                transform.localPosition = new(-680, -400, 0);
-                hasCompletedReveal = true;
-            }
-
+            currentCheckpointManager = checkpointManagers[1];
+            outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, 0);
+            StartCoroutine(LerpTo(grayContainerPosition, false));
+            hasCompletedRed = true;
+        }
+        else
+        {
+            transform.SetParent(transform.parent.parent.GetChild(1));
+            StartCoroutine(LerpTo(new(-680, -400, 0), true));
+            StartCoroutine(transition.TransitionToDryingRope());
+            hasCompletedReveal = true;
         }
     }
-    
+
     void RevealPhotos()
     {
         if (hasCompletedReveal) { return; }
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-Mathf.Clamp(rb.velocity.y / 5 + angleOffset, -250, 70), 0, 0), 0.05f);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-Mathf.Clamp(rb.velocity.y / 5 + angleOffset, -200, 50), Mathf.Atan(rb.velocity.y/rb.velocity.x) * Mathf.Rad2Deg, 0), 0.05f);
+        
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(rb.velocity.y / 6, 0, Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg), 0.05f);
         FlipPhoto();
+        CalculateOutlineAlpha();
         CheckVelocity();
     }
 
+    #endregion
+
+
+    #region Dry Photos
     void DryPhotos()
     {
-        timeElapsed += Time.deltaTime;
+        timeElapsedDry += Time.deltaTime;
 
-        if (timeElapsed >= timeToDry)
+        if (timeElapsedDry >= timeToDry)
         {
             // Reveal Photo
             // Zoom Photo
+
+            Debug.Log("SHOW FOTO");
         }
     }
 
+    #endregion
+
+    IEnumerator LerpTo(Vector3 newPosition, bool isLocal)
+    {
+        if (!isLocal)
+        {
+            disableDrag = true;
+            cursorPosition = newPosition;
+            rb.velocity = Vector2.zero;
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
+            while (transform.position != newPosition)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, newPosition, 5);
+                yield return null;
+            }
+            disableDrag = false;
+        }
+        else
+        {
+            disableDrag = true;
+            cursorPosition = newPosition;
+            rb.velocity = Vector2.zero;
+            transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 180);
+            while (transform.localPosition != newPosition)
+            {
+                transform.localPosition = Vector3.MoveTowards(transform.localPosition, newPosition, 5);
+                yield return null;
+            }
+            disableDrag = false;
+            yield return new WaitForSeconds(2);
+        }
+    }
+
+    #region Mouse Events
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
     {
         startPoint = eventData.pressPosition;
         cursorPosition = eventData.pressPosition;
-
-        timeElapsed = 0;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (disableDrag) { return; }
         isCursorDragging = eventData.dragging;
         cursorPosition = eventData.position;
     }
@@ -146,11 +212,11 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         isCursorDragging = false;
-        timeElapsed = 0;
 
         if (hasCompletedReveal)
         {
             rb.velocity = Vector2.zero;
         }
     }
+    #endregion
 }
