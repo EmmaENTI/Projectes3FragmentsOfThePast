@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
@@ -90,7 +91,8 @@ public class CardManager : MonoBehaviour
         // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
         if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
 
-        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
+            || chipManager.isRightChoice && (gateColor == rightLayoutColor))
         {
             chipManager.GainChips();
             SuccessRound();
