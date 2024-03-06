@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: fe3bcf4083306564fb0d085da7c41c52
+  - enabled: 1
+    path: Assets/Scenes/MonteScene.unity
+    guid: 63d4be81b1169c740ad9b7e0fe7727ca
   m_configObjects: {}

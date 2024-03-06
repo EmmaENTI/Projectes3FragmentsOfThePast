@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using System;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class InitialDialogue : MonoBehaviour
 {
@@ -649,11 +650,11 @@ public class InitialDialogue : MonoBehaviour
                            case 65:
                                DialogueLine65();
                                break;
-                /*
+                
                            case 66:
                                DialogueLine66();
                                break;
-
+                /*
                            case 67:
                                DialogueLine67();
                                break;*/
@@ -1889,6 +1890,19 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(false);
         luisHappyImage.SetActive(true);
+    }
+
+    private void DialogueLine66()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        dialogueTextPanel.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+        SceneManager.LoadScene("MonteScene");
     }
 
     /*
