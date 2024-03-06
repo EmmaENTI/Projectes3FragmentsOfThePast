@@ -5659,8 +5659,14 @@ MonoBehaviour:
   hasEndedTyping: 0
   dialogueLine: 0
   dialogueText: {fileID: 1387564791}
-  playSound: {fileID: 0}
+  playSound: {fileID: 1117280568}
   texToToWrite: 
+  audioSourceGameObject: {fileID: 2065287848}
+  tagGameObject: {fileID: 0}
+  luisPanelSprite: {fileID: 0}
+  normalPanelSprite: {fileID: 0}
+  textPanelImage: {fileID: 0}
+  playerName: 
   firstPanel: {fileID: 1380465591}
 --- !u!1 &2052700457
 GameObject:
