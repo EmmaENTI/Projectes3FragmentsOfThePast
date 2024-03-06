@@ -1,6 +1,9 @@
+using CardHouse;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
@@ -20,14 +23,25 @@ public class CardManager : MonoBehaviour
     ChipManager chipManager;
 
     [SerializeField] int winCount = 0;
+    [SerializeField] TextMeshProUGUI winCountText;
 
+    bool doubleScoreActive = false;
+    bool revealActive = false;
+    bool predictoActive = false;
+    bool immunityActive = false;
+    bool doubleChipActive = false;
 
+    public List<CardGroup> Slots;
+    public List<Sprite> Sprites;
+
+    public CardGroup GuessSlot;
 
     void Start()
     {
         Load();
         SetBotTopLayout();
         SetGateColor();
+
     }
 
     void Update()
@@ -42,6 +56,34 @@ public class CardManager : MonoBehaviour
         }
 
         PrintCardStates();
+
+        winCountText.text = winCount.ToString();
+    }
+
+    // Funcions para activar habilidades
+    public void ActivateDoubleScore()
+    {
+        doubleScoreActive = true;
+    }
+
+    public void ActivateReveal()
+    {
+        revealActive = true;
+    }
+
+    public void ActivatePredicto()
+    {
+        predictoActive = true;
+    }
+
+    public void ActivateImmunity()
+    {
+        immunityActive = true;
+    }
+
+    public void ActivateDoubleChip()
+    {
+        doubleChipActive = true;
     }
 
     public void CheckChipTopBotWithGate()
@@ -49,7 +91,8 @@ public class CardManager : MonoBehaviour
         // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
         if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
 
-        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
+            || chipManager.isRightChoice && (gateColor == rightLayoutColor))
         {
             chipManager.GainChips();
             SuccessRound();
@@ -89,8 +132,15 @@ public class CardManager : MonoBehaviour
 
     void ResetRound()
     {
+        if (immunityActive) // Inmunitat
+        {
+            immunityActive = false;
+            return;
+        }
+
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
         // Missatge Doubt era la opcio correcta
+        doubleScoreActive = false;
 
         if (chipManager.GetChips() <= 0)
         {
@@ -106,10 +156,21 @@ public class CardManager : MonoBehaviour
 
     void SuccessRound()
     {
-        Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
-        // Missatge Doubt era la opcio correcta
 
-        winCount++;
+        if (doubleScoreActive) // Doble puntuación
+        {
+            winCount += 2;
+            Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
+            doubleScoreActive = false;
+            // Missatge Doubt era la opcio correcta
+        }
+        else
+        {
+            winCount++;
+            Debug.Log("YOU WIN! " + gateColor.ToString() + " was the correct Option");
+            doubleScoreActive = false;
+            // Missatge Doubt era la opcio correcta
+        }
 
         if (winCount >= 5)
         {
@@ -144,6 +205,12 @@ public class CardManager : MonoBehaviour
         SetBotTopLayout();
         SetGateColor();
         //gate.SetActive(false);
+
+        doubleChipActive = false;
+        doubleScoreActive = false;
+        revealActive = false;
+        immunityActive = false;
+        predictoActive = false;
     }
 
     void SetGateColor()

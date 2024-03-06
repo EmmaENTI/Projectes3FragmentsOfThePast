@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a53ccdedd01be347bd21783467b4825, type: 3}
+  m_Name: TarotDeck
+  m_EditorClassIdentifier: 
+  CardBackArt: {fileID: 0}
+  CardCollection:
+  - {fileID: 11400000, guid: 7c102bfa2242d7b49b5865ae1586cf18, type: 2}
+  - {fileID: 11400000, guid: e9494988f905a43479ae971ac5275ead, type: 2}
+  - {fileID: 11400000, guid: b66e02ea38fe4b3439f650bc0cdca5c2, type: 2}
+  - {fileID: 11400000, guid: ecdc9dc77523b6e439bb661216b7deb9, type: 2}
