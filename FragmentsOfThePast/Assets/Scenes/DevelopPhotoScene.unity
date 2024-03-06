@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLaps: 0
-  totalLaps: 8
+  totalLaps: 3
 --- !u!68 &437355546
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentLaps: 0
-  totalLaps: 8
+  totalLaps: 3
 --- !u!1 &1374084444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +2115,6 @@ MonoBehaviour:
   isGoodVelocity: 0
   isCursorDragging: 0
   redContainerPosition: {x: 0, y: 0, z: 0}
-  grayContainerPosition: {x: 0, y: 0, z: 0}
   disableDrag: 0
   startDrying: 0
   checkpointManagers: []

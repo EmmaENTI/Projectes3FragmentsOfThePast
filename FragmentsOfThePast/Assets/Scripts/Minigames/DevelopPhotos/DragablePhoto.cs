@@ -17,7 +17,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     float angleOffset = 0;
 
     [SerializeField] Vector3 redContainerPosition;
-    [SerializeField] Vector3 grayContainerPosition;
+    Vector3 grayContainerPosition;
 
     bool hasCompletedRed = false;
     bool hasCompletedReveal = false;

@@ -9,7 +9,7 @@ public class CheckpointManager : MonoBehaviour
     int checkpointId = 0;
 
     public float currentLaps = 0;
-    public float totalLaps = 8;
+    public float totalLaps = 3;
 
     DragablePhoto photo;
 
