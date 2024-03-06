@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardTutorialScript : MonoBehaviour
 {
@@ -29,15 +30,32 @@ public class CardTutorialScript : MonoBehaviour
     //Sound 0
     [SerializeField] PlaySound playSound;
 
+    //Text to write
+    [SerializeField] string texToToWrite;
+
+    [SerializeField] private GameObject audioSourceGameObject;
+
+    [SerializeField] private GameObject tagGameObject;
+
+    [SerializeField] private Sprite luisPanelSprite;
+    [SerializeField] private Sprite normalPanelSprite;
+
+
+    [SerializeField] private Image textPanelImage;
 
     bool isFirstColor = true;
-
+    public string playerName;
 
 
 
 
     [SerializeField] private GameObject firstPanel;
 
+    private void Start()
+    {
+        audioSourceGameObject.SetActive(false);
+        playerName = PlayerPrefs.GetString("Player Name");
+    }
 
     private void Update()
     {
@@ -151,8 +169,58 @@ public class CardTutorialScript : MonoBehaviour
                 break;
 
             case 0:
-                //DialogueLine0();
+                DialogueLine0();
                 break;
         }
+    }
+
+    private void DialogueLine0()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = playerName + ", the game I chose…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine1()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Is a card game! Gambling is my guilty pleasure…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine2()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "My favorite thing in the damn world!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+    }
+
+    private void DialogueLine3()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Here I thought we would have some kind of strategy game… But okay, whatever you want, Luis.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = normalPanelSprite;
+    }
+
+    private void DialogueLine4()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "It goes like this…";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
     }
 }

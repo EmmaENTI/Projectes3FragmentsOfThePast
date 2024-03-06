@@ -3298,7 +3298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae0897e932cd384cbc77251aae71c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clip: {fileID: 8300000, guid: f844b6ad9ae63db49b3860a3e756269d, type: 3}
+  _clip: {fileID: 8300000, guid: 8baac42a8b92b7e459419179fb9202da, type: 3}
   _audioSource: {fileID: 0}
 --- !u!4 &1117280569
 Transform:
@@ -5660,6 +5660,7 @@ MonoBehaviour:
   dialogueLine: 0
   dialogueText: {fileID: 1387564791}
   playSound: {fileID: 0}
+  texToToWrite: 
   firstPanel: {fileID: 1380465591}
 --- !u!1 &2052700457
 GameObject:
