@@ -18,8 +18,6 @@ public class ChipManager : MonoBehaviour
 
     private void Start()
     {
-        chipCounterText = transform.parent.GetChild(6).GetComponentInChildren<TMP_Text>();
-        UpdateUIChipCounter();
     }
 
     public void LoseChips()
@@ -27,14 +25,12 @@ public class ChipManager : MonoBehaviour
         chipCount -= 1 + (chipCount/2 * doubtFailedMultiplier);
         doubtFailedMultiplier = 0;
         DestroyChip();
-        UpdateUIChipCounter();
     }
 
     public void GainChips()
     {
         chipCount += 2;
         DestroyChip();
-        UpdateUIChipCounter();
     }
 
     public int GetChips()
@@ -55,8 +51,6 @@ public class ChipManager : MonoBehaviour
         isRightChoice = false;
         doubtFailedMultiplier = 0;
 
-        UpdateUIChipCounter();
-
         DestroyChip();
     }
 
@@ -68,18 +62,12 @@ public class ChipManager : MonoBehaviour
         }
     }
 
-    public void UpdateUIChipCounter()
-    {
-        chipCounterText.text = chipCount.ToString();
-    }
-
     public void RecollectChip()
     {
         if (transform.childCount != 0)
         {
             Destroy(transform.GetChild(0).gameObject);
             chipCount++;
-            UpdateUIChipCounter();
         }
     }
 }
