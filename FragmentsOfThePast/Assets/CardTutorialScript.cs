@@ -221,23 +221,43 @@ public class CardTutorialScript : MonoBehaviour
                 break;
 
             case 11:
-                DialogueLine9();
+                DialogueLine8part2();
                 break;
 
             case 12:
-                DialogueLine10();
+                DialogueLine9();
                 break;
 
             case 13:
-                DialogueLine11();
+                DialogueLine9part2();
                 break;
 
             case 14:
-                DialogueLine12();
+                DialogueLine10();
                 break;
 
             case 15:
+                DialogueLine11();
+                break;
+
+            case 16:
+                DialogueLine12();
+                break;
+
+            case 17:
+                DialogueLine12part2();
+                break;
+
+            case 18:
                 DialogueLine13();
+                break;
+
+            case 19:
+                DialogueLine14();
+                break;
+
+            case 20:
+                DialogueLine15();
                 break;
         }
     }
@@ -354,9 +374,6 @@ public class CardTutorialScript : MonoBehaviour
 
     private void DialogueLine8()
     {
-        //ROHE
-        //(Apareix el botó de Play i fa una demostracio del joc sense aposta (apretes play i es revela la carta i tot normal pero sense aposta)
-
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "The point of the game is to bet on the card you think will match the mysterious one!";
@@ -366,11 +383,22 @@ public class CardTutorialScript : MonoBehaviour
         textPanelImage.sprite = luisPanelSprite;
     }
 
-    private void DialogueLine9()
+    private void DialogueLine8part2()
     {
         //ROHE
-        //(Apareixen les fitxes)
+        //(Apareix el botó de Play i fa una demostracio del joc sense aposta (apretes play i es revela la carta i tot normal pero sense aposta)
 
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "The point of the game is to bet on the card you think will match the mysterious one!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine9()
+    { 
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "How do you bet? Simply grab one of the tokens and place it on the card you think is the correct one!";
@@ -379,6 +407,21 @@ public class CardTutorialScript : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
     }
+
+    private void DialogueLine9part2()
+    {
+        //ROHE
+        //(Apareixen les fitxes)
+
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
 
     private void DialogueLine10()
     {
@@ -404,15 +447,26 @@ public class CardTutorialScript : MonoBehaviour
 
     private void DialogueLine12()
     {
-        //ROHE
-        //(Apareix el boto de doubt)
-
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "In that case, use Doubt… If you guessed correctly and none match, you win!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine12part2()
+    {
+        //ROHE
+        //(Apareix el boto de doubt)
+
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
         textPanelImage.sprite = luisPanelSprite;
     }
 
@@ -425,12 +479,16 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+
     }
 
     private void DialogueLine14()
     {
         answerButtonsPanel.SetActive(true);
         dialogueTextPanel.SetActive(false);
+
+
+        playerIsAnswering = true;
     }
 
     public void YesFunctionButton()
