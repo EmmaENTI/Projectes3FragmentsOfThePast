@@ -403,10 +403,11 @@ public class CardTutorialScript : MonoBehaviour
     {
         //ROHE
         //(Apareix el botó de Play i fa una demostracio del joc sense aposta (apretes play i es revela la carta i tot normal pero sense aposta)
+        initialTabletopGameObjects[0].SetActive(true);
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
-        texToToWrite = "The point of the game is to bet on the card you think will match the mysterious one!";
+        texToToWrite = "";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(false);
@@ -428,6 +429,8 @@ public class CardTutorialScript : MonoBehaviour
     {
         //ROHE
         //(Apareixen les fitxes)
+        initialTabletopGameObjects[2].SetActive(true);
+        initialTabletopGameObjects[3].SetActive(true);
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
@@ -476,6 +479,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         //ROHE
         //(Apareix el boto de doubt)
+        initialTabletopGameObjects[1].SetActive(true);
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
