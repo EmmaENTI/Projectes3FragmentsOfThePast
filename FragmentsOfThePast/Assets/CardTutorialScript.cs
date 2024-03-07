@@ -33,6 +33,9 @@ public class CardTutorialScript : MonoBehaviour
     //Sound 0
     [SerializeField] PlaySound playSound;
 
+    //Sound 1
+    [SerializeField] PlaySound playSound1;
+
     //Text to write
     [SerializeField] string texToToWrite;
 
@@ -42,6 +45,9 @@ public class CardTutorialScript : MonoBehaviour
 
     [SerializeField] private Sprite luisPanelSprite;
     [SerializeField] private Sprite normalPanelSprite;
+
+    [SerializeField] private Sprite luisTagSprite;
+    [SerializeField] private Sprite playerTagSprite;
 
 
     [SerializeField] private Image textPanelImage;
@@ -64,6 +70,8 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] SpreadManager tutorialSystem;
     [SerializeField] SpreadManager system;
     [SerializeField] SpreadManager playerSystem;
+
+    private bool luisText;
 
     private void Start()
     {
@@ -167,8 +175,16 @@ public class CardTutorialScript : MonoBehaviour
 
                 if (printIndex % 3 == 0 && textContent.Substring(0, printIndex) != "")
                 {
+                    if(!luisText)
+                    {
+                        playSound1.playEffect();
+                    }
 
-                    playSound.playEffect();
+                    else if(luisText)
+                    {
+                        playSound.playEffect();
+                    }
+
 
                 }
                 yield return new WaitForSeconds(0.04f);
@@ -283,6 +299,8 @@ public class CardTutorialScript : MonoBehaviour
         texToToWrite = playerName + ", the game I chose…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
     }
 
     private void DialogueLine1()
@@ -292,6 +310,7 @@ public class CardTutorialScript : MonoBehaviour
         texToToWrite = "Is a card game! Gambling is my guilty pleasure…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        luisText = true;
     }
 
     private void DialogueLine2()
@@ -301,6 +320,7 @@ public class CardTutorialScript : MonoBehaviour
         texToToWrite = "My favorite thing in the damn world!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
+        luisText = true;
     }
 
     private void DialogueLine3()
@@ -311,8 +331,9 @@ public class CardTutorialScript : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        tagGameObject.SetActive(false);
         textPanelImage.sprite = normalPanelSprite;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
     }
 
     private void DialogueLine4()
@@ -324,6 +345,8 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
     }
 
     private void DialogueLine5()
@@ -335,6 +358,7 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine5part2()
@@ -367,6 +391,8 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
     }
 
     private void DialogueLine6part2()
@@ -394,6 +420,7 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine8()
@@ -405,6 +432,7 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine8part2()
@@ -431,6 +459,8 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+
     }
 
     private void DialogueLine9part2()
@@ -459,6 +489,7 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine11()
@@ -468,8 +499,10 @@ public class CardTutorialScript : MonoBehaviour
         texToToWrite = "What if I think none of the cards match with the unrevealed one?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
-        tagGameObject.SetActive(false);
+
         textPanelImage.sprite = normalPanelSprite;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
     }
 
     private void DialogueLine12()
@@ -481,6 +514,8 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
     }
 
     private void DialogueLine12part2()
@@ -507,6 +542,7 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
 
     }
 
