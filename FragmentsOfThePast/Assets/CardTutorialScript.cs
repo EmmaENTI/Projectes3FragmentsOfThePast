@@ -412,7 +412,6 @@ public class CardTutorialScript : MonoBehaviour
         //ROHE
         //(Apareix el botó de Play i fa una demostracio del joc sense aposta (apretes play i es revela la carta i tot normal pero sense aposta)
         initialTabletopGameObjects[0].SetActive(true);
-        initialTabletopGameObjects[5].SetActive(true);
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
@@ -540,6 +539,11 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         tagGameObject.SetActive(false);
         answerButtonsPanel.SetActive(false);
+
+        for (int i = 0; i < initialTabletopGameObjects.Length; i++)
+        {
+            initialTabletopGameObjects[i].SetActive(true);
+        }
 
         StartMonte();
     }
