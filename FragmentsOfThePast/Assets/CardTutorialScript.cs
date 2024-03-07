@@ -46,6 +46,8 @@ public class CardTutorialScript : MonoBehaviour
     bool isFirstColor = true;
     public string playerName;
 
+    [SerializeField] private GameObject[] initialTabletopGameObjects;
+
 
 
 
@@ -55,6 +57,11 @@ public class CardTutorialScript : MonoBehaviour
     {
         audioSourceGameObject.SetActive(false);
         playerName = PlayerPrefs.GetString("Player Name");
+
+        for(int i = 0; i < initialTabletopGameObjects.Length; i++)
+        {
+           initialTabletopGameObjects[i].SetActive(false);  
+        }
     }
 
     private void Update()
@@ -171,6 +178,22 @@ public class CardTutorialScript : MonoBehaviour
             case 0:
                 DialogueLine0();
                 break;
+
+            case 1:
+                DialogueLine1();
+                break;
+
+            case 2:
+                DialogueLine2();
+                break;
+
+            case 3:
+                DialogueLine3();
+                break;
+
+            case 4:
+                DialogueLine4();
+                break;
         }
     }
 
@@ -223,4 +246,124 @@ public class CardTutorialScript : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = luisPanelSprite;
     }
+
+    private void DialogueLine5()
+    {
+        //ROHE
+        //(Es mostren les 4 cartes per pantalla)
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "We have 4 types of cards.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine6()
+    {
+        //ROHE
+        //(Es barallen les cartes i es posen sobre la taula (rollo 2 visibles i 1 boca abaix com quan dones a deal)
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "I deal 3 different types of cards, as you can see, two visible and one unrevealed.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine7()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "The ones you see will always be different between them.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine8()
+    {
+        //ROHE
+        //(Apareix el botó de Play i fa una demostracio del joc sense aposta (apretes play i es revela la carta i tot normal pero sense aposta)
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "The point of the game is to bet on the card you think will match the mysterious one!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine9()
+    {
+        //ROHE
+        //(Apareixen les fitxes)
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "How do you bet? Simply grab one of the tokens and place it on the card you think is the correct one!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine10()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Simple isn’t it?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine11()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "What if I think none of the cards match with the unrevealed one?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
+        textPanelImage.sprite = normalPanelSprite;
+    }
+
+    private void DialogueLine12()
+    {
+        //ROHE
+        //(Apareix el boto de doubt)
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "In that case, use Doubt… If you guessed correctly and none match, you win!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine13()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Ready " + playerName + "?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine14()
+    {
+
+    }
 }
+
