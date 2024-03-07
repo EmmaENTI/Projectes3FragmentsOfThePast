@@ -1,6 +1,9 @@
+using CardHouse;
+using CardHouse.SampleGames.Tarot;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -53,6 +56,12 @@ public class CardTutorialScript : MonoBehaviour
 
     [SerializeField] private GameObject firstPanel;
 
+    [SerializeField] GameObject playerDeck;
+    [SerializeField] GameObject deck;
+
+    [SerializeField] GameObject tutorialDeck;
+
+    [SerializeField] SpreadManager tutorialSystem;
 
     private void Start()
     {
@@ -327,6 +336,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         //ROHE
         //(Es mostren les 4 cartes per pantalla)
+        tutorialSystem.DealNextCard();
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
@@ -351,6 +361,8 @@ public class CardTutorialScript : MonoBehaviour
     {
         //ROHE
         //(Es barallen les cartes i es posen sobre la taula (rollo 2 visibles i 1 boca abaix com quan dones a deal)
+        tutorialSystem.ShuffleCardsBackIn();
+        tutorialDeck.SetActive(false);
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
