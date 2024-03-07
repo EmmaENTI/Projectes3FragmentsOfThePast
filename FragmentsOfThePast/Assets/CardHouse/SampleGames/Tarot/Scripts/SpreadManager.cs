@@ -18,7 +18,7 @@ namespace CardHouse.SampleGames.Tarot
 
         int CurrentSpreadIndex = 0;
 
-        void Start()
+        public void Start()
         {
             foreach (var spread in Spreads)
             {

@@ -69,8 +69,11 @@ public class CardTutorialScript : MonoBehaviour
     {
         audioSourceGameObject.SetActive(false);
         playerName = PlayerPrefs.GetString("Player Name");
+        //playerSystem.gameObject.SetActive(false);
+        //system.gameObject.SetActive(false);
+        //deck.gameObject.SetActive(false);
 
-        for(int i = 0; i < initialTabletopGameObjects.Length; i++)
+        for (int i = 0; i < initialTabletopGameObjects.Length; i++)
         {
            initialTabletopGameObjects[i].SetActive(false);  
         }
@@ -350,8 +353,13 @@ public class CardTutorialScript : MonoBehaviour
     }
     private void DialogueLine6()
     {
+        //playerSystem.gameObject.SetActive(true);
+        //system.gameObject.SetActive(true);
+        //deck.gameObject.SetActive(true);
+
         tutorialSystem.ShuffleCardsBackIn();
         tutorialDeck.SetActive(false);
+
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "I deal 3 different types of cards, as you can see, two visible and one unrevealed.";
