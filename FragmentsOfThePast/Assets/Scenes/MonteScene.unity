@@ -4232,8 +4232,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PLAY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
+  m_sharedMaterial: {fileID: 1105900647883263988, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4257,8 +4257,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5083,8 +5083,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: DOUBT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
+  m_sharedMaterial: {fileID: 1105900647883263988, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5108,8 +5108,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6174,7 +6174,6 @@ GameObject:
   - component: {fileID: 1884866493}
   - component: {fileID: 1884866492}
   - component: {fileID: 1884866494}
-  - component: {fileID: 1884866495}
   - component: {fileID: 1884866496}
   m_Layer: 5
   m_Name: ChipsDrawer
@@ -6286,18 +6285,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 160, y: 160}
   m_EdgeRadius: 0
---- !u!114 &1884866495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884866489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a913a6998d817b64e9d5620152f21015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1884866496
 MonoBehaviour:
   m_ObjectHideFlags: 0
