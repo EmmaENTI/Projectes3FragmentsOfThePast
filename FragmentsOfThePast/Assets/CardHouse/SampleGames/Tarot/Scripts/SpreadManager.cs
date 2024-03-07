@@ -18,6 +18,8 @@ namespace CardHouse.SampleGames.Tarot
 
         int CurrentSpreadIndex = 0;
 
+        [SerializeField] PlaySound playSound;
+
         public void Start()
         {
             foreach (var spread in Spreads)
@@ -91,6 +93,8 @@ namespace CardHouse.SampleGames.Tarot
             {
                 Deck.Shuffle();
             }
+
+            playSound.playEffect();
         }
 
         public void DealNextCard()
@@ -102,6 +106,8 @@ namespace CardHouse.SampleGames.Tarot
             Spreads[CurrentSpreadIndex].FillNext(Deck.MountedCards[Deck.MountedCards.Count - 1]);
             Spreads[CurrentSpreadIndex].FillNext(Deck.MountedCards[Deck.MountedCards.Count - 1]);
             Spreads[CurrentSpreadIndex].FillNext(Deck.MountedCards[Deck.MountedCards.Count - 1]);
+
+            playSound.playEffect();
         }
     }
 }

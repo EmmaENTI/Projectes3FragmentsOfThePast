@@ -36,6 +36,9 @@ public class CardManager : MonoBehaviour
 
     public CardGroup GuessSlot;
 
+    [SerializeField] PlaySound playSound;
+    [SerializeField] PlaySound playSound1;
+
     void Start()
     {
         Load();
@@ -138,6 +141,7 @@ public class CardManager : MonoBehaviour
             return;
         }
 
+        playSound1.playEffect();
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
         // Missatge Doubt era la opcio correcta
         doubleScoreActive = false;
@@ -156,6 +160,8 @@ public class CardManager : MonoBehaviour
 
     void SuccessRound()
     {
+
+        playSound.playEffect();
 
         if (doubleScoreActive) // Doble puntuación
         {
