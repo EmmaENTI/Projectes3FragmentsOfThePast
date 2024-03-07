@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Espiritista de la Conquista
+  m_text: 'The Conqueror
 
 '
   m_isRightToLeft: 0
@@ -2398,7 +2398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Espiritista del Orden
+  m_text: 'The Guardian
 
 '
   m_isRightToLeft: 0
@@ -20790,6 +20790,7 @@ MonoBehaviour:
   darkerFilterPanel: {fileID: 447596965}
   whoAreYou: {fileID: 8300000, guid: b9bca2d0e2717b74e8275293a75185e0, type: 3}
   breachClip: {fileID: 8300000, guid: b82b9afbf4c7fbe48a22ad3d6c8dd3d4, type: 3}
+  lobbyClip: {fileID: 8300000, guid: 35fb8b5bf44bb0f44a326aab87fb0f22, type: 3}
   audioSourceGameObject: {fileID: 852453418}
   saveIcon: {fileID: 1353169053}
   tagGameObject: {fileID: 953620930}

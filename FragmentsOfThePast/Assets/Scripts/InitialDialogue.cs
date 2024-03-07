@@ -216,12 +216,14 @@ public class InitialDialogue : MonoBehaviour
 
     public AudioClip whoAreYou;
     public AudioClip breachClip;
+    public AudioClip lobbyClip;
     public GameObject audioSourceGameObject;
 
     private bool canChangeSound1 = true;
     private bool canChangeSound2 = true;
     private bool canChangeSound3 = true;
     private bool canChangeSound4 = true;
+    private bool canChangeSound5 = true;
 
     private bool canPlayEffectSound = true;
 
@@ -1483,8 +1485,6 @@ public class InitialDialogue : MonoBehaviour
 
         textAnimator.SetBool("TextAnim1", true);
 
-
-
     }
 
     private void DialogueLine39()
@@ -1505,6 +1505,16 @@ public class InitialDialogue : MonoBehaviour
         animator.SetBool("canPlayAnim7", true);
         streetPanelImage.sprite = luisNewIllustrationImage;
         backgroundAnimator.SetBool("BackgroundMovement3", true);
+
+        if (canChangeSound5)
+        {
+            audioSourceGameObject.SetActive(false);
+            canChangeSound5 = false;
+        }
+
+        audioSource.clip = lobbyClip;
+
+        audioSourceGameObject.SetActive(true);
     }
 
     private void DialogueLine41()
