@@ -48,10 +48,11 @@ public class CardTutorialScript : MonoBehaviour
 
     [SerializeField] private GameObject[] initialTabletopGameObjects;
 
-
+    [SerializeField] private GameObject answerButtonsPanel;
 
 
     [SerializeField] private GameObject firstPanel;
+
 
     private void Start()
     {
@@ -194,6 +195,50 @@ public class CardTutorialScript : MonoBehaviour
             case 4:
                 DialogueLine4();
                 break;
+
+            case 5:
+                DialogueLine5();
+                break;
+
+            case 6:
+                DialogueLine5part2();
+                break;
+
+            case 7:
+                DialogueLine6();
+                break;
+
+            case 8:
+                DialogueLine6part2();
+                break;
+
+            case 9:
+                DialogueLine7();
+                break;
+
+            case 10:
+                DialogueLine8();
+                break;
+
+            case 11:
+                DialogueLine9();
+                break;
+
+            case 12:
+                DialogueLine10();
+                break;
+
+            case 13:
+                DialogueLine11();
+                break;
+
+            case 14:
+                DialogueLine12();
+                break;
+
+            case 15:
+                DialogueLine13();
+                break;
         }
     }
 
@@ -249,9 +294,6 @@ public class CardTutorialScript : MonoBehaviour
 
     private void DialogueLine5()
     {
-        //ROHE
-        //(Es mostren les 4 cartes per pantalla)
-
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "We have 4 types of cards.";
@@ -261,17 +303,41 @@ public class CardTutorialScript : MonoBehaviour
         textPanelImage.sprite = luisPanelSprite;
     }
 
-    private void DialogueLine6()
+    private void DialogueLine5part2()
     {
         //ROHE
-        //(Es barallen les cartes i es posen sobre la taula (rollo 2 visibles i 1 boca abaix com quan dones a deal)
+        //(Es mostren les 4 cartes per pantalla)
 
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+    private void DialogueLine6()
+    {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "I deal 3 different types of cards, as you can see, two visible and one unrevealed.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine6part2()
+    {
+        //ROHE
+        //(Es barallen les cartes i es posen sobre la taula (rollo 2 visibles i 1 boca abaix com quan dones a deal)
+
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
         textPanelImage.sprite = luisPanelSprite;
     }
 
@@ -362,6 +428,36 @@ public class CardTutorialScript : MonoBehaviour
     }
 
     private void DialogueLine14()
+    {
+        answerButtonsPanel.SetActive(true);
+        dialogueTextPanel.SetActive(false);
+    }
+
+    public void YesFunctionButton()
+    {
+        dialogueLine++;
+    }
+
+    public void NoFunctionButton()
+    {
+        dialogueLine = 4;
+        answerButtonsPanel.SetActive(false);
+    }
+
+    private void DialogueLine15()
+    {
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
+        answerButtonsPanel.SetActive(false);
+
+        StartMonte();
+    }
+
+    public void StartMonte()
     {
 
     }
