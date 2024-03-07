@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
   m_PrefabInstance: {fileID: 408102948}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978132182}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 318865ee4312095429feca847343d7fc, type: 3}
@@ -1602,11 +1602,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509765185}
   m_CullTransparentMesh: 1
---- !u!1 &514483204 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-  m_PrefabInstance: {fileID: 631786855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &572856536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +1846,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
   m_PrefabInstance: {fileID: 631786855}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514483204}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 318865ee4312095429feca847343d7fc, type: 3}
@@ -2127,7 +2122,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
   m_PrefabInstance: {fileID: 638784044}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1171823340}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 318865ee4312095429feca847343d7fc, type: 3}
@@ -2407,9 +2402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a615af43418fed459903cf24dae876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpreadLabel: {fileID: 1472273364}
+  SpreadLabel: {fileID: 0}
   Deck: {fileID: 1407938034}
-  SpreadOrderLabelPrefab: {fileID: 1817337767517961030, guid: 9be9953db29da2b43bbce2551ac4c128, type: 3}
   Key: {fileID: 1176076646}
   Spreads:
   - Name: 3 Card
@@ -2553,9 +2547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a615af43418fed459903cf24dae876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpreadLabel: {fileID: 1472273364}
+  SpreadLabel: {fileID: 0}
   Deck: {fileID: 1407938034}
-  SpreadOrderLabelPrefab: {fileID: 1817337767517961030, guid: 9be9953db29da2b43bbce2551ac4c128, type: 3}
   Key: {fileID: 1176076646}
   Spreads:
   - Name: 3 Card
@@ -3402,7 +3395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263739, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Name
@@ -3431,7 +3424,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2639291437605776710, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     - {fileID: 8040610219115676363, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2842246232433208794, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+    - {fileID: 224513812576709892, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
@@ -3768,11 +3763,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165647582}
   m_CullTransparentMesh: 1
---- !u!1 &1171823340 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-  m_PrefabInstance: {fileID: 638784044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1176076645
 GameObject:
   m_ObjectHideFlags: 0
@@ -5079,7 +5069,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spread
+  m_Text: 
 --- !u!1 &1473360122
 GameObject:
   m_ObjectHideFlags: 0
@@ -5312,9 +5302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a615af43418fed459903cf24dae876c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpreadLabel: {fileID: 1472273364}
+  SpreadLabel: {fileID: 0}
   Deck: {fileID: 1310833465}
-  SpreadOrderLabelPrefab: {fileID: 1817337767517961030, guid: 9be9953db29da2b43bbce2551ac4c128, type: 3}
   Key: {fileID: 1176076646}
   Spreads:
   - Name: 3 Card
@@ -5627,7 +5616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263739, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Name
@@ -5656,7 +5645,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2639291437605776710, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     - {fileID: 8040610219115676363, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2842246232433208794, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+    - {fileID: 224513812576709892, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
@@ -5762,7 +5753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263739, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Name
@@ -5791,7 +5782,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2639291437605776710, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     - {fileID: 8040610219115676363, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2842246232433208794, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+    - {fileID: 224513812576709892, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
@@ -6210,7 +6203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263739, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: m_Name
@@ -6239,7 +6232,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2639291437605776710, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     - {fileID: 8040610219115676363, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2842246232433208794, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+    - {fileID: 224513812576709892, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
@@ -6258,11 +6253,6 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2842246233212263736, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
   m_PrefabInstance: {fileID: 1938306091}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1978132182 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2842246233212263741, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
-  m_PrefabInstance: {fileID: 408102948}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1987287925
 GameObject:
@@ -6357,19 +6347,14 @@ MonoBehaviour:
   playerName: 
   initialTabletopGameObjects:
   - {fileID: 1809967135}
-  - {fileID: 1496902904}
-  - {fileID: 1171823340}
-  - {fileID: 514483204}
-  - {fileID: 1978132182}
-  - {fileID: 895860599}
-  - {fileID: 853435129}
-  - {fileID: 1869646532}
   answerButtonsPanel: {fileID: 1895455260}
   firstPanel: {fileID: 1380465591}
   playerDeck: {fileID: 1869646532}
   deck: {fileID: 895860599}
   tutorialDeck: {fileID: 292715309}
   tutorialSystem: {fileID: 897155173}
+  system: {fileID: 1496902905}
+  playerSystem: {fileID: 853435130}
 --- !u!1 &2052700457
 GameObject:
   m_ObjectHideFlags: 0

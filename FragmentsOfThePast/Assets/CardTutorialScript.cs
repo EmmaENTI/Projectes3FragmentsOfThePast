@@ -62,6 +62,8 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] GameObject tutorialDeck;
 
     [SerializeField] SpreadManager tutorialSystem;
+    [SerializeField] SpreadManager system;
+    [SerializeField] SpreadManager playerSystem;
 
     private void Start()
     {
@@ -348,6 +350,8 @@ public class CardTutorialScript : MonoBehaviour
     }
     private void DialogueLine6()
     {
+        tutorialSystem.ShuffleCardsBackIn();
+        tutorialDeck.SetActive(false);
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "I deal 3 different types of cards, as you can see, two visible and one unrevealed.";
@@ -361,8 +365,8 @@ public class CardTutorialScript : MonoBehaviour
     {
         //ROHE
         //(Es barallen les cartes i es posen sobre la taula (rollo 2 visibles i 1 boca abaix com quan dones a deal)
-        tutorialSystem.ShuffleCardsBackIn();
-        tutorialDeck.SetActive(false);
+        system.DealNextCard();
+        playerSystem.DealNextCard();
 
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;

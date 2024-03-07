@@ -10,7 +10,7 @@ namespace CardHouse.SampleGames.Tarot
     {
         public Text SpreadLabel;
         public CardGroup Deck;
-        public GameObject SpreadOrderLabelPrefab;
+        //public GameObject SpreadOrderLabelPrefab;
         public TMP_Text Key;
 
         public List<TarotSpread> Spreads;
@@ -61,17 +61,17 @@ namespace CardHouse.SampleGames.Tarot
             {
                 CurrentSpreadIndex += Spreads.Count;
             }
-            SpreadLabel.text = Spreads[CurrentSpreadIndex].Name;
-            Key.text = Spreads[CurrentSpreadIndex].Instructions;
+            //SpreadLabel.text = Spreads[CurrentSpreadIndex].Name;
+            //Key.text = Spreads[CurrentSpreadIndex].Instructions;
 
             CurrentSpreadLabels.Clear();
             for (var i = 0; i < Spreads[CurrentSpreadIndex].Slots.Count; i++)
             {
                 var slot = Spreads[CurrentSpreadIndex].Slots[i];
                 slot.gameObject.SetActive(true);
-                var label = Instantiate(SpreadOrderLabelPrefab, slot.transform);
-                label.GetComponent<TMP_Text>().text = (i + 1).ToString();
-                CurrentSpreadLabels.Add(label);
+                //var label = Instantiate(SpreadOrderLabelPrefab, slot.transform);
+                //label.GetComponent<TMP_Text>().text = (i + 1).ToString();
+                //CurrentSpreadLabels.Add(label);
             }
         }
 
