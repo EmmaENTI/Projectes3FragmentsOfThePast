@@ -2697,6 +2697,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &319273036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 319273038}
+  - component: {fileID: 319273037}
+  m_Layer: 0
+  m_Name: ---AUDIO MANAGER--- (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &319273037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319273036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae0897e932cd384cbc77251aae71c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: 8baac42a8b92b7e459419179fb9202da, type: 3}
+  _audioSource: {fileID: 852453419}
+--- !u!4 &319273038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319273036}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 884.68115, y: 737.5702, z: -7.217406}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321920015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,7 +4840,7 @@ Transform:
   - {fileID: 2029194231}
   - {fileID: 1956413972}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &494034403
 GameObject:
@@ -10064,7 +10110,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038530293
 GameObject:
@@ -10397,7 +10443,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1085885028
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11857,7 +11903,7 @@ Transform:
   - {fileID: 852453420}
   - {fileID: 1903370591}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1315408058
 GameObject:
@@ -14872,7 +14918,7 @@ RectTransform:
   - {fileID: 1385383213}
   - {fileID: 1353169054}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20698,6 +20744,7 @@ MonoBehaviour:
   playSound9: {fileID: 615311176}
   playSound10: {fileID: 627937918}
   playSound11: {fileID: 1079084569}
+  playSound12: {fileID: 319273037}
   audioSource: {fileID: 852453419}
   effectSourceGameObject: {fileID: 1903370590}
   hoodedManMusic: {fileID: 8300000, guid: e0a4025c7e9a4cc488426c16a5551e74, type: 3}
@@ -20707,8 +20754,9 @@ MonoBehaviour:
   textPanelImage: {fileID: 1758461481}
   TextPanelDarkSprite: {fileID: 21300000, guid: b1bea1e466f215b4b9f421b344da273b, type: 3}
   TextPanelNormalSprite: {fileID: 21300000, guid: f39656e3ad8aa124fb24f7c948d63f19, type: 3}
-  LuisPanelSprite: {fileID: 21300000, guid: db6c347c7cb1ed743b5b8dd91f12ae9c, type: 3}
+  LuisPanelSprite: {fileID: 21300000, guid: 81d4f5ba08fcb0b47988f914fcdfd330, type: 3}
   LuisTagSprite: {fileID: 21300000, guid: db6c347c7cb1ed743b5b8dd91f12ae9c, type: 3}
+  PlayerTagSprite: {fileID: 21300000, guid: 7aad6c030fa7fab48af055092fd83b86, type: 3}
   hoodedManImage: {fileID: 1472916146}
   marinaSadImage: {fileID: 732092754}
   marinaSurpriseImage: {fileID: 2089422434}
