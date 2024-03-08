@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CardTutorialScript : MonoBehaviour
 {
@@ -71,6 +72,9 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] SpreadManager system;
     [SerializeField] SpreadManager playerSystem;
 
+    [SerializeField] private string spiritName;
+    [SerializeField] private TextMeshProUGUI spiritNameText;
+
     private bool luisText;
 
     private void Start()
@@ -89,6 +93,13 @@ public class CardTutorialScript : MonoBehaviour
 
     private void Update()
     {
+        spiritNameText.text = spiritName;
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SceneManager.LoadScene("DevelopPhotoScene");
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             //If can Start Dialogue
@@ -301,6 +312,8 @@ public class CardTutorialScript : MonoBehaviour
         canTalk = false;
         luisText = true;
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
     }
 
     private void DialogueLine1()
@@ -334,6 +347,8 @@ public class CardTutorialScript : MonoBehaviour
         textPanelImage.sprite = normalPanelSprite;
         luisText = false;
         tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        spiritName = playerName;
     }
 
     private void DialogueLine4()
@@ -347,6 +362,7 @@ public class CardTutorialScript : MonoBehaviour
         textPanelImage.sprite = luisPanelSprite;
         luisText = true;
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+        spiritName = "Luis";
     }
 
     private void DialogueLine5()
@@ -503,6 +519,9 @@ public class CardTutorialScript : MonoBehaviour
         textPanelImage.sprite = normalPanelSprite;
         luisText = false;
         tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        spiritName = playerName;
+
     }
 
     private void DialogueLine12()
@@ -516,6 +535,8 @@ public class CardTutorialScript : MonoBehaviour
         textPanelImage.sprite = luisPanelSprite;
         luisText = true;
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
     }
 
     private void DialogueLine12part2()

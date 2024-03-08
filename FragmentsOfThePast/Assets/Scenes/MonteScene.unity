@@ -6819,6 +6819,8 @@ MonoBehaviour:
   tutorialSystem: {fileID: 897155173}
   system: {fileID: 1496902905}
   playerSystem: {fileID: 853435130}
+  spiritName: 
+  spiritNameText: {fileID: 1165647584}
 --- !u!1 &2052700457
 GameObject:
   m_ObjectHideFlags: 0
