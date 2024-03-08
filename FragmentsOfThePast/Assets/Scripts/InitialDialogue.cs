@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using System;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class InitialDialogue : MonoBehaviour
 {
@@ -113,6 +114,9 @@ public class InitialDialogue : MonoBehaviour
     //Sound 11
     [SerializeField] PlaySound playSound11;
 
+    //Sound 12
+    [SerializeField] PlaySound playSound12;
+
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
@@ -148,6 +152,9 @@ public class InitialDialogue : MonoBehaviour
 
     //Luis Tag Sprite
     [SerializeField] Sprite LuisTagSprite;
+
+    //Player Tag Sprite
+    [SerializeField] Sprite PlayerTagSprite;
 
     //Hooded Man Image
     [SerializeField] GameObject hoodedManImage;
@@ -209,17 +216,20 @@ public class InitialDialogue : MonoBehaviour
 
     public AudioClip whoAreYou;
     public AudioClip breachClip;
+    public AudioClip lobbyClip;
     public GameObject audioSourceGameObject;
 
     private bool canChangeSound1 = true;
     private bool canChangeSound2 = true;
     private bool canChangeSound3 = true;
     private bool canChangeSound4 = true;
+    private bool canChangeSound5 = true;
 
     private bool canPlayEffectSound = true;
 
     bool isWhoAreYou;
     bool hoodedManText;
+    bool luisText;
 
 
     private int benignityPoints;
@@ -356,7 +366,7 @@ public class InitialDialogue : MonoBehaviour
 
                 if(printIndex%3 == 0 && textContent.Substring(0, printIndex) != "")
                 {
-                    if(!isWhoAreYou && !hoodedManText)
+                    if(!isWhoAreYou && !hoodedManText && !luisText)
                     {
                         playSound.playEffect();
                     }
@@ -369,6 +379,11 @@ public class InitialDialogue : MonoBehaviour
                     else if(hoodedManText)
                     {
                         playSound7.playEffect();
+                    }
+
+                    else if(luisText)
+                    {
+                        playSound12.playEffect();
                     }
                 }
                 yield return new WaitForSeconds(0.04f);
@@ -649,11 +664,11 @@ public class InitialDialogue : MonoBehaviour
                            case 65:
                                DialogueLine65();
                                break;
-                /*
+                
                            case 66:
                                DialogueLine66();
                                break;
-
+                /*
                            case 67:
                                DialogueLine67();
                                break;*/
@@ -1470,8 +1485,6 @@ public class InitialDialogue : MonoBehaviour
 
         textAnimator.SetBool("TextAnim1", true);
 
-
-
     }
 
     private void DialogueLine39()
@@ -1492,6 +1505,16 @@ public class InitialDialogue : MonoBehaviour
         animator.SetBool("canPlayAnim7", true);
         streetPanelImage.sprite = luisNewIllustrationImage;
         backgroundAnimator.SetBool("BackgroundMovement3", true);
+
+        if (canChangeSound5)
+        {
+            audioSourceGameObject.SetActive(false);
+            canChangeSound5 = false;
+        }
+
+        audioSource.clip = lobbyClip;
+
+        audioSourceGameObject.SetActive(true);
     }
 
     private void DialogueLine41()
@@ -1522,6 +1545,7 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite;
         tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
         tagGameObject.SetActive(true);
+        luisText = true;
     }
 
     private void DialogueLine44()
@@ -1533,6 +1557,7 @@ public class InitialDialogue : MonoBehaviour
 
         tagGameObject.SetActive(false);
         textPanelImage.sprite = TextPanelNormalSprite;
+        luisText = false;
     }
 
 
@@ -1592,6 +1617,7 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine47()
@@ -1604,6 +1630,7 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine48()
@@ -1616,6 +1643,7 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         spiritNameText.text = "???";
         textPanelImage.sprite = LuisPanelSprite;
+        luisText = true;
     }
 
     private void DialogueLine49()
@@ -1634,6 +1662,9 @@ public class InitialDialogue : MonoBehaviour
         lobbyContenderGameObject.SetActive(true);
         luisHappyImage.SetActive(true);
 
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine50()
@@ -1647,6 +1678,10 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
         luisHappyImage.SetActive(true);
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     IEnumerator SaveIconTimer()
@@ -1663,8 +1698,12 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        tagGameObject.SetActive(false);
+        spiritNameText.text = gameManager_Script.playerName;
+        tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
+        //Tag Player
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
 
     private void DialogueLine52()
@@ -1674,8 +1713,12 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        tagGameObject.SetActive(false);
+        spiritNameText.text = gameManager_Script.playerName;
         textPanelImage.sprite = TextPanelNormalSprite;
+
+        //Tag Player
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
 
     private void DialogueLine53()
@@ -1690,6 +1733,10 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite;
         luisHappyImage.SetActive(false);
         luisSurpriseImage.SetActive(true);
+
+        //Tag Luis
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine54()
@@ -1760,6 +1807,11 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite;
         luisAngryImage.SetActive(true);
         luisSurpriseImage.SetActive(false);
+
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine56()
@@ -1775,6 +1827,10 @@ public class InitialDialogue : MonoBehaviour
         luisAngryImage.SetActive(false);
         luisHappyImage.SetActive(true);
 
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine57()
@@ -1787,6 +1843,10 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
+
+        //Player Tag
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
 
     private void DialogueLine58()
@@ -1800,6 +1860,10 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(true);
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine59()
@@ -1812,6 +1876,10 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
+
+        //Player Tag
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
 
     private void DialogueLine60()
@@ -1824,6 +1892,10 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
+
+        //Player Tag
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
 
     private void DialogueLine61()
@@ -1836,6 +1908,10 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
+
+        //Player Tag
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
     private void DialogueLine62()
     {
@@ -1847,6 +1923,10 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.SetActive(true);
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = gameManager_Script.playerName;
+
+        //Player Tag
+        tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
+        luisText = false;
     }
 
     private void DialogueLine63()
@@ -1861,6 +1941,10 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(false);
         luisHappyImage.SetActive(true);
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine64()
@@ -1875,6 +1959,10 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite; ;
         luisHappyImage.SetActive(false);
         luisSurpriseImage.SetActive(true);
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
     }
 
     private void DialogueLine65()
@@ -1889,6 +1977,23 @@ public class InitialDialogue : MonoBehaviour
         textPanelImage.sprite = LuisPanelSprite;
         luisSurpriseImage.SetActive(false);
         luisHappyImage.SetActive(true);
+
+        //Luis Tag
+        tagGameObject.GetComponent<Image>().sprite = LuisTagSprite;
+        luisText = true;
+    }
+
+    private void DialogueLine66()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+
+        tagGameObject.SetActive(true);
+        dialogueTextPanel.SetActive(false);
+        textPanelImage.sprite = TextPanelNormalSprite;
+        SceneManager.LoadScene("MonteScene");
     }
 
     /*
