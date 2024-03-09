@@ -100,7 +100,7 @@ public class CardTutorialScript : MonoBehaviour
             SceneManager.LoadScene("DevelopPhotoScene");
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             //If can Start Dialogue
             if (canStartDialogue == true)

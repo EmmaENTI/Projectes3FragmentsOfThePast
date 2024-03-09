@@ -16,6 +16,15 @@ public class StartGame_Script_MainMenu : MonoBehaviour
 
     [SerializeField] LoadManager loadManager;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) && playerNamePanel.activeSelf)
+        {
+            Debug.Log("A");
+            StartGame();
+        }
+    }
+
     public void StartButton()
     { 
         playerNamePanel.SetActive(true);

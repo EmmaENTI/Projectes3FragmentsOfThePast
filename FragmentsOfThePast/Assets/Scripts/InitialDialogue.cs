@@ -245,6 +245,11 @@ public class InitialDialogue : MonoBehaviour
 
     [SerializeField] private GameObject lobbyContenderGameObject;
 
+
+    private float timer;
+    private bool canActivateTimer;
+    [SerializeField] private GameObject clickAlertGameObject;
+
     private void Start()
     {
 
@@ -272,7 +277,7 @@ public class InitialDialogue : MonoBehaviour
     {
         //GoTo68();
         //If Left CLick
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
         {
             //If can Start Dialogue
             if (canStartDialogue == true)
@@ -309,6 +314,10 @@ public class InitialDialogue : MonoBehaviour
                     hasEndedTyping = true;
                 }
             }
+
+            canActivateTimer = false;
+            timer = 0;
+            clickAlertGameObject.SetActive(false);
         }
 
         //If canTalk
@@ -324,7 +333,16 @@ public class InitialDialogue : MonoBehaviour
             DialogueLine38();
         }
 
-       
+        if (canActivateTimer)
+        {
+            timer += Time.deltaTime;
+        }
+
+        if(timer > 6)
+        {
+            clickAlertGameObject.SetActive(true);
+        }
+
     }
 
     //Logica del TypeText (passar el text amb el que vols escriure al string textContent de la funcio)
@@ -702,6 +720,8 @@ public class InitialDialogue : MonoBehaviour
         streetPanelImage.sprite = flowerSpaceBackgroundSprite;
         textPanelImage.sprite = TextPanelNormalSprite;
         spiritNameText.text = " ";
+
+        canActivateTimer = true;
     }
 
     private void DialogueLine1()
@@ -717,6 +737,7 @@ public class InitialDialogue : MonoBehaviour
         streetPanelImage.sprite = intro1Background;
         cameraShake.Shake();
         playSound10.playEffect();
+
     }
 
     private void DialogueLine2()
@@ -1474,6 +1495,9 @@ public class InitialDialogue : MonoBehaviour
 
         effectSourceGameObject.SetActive(false);
         effectSourceGameObject.SetActive(true);
+
+
+        canActivateTimer = true;
     }
 
     private void DialogueLine38()
@@ -1515,6 +1539,7 @@ public class InitialDialogue : MonoBehaviour
         audioSource.clip = lobbyClip;
 
         audioSourceGameObject.SetActive(true);
+
     }
 
     private void DialogueLine41()
