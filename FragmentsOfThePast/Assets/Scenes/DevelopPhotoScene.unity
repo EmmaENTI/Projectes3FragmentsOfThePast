@@ -274,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLaps: 0
   totalLaps: 3
+  photo: {fileID: 1187868655}
 --- !u!68 &61731478
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1635,7 +1636,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -2835,6 +2836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLaps: 0
   totalLaps: 3
+  photo: {fileID: 1187868655}
 --- !u!68 &1904570757
 EdgeCollider2D:
   m_ObjectHideFlags: 0
