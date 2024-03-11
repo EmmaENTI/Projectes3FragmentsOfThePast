@@ -4324,7 +4324,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: DEAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
   m_sharedMaterial: {fileID: 1105900647883263988, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
@@ -6075,8 +6075,6 @@ Transform:
   - {fileID: 481759095}
   - {fileID: 1131569839}
   - {fileID: 213546547}
-  - {fileID: 1884866490}
-  - {fileID: 1321256502}
   - {fileID: 636338723}
   - {fileID: 461498339}
   - {fileID: 2103233722}
@@ -6084,6 +6082,8 @@ Transform:
   - {fileID: 1176076648}
   - {fileID: 1472273362}
   - {fileID: 150404718}
+  - {fileID: 1884866490}
+  - {fileID: 1321256502}
   m_Father: {fileID: 457921701}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6774,6 +6774,8 @@ MonoBehaviour:
   GuessSlot: {fileID: 675604366}
   playSound: {fileID: 1970199549}
   playSound1: {fileID: 1109325526}
+  spPlayer: {fileID: 853435130}
+  sp: {fileID: 1496902905}
 --- !u!114 &1987287928
 MonoBehaviour:
   m_ObjectHideFlags: 0

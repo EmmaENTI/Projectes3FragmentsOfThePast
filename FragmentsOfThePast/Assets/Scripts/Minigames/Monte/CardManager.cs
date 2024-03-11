@@ -1,4 +1,5 @@
 using CardHouse;
+using CardHouse.SampleGames.Tarot;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -38,6 +39,9 @@ public class CardManager : MonoBehaviour
 
     [SerializeField] PlaySound playSound;
     [SerializeField] PlaySound playSound1;
+
+    [SerializeField] SpreadManager spPlayer;
+    [SerializeField] SpreadManager sp;
 
     void Start()
     {
@@ -104,6 +108,7 @@ public class CardManager : MonoBehaviour
         {
             ResetRound();
         }
+
     }
 
     public void DoubtButton()

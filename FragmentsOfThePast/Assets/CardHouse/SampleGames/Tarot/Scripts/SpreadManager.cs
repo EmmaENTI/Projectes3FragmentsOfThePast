@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -20,6 +21,8 @@ namespace CardHouse.SampleGames.Tarot
 
         [SerializeField] PlaySound playSound;
 
+        public bool dealing;
+
         public void Start()
         {
             foreach (var spread in Spreads)
@@ -31,7 +34,16 @@ namespace CardHouse.SampleGames.Tarot
             }
             AdjustSpread(0);
 
-            DealNextCard();
+            dealing= false;
+        }
+
+        private void Update()
+        {
+            if (dealing == true)
+            {
+                dealing = false;
+                StartCoroutine(Waiter());
+            }
         }
 
         public void NextSpread()
@@ -79,6 +91,7 @@ namespace CardHouse.SampleGames.Tarot
 
         public void ShuffleCardsBackIn()
         {
+            
             var areCardsInPlay = false;
             foreach (var slot in Spreads[CurrentSpreadIndex].Slots)
             {
@@ -86,15 +99,23 @@ namespace CardHouse.SampleGames.Tarot
                 {
                     Deck.Mount(card);
                     areCardsInPlay = true;
+                    dealing = true;
                 }
             }
 
             if (areCardsInPlay)
             {
                 Deck.Shuffle();
+                dealing = true;
             }
 
             playSound.playEffect();
+        }
+
+        IEnumerator Waiter()
+        {
+            yield return new WaitForSeconds(3.0f);
+            DealNextCard();
         }
 
         public void DealNextCard()
