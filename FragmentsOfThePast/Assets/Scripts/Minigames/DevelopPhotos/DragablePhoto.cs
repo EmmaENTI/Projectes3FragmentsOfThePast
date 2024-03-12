@@ -159,7 +159,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             currentCheckpointManager = checkpointManagers[1];
             outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, 0);
-            StartCoroutine(LerpTo(grayContainerPosition, false));
+            StartCoroutine(LerpTo(new(446, -33, 0), true));
             hasCompletedRed = true;
         }
         else
