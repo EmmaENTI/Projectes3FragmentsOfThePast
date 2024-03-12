@@ -227,7 +227,7 @@ public class CardManager : MonoBehaviour
             // Missatge Doubt era la opcio correcta
         }
 
-        if (winCount >= 5)
+        if (winCount >= 3)
         {
             Debug.Log("YOU WON, GG");
 
