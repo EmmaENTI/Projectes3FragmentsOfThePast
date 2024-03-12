@@ -44,6 +44,13 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     [SerializeField] GameObject memoryPhoto;
 
+    [SerializeField] Sprite[] photoSprites;
+    Image finalPhoto;
+
+    ZoomInImage memoryPhotoZoom;
+
+    [SerializeField] GameObject[] clips;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -52,6 +59,8 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         grayContainerPosition = GameObject.Find("PurpleContainer").transform.position;
 
         outlinePhoto = transform.GetChild(0).GetComponent<Image>();
+        finalPhoto = transform.GetChild(1).GetComponent<Image>();
+        memoryPhotoZoom = memoryPhoto.GetComponent<ZoomInImage>();
 
         transition = GetComponentInParent<ScreenTransition>();
 
@@ -161,6 +170,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             audioManager.SetMusicVolume(0, 0.4f);
             StartCoroutine(transition.TransitionToDryingRope());
             hasCompletedReveal = true;
+            ChangeSprite(1);
         }
     }
 
@@ -184,13 +194,21 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         timeElapsedDry += Time.deltaTime;
 
+        finalPhoto.color = new Color(finalPhoto.color.r, finalPhoto.color.g, finalPhoto.color.b, timeElapsedDry/timeToDry);
+
         if (timeElapsedDry >= timeToDry)
         {
+
             Debug.Log("AA");
             startDrying = false;
             audioManager.PlaySFX(1);
 
+            ClipToggle(false);
             memoryPhoto.SetActive(true);
+            memoryPhotoZoom.StartZoomIn();
+
+            gameObject.SetActive(false);
+            
         }
     }
 
@@ -229,6 +247,20 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             yield return new WaitForSeconds(2);
         }
     }
+
+    void ChangeSprite(int index)
+    {
+        GetComponent<Image>().sprite = photoSprites[index];
+    }
+
+    void ClipToggle(bool value)
+    {
+        for (int i = 0; i < clips.Length;i++)
+        {
+            clips[i].SetActive(value);
+        }
+    }
+
 
     #region Mouse Events
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)

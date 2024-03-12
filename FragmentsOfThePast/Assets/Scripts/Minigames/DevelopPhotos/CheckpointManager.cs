@@ -15,8 +15,6 @@ public class CheckpointManager : MonoBehaviour
 
     void Start()
     {
-        //photo = GameObject.FindGameObjectWithTag("Photo").GetComponent<DragablePhoto>();
-
         currentCheckpoint = new();
 
         for (int i = 0; i < 8; i++)

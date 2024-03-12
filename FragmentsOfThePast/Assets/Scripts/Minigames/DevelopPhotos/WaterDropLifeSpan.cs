@@ -13,17 +13,16 @@ public class WaterDropLifeSpan : MonoBehaviour
     void Update()
     {
         if (!startTimer) { return; }
-        Debug.Log("Starting?");
 
         timerToStart += Time.deltaTime;
 
         if (startTime < timerToStart)
         {
-            Debug.Log("Dropping");
             transform.position += Vector3.down * Time.deltaTime*1500.0f;
         }
         else if (timerToStart > 10.0f)
         {
+            startTimer = false;
             Destroy(gameObject);
         }
     }
