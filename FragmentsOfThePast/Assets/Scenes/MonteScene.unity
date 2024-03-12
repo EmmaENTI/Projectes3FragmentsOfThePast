@@ -2620,6 +2620,7 @@ MonoBehaviour:
     Slots:
     - {fileID: 675604366}
   playSound: {fileID: 1539629551}
+  dealing: 0
 --- !u!114 &853435131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,6 +2881,7 @@ MonoBehaviour:
     - {fileID: 1103360856}
     - {fileID: 1713801324}
   playSound: {fileID: 1539629551}
+  dealing: 0
 --- !u!114 &897155174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5585,6 +5587,7 @@ MonoBehaviour:
     - {fileID: 631786856}
     - {fileID: 408102949}
   playSound: {fileID: 1539629551}
+  dealing: 0
 --- !u!114 &1496902906
 MonoBehaviour:
   m_ObjectHideFlags: 0

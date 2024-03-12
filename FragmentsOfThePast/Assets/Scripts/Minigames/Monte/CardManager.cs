@@ -43,6 +43,8 @@ public class CardManager : MonoBehaviour
     [SerializeField] SpreadManager spPlayer;
     [SerializeField] SpreadManager sp;
 
+    TarotCard GuessCard;
+
     void Start()
     {
         Load();
@@ -93,13 +95,26 @@ public class CardManager : MonoBehaviour
         doubleChipActive = true;
     }
 
-    public void CheckChipTopBotWithGate()
+    public void CheckChipTopBotWithGate(TarotCard card1, TarotCard card2)
     {
         // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
-        if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
+        //if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
 
-        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
-            || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        //if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
+        //    || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        //{
+        //    chipManager.GainChips();
+        //    SuccessRound();
+        //}
+        //else
+        //{
+        //    ResetRound();
+        //}
+
+        if (card1 == GuessCard || card2 == GuessCard)
+            return;
+
+        if(card1.MySprite == GuessCard.MySprite || card2.MySprite == GuessCard.MySprite)
         {
             chipManager.GainChips();
             SuccessRound();
