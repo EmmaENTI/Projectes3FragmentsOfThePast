@@ -465,7 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2363,6 +2363,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e450abcf826ea96459175eb29472d669, type: 3}
   - {fileID: 21300000, guid: 1df80cc750412074f95b61e15c0b695e, type: 3}
   - {fileID: 21300000, guid: 7aeaa08a51dcf584c94ee753cdea5166, type: 3}
+  clips:
+  - {fileID: 2022370192}
+  - {fileID: 625222602}
 --- !u!114 &1187868656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3663,7 +3666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1920, y: -60}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128260970
