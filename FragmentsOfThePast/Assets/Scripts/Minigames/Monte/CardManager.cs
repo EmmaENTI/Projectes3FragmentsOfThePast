@@ -45,12 +45,16 @@ public class CardManager : MonoBehaviour
 
     TarotCard GuessCard;
 
+    [SerializeField] GameObject chip;
+    private Vector3 initialPosition;
+
     void Start()
     {
         Load();
         SetBotTopLayout();
         SetGateColor();
 
+        initialPosition = chip.transform.position;
     }
 
     void Update()
@@ -126,6 +130,7 @@ public class CardManager : MonoBehaviour
             ResetRound();
         }
 
+        chip.transform.position = initialPosition;
     }
 
     public void DoubtButton()
@@ -145,6 +150,7 @@ public class CardManager : MonoBehaviour
             SetGateColor();
         }
 
+        chip.transform.position = initialPosition;
     }
 
     void PrintCardStates()

@@ -3666,6 +3666,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -5806,6 +5810,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -5942,6 +5950,10 @@ PrefabInstance:
       propertyPath: sp
       value: 
       objectReference: {fileID: 1496902905}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
@@ -6561,6 +6573,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -6779,6 +6795,7 @@ MonoBehaviour:
   playSound1: {fileID: 1109325526}
   spPlayer: {fileID: 853435130}
   sp: {fileID: 1496902905}
+  chip: {fileID: 1321256501}
 --- !u!114 &1987287928
 MonoBehaviour:
   m_ObjectHideFlags: 0
