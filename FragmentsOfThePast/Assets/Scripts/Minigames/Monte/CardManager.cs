@@ -112,7 +112,9 @@ public class CardManager : MonoBehaviour
         //}
 
         if (GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite == 
-            Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite ||
+            Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite 
+            && chipManager.isLeftChoice ||
+            chipManager.isRightChoice && 
             GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite ==
             Slots[1].MountedCards[0].GetComponent<TarotCard>().Image.sprite)
         {
