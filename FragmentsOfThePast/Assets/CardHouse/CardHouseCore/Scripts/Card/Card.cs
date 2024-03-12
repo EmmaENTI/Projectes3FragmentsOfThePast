@@ -26,7 +26,7 @@ namespace CardHouse
 
         public bool CanBeUpsideDown;
         [Range(0f, 1f)]
-        public float UpsideDownChance = 0.5f;
+        public float UpsideDownChance = 0f;
         public Transform RootToRotateWhenUpsideDown;
 
         public Homing FaceHoming;

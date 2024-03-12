@@ -1,4 +1,6 @@
+using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CardHouse
 {
@@ -13,6 +15,8 @@ namespace CardHouse
         public SpriteRenderer Image;
         [HideInInspector]
         public Sprite MySprite;
+
+        
 
         public ArcanaData ArcanaData { get; private set; }
         public Arcana ArcanaType { get { return ArcanaData?.Arcana == null ? Arcana.Minor : Arcana.Major; } }

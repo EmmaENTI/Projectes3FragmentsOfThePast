@@ -95,7 +95,7 @@ public class CardManager : MonoBehaviour
         doubleChipActive = true;
     }
 
-    public void CheckChipTopBotWithGate(TarotCard card1, TarotCard card2)
+    public void CheckChipTopBotWithGate()
     {
         // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
         //if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
@@ -111,10 +111,10 @@ public class CardManager : MonoBehaviour
         //    ResetRound();
         //}
 
-        if (card1 == GuessCard || card2 == GuessCard)
-            return;
-
-        if(card1.MySprite == GuessCard.MySprite || card2.MySprite == GuessCard.MySprite)
+        if (GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite == 
+            Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite ||
+            GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite ==
+            Slots[1].MountedCards[0].GetComponent<TarotCard>().Image.sprite)
         {
             chipManager.GainChips();
             SuccessRound();

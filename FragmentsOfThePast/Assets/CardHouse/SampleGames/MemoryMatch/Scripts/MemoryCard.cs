@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CardHouse.SampleGames.MemoryMatch
 {
@@ -7,6 +8,7 @@ namespace CardHouse.SampleGames.MemoryMatch
         public SpriteRenderer MySpriteRenderer;
         [HideInInspector]
         public Sprite MySprite;
+
 
         MemoryGame MyGame;
 
