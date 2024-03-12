@@ -138,9 +138,28 @@ public class CardManager : MonoBehaviour
         chipManager.RecollectChip();
 
         // Si doubt es correcte (Left i Right son diferents a la carta mostrada, no passa res)
-        if ((gateColor != leftLayoutColor) && (gateColor != rightLayoutColor))
+        //if ((gateColor != leftLayoutColor) && (gateColor != rightLayoutColor))
+        //{
+        //    SuccessRound();
+        //    Debug.Log("Doubted");
+        //}
+        //// Si alguna de les cartes es igual a la carta mostrada penalització
+        //else
+        //{
+        //    chipManager.SetDoubtMultiplier();
+        //    SetBotTopLayout();
+        //    SetGateColor();
+
+        //    Debug.Log("Doubted");
+        //}
+
+        if ((GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite !=
+            Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite) && 
+            (GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite !=
+            Slots[1].MountedCards[0].GetComponent<TarotCard>().Image.sprite))
         {
             SuccessRound();
+            Debug.Log("Doubted");
         }
         // Si alguna de les cartes es igual a la carta mostrada penalització
         else
@@ -148,6 +167,8 @@ public class CardManager : MonoBehaviour
             chipManager.SetDoubtMultiplier();
             SetBotTopLayout();
             SetGateColor();
+
+            Debug.Log("Doubted");
         }
 
         chip.transform.position = initialPosition;

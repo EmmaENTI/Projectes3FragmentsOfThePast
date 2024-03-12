@@ -513,14 +513,6 @@ namespace CardHouse
                 }
             }
 
-            foreach (var card in MountedCards)
-            {
-                if (card.CanBeUpsideDown)
-                {
-                    card.SetUpsideDown(UnityEngine.Random.Range(0f, 1f) < card.UpsideDownChance);
-                }
-            }
-
             Strategy.Apply(MountedCards, instaFlip: isInstant, seekerSets: seekerSetList);
         }
 
