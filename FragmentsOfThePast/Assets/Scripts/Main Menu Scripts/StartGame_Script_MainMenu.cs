@@ -16,6 +16,15 @@ public class StartGame_Script_MainMenu : MonoBehaviour
 
     [SerializeField] LoadManager loadManager;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return) && playerNamePanel.activeSelf)
+        {
+            Debug.Log("A");
+            StartGame();
+        }
+    }
+
     public void StartButton()
     { 
         playerNamePanel.SetActive(true);
@@ -64,10 +73,18 @@ public class StartGame_Script_MainMenu : MonoBehaviour
 
     public void LoadGame()
     {
-        soundManagerAudioSource.enabled = false;
-        SceneManager.LoadScene("GameScene");
-        loadManager.loadGame = true;
-        PlayerPrefs.SetInt("loadManager.loadGame", loadManager.loadGame ? 1 : 0);
+        if(!loadManager.loadGame)
+        {
+            StartButton();
+        }
+        else
+        {
+            soundManagerAudioSource.enabled = false;
+            SceneManager.LoadScene("GameScene");
+            loadManager.loadGame = true;
+            PlayerPrefs.SetInt("loadManager.loadGame", loadManager.loadGame ? 1 : 0);
+        }
+        
     }
 
     public void StartGameAnimPointerEnter()

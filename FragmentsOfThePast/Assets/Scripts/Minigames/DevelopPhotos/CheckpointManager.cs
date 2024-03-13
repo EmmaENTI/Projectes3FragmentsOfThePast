@@ -11,12 +11,10 @@ public class CheckpointManager : MonoBehaviour
     public float currentLaps = 0;
     public float totalLaps = 3;
 
-    DragablePhoto photo;
+    [SerializeField] DragablePhoto photo;
 
     void Start()
     {
-        photo = GameObject.FindGameObjectWithTag("Photo").GetComponent<DragablePhoto>();
-
         currentCheckpoint = new();
 
         for (int i = 0; i < 8; i++)

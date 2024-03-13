@@ -24,7 +24,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public bool disableDrag = false;
 
     public bool startDrying = false;
-    float timeToDry = 3;
+    float timeToDry = 8;
     float timeElapsedDry = 0;
 
     Image outlinePhoto;
@@ -34,6 +34,23 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [SerializeField] CheckpointManager[] checkpointManagers;
     CheckpointManager currentCheckpointManager;
 
+    AudioManagerMiki audioManager;
+    // SFX: 0 -> Cauldron To Cauldron, 1 -> Cauldron to Drying
+    // Music: 0 -> Cauldron Noises
+
+    [SerializeField] GameObject water1;
+    [SerializeField] GameObject water2;
+    [SerializeField] GameObject water3;
+
+    [SerializeField] GameObject memoryPhoto;
+
+    [SerializeField] Sprite[] photoSprites;
+    Image finalPhoto;
+
+    ZoomInImage memoryPhotoZoom;
+
+    [SerializeField] GameObject[] clips;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -42,11 +59,24 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         grayContainerPosition = GameObject.Find("PurpleContainer").transform.position;
 
         outlinePhoto = transform.GetChild(0).GetComponent<Image>();
+        finalPhoto = transform.GetChild(1).GetComponent<Image>();
+        memoryPhotoZoom = memoryPhoto.GetComponent<ZoomInImage>();
 
         transition = GetComponentInParent<ScreenTransition>();
 
         checkpointManagers = transform.parent.GetComponentsInChildren<CheckpointManager>();
         currentCheckpointManager = checkpointManagers[0];
+        audioManager = GameObject.Find("AudioManagerPhotos").GetComponent<AudioManagerMiki>();
+
+        audioManager.PlayMusic(0, true);
+
+        water1.GetComponent<WaterDropLifeSpan>().SetStartTime(2f);
+        water2.GetComponent<WaterDropLifeSpan>().SetStartTime(4f);
+        water3.GetComponent<WaterDropLifeSpan>().SetStartTime(6f);
+
+        water1.SetActive(false);
+        water2.SetActive(false);
+        water3.SetActive(false);
     }
 
     private void Update()
@@ -55,6 +85,8 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             transform.SetParent(transform.parent.parent.GetChild(1));
             StartCoroutine(LerpTo(new(-680, -400, 0), true));
+            StartCoroutine(audioManager.LerpMusicStereoPan(0, -0.8f, 2.0f));
+            audioManager.SetMusicVolume(0, 0.4f);
             StartCoroutine(transition.TransitionToDryingRope());
             hasCompletedReveal = true;
         }
@@ -77,6 +109,12 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         if (startDrying)
         {
+            water1.SetActive(true);
+            water2.SetActive(true);
+            water3.SetActive(true);
+            water1.GetComponent<WaterDropLifeSpan>().StartCounting();
+            water2.GetComponent<WaterDropLifeSpan>().StartCounting();
+            water3.GetComponent<WaterDropLifeSpan>().StartCounting();
             DryPhotos();
         }
     }
@@ -121,15 +159,18 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         {
             currentCheckpointManager = checkpointManagers[1];
             outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, 0);
-            StartCoroutine(LerpTo(grayContainerPosition, false));
+            StartCoroutine(LerpTo(new(446, -33, 0), true));
             hasCompletedRed = true;
         }
         else
         {
             transform.SetParent(transform.parent.parent.GetChild(1));
             StartCoroutine(LerpTo(new(-680, -400, 0), true));
+            StartCoroutine(audioManager.LerpMusicStereoPan(0, -0.66f, 2.0f));
+            audioManager.SetMusicVolume(0, 0.4f);
             StartCoroutine(transition.TransitionToDryingRope());
             hasCompletedReveal = true;
+            ChangeSprite(1);
         }
     }
 
@@ -153,12 +194,21 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         timeElapsedDry += Time.deltaTime;
 
+        finalPhoto.color = new Color(finalPhoto.color.r, finalPhoto.color.g, finalPhoto.color.b, timeElapsedDry/timeToDry);
+
         if (timeElapsedDry >= timeToDry)
         {
-            // Reveal Photo
-            // Zoom Photo
 
-            Debug.Log("SHOW FOTO");
+            Debug.Log("AA");
+            startDrying = false;
+            audioManager.PlaySFX(1);
+
+            ClipToggle(false);
+            memoryPhoto.SetActive(true);
+            memoryPhotoZoom.StartZoomIn();
+
+            gameObject.SetActive(false);
+            
         }
     }
 
@@ -172,12 +222,14 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             cursorPosition = newPosition;
             rb.velocity = Vector2.zero;
             transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 0);
+            audioManager.PlaySFX(0);
             while (transform.position != newPosition)
             {
                 transform.position = Vector3.MoveTowards(transform.position, newPosition, 5);
                 yield return null;
             }
             disableDrag = false;
+
         }
         else
         {
@@ -185,6 +237,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             cursorPosition = newPosition;
             rb.velocity = Vector2.zero;
             transform.rotation = Quaternion.Euler(transform.rotation.x, 0, 180);
+            audioManager.PlaySFX(1);
             while (transform.localPosition != newPosition)
             {
                 transform.localPosition = Vector3.MoveTowards(transform.localPosition, newPosition, 5);
@@ -194,6 +247,20 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             yield return new WaitForSeconds(2);
         }
     }
+
+    void ChangeSprite(int index)
+    {
+        GetComponent<Image>().sprite = photoSprites[index];
+    }
+
+    void ClipToggle(bool value)
+    {
+        for (int i = 0; i < clips.Length;i++)
+        {
+            clips[i].SetActive(value);
+        }
+    }
+
 
     #region Mouse Events
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)

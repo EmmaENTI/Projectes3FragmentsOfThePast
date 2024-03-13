@@ -9,8 +9,8 @@ public class ClipPhotosToRope : MonoBehaviour
 
     private void Start()
     {
-        frontClip = transform.parent.GetChild(0).gameObject;
-        backClip = transform.parent.GetChild(2).gameObject;
+        frontClip = transform.parent.GetChild(3).gameObject;
+        backClip = transform.parent.GetChild(5).gameObject;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -21,7 +21,11 @@ public class ClipPhotosToRope : MonoBehaviour
             collision.GetComponent<DragablePhoto>().disableDrag = true;
 
             if (collision.GetComponent<DragablePhoto>().isCursorDragging) return;
-            collision.GetComponent<DragablePhoto>().startDrying = true;
+
+            if (!frontClip.activeSelf) 
+            { 
+                collision.GetComponent<DragablePhoto>().startDrying = true;
+            }
 
             collision.transform.rotation = Quaternion.Euler(collision.transform.rotation.x, collision.transform.rotation.y, 180);
 
