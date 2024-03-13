@@ -43,10 +43,10 @@ public class CardManager : MonoBehaviour
     [SerializeField] SpreadManager spPlayer;
     [SerializeField] SpreadManager sp;
 
-    TarotCard GuessCard;
-
     [SerializeField] GameObject chip;
     private Vector3 initialPosition;
+
+    [SerializeField] CardTutorialScript tuto;
 
     void Start()
     {
@@ -101,19 +101,6 @@ public class CardManager : MonoBehaviour
 
     public void CheckChipTopBotWithGate()
     {
-        // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
-        //if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
-
-        //if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
-        //    || chipManager.isRightChoice && (gateColor == rightLayoutColor))
-        //{
-        //    chipManager.GainChips();
-        //    SuccessRound();
-        //}
-        //else
-        //{
-        //    ResetRound();
-        //}
 
         if (GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite == 
             Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite 
@@ -136,22 +123,6 @@ public class CardManager : MonoBehaviour
     public void DoubtButton()
     {
         chipManager.RecollectChip();
-
-        // Si doubt es correcte (Left i Right son diferents a la carta mostrada, no passa res)
-        //if ((gateColor != leftLayoutColor) && (gateColor != rightLayoutColor))
-        //{
-        //    SuccessRound();
-        //    Debug.Log("Doubted");
-        //}
-        //// Si alguna de les cartes es igual a la carta mostrada penalització
-        //else
-        //{
-        //    chipManager.SetDoubtMultiplier();
-        //    SetBotTopLayout();
-        //    SetGateColor();
-
-        //    Debug.Log("Doubted");
-        //}
 
         if ((GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite !=
             Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite) && 
@@ -191,6 +162,7 @@ public class CardManager : MonoBehaviour
         }
 
         playSound1.playEffect();
+        tuto.DialogueLineLoose();
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
         // Missatge Doubt era la opcio correcta
         doubleScoreActive = false;
@@ -211,6 +183,8 @@ public class CardManager : MonoBehaviour
     {
 
         playSound.playEffect();
+
+        tuto.DialogueLineWin();
 
         if (doubleScoreActive) // Doble puntuación
         {

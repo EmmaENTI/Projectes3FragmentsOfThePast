@@ -609,6 +609,75 @@ public class CardTutorialScript : MonoBehaviour
         StartMonte();
     }
 
+    public void DialogueLineWin()
+    {
+        // Array de frases
+        string[] frases = {
+            "Primera frase aleatoria",
+            "Segunda frase aleatoria",
+            "Tercera frase aleatoria",
+            "Cuarta frase aleatoria"
+        };
+
+        // Seleccionar una frase aleatoria del array
+        string fraseAleatoria = frases[UnityEngine.Random.Range(0, frases.Length)];
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = fraseAleatoria;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
+
+        StartCoroutine(EndLine());
+    }
+
+    public void DialogueLineLoose()
+    {
+        // Array de frases
+        string[] frases = {
+            "Primera frase aleatoria",
+            "Segunda frase aleatoria",
+            "Tercera frase aleatoria",
+            "Cuarta frase aleatoria"
+        };
+
+        // Seleccionar una frase aleatoria del array
+        string fraseAleatoria = frases[UnityEngine.Random.Range(0, frases.Length)];
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = fraseAleatoria;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
+
+        StartCoroutine(EndLine());
+    }
+
+    IEnumerator EndLine()
+    {
+
+        yield return new WaitForSeconds(2.0f);
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
+        answerButtonsPanel.SetActive(false);
+    }
+
     public void StartMonte()
     {
 

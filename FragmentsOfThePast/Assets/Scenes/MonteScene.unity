@@ -6591,6 +6591,7 @@ MonoBehaviour:
   spPlayer: {fileID: 853435130}
   sp: {fileID: 1496902905}
   chip: {fileID: 1321256501}
+  tuto: {fileID: 1987287928}
 --- !u!114 &1987287928
 MonoBehaviour:
   m_ObjectHideFlags: 0
