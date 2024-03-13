@@ -51,6 +51,8 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     [SerializeField] GameObject[] clips;
 
+    [SerializeField] OnboardCauldron onboardCauldron;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -77,6 +79,9 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         water1.SetActive(false);
         water2.SetActive(false);
         water3.SetActive(false);
+
+        onboardCauldron.SetAudioManager(audioManager);
+        onboardCauldron.ActivateOnboarding(true);
     }
 
     private void Update()
@@ -197,6 +202,12 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     void RevealPhotos()
     {
         if (hasCompletedReveal) { return; }
+
+        if (!hasCompletedRed && currentCheckpointManager.currentLaps >= 2)
+        {
+            onboardCauldron.ActivateOnboarding(false);
+            onboardCauldron.DeactivateOnboarding();
+        }
 
         //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-Mathf.Clamp(rb.velocity.y / 5 + angleOffset, -200, 50), Mathf.Atan(rb.velocity.y/rb.velocity.x) * Mathf.Rad2Deg, 0), 0.05f);
         
