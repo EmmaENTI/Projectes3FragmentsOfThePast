@@ -35,7 +35,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     CheckpointManager currentCheckpointManager;
 
     AudioManagerMiki audioManager;
-    // SFX: 0 -> Cauldron To Cauldron, 1 -> Cauldron to Drying
+    // SFX: 0 -> Cauldron To Cauldron, 1 -> Cauldron to Drying, 2-> Open Portal
     // Music: 0 -> Cauldron Noises
 
     [SerializeField] GameObject water1;
@@ -222,10 +222,12 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         if (timeElapsedDry >= timeToDry)
         {
             startDrying = false;
-            audioManager.PlaySFX(1);
+            audioManager.StopMusic();
+            audioManager.PlaySFX(2); // Portal Whoosh
 
             ClipToggle(false);
             memoryPhoto.SetActive(true);
+            audioManager.PlayMusicDelayed(1, 7.0f);
             memoryPhotoZoom.StartZoomIn();
 
             gameObject.SetActive(false);

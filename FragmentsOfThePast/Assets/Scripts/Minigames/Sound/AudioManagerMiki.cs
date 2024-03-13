@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManagerMiki : MonoBehaviour
@@ -27,6 +29,15 @@ public class AudioManagerMiki : MonoBehaviour
         musicList[currentMusic].Stop();
         currentMusic = -1;
     }
+
+    public void PlayMusicDelayed(int index, float delaySeconds)
+    {
+        if (currentMusic != -1) { StopMusic(); }
+
+        currentMusic = index;
+        musicList[currentMusic].PlayDelayed(delaySeconds);
+    }
+
     public void ToggleMusic(int index)
     {
         if (currentMusic == -1) { return; }
