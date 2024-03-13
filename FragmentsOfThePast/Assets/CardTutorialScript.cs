@@ -613,10 +613,10 @@ public class CardTutorialScript : MonoBehaviour
     {
         // Array de frases
         string[] frases = {
-            "Primera frase aleatoria",
-            "Segunda frase aleatoria",
-            "Tercera frase aleatoria",
-            "Cuarta frase aleatoria"
+            "Ha! What a lucky play!",
+            playerName + " is quite lucky, hm?",
+            "Look at that, " + playerName + " knows about gambling!",
+            "You should consider getting a lottery ticket after that one."
         };
 
         // Seleccionar una frase aleatoria del array
@@ -641,10 +641,10 @@ public class CardTutorialScript : MonoBehaviour
     {
         // Array de frases
         string[] frases = {
-            "Primera frase aleatoria",
-            "Segunda frase aleatoria",
-            "Tercera frase aleatoria",
-            "Cuarta frase aleatoria"
+            "Luck is not at your side, "+ playerName + "! But keep betting, you will win at some point!",
+            "Aw, unlucky!",
+            "Fortune is not on your side, what a pity!",
+            "No worries, just keep betting!"
         };
 
         // Seleccionar una frase aleatoria del array
@@ -668,7 +668,7 @@ public class CardTutorialScript : MonoBehaviour
     IEnumerator EndLine()
     {
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(3.0f);
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
         texToToWrite = "";
