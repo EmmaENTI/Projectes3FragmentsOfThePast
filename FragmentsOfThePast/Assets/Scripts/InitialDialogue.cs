@@ -117,6 +117,8 @@ public class InitialDialogue : MonoBehaviour
     //Sound 12
     [SerializeField] PlaySound playSound12;
 
+    //Sound 13
+    [SerializeField] PlaySound playSound13;
 
     //Audio Source
     [SerializeField] AudioSource audioSource;
@@ -1120,8 +1122,7 @@ public class InitialDialogue : MonoBehaviour
         cameraShake.Shake();
         hoodedManImage.SetActive(true);
 
-        //Hooded Man Sound
-        
+        playSound13.playEffect();
     }
 
     private void DialogueLine19()
