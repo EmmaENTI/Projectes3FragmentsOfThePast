@@ -19,6 +19,7 @@ namespace CardHouse
         public SeekerScriptable<Vector3> ShuffleStrategy;
 
         public List<Card> MountedCards = new List<Card>();
+        public List<TarotCard> TarotCards = new List<TarotCard>();
         CardGroupSettings Strategy;
 
         public UnityEvent OnGroupChanged;
@@ -86,8 +87,6 @@ namespace CardHouse
             Dragging.Instance.OnDrag += HandleDragStart;
             Dragging.Instance.OnDrop += HandleDragDrop;
             Dragging.Instance.PostDrop += HandlePostDrop;
-
-            
         }
 
         void OnDestroy()
@@ -120,7 +119,6 @@ namespace CardHouse
             {
                 MountedCards[i].SetFacing(true);
                 StartCoroutine(NextRound());
-                
             }
 
         }
@@ -512,14 +510,6 @@ namespace CardHouse
                 foreach (var card in MountedCards)
                 {
                     seekerSetList.Add(new SeekerSet { Card = card, Homing = ShuffleStrategy?.GetStrategy() ?? new ExponentialVector3Seeker() });
-                }
-            }
-
-            foreach (var card in MountedCards)
-            {
-                if (card.CanBeUpsideDown)
-                {
-                    card.SetUpsideDown(UnityEngine.Random.Range(0f, 1f) < card.UpsideDownChance);
                 }
             }
 

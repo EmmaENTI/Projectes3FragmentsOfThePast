@@ -2620,6 +2620,7 @@ MonoBehaviour:
     Slots:
     - {fileID: 675604366}
   playSound: {fileID: 1539629551}
+  dealing: 0
 --- !u!114 &853435131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,6 +2881,7 @@ MonoBehaviour:
     - {fileID: 1103360856}
     - {fileID: 1713801324}
   playSound: {fileID: 1539629551}
+  dealing: 0
 --- !u!114 &897155174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3664,6 +3666,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -4324,7 +4330,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PLAY
+  m_text: DEAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
   m_sharedMaterial: {fileID: 1105900647883263988, guid: 3d1af99645b82264d984bb45f46d1274, type: 2}
@@ -5585,6 +5591,7 @@ MonoBehaviour:
     - {fileID: 631786856}
     - {fileID: 408102949}
   playSound: {fileID: 1539629551}
+  dealing: 0
 --- !u!114 &1496902906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5803,6 +5810,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -5940,6 +5951,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -6075,8 +6090,6 @@ Transform:
   - {fileID: 481759095}
   - {fileID: 1131569839}
   - {fileID: 213546547}
-  - {fileID: 1884866490}
-  - {fileID: 1321256502}
   - {fileID: 636338723}
   - {fileID: 461498339}
   - {fileID: 2103233722}
@@ -6084,6 +6097,8 @@ Transform:
   - {fileID: 1176076648}
   - {fileID: 1472273362}
   - {fileID: 150404718}
+  - {fileID: 1884866490}
+  - {fileID: 1321256502}
   m_Father: {fileID: 457921701}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6558,6 +6573,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1496902905}
     - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
+      propertyPath: Hilight
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842246233212263734, guid: 15b2fa0757a34e74ebc87108fb6b9402, type: 3}
       propertyPath: spPlayer
       value: 
       objectReference: {fileID: 853435130}
@@ -6774,6 +6793,9 @@ MonoBehaviour:
   GuessSlot: {fileID: 675604366}
   playSound: {fileID: 1970199549}
   playSound1: {fileID: 1109325526}
+  spPlayer: {fileID: 853435130}
+  sp: {fileID: 1496902905}
+  chip: {fileID: 1321256501}
 --- !u!114 &1987287928
 MonoBehaviour:
   m_ObjectHideFlags: 0

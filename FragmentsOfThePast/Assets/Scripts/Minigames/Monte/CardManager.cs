@@ -1,4 +1,5 @@
 using CardHouse;
+using CardHouse.SampleGames.Tarot;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -39,12 +40,21 @@ public class CardManager : MonoBehaviour
     [SerializeField] PlaySound playSound;
     [SerializeField] PlaySound playSound1;
 
+    [SerializeField] SpreadManager spPlayer;
+    [SerializeField] SpreadManager sp;
+
+    TarotCard GuessCard;
+
+    [SerializeField] GameObject chip;
+    private Vector3 initialPosition;
+
     void Start()
     {
         Load();
         SetBotTopLayout();
         SetGateColor();
 
+        initialPosition = chip.transform.position;
     }
 
     void Update()
@@ -92,10 +102,25 @@ public class CardManager : MonoBehaviour
     public void CheckChipTopBotWithGate()
     {
         // Ficar Missatge dient que agafi una fitxa si no hi ha, si hi ha dirli que la fiqui en una de les cartes
-        if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
+        //if (!chipManager.isLeftChoice && !chipManager.isRightChoice) { return; }
 
-        if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
-            || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        //if ((gateColor == leftLayoutColor) && chipManager.isLeftChoice 
+        //    || chipManager.isRightChoice && (gateColor == rightLayoutColor))
+        //{
+        //    chipManager.GainChips();
+        //    SuccessRound();
+        //}
+        //else
+        //{
+        //    ResetRound();
+        //}
+
+        if (GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite == 
+            Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite 
+            && chipManager.isLeftChoice ||
+            chipManager.isRightChoice && 
+            GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite ==
+            Slots[1].MountedCards[0].GetComponent<TarotCard>().Image.sprite)
         {
             chipManager.GainChips();
             SuccessRound();
@@ -104,6 +129,8 @@ public class CardManager : MonoBehaviour
         {
             ResetRound();
         }
+
+        chip.transform.position = initialPosition;
     }
 
     public void DoubtButton()
@@ -111,9 +138,28 @@ public class CardManager : MonoBehaviour
         chipManager.RecollectChip();
 
         // Si doubt es correcte (Left i Right son diferents a la carta mostrada, no passa res)
-        if ((gateColor != leftLayoutColor) && (gateColor != rightLayoutColor))
+        //if ((gateColor != leftLayoutColor) && (gateColor != rightLayoutColor))
+        //{
+        //    SuccessRound();
+        //    Debug.Log("Doubted");
+        //}
+        //// Si alguna de les cartes es igual a la carta mostrada penalització
+        //else
+        //{
+        //    chipManager.SetDoubtMultiplier();
+        //    SetBotTopLayout();
+        //    SetGateColor();
+
+        //    Debug.Log("Doubted");
+        //}
+
+        if ((GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite !=
+            Slots[0].MountedCards[0].GetComponent<TarotCard>().Image.sprite) && 
+            (GuessSlot.MountedCards[0].GetComponent<TarotCard>().Image.sprite !=
+            Slots[1].MountedCards[0].GetComponent<TarotCard>().Image.sprite))
         {
             SuccessRound();
+            Debug.Log("Doubted");
         }
         // Si alguna de les cartes es igual a la carta mostrada penalització
         else
@@ -121,8 +167,11 @@ public class CardManager : MonoBehaviour
             chipManager.SetDoubtMultiplier();
             SetBotTopLayout();
             SetGateColor();
+
+            Debug.Log("Doubted");
         }
 
+        chip.transform.position = initialPosition;
     }
 
     void PrintCardStates()
@@ -178,7 +227,7 @@ public class CardManager : MonoBehaviour
             // Missatge Doubt era la opcio correcta
         }
 
-        if (winCount >= 5)
+        if (winCount >= 3)
         {
             Debug.Log("YOU WON, GG");
 
