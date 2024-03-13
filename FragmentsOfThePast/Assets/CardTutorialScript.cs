@@ -75,6 +75,8 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] private string spiritName;
     [SerializeField] private TextMeshProUGUI spiritNameText;
 
+    [SerializeField] private GameObject denier;
+
     private bool luisText;
 
     private void Start()
@@ -601,6 +603,8 @@ public class CardTutorialScript : MonoBehaviour
         {
             initialTabletopGameObjects[i].SetActive(true);
         }
+
+        denier.SetActive(false);
 
         StartMonte();
     }
