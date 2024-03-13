@@ -371,7 +371,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "We have 4 types of cards.";
+        texToToWrite = "We have four types of cards.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -404,7 +404,7 @@ public class CardTutorialScript : MonoBehaviour
 
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "I deal 3 different types of cards, as you can see, two visible and one unrevealed.";
+        texToToWrite = "I deal three different types of cards, as you can see, two visible and one unrevealed.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
