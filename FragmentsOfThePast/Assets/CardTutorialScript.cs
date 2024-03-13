@@ -668,7 +668,7 @@ public class CardTutorialScript : MonoBehaviour
     IEnumerator EndLine()
     {
 
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(5.0f);
         dialogueTextPanel.SetActive(false);
         hasEndedTyping = false;
         texToToWrite = "";
