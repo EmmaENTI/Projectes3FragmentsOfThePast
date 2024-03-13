@@ -136,12 +136,33 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     void CalculateOutlineAlpha()
     {
-        outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, currentCheckpointManager.currentLaps / currentCheckpointManager.totalLaps);
+        //outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, currentCheckpointManager.currentLaps / currentCheckpointManager.totalLaps);
+    }
+
+    void CalculateGrayScale()
+    {
+        gameObject.GetComponent<Image>().material.SetFloat("_EffectAmount", 1.0f - currentCheckpointManager.checkpointsDone / (currentCheckpointManager.totalLaps * 8.0f));
+    }
+
+    void CalculateTint()
+    {
+        if (!hasCompletedRed)
+        {
+            outlinePhoto.color = new Color(0.0627451f, 0.5137255f, 0.7098039f, currentCheckpointManager.checkpointsDone / (currentCheckpointManager.totalLaps * 4.0f));
+
+            gameObject.GetComponent<Image>().material.SetVector("_Color", new(0.0627451f, 0.5137255f, 0.7098039f, 1.0f));
+        }
+        else
+        {
+            outlinePhoto.color = new Color(0.6509804f, 0.3333333f, 0.8156863f, currentCheckpointManager.checkpointsDone / (currentCheckpointManager.totalLaps * 4.0f));
+
+            gameObject.GetComponent<Image>().material.SetVector("_Color", new(0.6509804f, 0.3333333f, 0.8156863f, 1.0f));
+        }
     }
 
     void CheckVelocity()
     {
-        if (rb.velocity.magnitude > 600 || rb.velocity.magnitude < 100)
+        if (rb.velocity.magnitude > 900 || rb.velocity.magnitude < 50)
         {
             isGoodVelocity = false;
             //Debug.Log("TOO FAST OR TOO SLOW");
@@ -157,7 +178,7 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         if (!hasCompletedRed)
         {
-            currentCheckpointManager = checkpointManagers[1];
+            currentCheckpointManager = checkpointManagers[1];   
             outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, 0);
             StartCoroutine(LerpTo(new(446, -33, 0), true));
             hasCompletedRed = true;
@@ -170,7 +191,6 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             audioManager.SetMusicVolume(0, 0.4f);
             StartCoroutine(transition.TransitionToDryingRope());
             hasCompletedReveal = true;
-            ChangeSprite(1);
         }
     }
 
@@ -182,6 +202,8 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(rb.velocity.y / 6, 0, Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg), 0.05f);
         FlipPhoto();
+        CalculateGrayScale();
+        CalculateTint();
         CalculateOutlineAlpha();
         CheckVelocity();
     }
@@ -194,12 +216,11 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         timeElapsedDry += Time.deltaTime;
 
+        outlinePhoto.color = new Color(outlinePhoto.color.r, outlinePhoto.color.g, outlinePhoto.color.b, 1.0f - timeElapsedDry / timeToDry);
         finalPhoto.color = new Color(finalPhoto.color.r, finalPhoto.color.g, finalPhoto.color.b, timeElapsedDry/timeToDry);
 
         if (timeElapsedDry >= timeToDry)
         {
-
-            Debug.Log("AA");
             startDrying = false;
             audioManager.PlaySFX(1);
 
@@ -208,7 +229,6 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
             memoryPhotoZoom.StartZoomIn();
 
             gameObject.SetActive(false);
-            
         }
     }
 
@@ -251,6 +271,11 @@ public class DragablePhoto : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     void ChangeSprite(int index)
     {
         GetComponent<Image>().sprite = photoSprites[index];
+    }
+
+    void ChangeColor()
+    {
+
     }
 
     void ClipToggle(bool value)

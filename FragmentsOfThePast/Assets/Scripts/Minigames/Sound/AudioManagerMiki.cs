@@ -8,34 +8,43 @@ public class AudioManagerMiki : MonoBehaviour
     [SerializeField] AudioSource[] musicList;
 
     float lerpTime = 0.0f;
+    int currentMusic = -1;
 
 
     #region MUSIC FUNCTIONS
 
     public void PlayMusic(int index, bool restart)
     {
-        if (restart) { StopMusic(index); }
+        if (restart || currentMusic != -1) { StopMusic(); }
 
-        musicList[index].Play();
+        currentMusic = index;
+        musicList[currentMusic].Play();
     }
-    public void StopMusic(int index)
+    public void StopMusic()
     {
-        musicList[index].Stop();
+        if (currentMusic == -1) { return; }
+
+        musicList[currentMusic].Stop();
+        currentMusic = -1;
     }
     public void ToggleMusic(int index)
     {
-        if (musicList[index].isPlaying)
+        if (currentMusic == -1) { return; }
+
+        if (musicList[currentMusic].isPlaying)
         {
-            StopMusic(index);
+            StopMusic();
         }
         else
         {
             PlayMusic(index, true);
         }
     }
-    public void SetMusicStereoPan(int index, float value)
+    public void SetMusicStereoPan( float value)
     {
-        musicList[index].panStereo = Mathf.Clamp(value, -1.0f, 1.0f);
+        if (currentMusic == -1) { return; }
+
+        musicList[currentMusic].panStereo = Mathf.Clamp(value, -1.0f, 1.0f);
     }
     public IEnumerator LerpMusicStereoPan(int index, float value, float maxTime)
     {
@@ -57,12 +66,16 @@ public class AudioManagerMiki : MonoBehaviour
 
         yield return null;
     }
-    public void ResetMusicStereoPan(int index)
+    public void ResetMusicStereoPan()
     {
-        musicList[index].panStereo = 0;
+        if (currentMusic == -1) { return; }
+
+        musicList[currentMusic].panStereo = 0;
     }
     public void SetMusicVolume(int index, float volume)
     {
+        if (currentMusic == -1) { return; }
+
         musicList[index].volume = Mathf.Clamp(volume, 0.0f, 1.0f);
     }
 
