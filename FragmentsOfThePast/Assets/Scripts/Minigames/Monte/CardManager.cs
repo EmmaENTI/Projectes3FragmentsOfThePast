@@ -39,6 +39,7 @@ public class CardManager : MonoBehaviour
 
     [SerializeField] PlaySound playSound;
     [SerializeField] PlaySound playSound1;
+    [SerializeField] PlaySound playSound2;
 
     [SerializeField] SpreadManager spPlayer;
     [SerializeField] SpreadManager sp;
@@ -281,5 +282,10 @@ public class CardManager : MonoBehaviour
         cardColor.Add(deck[3], Color.yellow);
 
         chipManager = transform.parent.GetComponentInChildren<ChipManager>();
+    }
+
+    public void ButtonSound()
+    {
+        playSound2.playEffect();
     }
 }
