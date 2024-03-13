@@ -1117,9 +1117,10 @@ public class InitialDialogue : MonoBehaviour
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
-        //streetPanelImage.sprite = intro2Background;
         cameraShake.Shake();
         hoodedManImage.SetActive(true);
+
+        //Hooded Man Sound
         
     }
 
