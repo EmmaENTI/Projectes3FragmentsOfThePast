@@ -56,6 +56,7 @@ public class OnboardCauldron : MonoBehaviour
 
     public void DeactivateOnboarding()
     {
+        ActivateOnboarding(false);
         gameObject.SetActive(false);
     }
 
