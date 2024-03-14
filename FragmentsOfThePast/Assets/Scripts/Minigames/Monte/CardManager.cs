@@ -204,7 +204,7 @@ public class CardManager : MonoBehaviour
 
         if (winCount >= 3)
         {
-            Debug.Log("YOU WON, GG");
+            /*Debug.Log("YOU WON, GG");
 
             // TEMP_START
             winCount = 0;
@@ -216,7 +216,7 @@ public class CardManager : MonoBehaviour
             //TEMP_END
 
             // Progress with the Story
-            return;
+            return;^*/
         }
 
         //gate.SetActive(true);
