@@ -89,6 +89,7 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] GameObject scoreContainer;
 
     [SerializeField] GameObject luisImage;
+    [SerializeField] GameObject luisSadImage;
 
     public bool cardSound = true;
 
@@ -741,7 +742,8 @@ public class CardTutorialScript : MonoBehaviour
         luisText = true;
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
 
-        luisImage.SetActive(true);
+        luisImage.SetActive(false);
+        luisSadImage.SetActive(true);
         spiritName = "Luis";
 
         //Cuadrado de player
@@ -793,10 +795,13 @@ public class CardTutorialScript : MonoBehaviour
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
 
         luisImage.SetActive(true);
+        luisSadImage.SetActive(false);
         spiritName = "Luis";
 
         //Cuadrado de player
         textPanelImage.sprite = luisPanelSprite;
+
+
     }
 
     private void DialogueLine23()
