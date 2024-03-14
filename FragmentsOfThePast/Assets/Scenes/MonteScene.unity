@@ -2926,6 +2926,8 @@ MonoBehaviour:
     - {fileID: 675604366}
   playSound: {fileID: 1539629551}
   dealing: 0
+  cm: {fileID: 1987287927}
+  cts: {fileID: 1987287928}
 --- !u!114 &853435131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3187,6 +3189,8 @@ MonoBehaviour:
     - {fileID: 1713801324}
   playSound: {fileID: 1539629551}
   dealing: 0
+  cm: {fileID: 1987287927}
+  cts: {fileID: 1987287928}
 --- !u!114 &897155174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5838,6 +5842,8 @@ MonoBehaviour:
     - {fileID: 408102949}
   playSound: {fileID: 1539629551}
   dealing: 0
+  cm: {fileID: 1987287927}
+  cts: {fileID: 1987287928}
 --- !u!114 &1496902906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7117,6 +7123,7 @@ MonoBehaviour:
   chip: {fileID: 1321256501}
   scoreContainer: {fileID: 1718488371}
   luisImage: {fileID: 1085302004}
+  cardSound: 1
 --- !u!1 &2052700457
 GameObject:
   m_ObjectHideFlags: 0

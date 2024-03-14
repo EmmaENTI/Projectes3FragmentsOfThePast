@@ -90,6 +90,8 @@ public class CardTutorialScript : MonoBehaviour
 
     [SerializeField] GameObject luisImage;
 
+    public bool cardSound = true;
+
     private void Start()
     {
         audioSourceGameObject.SetActive(false);
@@ -662,9 +664,18 @@ public class CardTutorialScript : MonoBehaviour
 
     private void DialogueLine16()
     {
-        animator.SetBool("TransitionToLobby", true);
+        StartCoroutine(WaitTrans());
+
         cardManager.winCount = 0;
 
+        cardSound = false;
+    }
+
+    IEnumerator WaitTrans()
+    {
+        yield return new WaitForSeconds(2.0f);
+
+        animator.SetBool("TransitionToLobby", true);
         dealButtonGameObject.SetActive(false);
         doubtButtonGameObject.SetActive(false);
         chip.SetActive(false);
