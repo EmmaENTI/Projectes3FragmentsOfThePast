@@ -822,24 +822,14 @@ public class CardTutorialScript : MonoBehaviour
 
         animator.SetBool("EndScene", true);
 
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("EndSceneMonteAnim")) // check if "bash" is playing...
-        {
-            Debug.Log("Playing Anim");
-            return; // "bash" is playing so no more code will be executed
-        }
-        else
-        {
-            SceneManager.LoadScene("DevelopPhotoScene");
-        }
-        // WaitOneSec();
-
+        StartCoroutine(WaitOneSec());
     }
 
-    //IEnumerator WaitOneSec()
-    //{
-        //yield return new WaitForSeconds(2.0f);
-        //SceneManager.LoadScene("DevelopPhotoScene");
-    //}
+    IEnumerator WaitOneSec()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("DevelopPhotoScene");
+    }
 
 
 
