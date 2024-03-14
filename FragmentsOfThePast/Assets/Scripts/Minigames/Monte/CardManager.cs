@@ -141,7 +141,6 @@ public class CardManager : MonoBehaviour
             SetBotTopLayout();
             SetGateColor();
 
-
             tuto.DialogueLineLoose();
             Debug.Log("Doubted");
         }
@@ -169,6 +168,8 @@ public class CardManager : MonoBehaviour
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
         // Missatge Doubt era la opcio correcta
         doubleScoreActive = false;
+
+        tuto.DialogueLineLoose();
 
         if (chipManager.GetChips() <= 0)
         {
