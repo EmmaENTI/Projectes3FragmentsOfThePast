@@ -10,6 +10,7 @@ public class CheckpointManager : MonoBehaviour
 
     public float currentLaps = 0;
     public float totalLaps = 3;
+    public float checkpointsDone = 0;
 
     [SerializeField] DragablePhoto photo;
 
@@ -38,6 +39,7 @@ public class CheckpointManager : MonoBehaviour
         {
             currentCheckpoint[checkpointName] = false;
 
+            checkpointsDone++;
             checkpointId++;
             checkpointId %= 8;
 
