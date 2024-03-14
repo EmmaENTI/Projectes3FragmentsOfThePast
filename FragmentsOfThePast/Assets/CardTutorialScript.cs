@@ -88,6 +88,8 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] GameObject chip;
     [SerializeField] GameObject scoreContainer;
 
+    [SerializeField] GameObject luisImage;
+
     private void Start()
     {
         audioSourceGameObject.SetActive(false);
@@ -321,7 +323,7 @@ public class CardTutorialScript : MonoBehaviour
                 DialogueLine15();
                 break;
 
-            case 21:
+            case 22:
                 DialogueLine17();
                 break;
         }
@@ -628,8 +630,6 @@ public class CardTutorialScript : MonoBehaviour
 
         denier.SetActive(false);
 
-        //
-
         StartMonte();
     }
 
@@ -644,10 +644,8 @@ public class CardTutorialScript : MonoBehaviour
         chipsDrawer.SetActive(false);
         scoreContainer.SetActive(false);
         dialogueLine++;
-    }
+        playerIsAnswering = false;
 
-    private void DialogueLine17()
-    {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
         texToToWrite = "Well, was that game enough? Or was it too simple?";
@@ -656,7 +654,24 @@ public class CardTutorialScript : MonoBehaviour
         luisText = true;
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
 
+        luisImage.SetActive(true);
         spiritName = "Luis";
+    }
+
+    private void DialogueLine17()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "It should be enough... Now please wait here.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = playerName;
+
+        //animator.SetBool("LuisAppear", true);
     }
 
     public void DialogueLineWin()
