@@ -75,7 +75,20 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] private string spiritName;
     [SerializeField] private TextMeshProUGUI spiritNameText;
 
+    [SerializeField] private GameObject denier;
+
     private bool luisText;
+
+    [SerializeField] Animator animator;
+    [SerializeField] CardManager cardManager;
+
+    [SerializeField] GameObject dealButtonGameObject;
+    [SerializeField] GameObject doubtButtonGameObject;
+    [SerializeField] GameObject chipsDrawer;
+    [SerializeField] GameObject chip;
+    [SerializeField] GameObject scoreContainer;
+
+    [SerializeField] GameObject luisImage;
 
     private void Start()
     {
@@ -121,8 +134,12 @@ public class CardTutorialScript : MonoBehaviour
                 //hasEndedTyping (Quan ha acabat d'escriure el autoType del dialeg o s'ha skipejat el autoType)
                 if (hasEndedTyping)
                 {
-                    //Passar a la seguent linea de dialeg
-                    dialogueLine++;
+                    if(dialogueLine!= 20)
+                    {
+                        //Passar a la seguent linea de dialeg
+                        dialogueLine++;
+                    }
+
 
                     LineJump();
 
@@ -144,6 +161,11 @@ public class CardTutorialScript : MonoBehaviour
         {
             //Funcio dels dialegs
             DialogueTalk();
+        }
+
+        if(cardManager.winCount == 3)
+        {
+            DialogueLine16();
         }
     }
 
@@ -300,6 +322,38 @@ public class CardTutorialScript : MonoBehaviour
             case 20:
                 DialogueLine15();
                 break;
+
+            case 22:
+                DialogueLine17();
+                break;
+
+            case 23:
+                DialogueLine18();
+                break;
+
+            case 24:
+                DialogueLine19();
+                break;
+
+            case 25:
+                DialogueLine20();
+                break;
+
+            case 26:
+                DialogueLine21();
+                break;
+
+            case 27:
+                DialogueLine22();
+                break;
+
+            case 28:
+                DialogueLine23();
+                break;
+
+            case 29:
+                DialogueLine24();
+                break;
         }
     }
 
@@ -369,7 +423,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "We have 4 types of cards.";
+        texToToWrite = "We have four types of cards.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -402,7 +456,7 @@ public class CardTutorialScript : MonoBehaviour
 
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "I deal 3 different types of cards, as you can see, two visible and one unrevealed.";
+        texToToWrite = "I deal three different types of cards, as you can see, two visible and one unrevealed.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -602,7 +656,250 @@ public class CardTutorialScript : MonoBehaviour
             initialTabletopGameObjects[i].SetActive(true);
         }
 
+        denier.SetActive(false);
         StartMonte();
+    }
+
+    private void DialogueLine16()
+    {
+        animator.SetBool("TransitionToLobby", true);
+        cardManager.winCount = 0;
+
+        dealButtonGameObject.SetActive(false);
+        doubtButtonGameObject.SetActive(false);
+        chip.SetActive(false);
+        chipsDrawer.SetActive(false);
+        scoreContainer.SetActive(false);
+        dialogueLine++;
+        playerIsAnswering = false;
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Well, was that game enough? Or was it too simple?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+        tagGameObject.SetActive(true);
+
+        luisImage.SetActive(true);
+        spiritName = "Luis";
+    }
+
+    private void DialogueLine17()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "It should be enough... Now please wait here.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = playerName;
+
+        //Cuadrado de player
+        textPanelImage.sprite = normalPanelSprite;
+    }
+
+    private void DialogueLine18()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "I need to go and see if this place has a witchcraft area... I am sure they will have small cauldrons there";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = playerName;
+
+        //Cuadrado de player
+        textPanelImage.sprite = normalPanelSprite;
+    }
+
+    private void DialogueLine19()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Cauldrons? You will see fragments of my past with cauldrons?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = "Luis";
+
+        //Cuadrado de player
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine20()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Basically yes, it is like developing photos, but instead, they are your memories.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = playerName;
+
+        //Cuadrado de player
+        textPanelImage.sprite = normalPanelSprite;
+    }
+
+    private void DialogueLine21()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Just spin them around for a while and let them dry!";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = false;
+        tagGameObject.GetComponent<Image>().sprite = playerTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = playerName;
+
+        //Cuadrado de player
+        textPanelImage.sprite = normalPanelSprite;
+    }
+
+    private void DialogueLine22()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = playerName + " you surely are... Special to say the least.";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = "Luis";
+
+        //Cuadrado de player
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine23()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Okay, I will wait here while you do your spiritist witchy stuff...";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = "Luis";
+
+        //Cuadrado de player
+        textPanelImage.sprite = luisPanelSprite;
+    }
+
+    private void DialogueLine24()
+    {
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        luisImage.SetActive(true);
+        spiritName = "Luis";
+
+        //Cuadrado de player
+        textPanelImage.sprite = luisPanelSprite;
+
+        animator.SetBool("EndScene", true);
+
+        StartCoroutine(WaitOneSec());
+    }
+
+    IEnumerator WaitOneSec()
+    {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("DevelopPhotoScene");
+    }
+
+
+
+    public void DialogueLineWin()
+    {
+        // Array de frases
+        string[] frases = {
+            "Ha! What a lucky play!",
+            playerName + " is quite lucky, hm?",
+            "Look at that, " + playerName + " knows about gambling!",
+            "You should consider getting a lottery ticket after that one."
+        };
+
+        // Seleccionar una frase aleatoria del array
+        string fraseAleatoria = frases[UnityEngine.Random.Range(0, frases.Length)];
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = fraseAleatoria;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
+
+        StartCoroutine(EndLine());
+    }
+
+    public void DialogueLineLoose()
+    {
+        // Array de frases
+        string[] frases = {
+            "Luck is not at your side, "+ playerName + "! But keep betting, you will win at some point!",
+            "Aw, unlucky!",
+            "Fortune is not on your side, what a pity!",
+            "No worries, just keep betting!"
+        };
+
+        // Seleccionar una frase aleatoria del array
+        string fraseAleatoria = frases[UnityEngine.Random.Range(0, frases.Length)];
+
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = fraseAleatoria;
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(true);
+        textPanelImage.sprite = luisPanelSprite;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
+
+        StartCoroutine(EndLine());
+    }
+
+    IEnumerator EndLine()
+    {
+
+        yield return new WaitForSeconds(5.0f);
+        dialogueTextPanel.SetActive(false);
+        hasEndedTyping = false;
+        texToToWrite = "";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        tagGameObject.SetActive(false);
+        answerButtonsPanel.SetActive(false);
     }
 
     public void StartMonte()
