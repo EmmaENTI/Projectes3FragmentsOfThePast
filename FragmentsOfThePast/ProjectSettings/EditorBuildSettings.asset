@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DevelopPhotoScene.unity
     guid: bddcd0a4e77e70d4b8e9b5da7042711c
+  - enabled: 1
+    path: Assets/EndScene.unity
+    guid: 0effae3dd06274e46a3008749d25729c
   m_configObjects: {}

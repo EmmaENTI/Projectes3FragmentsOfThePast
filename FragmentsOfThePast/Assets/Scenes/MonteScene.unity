@@ -860,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &288995005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1374,7 +1374,7 @@ RectTransform:
   - {fileID: 577906198}
   - {fileID: 1809967136}
   - {fileID: 1380465592}
-  - {fileID: 1085302007}
+  - {fileID: 1364436255}
   - {fileID: 12939965}
   - {fileID: 593418914}
   m_Father: {fileID: 0}
@@ -1837,6 +1837,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509765185}
   m_CullTransparentMesh: 1
+--- !u!1 &544950401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 544950404}
+  - component: {fileID: 544950403}
+  - component: {fileID: 544950402}
+  m_Layer: 5
+  m_Name: Luis Sad Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &544950402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544950401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 849704f2171dddf4a839a78dd7517b55, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &544950403
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544950401}
+  m_CullTransparentMesh: 1
+--- !u!224 &544950404
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544950401}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1364436255}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -60}
+  m_SizeDelta: {x: 1030, y: 1030}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &572856536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,6 +3002,8 @@ MonoBehaviour:
     - {fileID: 675604366}
   playSound: {fileID: 1539629551}
   dealing: 0
+  cm: {fileID: 1987287927}
+  cts: {fileID: 1987287928}
 --- !u!114 &853435131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3187,6 +3265,8 @@ MonoBehaviour:
     - {fileID: 1713801324}
   playSound: {fileID: 1539629551}
   dealing: 0
+  cm: {fileID: 1987287927}
+  cts: {fileID: 1987287928}
 --- !u!114 &897155174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4006,12 +4086,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 457921701}
+  m_Father: {fileID: 1364436255}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -25}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 1030, y: 1030}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1103360855
@@ -5066,6 +5146,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359258257}
   m_CullTransparentMesh: 1
+--- !u!1 &1364436254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1364436255}
+  - component: {fileID: 1364436256}
+  m_Layer: 5
+  m_Name: Luises
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1364436255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364436254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1085302007}
+  - {fileID: 544950404}
+  m_Father: {fileID: 457921701}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1364436256
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364436254}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4671a56b4ba997742ab445f9dae05042, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1380465591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5838,6 +5978,8 @@ MonoBehaviour:
     - {fileID: 408102949}
   playSound: {fileID: 1539629551}
   dealing: 0
+  cm: {fileID: 1987287927}
+  cts: {fileID: 1987287928}
 --- !u!114 &1496902906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7117,6 +7259,8 @@ MonoBehaviour:
   chip: {fileID: 1321256501}
   scoreContainer: {fileID: 1718488371}
   luisImage: {fileID: 1085302004}
+  luisSadImage: {fileID: 544950401}
+  cardSound: 1
 --- !u!1 &2052700457
 GameObject:
   m_ObjectHideFlags: 0

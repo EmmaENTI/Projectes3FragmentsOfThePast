@@ -89,6 +89,9 @@ public class CardTutorialScript : MonoBehaviour
     [SerializeField] GameObject scoreContainer;
 
     [SerializeField] GameObject luisImage;
+    [SerializeField] GameObject luisSadImage;
+
+    public bool cardSound = true;
 
     private void Start()
     {
@@ -662,9 +665,18 @@ public class CardTutorialScript : MonoBehaviour
 
     private void DialogueLine16()
     {
-        animator.SetBool("TransitionToLobby", true);
+        StartCoroutine(WaitTrans());
+
         cardManager.winCount = 0;
 
+        cardSound = false;
+    }
+
+    IEnumerator WaitTrans()
+    {
+        yield return new WaitForSeconds(2.0f);
+
+        animator.SetBool("TransitionToLobby", true);
         dealButtonGameObject.SetActive(false);
         doubtButtonGameObject.SetActive(false);
         chip.SetActive(false);
@@ -730,7 +742,8 @@ public class CardTutorialScript : MonoBehaviour
         luisText = true;
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
 
-        luisImage.SetActive(true);
+        luisImage.SetActive(false);
+        luisSadImage.SetActive(true);
         spiritName = "Luis";
 
         //Cuadrado de player
@@ -782,10 +795,13 @@ public class CardTutorialScript : MonoBehaviour
         tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
 
         luisImage.SetActive(true);
+        luisSadImage.SetActive(false);
         spiritName = "Luis";
 
         //Cuadrado de player
         textPanelImage.sprite = luisPanelSprite;
+
+
     }
 
     private void DialogueLine23()

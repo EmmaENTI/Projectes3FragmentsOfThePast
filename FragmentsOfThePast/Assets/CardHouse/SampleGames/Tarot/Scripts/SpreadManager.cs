@@ -23,6 +23,10 @@ namespace CardHouse.SampleGames.Tarot
 
         public bool dealing;
 
+        [SerializeField] CardManager cm;
+
+        [SerializeField] CardTutorialScript cts;
+
         public void Start()
         {
             foreach (var spread in Spreads)
@@ -39,7 +43,7 @@ namespace CardHouse.SampleGames.Tarot
 
         private void Update()
         {
-            if (dealing == true)
+            if (dealing == true && cm.winCount <= 2)
             {
                 dealing = false;
                 StartCoroutine(Waiter());
@@ -110,6 +114,8 @@ namespace CardHouse.SampleGames.Tarot
             }
 
             playSound.playEffect();
+
+           
         }
 
         IEnumerator Waiter()
@@ -128,7 +134,10 @@ namespace CardHouse.SampleGames.Tarot
             Spreads[CurrentSpreadIndex].FillNext(Deck.MountedCards[Deck.MountedCards.Count - 1]);
             Spreads[CurrentSpreadIndex].FillNext(Deck.MountedCards[Deck.MountedCards.Count - 1]);
 
-            playSound.playEffect();
+            if (cts.cardSound == true)
+            {
+                playSound.playEffect();
+            }
         }
     }
 }

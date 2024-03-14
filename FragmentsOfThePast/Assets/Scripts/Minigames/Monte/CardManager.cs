@@ -2,6 +2,7 @@ using CardHouse;
 using CardHouse.SampleGames.Tarot;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -140,6 +141,7 @@ public class CardManager : MonoBehaviour
             SetBotTopLayout();
             SetGateColor();
 
+            tuto.DialogueLineLoose();
             Debug.Log("Doubted");
         }
 
@@ -163,10 +165,11 @@ public class CardManager : MonoBehaviour
         }
 
         playSound1.playEffect();
-        tuto.DialogueLineLoose();
         Debug.Log("YOU LOST!, The correct option was: " + gateColor.ToString());
         // Missatge Doubt era la opcio correcta
         doubleScoreActive = false;
+
+        tuto.DialogueLineLoose();
 
         if (chipManager.GetChips() <= 0)
         {
@@ -185,8 +188,11 @@ public class CardManager : MonoBehaviour
 
         playSound.playEffect();
 
-        tuto.DialogueLineWin();
-
+        if(winCount < 2)
+        {
+            tuto.DialogueLineWin();
+        }
+     
         if (doubleScoreActive) // Doble puntuación
         {
             winCount += 2;
@@ -204,7 +210,7 @@ public class CardManager : MonoBehaviour
 
         if (winCount >= 3)
         {
-            Debug.Log("YOU WON, GG");
+            /*Debug.Log("YOU WON, GG");
 
             // TEMP_START
             winCount = 0;
@@ -216,7 +222,7 @@ public class CardManager : MonoBehaviour
             //TEMP_END
 
             // Progress with the Story
-            return;
+            return;^*/
         }
 
         //gate.SetActive(true);

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class ZoomInImage : MonoBehaviour
 {
 
@@ -11,9 +12,13 @@ public class ZoomInImage : MonoBehaviour
     float timeToReveal2 = 1.0f;
     float currentTime2 = 0.0f;
 
+    float timeToEndScene = 0.0f;
 
     Image image;
     Image characterImage;
+
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject blackPanel;
 
     void Start()
     {
@@ -36,9 +41,17 @@ public class ZoomInImage : MonoBehaviour
             {
                 if (currentTime2 > timeToReveal2)
                 {
+                    animator.SetBool("Text1", true);
+                    blackPanel.SetActive(false);
+                    timeToEndScene += Time.deltaTime;
+
+                    if(timeToEndScene > 30)
+                    {
+                        SceneManager.LoadScene("EndScene");
+                    }
+
                     return;
                 }
-
                 currentTime2 += Time.deltaTime;
 
                 characterImage.color = new Color(characterImage.color.r, characterImage.color.g, characterImage.color.b, currentTime2 / timeToReveal2);
