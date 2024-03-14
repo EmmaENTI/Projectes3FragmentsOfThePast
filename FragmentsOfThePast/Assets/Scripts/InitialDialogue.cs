@@ -1699,7 +1699,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine50()
     {
         hasEndedTyping = false;
-        texToToWrite = "I thought about presenting myself, to not make this so awkward and stuff…";
+        texToToWrite = "I thought about introducing myself, to not make this so awkward and stuff…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1910,11 +1910,11 @@ public class InitialDialogue : MonoBehaviour
         tagGameObject.GetComponent<Image>().sprite = PlayerTagSprite;
         luisText = false;
     }
-
+  
     private void DialogueLine60()
     {
         hasEndedTyping = false;
-        texToToWrite = "It could be a simple card game, a word association game, or even a game of riddles. <color=#ffa500ff>The key is \nconcentration.</color>";
+        texToToWrite = "It can be any type of game, a word association \ngame, a game of riddles... <color=#ffa500ff>The key is \nconcentration!</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
