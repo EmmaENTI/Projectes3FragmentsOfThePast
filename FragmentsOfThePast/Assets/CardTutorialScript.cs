@@ -426,7 +426,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "We have four types of cards.";
+        texToToWrite = "We have <color=#ff00ffff>four types</color> of cards.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -459,7 +459,7 @@ public class CardTutorialScript : MonoBehaviour
 
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "I deal three different types of cards, as you can see, two visible and one unrevealed.";
+        texToToWrite = "I deal three different types of cards, as you can see, <color=#ff00ffff>two visible</color> and one <color=#ff00ffff>unrevealed</color>.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -488,7 +488,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "The ones you see will always be different between them.";
+        texToToWrite = "<color=#ff00ffff>The ones you see will always be different between them.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -585,7 +585,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "In that case, use Doubt… If you guessed correctly and none match, you win!";
+        texToToWrite = "In that case, use <color=#ff00ffff>Doubt</color>… If you guessed correctly and none match, you win!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);

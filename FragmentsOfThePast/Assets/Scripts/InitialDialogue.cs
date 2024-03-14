@@ -1472,6 +1472,7 @@ public class InitialDialogue : MonoBehaviour
         audioSourceGameObject.SetActive(true);
         playSound9.playEffect();
         playSound11.playEffect();
+        //HeartBeat
     }
 
 
@@ -1505,12 +1506,11 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine38()
     {
         hasEndedTyping = false;
-        texToToWrite = "As you slowly regain consciousness, you find yourself lying on a dusty floor in an empty spiritist consulting room. ";
+        texToToWrite = "As you slowly regain consciousness, you find yourself lying on a dusty floor in an <color=#ffa500ff>empty spiritist consulting room.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
         textAnimator.SetBool("TextAnim1", true);
-
     }
 
     private void DialogueLine39()
@@ -1542,6 +1542,7 @@ public class InitialDialogue : MonoBehaviour
 
         audioSourceGameObject.SetActive(true);
 
+
     }
 
     private void DialogueLine41()
@@ -1555,7 +1556,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine42()
     {
         hasEndedTyping = false;
-        texToToWrite = "Wait… He is dead?!";
+        texToToWrite = "Wait… He is <color=#ffa500ff>dead?!</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1737,7 +1738,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine52()
     {
         hasEndedTyping = false;
-        texToToWrite = "I came here to find the origin of the breach. Do you know anything about it?";
+        texToToWrite = "I came here to find the <color=#ffa500ff>origin of the breach.</color> Do you know anything about it?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1826,7 +1827,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine55()
     {
         hasEndedTyping = false;
-        texToToWrite = "I used to know where it was, you know. Had a hunch about its location. But then... something happened. My memories got wiped clean. Total amnesia.";
+        texToToWrite = "I used to know where it was, you know. Had a hunch about its location. But then... something happened. My memories got wiped clean. <color=#ff00ffff>Total amnesia.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1845,7 +1846,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine56()
     {
         hasEndedTyping = false;
-        texToToWrite = "Guess I got too close to the breach, and it decided to mess with my head. Classic breach move, right?";
+        texToToWrite = "Guess I got too close to the breach, and <color=#ff00ffff>it decided to mess with my head.</color> Classic breach move, right?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1864,7 +1865,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine57()
     {
         hasEndedTyping = false;
-        texToToWrite = "I am a spiritist, I can recover your memories.";
+        texToToWrite = "I am a spiritist, <color=#ffa500ff>I can recover your memories.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1913,7 +1914,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine60()
     {
         hasEndedTyping = false;
-        texToToWrite = "It could be a simple card game, a word association game, or even a game of riddles. The key is concentration.";
+        texToToWrite = "It could be a simple card game, a word association game, or even a game of riddles. <color=#ffa500ff>The key is concentration.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1929,7 +1930,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine61()
     {
         hasEndedTyping = false;
-        texToToWrite = "As we play, we'll focus our minds, allowing my powers to work their magic.";
+        texToToWrite = "As we play, we'll focus our minds, allowing <color=#ffa500ff>my powers</color> to work their magic.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1944,7 +1945,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine62()
     {
         hasEndedTyping = false;
-        texToToWrite = "The deeper we delve into the game, the more I'll uncover about your past.";
+        texToToWrite = "The deeper we delve into the game, the more I'll <color=#ffa500ff>uncover about your past.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 

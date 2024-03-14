@@ -20946,6 +20946,7 @@ MonoBehaviour:
   luisNewIllustrationImage: {fileID: 21300000, guid: 071fd3fd4af79c546bf9909afe618ab2, type: 3}
   lobbyContenderGameObject: {fileID: 2114265494}
   clickAlertGameObject: {fileID: 542456677}
+  AudioSourceGameObject: {fileID: 1302849233}
 --- !u!114 &2091079310
 MonoBehaviour:
   m_ObjectHideFlags: 0
