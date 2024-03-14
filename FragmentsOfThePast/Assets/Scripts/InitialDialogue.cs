@@ -730,7 +730,7 @@ public class InitialDialogue : MonoBehaviour
     {
         hasEndedTyping = false;
         spiritNameText.text = "";
-        texToToWrite = "Spirits are appearing among the living and viceversa.";
+        texToToWrite = "Spirits are appearing among the living and \nviceversa.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -772,7 +772,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine5()
     {
         hasEndedTyping = false;
-        texToToWrite = "You're one of these gifted individuals, with a natural talent for connecting with the dead.";
+        texToToWrite = "You're one of these gifted individuals, with a \nnatural talent for connecting with the dead.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;  
     }
@@ -807,7 +807,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine7()
     {
         hasEndedTyping = false;
-        texToToWrite = "You find a wallet with money and ID inside. Would you give it back to the owner or keep it to yourself?";
+        texToToWrite = "You find a wallet with money and ID inside. Would \nyou give it back to the owner or keep it to \nyourself?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -943,7 +943,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine11()
     {
         hasEndedTyping = false;
-        texToToWrite = "You witness an authority figure abusing their power and causing harm to others. Would you speak out against injustice, even if it means putting yourself at risk, or would you prefer to stay silent to avoid trouble?";
+        texToToWrite = "You witness an authority figure abusing their power and causing harm to others. Would you speak out \nagainst injustice, even if it means putting \nyourself at risk, or would you prefer to stay \nsilent to avoid trouble?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         darkerFilterPanel.SetActive(false);
@@ -1059,7 +1059,7 @@ public class InitialDialogue : MonoBehaviour
         dialogueTextPanel.SetActive(true);
 
         hasEndedTyping = false;
-        texToToWrite = "You step into the <color=#ffa500ff>breach between the realms,</color> your heart pounding with anticipation…";
+        texToToWrite = "You step into the <color=#ffa500ff>breach between the realms,</color> your \nheart pounding with anticipation…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1097,7 +1097,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine16()
     {
         hasEndedTyping = false;
-        texToToWrite = "It feels really strange and unsettling, against nature's way, but your strong will pushes you forward, even though it's uncomfortable.";
+        texToToWrite = "It feels really strange and unsettling, against \nnature's way, but your strong will pushes you \nforward, even though it's uncomfortable.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1105,7 +1105,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine17()
     {
         hasEndedTyping = false;
-        texToToWrite = "Moving forward feels really hard, like pushing through thick, heavy fog. Each step is a tough fight against things you can't even see.";
+        texToToWrite = "Moving forward feels really hard, like pushing \nthrough thick, heavy fog. Each step is a tough \nfight against things you can't even see.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1128,7 +1128,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine19()
     {
         hasEndedTyping = false;
-        texToToWrite = "You lock eyes with the figure, a sense of dread mingling with curiosity as you approach cautiously.";
+        texToToWrite = "You lock eyes with the figure, a sense of dread \nmingling with curiosity as you approach cautiously.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1272,7 +1272,7 @@ public class InitialDialogue : MonoBehaviour
     {
         hasEndedTyping = false;
         spiritNameText.text = "???";
-        texToToWrite = "I can sense something about you... You're a spiritist, someone who can connect with the spirit world. Your energy feels strong and <color=#00ffffff>alive.</color>";
+        texToToWrite = "I can sense something about you... You're a \nspiritist, someone who can connect with the spirit world. Your energy feels strong and <color=#00ffffff>alive.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         hoodedManText = true;
@@ -1282,7 +1282,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine25()
     {
         hasEndedTyping = false;
-        texToToWrite = "The subtle rise and fall of your chest… It's fascinating, really.";
+        texToToWrite = "The subtle rise and fall of your chest… It's \nfascinating, really.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         hoodedManText = true;
@@ -1291,7 +1291,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine26()
     {
         hasEndedTyping = false;
-        texToToWrite = "Can you feel your heart beating? It's a reminder that you're in this strange place called <color=#00ffffff>the breach,</color> somewhere between life and death.";
+        texToToWrite = "Can you feel your heart beating? It's a reminder \nthat you're in this strange place called <color=#00ffffff>the \nbreach,</color> somewhere between life and death.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         hoodedManText = true;
@@ -1352,7 +1352,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine28()
     {
         hasEndedTyping = false;
-        texToToWrite = "Suddenly, he grabs you by the throat, squeezing tightly. You feel your strength fading as he tries to kill you.";
+        texToToWrite = "Suddenly, he grabs you by the throat, squeezing \ntightly. You feel your strength fading as he tries to kill you.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1411,7 +1411,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine32()
     {
         hasEndedTyping = false;
-        texToToWrite = "As he tries to take your powers and hurt you, something inside you fights back.";
+        texToToWrite = "As he tries to take your powers and hurt you, \nsomething inside you fights back.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1425,7 +1425,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine33()
     {
         hasEndedTyping = false;
-        texToToWrite = "He starts to struggle, and you feel a burst of energy, too strong for him to handle.";
+        texToToWrite = "He starts to struggle, and you feel a burst of \nenergy, too strong for him to handle.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1433,7 +1433,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine34()
     {
         hasEndedTyping = false;
-        texToToWrite = "You're tougher than I thought! But I'm not in a hurry. I enjoy a good chase. <color=#00ffffff>You're not the only one</color> searching for answers about what's happening.";
+        texToToWrite = "You're tougher than I thought! But I'm not in a \nhurry. I enjoy a good chase. <color=#00ffffff>You're not the only \none</color> searching for answers about what's happening.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1450,7 +1450,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine35()
     {
         hasEndedTyping = false;
-        texToToWrite = "As he vanishes, you feel exhausted, your throat hurts, and you struggle to breathe. Time is running out to find the way out.";
+        texToToWrite = "As he vanishes, you feel exhausted, your throat \nhurts, and you struggle to breathe. Time is running out to find the way out.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1479,7 +1479,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine36()
     {
         hasEndedTyping = false;
-        texToToWrite = "As you run, you start to feel faint. A familiar smell fills the air - <color=#ffa500ff>candles and marigolds.</color> It's comforting, but then darkness takes over, and you fall unconscious.";
+        texToToWrite = "As you run, you start to feel faint. A familiar \nsmell fills the air - <color=#ffa500ff>candles and marigolds.</color> It's \ncomforting, but then darkness takes over, and you \nfall unconscious.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1506,7 +1506,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine38()
     {
         hasEndedTyping = false;
-        texToToWrite = "As you slowly regain consciousness, you find yourself lying on a dusty floor in an <color=#ffa500ff>empty spiritist consulting room.</color>";
+        texToToWrite = "As you slowly regain consciousness, you find \nyourself lying on a dusty floor in an <color=#ffa500ff>empty \nspiritist consulting room.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1548,7 +1548,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine41()
     {
         hasEndedTyping = false;
-        texToToWrite = "He looks slightly translucent, bones underneath and…";
+        texToToWrite = "He looks slightly translucent, bones underneath \nand…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
     }
@@ -1564,7 +1564,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine43()
     {
         hasEndedTyping = false;
-        texToToWrite = "Hey there, buddy. What kind of drugs did you end up taking to wind up like this in an abandoned building?";
+        texToToWrite = "Hey there, buddy. What kind of drugs did you end up taking to wind up like this in an abandoned \nbuilding?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1638,7 +1638,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine46()
     {
         hasEndedTyping = false;
-        texToToWrite = "Yeah right, people don't just appear in shady abandoned buildings unconscious out of hobby…";
+        texToToWrite = "Yeah right, people don't just appear in shady \nabandoned buildings unconscious out of hobby…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1651,7 +1651,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine47()
     {
         hasEndedTyping = false;
-        texToToWrite = "If it is a hobby I should look into it though, sounds like fun.";
+        texToToWrite = "If it is a hobby I should look into it though, \nsounds like fun.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1723,7 +1723,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine51()
     {
         hasEndedTyping = false;
-        texToToWrite = "Luis… Alright. My name is " + gameManager_Script.playerName + ", thanks for saving me and stuff…";
+        texToToWrite = "Luis… Alright. My name is " + gameManager_Script.playerName + ", thanks for \nsaving me and stuff…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1738,7 +1738,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine52()
     {
         hasEndedTyping = false;
-        texToToWrite = "I came here to find the <color=#ffa500ff>origin of the breach.</color> Do you know anything about it?";
+        texToToWrite = "I came here to find the <color=#ffa500ff>origin of the breach.</color> Do \nyou know anything about it?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1753,7 +1753,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine53()
     {
         hasEndedTyping = false;
-        texToToWrite = "Crossing the breach, huh? That's some serious business you've got yourself into, " + gameManager_Script.playerName + "…";
+        texToToWrite = "Crossing the breach, huh? That's some serious \nbusiness you've got yourself into, " + gameManager_Script.playerName + "…";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1914,7 +1914,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine60()
     {
         hasEndedTyping = false;
-        texToToWrite = "It could be a simple card game, a word association game, or even a game of riddles. <color=#ffa500ff>The key is concentration.</color>";
+        texToToWrite = "It could be a simple card game, a word association game, or even a game of riddles. <color=#ffa500ff>The key is \nconcentration.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1930,7 +1930,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine61()
     {
         hasEndedTyping = false;
-        texToToWrite = "As we play, we'll focus our minds, allowing <color=#ffa500ff>my powers</color> to work their magic.";
+        texToToWrite = "As we play, we'll focus our minds, allowing <color=#ffa500ff>my \npowers</color> to work their magic.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1945,7 +1945,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine62()
     {
         hasEndedTyping = false;
-        texToToWrite = "The deeper we delve into the game, the more I'll <color=#ffa500ff>uncover about your past.</color>";
+        texToToWrite = "The deeper we delve into the game, the more I'll <color=#ffa500ff>\nuncover about your past.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1979,7 +1979,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine64()
     {
         hasEndedTyping = false;
-        texToToWrite = "Who knows, maybe we'll uncover something useful about the breach and my lost memories in the process.";
+        texToToWrite = "Who knows, maybe we'll uncover something useful \nabout the breach and my lost memories in the \nprocess.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -1997,7 +1997,7 @@ public class InitialDialogue : MonoBehaviour
     private void DialogueLine65()
     {
         hasEndedTyping = false;
-        texToToWrite = "Between this and drinking tequila at the bar, I prefer this.";
+        texToToWrite = "Between this and drinking tequila at the bar, I \nprefer this.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 

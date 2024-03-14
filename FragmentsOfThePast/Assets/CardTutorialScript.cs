@@ -459,7 +459,7 @@ public class CardTutorialScript : MonoBehaviour
 
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "I deal three different types of cards, as you can see, <color=#ff00ffff>two visible</color> and one <color=#ff00ffff>unrevealed</color>.";
+        texToToWrite = "I deal three different types of cards, as you can \nsee, <color=#ff00ffff>two visible</color> and one <color=#ff00ffff>unrevealed</color>.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -488,7 +488,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "<color=#ff00ffff>The ones you see will always be different between them.</color>";
+        texToToWrite = "The ones you see <color=#ff00ffff>will always be different between \nthem.</color>";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -500,7 +500,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "The point of the game is to bet on the card you think will match the mysterious one!";
+        texToToWrite = "The point of the game is to bet on the card you \nthink will match the mysterious one!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -527,7 +527,7 @@ public class CardTutorialScript : MonoBehaviour
     { 
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "How do you bet? Simply grab one of the tokens and place it on the card you think is the correct one!";
+        texToToWrite = "How do you bet? Simply grab one of the tokens and \nplace it on the card you think is the correct one!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -569,7 +569,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "What if I think none of the cards match with the unrevealed one?";
+        texToToWrite = "What if I think none of the cards match with the \nunrevealed one?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
 
@@ -585,7 +585,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "In that case, use <color=#ff00ffff>Doubt</color>… If you guessed correctly and none match, you win!";
+        texToToWrite = "In that case, use <color=#ff00ffff>Doubt</color>… If you guessed correctly \nand none match, you win!";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         tagGameObject.SetActive(true);
@@ -719,7 +719,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "I need to go and see if this place has a witchcraft area... I am sure they will have small cauldrons there";
+        texToToWrite = "I need to go and see if this place has a witchcraft area... I am sure they will have small cauldrons \nthere";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         luisText = false;
@@ -736,7 +736,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "Cauldrons? You will see fragments of my past with cauldrons?";
+        texToToWrite = "Cauldrons? You will see fragments of my past with \ncauldrons?";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         luisText = true;
@@ -754,7 +754,7 @@ public class CardTutorialScript : MonoBehaviour
     {
         dialogueTextPanel.SetActive(true);
         hasEndedTyping = false;
-        texToToWrite = "Basically yes, it is like developing photos, but instead, they are your memories.";
+        texToToWrite = "Basically yes, it is like developing photos, but \ninstead, they are your memories.";
         StartCoroutine(TypeText(texToToWrite));
         canTalk = false;
         luisText = false;
