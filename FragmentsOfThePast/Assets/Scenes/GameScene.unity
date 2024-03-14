@@ -8278,7 +8278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &819217849
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15962,8 +15962,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 2114265495}
   - {fileID: 819217849}
+  - {fileID: 2114265495}
   - {fileID: 1472916147}
   - {fileID: 1416586331}
   - {fileID: 1641661056}
@@ -20944,7 +20944,7 @@ MonoBehaviour:
   ordenBackground: {fileID: 21300000, guid: 14ece9fc0692e7341a4776e1028897be, type: 3}
   conquerorBackground: {fileID: 21300000, guid: dffa074317318484a81320b463bbdb7b, type: 3}
   luisNewIllustrationImage: {fileID: 21300000, guid: 071fd3fd4af79c546bf9909afe618ab2, type: 3}
-  lobbyContenderGameObject: {fileID: 819217848}
+  lobbyContenderGameObject: {fileID: 2114265494}
   clickAlertGameObject: {fileID: 542456677}
 --- !u!114 &2091079310
 MonoBehaviour:

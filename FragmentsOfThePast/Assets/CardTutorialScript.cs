@@ -79,6 +79,15 @@ public class CardTutorialScript : MonoBehaviour
 
     private bool luisText;
 
+    [SerializeField] Animator animator;
+    [SerializeField] CardManager cardManager;
+
+    [SerializeField] GameObject dealButtonGameObject;
+    [SerializeField] GameObject doubtButtonGameObject;
+    [SerializeField] GameObject chipsDrawer;
+    [SerializeField] GameObject chip;
+    [SerializeField] GameObject scoreContainer;
+
     private void Start()
     {
         audioSourceGameObject.SetActive(false);
@@ -123,8 +132,12 @@ public class CardTutorialScript : MonoBehaviour
                 //hasEndedTyping (Quan ha acabat d'escriure el autoType del dialeg o s'ha skipejat el autoType)
                 if (hasEndedTyping)
                 {
-                    //Passar a la seguent linea de dialeg
-                    dialogueLine++;
+                    if(dialogueLine!= 20)
+                    {
+                        //Passar a la seguent linea de dialeg
+                        dialogueLine++;
+                    }
+
 
                     LineJump();
 
@@ -146,6 +159,11 @@ public class CardTutorialScript : MonoBehaviour
         {
             //Funcio dels dialegs
             DialogueTalk();
+        }
+
+        if(cardManager.winCount == 3)
+        {
+            DialogueLine16();
         }
     }
 
@@ -301,6 +319,10 @@ public class CardTutorialScript : MonoBehaviour
 
             case 20:
                 DialogueLine15();
+                break;
+
+            case 21:
+                DialogueLine17();
                 break;
         }
     }
@@ -606,7 +628,35 @@ public class CardTutorialScript : MonoBehaviour
 
         denier.SetActive(false);
 
+        //
+
         StartMonte();
+    }
+
+    private void DialogueLine16()
+    {
+        animator.SetBool("TransitionToLobby", true);
+        cardManager.winCount = 0;
+
+        dealButtonGameObject.SetActive(false);
+        doubtButtonGameObject.SetActive(false);
+        chip.SetActive(false);
+        chipsDrawer.SetActive(false);
+        scoreContainer.SetActive(false);
+        dialogueLine++;
+    }
+
+    private void DialogueLine17()
+    {
+        dialogueTextPanel.SetActive(true);
+        hasEndedTyping = false;
+        texToToWrite = "Well, was that game enough? Or was it too simple?";
+        StartCoroutine(TypeText(texToToWrite));
+        canTalk = false;
+        luisText = true;
+        tagGameObject.GetComponent<Image>().sprite = luisTagSprite;
+
+        spiritName = "Luis";
     }
 
     public void DialogueLineWin()

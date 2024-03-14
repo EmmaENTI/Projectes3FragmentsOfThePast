@@ -1675,6 +1675,7 @@ public class InitialDialogue : MonoBehaviour
 
     private void DialogueLine49()
     {
+        //
         hasEndedTyping = false;
         texToToWrite = "Name is Luis, by the way…?";
         StartCoroutine(TypeText(texToToWrite));
@@ -1686,7 +1687,7 @@ public class InitialDialogue : MonoBehaviour
         spiritNameText.text = "Luis";
         textPanelImage.sprite = LuisPanelSprite;
 
-        lobbyContenderGameObject.SetActive(true);
+        lobbyContenderGameObject.SetActive(false);
         luisHappyImage.SetActive(true);
 
         //Luis Tag

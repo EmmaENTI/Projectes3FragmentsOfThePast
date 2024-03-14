@@ -23,7 +23,7 @@ public class CardManager : MonoBehaviour
 
     ChipManager chipManager;
 
-    [SerializeField] int winCount = 0;
+    public int winCount = 0;
     [SerializeField] TextMeshProUGUI winCountText;
 
     bool doubleScoreActive = false;
