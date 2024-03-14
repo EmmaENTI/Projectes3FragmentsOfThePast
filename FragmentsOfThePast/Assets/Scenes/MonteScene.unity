@@ -1417,6 +1417,7 @@ GameObject:
   - component: {fileID: 461498339}
   - component: {fileID: 461498342}
   - component: {fileID: 461498341}
+  - component: {fileID: 461498343}
   - component: {fileID: 461498340}
   m_Layer: 5
   m_Name: DoubtButton
@@ -1526,6 +1527,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 461498343}
+        m_TargetAssemblyTypeName: AntiSpamButton, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &461498341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1564,6 +1577,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461498338}
   m_CullTransparentMesh: 1
+--- !u!114 &461498343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461498338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9ae079e324a2f47a6242362cf2c1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 461498340}
+  cooldownTime: 2
 --- !u!1 &481759094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,6 +2422,7 @@ GameObject:
   - component: {fileID: 636338723}
   - component: {fileID: 636338726}
   - component: {fileID: 636338725}
+  - component: {fileID: 636338727}
   - component: {fileID: 636338724}
   m_Layer: 5
   m_Name: PlayButton
@@ -2504,6 +2532,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 636338727}
+        m_TargetAssemblyTypeName: AntiSpamButton, Assembly-CSharp
+        m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &636338725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2542,6 +2582,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636338722}
   m_CullTransparentMesh: 1
+--- !u!114 &636338727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636338722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9ae079e324a2f47a6242362cf2c1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 636338724}
+  cooldownTime: 2
 --- !u!1001 &638784044
 PrefabInstance:
   m_ObjectHideFlags: 0
