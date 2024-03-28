@@ -8,7 +8,7 @@ public class GOPSManager : MonoBehaviour
 
     [SerializeField] GameObject playerCardPrefab;
     [SerializeField] GameObject playerHandObject;
-    int playerCardResponse = -1;
+    int playerCardChoice = -1;
 
     [SerializeField] GameObject enemyCardPrefab;
     [SerializeField] GameObject enemyHandObject;
@@ -22,6 +22,9 @@ public class GOPSManager : MonoBehaviour
     int deckIterator;
 
     [SerializeField] TMP_Text cardPrizeText;
+
+    int playerScore = 0;
+    int enemyScore = 0;
 
     void Start()
     {
@@ -61,11 +64,13 @@ public class GOPSManager : MonoBehaviour
         }
     }
 
-    public void SetPlayerCardResponse(int num)
+    public void SetPlayerCardChoice(int num)
     {
-        playerCardResponse = num;
+        playerCardChoice = num;
 
+        deckCards.RemoveAt(deckIterator);
         deckIterator--;
+        CheckChoices();
     }
 
     public void SetDifficulty(float value)
@@ -100,16 +105,64 @@ public class GOPSManager : MonoBehaviour
             temp.RemoveAt(index);
         }
 
-        
+        /*
         for (int i = 0; i < deckCards.Count; i++)
         {
             Debug.Log("# " + deckCards[i]);
         }    
-        
+        */
     }
 
     void UpdatePrizeCard(string text)
     {
         cardPrizeText.text = text;
+    }
+
+    int EnemyCardChoice()
+    {
+        int currentCard = deckCards[deckIterator];
+
+        float prizeCardImportance = 0;
+        float enemyCardImportance = 0;
+
+        for (int i = 0; i < deckCards.Count; i++)
+        {
+            prizeCardImportance += deckCards[i];
+            enemyCardImportance += enemy.hand[i];
+        }
+
+        prizeCardImportance /= deckCards.Count;
+        enemyCardImportance /= enemy.hand.Count;
+
+        if (currentCard > prizeCardImportance) // Elecció de Carta Carta Alta quan esta per amunt de la mitja
+        {
+            return Random.Range(Mathf.CeilToInt(enemyCardImportance), enemy.hand[enemy.hand.Count - 1]);
+        }
+        else // Elecció de Carta Baixa quan esta per sota de la mitja
+        {
+            return Random.Range(enemy.hand[0], Mathf.FloorToInt(enemyCardImportance));
+        }
+    }
+
+    void CheckChoices()
+    {
+        int enemyChoice = EnemyCardChoice();
+
+        if (playerCardChoice > enemyChoice) // Guanya Player
+        {
+            Debug.Log("PLAYER GUANYA, ENEMIC HA TIRAT: " + enemyChoice);
+            playerScore += deckCards[deckIterator];
+        }
+        else if (playerCardChoice < enemyChoice) // Guanya Enemic
+        {
+            Debug.Log("ENEMIC GUANYA, ENEMIC HA TIRAT: " + enemyChoice);
+            enemyScore += deckCards[deckIterator];
+        }
+        else // Empat
+        {
+
+        }
+
+        Debug.Log("PLAYER SCORE: " + playerScore + " ENEMY SCORE: " + enemyScore);
     }
 }

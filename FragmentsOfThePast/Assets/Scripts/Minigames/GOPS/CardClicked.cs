@@ -21,7 +21,7 @@ public class CardClicked : MonoBehaviour, IPointerDownHandler
 
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
-        gopsManager.SetPlayerCardResponse(cardValue);
+        gopsManager.SetPlayerCardChoice(cardValue);
 
         // TEMP (TREURE PER FICAR LA ANIMACIO DE LA CARTA)
 
